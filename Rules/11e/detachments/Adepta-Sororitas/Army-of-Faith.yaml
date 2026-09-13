@@ -1,0 +1,134 @@
+version: 1
+record_type: "current_detachment_record"
+detachment_id: "11E-SOB-DET-ARMY-OF-FAITH"
+authority_map: "../../../../AUTHORITY.md"
+authority_scope: "current 11th-edition Army of Faith rules and dated official-lore context"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "current Army of Faith detachment fields explicitly verified here"
+does_not_supersede:
+  - "historical roster snapshots"
+  - "project canon, biography, relationships or story chronology"
+  - "unverified Codex/app-only rules"
+  - "current Games Workshop sources"
+
+edition: 11
+faction: "Adepta Sororitas"
+detachment: "Army of Faith"
+source_index: "../../SOURCE_INDEX.md"
+
+codex_origin:
+  publication_context: "Codex: Adepta Sororitas (2024)"
+  source: "OFF-11E-AOF-CODEX-PREVIEW"
+  note: >
+    Army of Faith originates in the 2024 Codex presentation. The 2026 edition
+    explicitly retained existing Codex Detachments unless separately updated.
+  carry_forward:
+    verification_status: "verified_current"
+    source: "OFF-11E-ARMY-BUILDING-2026"
+
+current_construction:
+  verification_status: "verified_current"
+  sources:
+    - "OFF-11E-MFM-SOB-1.0"
+    - "OFF-11E-IMPERIAL-FACTION-PACKS-ARTICLE"
+  detachment_points: 2
+  force_disposition: "Take and Hold"
+  note: >
+    Force Disposition affects mission selection in 11th edition; it is a game
+    construction field and is not a personality trait or permanent fictional
+    doctrine of Constantia or the Silver Compass.
+
+enhancements:
+  - name: "Blade of Saint Ellynor"
+    verification_status: "verified_current"
+    source: "OFF-11E-MFM-SOB-1.0"
+    points: 15
+    effect:
+      verification_status: "blocked_current_source"
+      authority: "current Codex / Warhammer 40,000 app"
+  - name: "Divine Aspect"
+    verification_status: "verified_current"
+    source: "OFF-11E-MFM-SOB-1.0"
+    points: 5
+    effect:
+      verification_status: "blocked_current_source"
+      authority: "current Codex / Warhammer 40,000 app"
+  - name: "Litanies of Faith"
+    verification_status: "verified_current"
+    source: "OFF-11E-MFM-SOB-1.0"
+    points: 10
+    effect:
+      verification_status: "blocked_current_source"
+      authority: "current Codex / Warhammer 40,000 app"
+  - name: "Triptych of the Macharian Crusade"
+    verification_status: "verified_current"
+    source: "OFF-11E-MFM-SOB-1.0"
+    points: 20
+    effect:
+      verification_status: "blocked_current_source"
+      authority: "current Codex / Warhammer 40,000 app"
+
+detachment_rule:
+  name: "Sacred Rites"
+  verification_status: "partially_verified_current"
+  sources:
+    - "OFF-11E-AOF-CODEX-PREVIEW"
+    - "OFF-11E-ARMY-BUILDING-2026"
+  public_official_evidence: >
+    The official Codex preview states that an Adepta Sororitas unit from this
+    army can perform up to two Acts of Faith in the same phase instead of one.
+    Games Workshop explicitly frames the benefit as greater reliability at
+    decisive moments and the cost as faster consumption of the Miracle-dice pool.
+  current_authority_boundary: >
+    Complete current wording remains controlled by the current Codex/app. The
+    inspected 2026 Faction Pack Rules Updates do not contain an Army of Faith
+    or Sacred Rites amendment.
+
+army_rule_interaction:
+  Acts_of_Faith:
+    verification_status: "verified_current"
+    source: "OFF-11E-SOB-FP-1.0"
+    gaining_miracle_dice:
+      - "Gain 1 Miracle dice at the start of each battle round."
+      - "Gain 1 Miracle dice each time an ADEPTA SORORITAS unit from your army is destroyed."
+    boundary: >
+      This is a faction-level 2026 update. It does not by itself reproduce every
+      Codex rule governing which rolls an Act of Faith can substitute.
+
+stratagems:
+  verification_status: "blocked_current_source"
+  authority: "current Codex / Warhammer 40,000 app"
+  note: >
+    Do not reconstruct the complete current Army of Faith Stratagem set from
+    community databases, older-edition summaries or model memory.
+
+official_theme:
+  evidence_class: "A5"
+  source: "OFF-11E-AOF-CODEX-PREVIEW"
+  summary: >
+    Games Workshop presents Army of Faith as the Adepta Sororitas Detachment
+    that intensifies the faction theme of Acts of Faith, allowing repeated
+    miraculous reliability while putting greater pressure on the Miracle-dice pool.
+
+project_interpretation:
+  canon_status: "INTERPRETATION"
+  evidence_class: "A6"
+  simulation_translation: >
+    For Constantia, Army of Faith is best used as a command problem about
+    consequential uncertainty: what deserves extraordinary reliability now,
+    and what later option is surrendered by consuming the resource.
+  boundaries:
+    - "Miracle dice are a tabletop abstraction, not literal numbered objects in-world."
+    - "The detachment does not determine Constantia's personality or private theology."
+    - "Army of Faith does not prove the cause or message of THE LIGHT OF RETURN."
+
+project_connections:
+  constantia_guide: "../../../../Characters/Constantia-Serenitas.md"
+  roster_occurrences:
+    - "FORCE-1985-V946/F1985-01"
+    - "FORCE-3000/F3000-01"
+  note: >
+    Both preserved snapshots map Constantia to the Canoness Warlord occurrence
+    and list Litanies of Faith. This connects her tabletop representation to
+    this detachment without converting roster structure into fictional biography.

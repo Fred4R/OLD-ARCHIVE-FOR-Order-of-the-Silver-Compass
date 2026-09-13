@@ -25,7 +25,7 @@ There is no universal ranking for every question. Identify the question type fir
 | FORCE-1985-V946 repository crosswalk | `Armies/Order-of-the-Silver-Compass/FORCE-1985-V946.yaml` | Maps roster occurrences to project unit IDs, rules IDs, and explicitly scoped project identities. It does not replace the exact source artifact. |
 | Exact FORCE-3000 source payload | `Sources/Armies/FORCE-3000.txt` | Standalone immutable source artifact. Appendix B remains the preserved embedded copy. It is not current legality or fictional chronology. |
 | FORCE-3000 repository crosswalk | `Armies/Order-of-the-Silver-Compass/FORCE-3000.yaml` | Maps the House Montfort 3,000-point roster to project unit IDs, rules IDs, and explicitly scoped project identities. It does not replace the exact source artifact. |
-| Current 11th-edition findings | `Rules/11e/SOURCE_INDEX.md` plus the matching record under `Rules/11e/units/` | Governs only fields actually verified from current official Games Workshop/Warhammer sources. |
+| Current 11th-edition findings | `Rules/11e/SOURCE_INDEX.md` plus the matching record under `Rules/11e/units/` or `Rules/11e/detachments/` | Governs only fields actually verified from current official Games Workshop/Warhammer sources. Unit records govern datasheet-specific fields; Detachment records govern Detachment-specific fields such as Detachment Points, Force Disposition, Enhancements, Stratagems and Detachment rules. |
 | Current official Warhammer lore/rules | Current Games Workshop/Warhammer primary source | Repository records verification and routing; they do not outrank the official source. |
 | Human-evidence methodology | Original PDFs under `Sources/Methodology/` | These sources govern the scientific constructs and limits they actually support. `Sources/Methodology/REVIEW_STATUS.md` governs only the later review-completion state. |
 | Illustrative fiction proposals | `Stories/Illustrative/` | A7 / PROPOSAL material. May draw on established continuity but does not become accepted story history merely by being stored. |
@@ -78,7 +78,7 @@ When records disagree:
 For a current Warhammer 40,000 question:
 
 1. start at `Rules/11e/SOURCE_INDEX.md`;
-2. use the matching rules record;
+2. use the matching unit record under `Rules/11e/units/` for datasheet questions or the matching Detachment record under `Rules/11e/detachments/` for Detachment-specific questions;
 3. inspect source and verification status;
 4. if a field is missing, `not_yet_verified`, or `blocked_current_source`, retrieve the current official source if possible;
 5. do not substitute a historical roster value or inherited rules claim and call it current.

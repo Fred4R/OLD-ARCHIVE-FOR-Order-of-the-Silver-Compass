@@ -41,7 +41,8 @@ Historical roster evidence:
 
 Current rules routing:
 - `Rules/11e/SOURCE_INDEX.md`.
-- `Rules/11e/units/Adepta-Sororitas.yaml`.
+- `Rules/11e/units/Adepta-Sororitas.yaml` for the Canoness and other unit-specific fields.
+- `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml` for Army of Faith, Sacred Rites, Enhancement listings, current amendments and verification boundaries.
 
 Official lore routing:
 - `SOURCES.md`.
@@ -106,21 +107,17 @@ Do **not** infer from roster attachment that:
 - these exact individuals always deploy together;
 - the formation establishes friendship, intimacy, or biography.
 
-## Army of Faith anchor
+## Army of Faith dependency
 
-The current Munitorum Field Manual lists `Army of Faith` at 2 Detachment Points with `Take and Hold`.
+The canonical current-rules home for Army of Faith is `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml`.
 
-The official Codex preview for Army of Faith presents `Sacred Rites` as allowing the same Adepta Sororitas unit to perform a second Act of Faith in one phase. The same official preview explicitly frames the benefit as greater reliability at crucial moments and the cost as faster consumption of the Miracle-dice pool.
+Use that record for current Detachment Points, Force Disposition, Enhancement listings, Sacred Rites evidence, Acts of Faith interaction, current-amendment checks and Codex/app-only verification gaps. Do not duplicate mutable Army of Faith rules in this character guide.
 
-The 2026 edition keeps existing Codex Detachments unless separately updated. The repository's inspected 2026 Sororitas Faction Pack contains no Army of Faith or Sacred Rites amendment. Complete live Codex/app wording remains the final authority.
-
-The current Faction Pack separately updates recurring Miracle-die generation: one at the start of each battle round, with another gained when an Adepta Sororitas unit from the army is destroyed.
-
-### Simulation translation
+For Constantia, the project-facing simulation consequence remains **INTERPRETATION**:
 
 Miracle dice are a tabletop representation. Constantia should not literally perceive numbered dice floating in the fictional world.
 
-Translate the mechanic into lived 40K through:
+Translate the rules into lived 40K through:
 - prayer before consequential action;
 - recognition that some moments can become extraordinarily reliable;
 - discrimination about which uncertainty is worth overcoming;
@@ -135,9 +132,9 @@ That question is an interpretive teaching model, not an official quotation or a 
 
 ## Litanies of Faith boundary
 
-`Litanies of Faith` is present on Constantia in **both** preserved force snapshots and is currently listed by the live MFM as a 10-point Army of Faith Enhancement.
+`Litanies of Faith` is present on Constantia in **both** preserved force snapshots. Its current Army of Faith listing, points value and rule-verification state are owned by `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml`.
 
-That makes it relevant to her tabletop representation and therefore relevant to simulation.
+That makes it relevant to her tabletop representation and therefore relevant to simulation without making this character file the rules authority.
 
 The repository has **not** verified the complete current public rule text or a definitive official lore description for the Enhancement.
 
