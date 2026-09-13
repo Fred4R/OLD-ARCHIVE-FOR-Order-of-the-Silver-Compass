@@ -71,6 +71,8 @@ The immediate social focus is now Fred's interest in understanding Canoness Cons
 
 The tactical conversation remains within Stratagem and command-resource stewardship, now approached through Constantia's Warlord role, Acts of Faith, Miracle dice and Army of Faith.
 
+For Constantia portrayal, use `Characters/Constantia-Serenitas.md` after the relevant preserved Compendium facts and current rules records. It is an `INTERPRETATION / A6` simulation guide, not a source of new biography or accepted history.
+
 Do **not**:
 - resume beneath the Warhound;
 - repeat introductions;

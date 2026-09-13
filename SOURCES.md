@@ -54,8 +54,21 @@ These sources are used to test compatibility and sharpen portrayal. They do not 
 - Games Workshop / Warhammer Community, "Starting an Adepta Sororitas Army in Warhammer 40,000 – Everything You Need To Know, From Painting to Lore", 2024.
   - The Adepta Sororitas are a martial sisterhood whose devotion is presented as integral to how they fight.
   - Their historical institutional role includes defending holy sites and waging wars of faith against heretics.
-  - Project use: broad faction context only; it does not define Constantia's personal history.
+  - Its Canoness example explicitly presents a Canoness as useful either with a firing line to improve resilience and objective holding or at the front with Celestian Sacresants.
+  - Project use: broad faction and Canoness-role compatibility. This supports a flexible command-position model for Constantia; it does not create her personal history, motives, preferred formation or past deployments.
   - Locator: https://www.warhammer-community.com/en-gb/articles/PFyXcQCJ/starting-an-adepta-sororitas-army-in-warhammer-40000-everything-you-need-to-know-from-painting-to-lore/
+
+- Games Workshop / Warhammer Community, "Are You a 'Burn Everything' Kind of Battle Sister, or a Penitent Zealot? Find Out in Codex: Adepta Sororitas", 2024.
+  - Official public Codex preview for Army of Faith.
+  - Sacred Rites is presented as allowing an Adepta Sororitas unit to perform a second Act of Faith in the same phase, increasing reliability while consuming the Miracle-dice pool faster.
+  - Project use: supports the Army of Faith decision model around consequential reliability and resource stewardship.
+  - Temporal boundary: this is a 2024 Codex preview. Current-edition status and any later amendments are routed through `Rules/11e/SOURCE_INDEX.md`; complete live Codex/app wording remains the final authority.
+  - Locator: https://www.warhammer-community.com/en-gb/articles/yM3ZJXWr/are-you-a-burn-everything-kind-of-battle-sister-or-a-penitent-zealot-find-out-in-codex-adepta-sororitas/
+
+- Games Workshop / Warhammer Community, "Warhammer 40,000 Faction Focus: Adepta Sororitas", 11 May 2026.
+  - Sanctified Orators is presented as a Character-focused Detachment whose commanders recite stirring hymns; its rule is named `Hymns of Battle`.
+  - Project use: supports keeping sacred oratory and hymnal inspiration distinct from Army of Faith's Acts-of-Faith resource logic. It does not assign every Sanctified Orators rule or Enhancement to Constantia or Eulalia personally.
+  - Locator: https://www.warhammer-community.com/en-gb/articles/1zvyawig/warhammer-40000-faction-focus-adepta-sororitas/
 
 ## Warhammer 40,000 lore and rules
 

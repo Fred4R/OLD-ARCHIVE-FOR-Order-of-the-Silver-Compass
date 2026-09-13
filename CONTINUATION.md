@@ -115,15 +115,23 @@ Do not infer that a Detachment rule is Constantia's personality. Use the rule to
 
 ### Constantia-specific project connection
 
-The preserved roster establishes Constantia's Canoness occurrence as the Warlord and gives her Litanies of Faith in FORCE-1985. Project continuity separately establishes her as commander of the Silver Compass, competent in her own right, protective of the Sisters she commands, strong in faith, and unwilling to treat private interpretation as infallible.
+Use `Characters/Constantia-Serenitas.md` as an `INTERPRETATION / A6` simulation overlay when Constantia is the focal character. It does not supersede the established facts in the preserved Compendium, create new biography, or turn tabletop attachment into a personal relationship.
+
+Both preserved force snapshots establish the same first-formation structure: Constantia's Canoness occurrence is the Warlord and carries Litanies of Faith; Eulalia Veridica is the Dialogus Support Character; and a five-model Retributor Squad is the Bodyguard formation. This repeated roster structure supports a functional command / sacred-communication / heavy-fire simulation context, but it does not prove a permanent entourage, friendship history, or fictional deployment chronology.
+
+Project continuity separately establishes Constantia as commander of the Silver Compass, competent in her own right, protective of the Sisters she commands, strong in faith, and unwilling to treat private interpretation as infallible.
 
 Official Sacred Rose lore may be used as compatibility context because the project already establishes a Sacred Rose inheritance. The official lore describes Saint Arabella as level-headed and serene, oriented toward liberation of the oppressed, and Sacred Rose Sisters as praying for fortitude and strength rather than bloodlust. Do not copy Arabella's biography into Constantia or use the source to prove private motives.
 
 ### Preferred lived teaching chain
 
-Use:
+For Army of Faith teaching, use:
 
 mission -> threatened purpose -> Miracle-dice pool -> first Act of Faith -> whether a second Act is worth the cost -> consequence -> remaining Miracle dice -> future options
+
+For full Constantia simulation, route the choice through the reusable model in `Characters/Constantia-Serenitas.md`:
+
+mission -> threat or failure mode -> relevant capability -> proper authority -> reliability/resource choice -> opportunity cost -> action -> reassessment
 
 For Constantia as Warlord, make leadership visible through selection and restraint:
 - what certainty is worth purchasing now;

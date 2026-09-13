@@ -83,17 +83,30 @@ units:
       - "FORCE-1985-V946/F1985-01"
       - "FORCE-3000/F3000-01"
     current_datasheet:
-      status: "not_yet_verified"
+      status: "partially_verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
       characteristics: null
       weapons: null
       abilities: null
       keywords: null
       faction_keywords: null
+      attachment_role: "Leader"
+      eligible_bodyguard_units:
+        - "Battle Sisters Squad"
+        - "Celestian Insidiants"
+        - "Celestian Sacresants"
+        - "Dominion Squad"
+        - "Retributor Squad"
+        - "Sisters Novitiate Squad"
     current_points:
       status: "verified_current"
       source: "OFF-11E-MFM-SOB-1.0"
       unit_cost: 60
-    verified_updates: []
+    verified_updates:
+      - source: "OFF-11E-MFM-SOB-1.0"
+        as_of: "2026-09-13"
+        field: "leader_eligibility"
+        value: "Leader for Battle Sisters Squad, Celestian Insidiants, Celestian Sacresants, Dominion Squad, Retributor Squad and Sisters Novitiate Squad."
 
   11E-SOB-DIALOGUS:
     datasheet: "Dialogus"
