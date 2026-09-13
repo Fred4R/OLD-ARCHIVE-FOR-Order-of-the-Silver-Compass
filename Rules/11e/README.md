@@ -6,7 +6,7 @@ This directory connects Silver Compass roster records to current official Warham
 
 ## Authority scope
 
-`Rules/11e/` governs only the current-rules fields that its records explicitly verify from current official Games Workshop/Warhammer sources.
+This directory governs only the current-rules fields that its records explicitly verify from current official Games Workshop/Warhammer sources.
 
 It may narrowly supersede older Compendium rules statements for those verified fields. It does not supersede:
 - historical roster payloads or snapshot costs;
@@ -43,4 +43,4 @@ Historical export points and current points are separate fields. A later rules c
 
 ## Current pilot
 
-The first pilot is `FORCE-1985-V946`, the directly re-supplied 1,985-point Order of the Silver Compass list. Its exact export remains in Appendix C of `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` pending extraction to a standalone immutable source artifact.
+The first pilot is `FORCE-1985-V946`, the directly re-supplied 1,985-point Order of the Silver Compass list. Its standalone exact source is `../../Sources/Armies/FORCE-1985-V946.txt`; Appendix C of `../../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` remains the preserved embedded copy.
