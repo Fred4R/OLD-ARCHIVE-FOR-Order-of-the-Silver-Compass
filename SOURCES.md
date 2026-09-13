@@ -40,6 +40,23 @@ Current extracted army sources:
 
 These academic sources govern only the scientific constructs and limits they actually support. `Sources/Methodology/REVIEW_STATUS.md` records the later full-review state and narrowly supersedes the older Compendium audit only on that review-completion question. The papers improve inference; they do not create project canon or dictate fiction.
 
+## Relevant official Adepta Sororitas lore anchors
+
+These sources are used to test compatibility and sharpen portrayal. They do not create project biography, motive, relationship or private belief by themselves.
+
+- Games Workshop / Warhammer Community, "New animation Adepta Sororitas: Penitence arrives on Warhammer+ along with a host of special content", 2026.
+  - The Order of the Sacred Rose is one of the six Orders Majoris.
+  - Its Matriarch is Saint Arabella, remembered as level-headed and serene and as a liberator of the oppressed.
+  - Sacred Rose Sisters are described as intoning prayers of fortitude and strength rather than bloodlust and vengeance.
+  - Project use: this supports compatibility with Constantia's already-established Sacred Rose inheritance and her calm, liberation-oriented theology. It does not transfer Arabella's biography or make serenity a rule-determined personality.
+  - Locator: https://www.warhammer-community.com/en-gb/articles/mb5z0ebi/new-animation-adepta-sororitas-penitence-arrives-on-warhammer-along-with-a-host-of-special-content/
+
+- Games Workshop / Warhammer Community, "Starting an Adepta Sororitas Army in Warhammer 40,000 – Everything You Need To Know, From Painting to Lore", 2024.
+  - The Adepta Sororitas are a martial sisterhood whose devotion is presented as integral to how they fight.
+  - Their historical institutional role includes defending holy sites and waging wars of faith against heretics.
+  - Project use: broad faction context only; it does not define Constantia's personal history.
+  - Locator: https://www.warhammer-community.com/en-gb/articles/PFyXcQCJ/starting-an-adepta-sororitas-army-in-warhammer-40000-everything-you-need-to-know-from-painting-to-lore/
+
 ## Warhammer 40,000 lore and rules
 
 Current official Games Workshop/Warhammer sources govern current lore and rules.

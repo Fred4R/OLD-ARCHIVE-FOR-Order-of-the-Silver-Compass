@@ -166,6 +166,36 @@ Relevant metadata:
 - Adepta Sororitas `Sanctified Orators`: Purge the Foe, 1DP.
 - Imperial Knights current detachment names/DP values are listed independently.
 
+## OFF-11E-ARMY-BUILDING-2026
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Building an army in the new edition of Warhammer 40,000  
+Date: 2 April 2026  
+Locator: https://www.warhammer-community.com/en-gb/articles/95fucn12/building-an-army-in-the-new-edition-of-warhammer-40000/  
+Verified: yes, 2026-09-13  
+Scope: 11th-edition army-construction transition and Detachment Point structure.
+
+Relevant verified findings:
+- existing Codexes and their Detachments remain valid in the new edition unless separately updated;
+- Strike Force is 2,000 points with 3 Detachment Points, an Enhancement Limit of 4 and a normal Unit Limit of 3, doubled for Battleline.
+
+## OFF-11E-AOF-CODEX-PREVIEW
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Are You a 'Burn Everything' Kind of Battle Sister, or a Penitent Zealot? Find Out in Codex: Adepta Sororitas  
+Date: 6 June 2024  
+Locator: https://www.warhammer-community.com/en-gb/articles/yM3ZJXWr/are-you-a-burn-everything-kind-of-battle-sister-or-a-penitent-zealot-find-out-in-codex-adepta-sororitas/  
+Verified: yes, 2026-09-13  
+Scope: official public Codex preview for the Army of Faith Detachment.
+
+Relevant verified findings:
+- Army of Faith's Sacred Rites rule lets an Adepta Sororitas unit perform up to two Acts of Faith in the same phase instead of one;
+- Games Workshop explicitly frames that increased reliability as consuming the Miracle-dice pool faster;
+- the preview identifies Blade of Saint Ellynor and Divine Guidance as examples of ways Army of Faith can replenish Miracle dice.
+
+Temporal boundary:
+The 2026 edition explicitly retains existing Codex Detachments. The inspected current 2026 Adepta Sororitas Faction Pack rules-update section contains no Army of Faith or Sacred Rites amendment. This supports continued use of the Codex rule in public official evidence, but the live Warhammer 40,000 app/current Codex remains the final authority for complete wording.
+
 ## Source-routing rule
 
 For current rules questions:

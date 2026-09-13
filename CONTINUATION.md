@@ -96,6 +96,44 @@ After meaningful repository changes:
 
 Do not announce “complete,” “verified,” “current,” “legal,” “accepted,” or “ready” unless the relevant condition was actually checked.
 
+## Current focus — Constantia as Warlord and Army of Faith
+
+Direct user instruction on 2026-09-13 shifts the immediate experiential focus from understanding Justina toward understanding Canoness Constantia Serenitas as Warlord through the Army of Faith Detachment.
+
+This changes current priority only. It does not erase the established Justina thread, move anyone out of the current chamber, or create a new fictional event by itself.
+
+### Official-rules connection
+
+Use the following verified/public evidence when Army of Faith enters the story:
+
+- Rules/11e/SOURCE_INDEX.md record OFF-11E-AOF-CODEX-PREVIEW: Sacred Rites permits an Adepta Sororitas unit to perform up to two Acts of Faith in one phase instead of one.
+- OFF-11E-SOB-FP-1.0: current Acts of Faith generation gives 1 Miracle dice at the start of each battle round and each time an Adepta Sororitas unit from the army is destroyed.
+- OFF-11E-MFM-SOB-1.0: Army of Faith is currently 2DP, unlocks Take and Hold, and lists Litanies of Faith at 10 points and Blade of Saint Ellynor at 15 points.
+- OFF-11E-ARMY-BUILDING-2026: existing Codex Detachments remain valid in 11th edition unless separately updated.
+
+Do not infer that a Detachment rule is Constantia's personality. Use the rule to teach a command problem: greater certainty now can consume a scarce Miracle-dice resource and therefore reduce future options.
+
+### Constantia-specific project connection
+
+The preserved roster establishes Constantia's Canoness occurrence as the Warlord and gives her Litanies of Faith in FORCE-1985. Project continuity separately establishes her as commander of the Silver Compass, competent in her own right, protective of the Sisters she commands, strong in faith, and unwilling to treat private interpretation as infallible.
+
+Official Sacred Rose lore may be used as compatibility context because the project already establishes a Sacred Rose inheritance. The official lore describes Saint Arabella as level-headed and serene, oriented toward liberation of the oppressed, and Sacred Rose Sisters as praying for fortitude and strength rather than bloodlust. Do not copy Arabella's biography into Constantia or use the source to prove private motives.
+
+### Preferred lived teaching chain
+
+Use:
+
+mission -> threatened purpose -> Miracle-dice pool -> first Act of Faith -> whether a second Act is worth the cost -> consequence -> remaining Miracle dice -> future options
+
+For Constantia as Warlord, make leadership visible through selection and restraint:
+- what certainty is worth purchasing now;
+- which Sister or formation bears the risk if certainty is withheld;
+- which later crisis becomes harder if the pool is spent;
+- when faith is expressed by commitment;
+- when faith is expressed by refusing to spend a sacred resource merely because it is available.
+
+Keep the rule and the theology distinct. A tabletop choice may illuminate a character theme, but it does not establish a private belief unless the story separately does so.
+
 ## Symbolic-story protocol
 
 Repository actions may inspire symbolic echoes in illustrative or later accepted fiction, but the software action and the fictional event are never the same thing.

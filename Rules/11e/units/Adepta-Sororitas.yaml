@@ -32,6 +32,18 @@ status_rule: >
   Empty current fields are never interpreted as zero or absent.
   Current point schedules come from the live MFM and do not rewrite snapshot costs.
 
+current_army_rule_context:
+  Acts_of_Faith:
+    source: "OFF-11E-SOB-FP-1.0"
+    verification_status: "verified_current"
+    gaining_miracle_dice:
+      - "Gain 1 Miracle dice at the start of each battle round."
+      - "Gain 1 Miracle dice each time an ADEPTA SORORITAS unit from your army is destroyed."
+    note: >
+      This is the current 2026 Faction Pack update. It changes the timing of the
+      recurring Miracle-die gain and does not itself replace the Codex definition
+      of which rolls an Act of Faith can substitute.
+
 current_detachment_costs:
   Army_of_Faith:
     source: "OFF-11E-MFM-SOB-1.0"
@@ -41,6 +53,20 @@ current_detachment_costs:
     enhancements:
       Litanies_of_Faith: 10
       Blade_of_Saint_Ellynor: 15
+    detachment_rule:
+      name: "Sacred Rites"
+      source: "OFF-11E-AOF-CODEX-PREVIEW"
+      verification_status: "partially_verified_current"
+      public_official_evidence: >
+        The official Codex preview states that each ADEPTA SORORITAS unit from
+        the army can perform up to two Acts of Faith per phase instead of one.
+        The 2026 edition retains existing Codex Detachments and the inspected
+        2026 Faction Pack rules-update section contains no Army of Faith or
+        Sacred Rites amendment. Complete live app/Codex wording remains the
+        final authority.
+      tactical_consequence: >
+        A unit can use Miracle dice twice in one phase, increasing reliability
+        at decisive moments while consuming the finite Miracle-dice pool faster.
   Sanctified_Orators:
     source: "OFF-11E-MFM-SOB-1.0"
     verification_status: "verified_current"
