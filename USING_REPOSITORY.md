@@ -152,6 +152,8 @@ For the current chamber:
 
 The next conversation should favor experience over architecture.
 
+When Constantia is the focal character, retrieve `Characters/Constantia-Serenitas.md` after the controlling continuity and current-rules records. Treat that file as `INTERPRETATION / A6`: it guides portrayal but does not create biography, relationships or accepted history.
+
 Current focus:
 - Canoness Constantia Serenitas as Warlord;
 - Army of Faith;
