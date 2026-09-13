@@ -57,14 +57,20 @@ current_rules_status:
   as_of: "2026-09-12"
   authority: "../../Rules/11e/SOURCE_INDEX.md"
   whole_list_legality: "not_certified"
-  current_points: "not_verified"
-  current_leader_support_attachments: "not_fully_verified"
-  current_allied_legality: "not_verified"
+  current_points:
+    verification_status: "partially_verified_current"
+    calculated_cost_if_current_retrieved_schedules_apply: 1975
+    sources:
+      - "OFF-11E-MFM-SOB-1.0"
+      - "OFF-11E-MFM-IA-1.0"
+    note: >
+      This calculated value applies current retrieved MFM unit, wargear and
+      Enhancement/Upgrade schedules to the preserved snapshot composition.
+      It is not a whole-list legality certificate and does not rewrite the
+      historical 1,985-point export.
+  current_leader_support_attachments: "partially_verified_current"
+  current_allied_legality: "not_fully_verified"
   live_mfm_source: "OFF-11E-MFM-LIVE"
-  note: >
-    The current MFM locator was identified, but the live endpoint returned HTTP
-    403 through the available route. Snapshot values remain historical/export
-    evidence rather than current legality claims.
 
 direct_user_resupply:
   record_type: "provenance_event"
