@@ -1,3 +1,5 @@
+For a fresh conversation, read `NEW_CONVERSATION.md` first. It is a routing handoff, not a canon source.
+
 # Instructions for AI systems
 
 This is a provenance-controlled Warhammer 40,000 project repository.
