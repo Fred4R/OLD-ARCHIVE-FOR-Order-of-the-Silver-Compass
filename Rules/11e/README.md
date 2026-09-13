@@ -63,10 +63,12 @@ Current rules records now cover the relevant Adepta Sororitas, Imperial Agents, 
 
 Shared current rules concepts live under `system/`.
 
-Current foundation:
+Current records:
 - `system/ARMY_CONSTRUCTION.yaml` — current verified army-construction structure;
+- `system/MISSIONS.yaml` — current shared mission generation, event/casual distinctions and scoring boundaries;
+- `system/TERRAIN_AND_OBJECTIVES.yaml` — current terrain/objective interaction with explicit time-sensitive layout boundaries;
 - `system/SOURCE_AND_UPDATE_ROUTING.yaml` — current official-source routing and update discipline.
 
-The next planned system merge is mission selection together with terrain/objective interaction. See `../../../CONTINUATION.md`.
+The next integration step is to connect the two preserved army crosswalks to these shared system concepts without rewriting historical roster evidence. See `../../../CONTINUATION.md`.
 
-System records must use current official Games Workshop evidence. They connect rules structure across armies without rewriting historical roster snapshots or turning game structure into fictional chronology.
+System records must use current official Games Workshop evidence. They connect rules structure across armies without turning rules structure into fictional chronology.
