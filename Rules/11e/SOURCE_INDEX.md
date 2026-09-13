@@ -192,10 +192,26 @@ Scope: official public Codex preview for the Army of Faith Detachment.
 Relevant verified findings:
 - Army of Faith's Sacred Rites rule lets an Adepta Sororitas unit perform up to two Acts of Faith in the same phase instead of one;
 - Games Workshop explicitly frames that increased reliability as consuming the Miracle-dice pool faster;
-- the preview identifies Blade of Saint Ellynor and Divine Guidance as examples of ways Army of Faith can replenish Miracle dice.
+- the published Blade of Saint Ellynor rules image verifies stronger, more penetrating melee attacks, Precision, and a Miracle-die reward after the bearer destroys enemy models in melee;
+- the published Divine Guidance rules image verifies a 1CP Battle Tactic that improves Armour Penetration for one Sororitas unit in Shooting or Fight and can generate a Miracle die when those attacks destroy enemy models.
 
 Temporal boundary:
 The 2026 edition explicitly retains existing Codex Detachments. The inspected current 2026 Adepta Sororitas Faction Pack rules-update section contains no Army of Faith or Sacred Rites amendment. This supports continued use of the Codex rule in public official evidence, but the live Warhammer 40,000 app/current Codex remains the final authority for complete wording.
+
+## OFF-11E-APP-CODEX-AUTHORITY
+
+Publisher: Games Workshop / Warhammer Community  
+Titles: #New40k – Points, apps, and updates incoming; Warhammer 40,000 Core Rules  
+Dates: 15 June 2026; 1 June 2026  
+Verified: yes, 2026-09-13
+
+Relevant verified findings:
+- the 2026 app update provides full integration with the new edition while retaining previously unlocked Codex rules;
+- the 2026 Core Rules identify the Warhammer 40,000 app as the best place for the latest faction updates and Codexes as the principal faction source books for background and rules;
+- detailed Codex rules are not fully republished in the public MFM or Faction Pack.
+
+Repository consequence:
+Use public official previews for the fields they actually expose. Keep unexposed Codex/app-only fields blocked rather than reconstructing them from secondary sources.
 
 ## Source-routing rule
 
