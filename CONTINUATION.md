@@ -104,18 +104,21 @@ This changes current priority only. It does not erase the established Justina th
 
 ### Official-rules connection
 
-Use the following verified/public evidence when Army of Faith enters the story:
+Use `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml` as the canonical repository home when Army of Faith enters the story or tactical explanation.
 
-- Rules/11e/SOURCE_INDEX.md record OFF-11E-AOF-CODEX-PREVIEW: Sacred Rites permits an Adepta Sororitas unit to perform up to two Acts of Faith in one phase instead of one.
-- OFF-11E-SOB-FP-1.0: current Acts of Faith generation gives 1 Miracle dice at the start of each battle round and each time an Adepta Sororitas unit from the army is destroyed.
-- OFF-11E-MFM-SOB-1.0: Army of Faith is currently 2DP, unlocks Take and Hold, and lists Litanies of Faith at 10 points and Blade of Saint Ellynor at 15 points.
-- OFF-11E-ARMY-BUILDING-2026: existing Codex Detachments remain valid in 11th edition unless separately updated.
+That record separates:
+- the 2024 Codex origin from 11th-edition carry-forward;
+- current 2DP / Take and Hold construction data;
+- all four current Enhancement names and points;
+- current Acts of Faith generation from the 2026 Faction Pack;
+- publicly verified Sacred Rites evidence;
+- complete Stratagem and Enhancement-effect fields that remain blocked behind the current Codex/app authority.
 
 Do not infer that a Detachment rule is Constantia's personality. Use the rule to teach a command problem: greater certainty now can consume a scarce Miracle-dice resource and therefore reduce future options.
 
 ### Constantia-specific project connection
 
-Use `Characters/Constantia-Serenitas.md` as an `INTERPRETATION / A6` simulation overlay when Constantia is the focal character. It does not supersede the established facts in the preserved Compendium, create new biography, or turn tabletop attachment into a personal relationship.
+After resolving current Army of Faith fields through `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml`, use `Characters/Constantia-Serenitas.md` as an `INTERPRETATION / A6` simulation overlay when Constantia is the focal character. It does not supersede the established facts in the preserved Compendium, create new biography, or turn tabletop attachment into a personal relationship.
 
 Both preserved force snapshots establish the same first-formation structure: Constantia's Canoness occurrence is the Warlord and carries Litanies of Faith; Eulalia Veridica is the Dialogus Support Character; and a five-model Retributor Squad is the Bodyguard formation. This repeated roster structure supports a functional command / sacred-communication / heavy-fire simulation context, but it does not prove a permanent entourage, friendship history, or fictional deployment chronology.
 
@@ -171,7 +174,7 @@ Etymology should normally influence diction silently. Explain an origin only whe
 
 For unnamed characters, introduce names gradually through natural address. A lore-compatible name remains a proposal until accepted.
 
-For Army of Faith, do not rely on a secondary full Stratagem list as though it were current official evidence. Retrieve the current official Codex/app or another authoritative Games Workshop route before precise Stratagem wording.
+For Army of Faith, do not rely on a secondary full Stratagem list or Enhancement-effect summary as though it were current official evidence. Retrieve the current official Codex/app or another authoritative Games Workshop route before precise Stratagem wording or Enhancement-effect claims.
 
 ## Symbolic-story protocol
 
