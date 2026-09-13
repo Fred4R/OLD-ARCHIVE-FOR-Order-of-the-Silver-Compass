@@ -20,9 +20,10 @@ When answering an army, unit, tactics, or story-context question:
 
 1. Resolve the roster occurrence, such as `FORCE-1985-V946/F1985-01`.
 2. Resolve the stable project unit identifier, such as `UNIT-CANONESS`.
-3. Resolve the 11th-edition rules identifier, such as `11E-SOB-CANONESS`.
-4. Use only current official data whose source and verification status are recorded.
-5. Resolve a project character mapping only when project continuity separately establishes it.
+3. Resolve the 11th-edition unit rules identifier, such as `11E-SOB-CANONESS`, when the question concerns a datasheet.
+4. Resolve the matching record under `detachments/` when the question concerns a Detachment, Enhancement, Stratagem, Detachment Point cost or Force Disposition.
+5. Use only current official data whose source and verification status are recorded.
+6. Resolve a project character mapping only when project continuity separately establishes it.
 
 These are different relations. A roster occurrence is not a datasheet; a datasheet is not a character biography; roster presence is not story-scene presence.
 
@@ -40,6 +41,13 @@ The crosswalk preserves those Games Workshop concepts. It does not invent a para
 - `blocked_current_source` — the authoritative live source was identified but could not be retrieved through the available route.
 
 Historical export points and current points are separate fields. A later rules change does not rewrite an earlier roster snapshot.
+
+## Detachment records
+
+Detachment-specific current rules live under `detachments/`. They preserve Codex origin, current-edition carry-forward, current amendments, construction values and verification boundaries without duplicating those fields inside character or unit records.
+
+Current connected record:
+- `detachments/Adepta-Sororitas/Army-of-Faith.yaml`
 
 ## Connected forces
 
