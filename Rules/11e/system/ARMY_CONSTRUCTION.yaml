@@ -1,0 +1,108 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-ARMY-CONSTRUCTION"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current 11th-edition game-wide army-construction fields explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "current army-construction fields explicitly verified here"
+does_not_supersede:
+  - "historical roster snapshots or snapshot points"
+  - "faction-specific legality or ally permissions not verified here"
+  - "mission rules, terrain rules or objective rules"
+  - "project canon, biography, relationships or story chronology"
+  - "current Games Workshop sources"
+edition: 11
+system: "Army construction"
+source_index: "../SOURCE_INDEX.md"
+
+primary_source:
+  source: "OFF-11E-ARMY-BUILDING-2026"
+  verification_status: "verified_current"
+
+battle_sizes:
+  - name: "Incursion"
+    verification_status: "verified_current"
+    source: "OFF-11E-ARMY-BUILDING-2026"
+    points_total: 1000
+    detachment_points: 2
+    enhancement_limit: 2
+    unit_limit: 2
+    battleline_unit_limit_multiplier: 2
+  - name: "Strike Force"
+    verification_status: "verified_current"
+    source: "OFF-11E-ARMY-BUILDING-2026"
+    points_total: 2000
+    detachment_points: 3
+    enhancement_limit: 4
+    unit_limit: 3
+    battleline_unit_limit_multiplier: 2
+
+unverified_sizes:
+  verification_status: "not_yet_verified"
+  note: >
+    The inspected current public construction article directly lists Incursion
+    and Strike Force only. This record therefore does not infer a current
+    3,000-point construction row from older editions or from the historical
+    FORCE-3000 roster snapshot.
+
+detachments:
+  verification_status: "verified_current"
+  source: "OFF-11E-ARMY-BUILDING-2026"
+  summary: >
+    Existing Codex Detachments remain usable in the new edition unless
+    separately updated. Detachments have Detachment Point costs, and an army
+    can combine Detachments within the Detachment Point budget for its battle size.
+  consequence: >
+    A Detachment choice consumes part of a finite construction budget and can
+    change which rules and Force Dispositions are available to the army.
+
+enhancements:
+  verification_status: "verified_current"
+  source: "OFF-11E-ARMY-BUILDING-2026"
+  summary: >
+    The battle-size table sets an Enhancement Limit. Some Enhancements have the
+    Upgrade tag: one such choice can be applied to up to three non-Character
+    units while counting as one Enhancement choice, with points paid for each
+    application.
+  boundary: >
+    Exact faction Enhancement names, points and effects belong in current
+    faction or Detachment records.
+
+character_attachments:
+  verification_status: "verified_current"
+  source: "OFF-11E-ARMY-BUILDING-2026"
+  leader_and_support:
+    max_leaders_attached_to_one_unit: 1
+    max_support_attached_to_one_unit: 1
+    support_must_be_attached: true
+    leader_may_remain_unattached: true
+    attachment_selected_during_list_building: true
+  boundary: >
+    Eligible bodyguard units and current character labels should be resolved
+    through the current Munitorum Field Manual or faction rules.
+
+force_dispositions:
+  verification_status: "verified_current"
+  source: "OFF-11E-ARMY-BUILDING-2026"
+  values:
+    - "Take and Hold"
+    - "Disruption"
+    - "Purge the Foe"
+    - "Priority Assets"
+    - "Reconnaissance"
+  construction_role: >
+    Detachments grant one or more Force Dispositions and the army selects one
+    during army construction.
+  downstream_dependency: >
+    Force Disposition feeds into mission selection. Detailed mission procedure
+    belongs in the planned MISSIONS system record and is not reconstructed here.
+
+project_use:
+  teaching_chain: >
+    battle size -> construction budget -> Detachment choice -> attachments and
+    limits -> Force Disposition -> options available when mission play begins
+  boundaries:
+    - "Construction rules do not create fictional chronology."
+    - "Roster presence does not establish story presence or relationship."
+    - "A historical army export is evidence of that snapshot, not proof of current legality."
