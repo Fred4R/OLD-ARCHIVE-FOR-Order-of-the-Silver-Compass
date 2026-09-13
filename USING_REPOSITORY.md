@@ -39,7 +39,8 @@ If current rules enter the scene, verify them first and let them matter because 
 
 Start at:
 - `Rules/11e/SOURCE_INDEX.md`;
-- then the matching record under `Rules/11e/units/`.
+- then the matching record under `Rules/11e/units/` for datasheet questions;
+- or the matching record under `Rules/11e/detachments/` for Detachment, Enhancement, Stratagem, Detachment Point or Force Disposition questions.
 
 Check:
 - source identity;
@@ -152,7 +153,7 @@ For the current chamber:
 
 The next conversation should favor experience over architecture.
 
-When Constantia is the focal character, retrieve `Characters/Constantia-Serenitas.md` after the controlling continuity and current-rules records. Treat that file as `INTERPRETATION / A6`: it guides portrayal but does not create biography, relationships or accepted history.
+When Constantia is the focal character, retrieve `Characters/Constantia-Serenitas.md` after the controlling continuity and current-rules records. For Army of Faith, retrieve `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml` before the character guide. Treat the character file as `INTERPRETATION / A6`: it guides portrayal but does not create biography, relationships or accepted history.
 
 Current focus:
 - Canoness Constantia Serenitas as Warlord;
@@ -166,8 +167,8 @@ Before giving precise current Army of Faith Stratagem wording, retrieve the curr
 Public official evidence already supports:
 - Army of Faith remains a valid Codex Detachment in 11th edition unless separately updated;
 - Sacred Rites allows a unit to perform a second Act of Faith in the same phase;
-- the current Faction Pack changes Miracle-die generation;
-- the current MFM supplies the Detachment Point cost, Force Disposition and current enhancement costs recorded in the Sororitas rules crosswalk.
+- the current Faction Pack changes Miracle-die generation and currently contains no Army of Faith or Sacred Rites amendment in its Rules Updates section;
+- the current MFM supplies Army of Faith's Detachment Point cost, Force Disposition, and all four current Enhancement names and points recorded in the dedicated Army of Faith record.
 
 Do not promote a secondary-source Stratagem list to `verified_current` merely because multiple indexes agree.
 
