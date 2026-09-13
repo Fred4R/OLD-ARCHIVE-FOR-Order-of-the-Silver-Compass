@@ -16,10 +16,13 @@ Use that preserved Compendium for baseline project continuity, relationships, ro
 
 Exact army-list source payloads live under `Sources/Armies/` when extracted. Army crosswalk records live under `Armies/`. They map preserved roster evidence into repository identifiers but do not replace the exact roster payload.
 
-Current extracted army source:
+Current extracted army sources:
 - `Sources/Armies/FORCE-1985-V946.txt`
-- SHA-256: `f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6`
-- Embedded duplicate: Appendix C of `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`
+  - SHA-256: `f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6`
+  - Embedded duplicate: Appendix C of `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`
+- `Sources/Armies/FORCE-3000.txt`
+  - SHA-256: `ce28c1e3d3a99fb0765af0b141adcb88ca6373474df2a2f1a909597aca0c2ac9`
+  - Embedded duplicate: Appendix B of `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`
 
 ## Human-evidence methodology
 

@@ -31,6 +31,12 @@ Army exports, current rules, and project continuity answer different questions:
 
 Roster presence does not itself establish story presence, ownership, biography, casualty, reinforcement, rearmament, or chronology.
 
+Connected army references:
+- `Armies/Order-of-the-Silver-Compass/FORCE-1985-V946.yaml`
+- `Armies/Order-of-the-Silver-Compass/FORCE-3000.yaml`
+
+Their exact extracted source payloads live under `Sources/Armies/`.
+
 ## Current migration state
 
 The preserved MASTER identifies itself as:

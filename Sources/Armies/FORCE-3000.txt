@@ -1,0 +1,217 @@
+Order of the Silver Compass (House Montfort) (3000 points)
+
+Adepta Sororitas
+Army of Faith and Sanctified Orators (3 Detachment Points)
+Take and Hold
+Onslaught (3000 points)
+
+Attached Units
+Attached Unit 1
+
+Canoness (70 points)
+• Attached as: Leader (Character)
+  • Warlord
+  • 1x Condemnor boltgun
+    1x Hallowed chainsword
+    1x Null Rod
+  • Enhancement: Litanies of Faith
+
+Dialogus (40 points)
+• Attached as: Support (Character)
+  • 1x Bolt pistol
+    1x Dialogus staff
+
+Retributor Squad (105 points)
+• Attached as: Bodyguard
+  • 1x Retributor Superior
+    • 1x Bolt pistol
+      1x Boltgun
+      1x Close combat weapon
+  • 4x Retributor
+    • 4x Bolt pistol
+      4x Close combat weapon
+      4x Heavy bolter
+
+Attached Unit 2
+
+Imagifier (55 points)
+• Attached as: Support (Character)
+  • 1x Bolt pistol
+    1x Boltgun
+    1x Close combat weapon
+
+Battle Sisters Squad (100 points)
+• Attached as: Bodyguard (Battleline)
+  • 1x Sister Superior
+    • 1x Bolt pistol
+      1x Boltgun
+      1x Close combat weapon
+      1x Power weapon
+  • 9x Battle Sister
+    • 9x Bolt pistol
+      7x Boltgun
+      9x Close combat weapon
+      1x Ministorum flamer
+      1x Ministorum heavy flamer
+      1x Simulacrum Imperialis
+
+Attached Unit 3
+
+Palatine (65 points)
+• Attached as: Leader (Character)
+  • 1x Bolt Pistol
+    1x Palatine blade
+  • Enhancement: Blade of Saint Ellynor
+
+Dogmata (45 points)
+• Attached as: Support (Character)
+  • 1x Bolt pistol
+    1x Mace of the righteous
+
+Celestian Sacresants (75 points)
+• Attached as: Bodyguard
+  • 1x Sacresant Superior
+    • 1x Anointed halberd
+      1x Inferno pistol
+  • 4x Celestian Sacresant
+    • 4x Anointed halberd
+      4x Bolt pistol
+
+Attached Unit 4
+
+Hospitaller (65 points)
+• Attached as: Support (Character)
+  • 1x Bolt pistol
+    1x Chirurgeon’s tools
+
+Dominion Squad (90 points)
+• Attached as: Bodyguard
+  • 1x Dominion Superior
+    • 1x Bolt pistol
+      1x Boltgun
+      1x Close combat weapon
+  • 9x Dominion
+    • 9x Bolt pistol
+      5x Boltgun
+      9x Close combat weapon
+      4x Ministorum flamer
+
+Attached Unit 5
+
+Inquisitor (65 points)
+• Attached as: Leader
+  • 1x Blessed Wardings
+    1x Combi-weapon
+    1x Inquisitorial melee weapon
+
+Inquisitorial Agents (60 points)
+• Attached as: Bodyguard
+  • 5x Inquisitorial Agent
+    • 5x Agent firearm
+      5x Agent melee weapon
+      1x Eviscerator
+      1x Mystic stave
+      1x Plasma pistol
+  • 1x Gun Servitor
+    • 1x Agent melee weapon
+      1x Multi-melta
+
+Attached Unit 6
+
+Rogue Trader Entourage (105 points)
+• Attached as: Leader
+  • 1x Rogue Trader
+    • 1x Household pistol
+      1x Monomolecular cane-rapier
+  • 1x Death Cult Assassin
+    • 1x Dartmask
+      1x Death Cult power blade
+  • 1x Lectro‐Maester
+    • 1x Close combat weapon
+      1x Voltaic pistol
+  • 1x Rejuvenat Adept
+    • 1x Close combat weapon
+      1x Healing serum
+      1x Laspistol
+
+Voidsmen-at-Arms (70 points)
+• Attached as: Bodyguard
+  • 1x Voidmaster
+    • 1x Artificer shotgun
+      1x Close combat weapon
+      1x Laspistol
+  • 4x Voidsman
+    • 4x Close combat weapon
+      3x Lasgun
+      4x Laspistol
+      1x Voidsman rotor cannon
+  • 1x Canid
+    • 1x Vicious bite
+
+
+DEDICATED TRANSPORTS
+
+Sororitas Rhino (65 points)
+  • 1x Armoured tracks
+    1x Hunter-killer missile
+    1x Storm bolter
+
+
+OTHER DATASHEETS
+
+Castigator (165 points)
+  • 1x Armoured tracks
+    1x Castigator battle cannon
+    3x Heavy bolter
+    1x Hunter-killer missile
+    1x Storm bolter
+
+Paragon Warsuits (180 points)
+  • 1x Paragon Superior
+    • 1x Bolt pistol
+      1x Heavy bolter
+      1x Paragon grenade launchers
+      1x Paragon war mace
+  • 2x Paragon
+    • 2x Bolt pistol
+      2x Heavy bolter
+      2x Paragon grenade launchers
+      2x Paragon war mace
+
+Seraphim Squad (75 points)
+  • 1x Seraphim Superior
+    • 2x Bolt pistol
+      1x Close combat weapon
+  • 4x Seraphim
+    • 4x Bolt pistol
+      4x Close combat weapon
+      4x Inferno pistol
+
+
+ALLIED UNITS
+
+Armiger Helverin (140 points)
+  • 2x Armiger autocannon
+    1x Armoured feet
+    1x Meltagun
+
+Armiger Warglaive (140 points)
+  • 1x Questoris heavy stubber
+    1x Reaper chain-cleaver
+    1x Thermal spear
+
+Imperial Rhino (65 points)
+  • 1x Armoured tracks
+    1x Storm bolter
+
+Inquisitorial Chimera (60 points)
+  • 1x Armoured tracks
+    1x Heavy bolter
+    1x Lasgun array
+    1x Multi-laser
+
+Warhound Titan (1100 points)
+  • 1x Warhound feet
+    2x Warhound turbo-laser destructor
+
+Exported with App Version: v2.6.0 (144), Data Version: v946

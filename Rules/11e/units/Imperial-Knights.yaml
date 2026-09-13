@@ -1,0 +1,68 @@
+version: 1
+record_type: "current_rules_crosswalk"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "dated current 11e rules findings for FORCE-3000 Imperial Knights"
+verification_as_of: "2026-09-12"
+supersedes_for:
+  - "only current-rules fields explicitly verified in this file"
+does_not_supersede:
+  - "historical roster snapshots"
+  - "project Knight identity, house, fealty or pilot biography"
+  - "unverified current datasheet or allied-construction fields"
+
+edition: 11
+faction: "Imperial Knights"
+source_index: "../SOURCE_INDEX.md"
+connected_forces: ["FORCE-3000"]
+
+status_rule: >
+  Current MFM points are verified. Base Armiger datasheets and current
+  cross-faction Freeblade construction rules were not successfully retrieved
+  from a current 11th-edition primary source, so they remain unverified here.
+
+units:
+  11E-IK-ARMIGER-HELVERIN:
+    datasheet: "Armiger Helverin"
+    project_unit_id: "UNIT-HELVERIN"
+    roster_occurrences: ["FORCE-3000/F3000-11"]
+    current_datasheet:
+      status: "not_yet_verified"
+      characteristics: null
+      weapons: null
+      abilities: null
+      keywords: null
+      faction_keywords: null
+      wargear_legality: "not_yet_verified"
+    current_points:
+      status: "verified_current"
+      source: "OFF-11E-MFM-IK-1.0"
+      models: 1
+      unit_cost: 140
+    allied_use:
+      status: "not_yet_verified"
+      note: >
+        Do not use older-edition Freeblade wording as proof of current 11e
+        allied legality without a current primary-source check.
+
+  11E-IK-ARMIGER-WARGLAIVE:
+    datasheet: "Armiger Warglaive"
+    project_unit_id: "UNIT-WARGLAIVE"
+    roster_occurrences: ["FORCE-3000/F3000-12"]
+    current_datasheet:
+      status: "not_yet_verified"
+      characteristics: null
+      weapons: null
+      abilities: null
+      keywords: null
+      faction_keywords: null
+      wargear_legality: "not_yet_verified"
+    current_points:
+      status: "verified_current"
+      source: "OFF-11E-MFM-IK-1.0"
+      models: 1
+      unit_cost: 140
+    allied_use:
+      status: "not_yet_verified"
+      note: >
+        Current MFM confirms the unit and cost, but this does not by itself
+        establish current cross-faction construction legality.

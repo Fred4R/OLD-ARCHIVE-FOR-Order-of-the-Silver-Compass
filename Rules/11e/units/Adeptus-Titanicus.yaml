@@ -1,0 +1,100 @@
+version: 1
+record_type: "current_rules_crosswalk"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "dated current 11e Adeptus Titanicus findings for FORCE-3000"
+verification_as_of: "2026-09-12"
+supersedes_for:
+  - "current Warhound fields explicitly verified from OFF-11E-AT-FP-1.0"
+does_not_supersede:
+  - "historical FORCE-3000 snapshot points"
+  - "project Titan name, Titan Legion, Princeps biography or shipboard status"
+  - "unverified current points"
+
+edition: 11
+faction: "Adeptus Titanicus"
+source_index: "../SOURCE_INDEX.md"
+connected_forces: ["FORCE-3000"]
+
+army_rule:
+  Titanic_Support:
+    status: "verified_current"
+    source: "OFF-11E-AT-FP-1.0"
+    condition: "Every model in the army has the Imperium keyword."
+    permission: >
+      One Adeptus Titanicus model can be included even if it lacks the Faction
+      keyword selected in the Select Army Faction step.
+    force_3000_condition_satisfaction: "not_fully_certified"
+
+units:
+  11E-AT-WARHOUND:
+    datasheet: "Warhound Titan"
+    project_unit_id: "UNIT-WARHOUND"
+    roster_occurrences: ["FORCE-3000/F3000-15"]
+    current_datasheet:
+      status: "verified_current"
+      source: "OFF-11E-AT-FP-1.0"
+      characteristics:
+        M: "14in"
+        T: 13
+        SV: "2+"
+        W: 40
+        LD: "6+"
+        OC: 16
+      invulnerable_save:
+        value: "5+"
+        scope: "against ranged attacks only"
+      ranged_weapons:
+        Warhound_turbo_laser_destructor:
+          keywords: ["Blast"]
+          RANGE: "72in"
+          A: "D3+3"
+          BS: "3+"
+          S: 20
+          AP: -3
+          D: "2D6"
+      melee_weapons:
+        Warhound_feet:
+          RANGE: "Melee"
+          A: 8
+          WS: "4+"
+          S: 10
+          AP: -1
+          D: 2
+      abilities:
+        core: ["Deadly Demise 2D6"]
+        faction: ["Super-heavy Walker"]
+        datasheet:
+          Striding_Colossus: >
+            A Stratagem targeting this model costs twice that Stratagem's
+            stated CP cost.
+          Flank_Speed: >
+            When this model Advances, add 8 inches to its Move for the phase
+            instead of making an Advance roll.
+          damaged:
+            threshold: "1-13 wounds remaining"
+            effect: "Subtract 8 from OC and subtract 1 from Hit rolls."
+      keywords:
+        - Vehicle
+        - Walker
+        - Titanic
+        - Towering
+        - Frame
+        - Imperium
+        - Warhound Titan
+      faction_keywords: ["Adeptus Titanicus"]
+      unit_composition: "1 Warhound Titan"
+      selected_snapshot_loadout:
+        weapons:
+          - "Warhound turbo-laser destructor"
+          - "Warhound turbo-laser destructor"
+          - "Warhound feet"
+        current_legality:
+          status: "verified_current"
+          note: >
+            The current datasheet provides an independent replacement route
+            from each standard primary weapon to a turbo-laser destructor, so
+            the double turbo-laser configuration is supported.
+    current_points:
+      status: "not_yet_verified"
+      source: null
+      snapshot_value_not_current_proof: 1100

@@ -1,4 +1,4 @@
-version: 2
+version: 3
 record_type: "current_rules_crosswalk"
 authority_map: "../../../AUTHORITY.md"
 authority_scope: "dated current 11e rules findings for listed units"
@@ -13,7 +13,7 @@ does_not_supersede:
 edition: 11
 faction: "Adepta Sororitas"
 source_index: "../SOURCE_INDEX.md"
-pilot_force: "FORCE-1985-V946"
+connected_forces: ["FORCE-1985-V946", "FORCE-3000"]
 
 field_vocabulary:
   model_characteristics: [M, T, SV, W, LD, OC]
@@ -30,13 +30,32 @@ field_vocabulary:
 
 status_rule: >
   Empty current fields are never interpreted as zero or absent.
-  They remain unknown until a current official datasheet is actually retrieved.
+  Current point schedules come from the live MFM and do not rewrite snapshot costs.
+
+current_detachment_costs:
+  Army_of_Faith:
+    source: "OFF-11E-MFM-SOB-1.0"
+    verification_status: "verified_current"
+    detachment_points: 2
+    force_disposition: "Take and Hold"
+    enhancements:
+      Litanies_of_Faith: 10
+      Blade_of_Saint_Ellynor: 15
+  Sanctified_Orators:
+    source: "OFF-11E-MFM-SOB-1.0"
+    verification_status: "verified_current"
+    detachment_points: 1
+    force_disposition: "Purge the Foe"
+    upgrades:
+      Hagiomnifex: 25
 
 units:
   11E-SOB-CANONESS:
     datasheet: "Canoness"
     project_unit_id: "UNIT-CANONESS"
-    roster_occurrences: ["FORCE-1985-V946/F1985-01"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-01"
+      - "FORCE-3000/F3000-01"
     current_datasheet:
       status: "not_yet_verified"
       characteristics: null
@@ -45,23 +64,28 @@ units:
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      unit_cost: 60
     verified_updates: []
 
   11E-SOB-DIALOGUS:
     datasheet: "Dialogus"
     project_unit_id: "UNIT-DIALOGUS"
-    roster_occurrences: ["FORCE-1985-V946/F1985-01"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-01"
+      - "FORCE-3000/F3000-01"
     current_datasheet:
       status: "partially_verified_current"
       characteristics: null
       weapons: null
       keywords: null
       faction_keywords: null
+      attachment_role: "Support"
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      unit_cost: 40
     verified_updates:
       - source: "OFF-11E-SOB-FP-1.0"
         field: "core_ability_role"
@@ -71,7 +95,9 @@ units:
   11E-SOB-RETRIBUTORS:
     datasheet: "Retributor Squad"
     project_unit_id: "UNIT-RETRIBUTORS"
-    roster_occurrences: ["FORCE-1985-V946/F1985-01"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-01"
+      - "FORCE-3000/F3000-01"
     current_datasheet:
       status: "partially_verified_current"
       characteristics: null
@@ -79,31 +105,41 @@ units:
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      first_to_second_unit:
+        models: 5
+        unit_cost: 105
+      third_plus_unit:
+        models: 5
+        unit_cost: 115
+      wargear_options:
+        per_multi_melta: 5
     verified_updates:
       - source: "OFF-11E-SOB-FP-1.0"
         ability: "Storm of Retribution"
         value: >
-          Each time a model in this unit makes a ranged attack, that model can
-          re-roll a Hit roll of 1 and re-roll a Wound roll of 1. If that attack
-          targets an enemy unit that has destroyed one or more Adepta Sororitas
-          units from the army during the battle, add 1 to the Hit roll and add 1
-          to the Wound roll as well.
+          Ranged attacks re-roll a Hit roll of 1 and a Wound roll of 1.
+          Against an enemy unit that has destroyed one or more Adepta Sororitas
+          units from this army during the battle, add 1 to Hit and Wound rolls.
 
   11E-SOB-IMAGIFIER:
     datasheet: "Imagifier"
     project_unit_id: "UNIT-IMAGIFIER"
-    roster_occurrences: ["FORCE-1985-V946/F1985-02"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-02"
+      - "FORCE-3000/F3000-02"
     current_datasheet:
       status: "partially_verified_current"
       characteristics: null
       weapons: null
       keywords: null
       faction_keywords: null
+      attachment_role: "Support"
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      unit_cost: 65
     verified_updates:
       - source: "OFF-11E-SOB-FP-1.0"
         field: "core_ability_role"
@@ -112,7 +148,9 @@ units:
   11E-SOB-BATTLE-SISTERS:
     datasheet: "Battle Sisters Squad"
     project_unit_id: "UNIT-BATTLE-SISTERS"
-    roster_occurrences: ["FORCE-1985-V946/F1985-02"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-02"
+      - "FORCE-3000/F3000-02"
     current_datasheet:
       status: "not_yet_verified"
       characteristics: null
@@ -121,14 +159,18 @@ units:
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      models: 10
+      unit_cost: 100
     verified_updates: []
 
   11E-SOB-PALATINE:
     datasheet: "Palatine"
     project_unit_id: "UNIT-PALATINE"
-    roster_occurrences: ["FORCE-1985-V946/F1985-03"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-03"
+      - "FORCE-3000/F3000-03"
     current_datasheet:
       status: "not_yet_verified"
       characteristics: null
@@ -137,23 +179,28 @@ units:
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      unit_cost: 50
     verified_updates: []
 
   11E-SOB-DOGMATA:
     datasheet: "Dogmata"
     project_unit_id: "UNIT-DOGMATA"
-    roster_occurrences: ["FORCE-1985-V946/F1985-03"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-03"
+      - "FORCE-3000/F3000-03"
     current_datasheet:
       status: "partially_verified_current"
       characteristics: null
       weapons: null
       keywords: null
       faction_keywords: null
+      attachment_role: "Support"
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      unit_cost: 45
     verified_updates:
       - source: "OFF-11E-SOB-FP-1.0"
         field: "core_ability_role"
@@ -162,7 +209,9 @@ units:
   11E-SOB-SACRESANTS:
     datasheet: "Celestian Sacresants"
     project_unit_id: "UNIT-SACRESANTS"
-    roster_occurrences: ["FORCE-1985-V946/F1985-03"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-03"
+      - "FORCE-3000/F3000-03"
     current_datasheet:
       status: "not_yet_verified"
       characteristics: null
@@ -171,23 +220,34 @@ units:
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      first_unit:
+        5_models: 75
+        10_models: 150
+      second_plus_unit:
+        5_models: 90
+        10_models: 165
     verified_updates: []
 
   11E-SOB-HOSPITALLER:
     datasheet: "Hospitaller"
     project_unit_id: "UNIT-HOSPITALLER"
-    roster_occurrences: ["FORCE-1985-V946/F1985-04"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-04"
+      - "FORCE-3000/F3000-04"
     current_datasheet:
       status: "partially_verified_current"
       characteristics: null
       weapons: null
       keywords: null
       faction_keywords: null
+      attachment_role: "Support"
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      first_unit: 75
+      second_plus_unit: 85
     verified_updates:
       - source: "OFF-11E-SOB-FP-1.0"
         field: "core_ability_role"
@@ -196,7 +256,9 @@ units:
   11E-SOB-DOMINIONS:
     datasheet: "Dominion Squad"
     project_unit_id: "UNIT-DOMINIONS"
-    roster_occurrences: ["FORCE-1985-V946/F1985-04"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-04"
+      - "FORCE-3000/F3000-04"
     current_datasheet:
       status: "partially_verified_current"
       characteristics: null
@@ -204,20 +266,30 @@ units:
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      first_to_second_unit:
+        models: 10
+        unit_cost: 100
+      third_plus_unit:
+        models: 10
+        unit_cost: 110
+      wargear_options:
+        per_meltagun: 5
     verified_updates:
       - source: "OFF-11E-SOB-FP-1.0"
         ability: "Righteous Awareness"
         value: >
           In the opponent's Movement phase, if an enemy unit ends a move within
-          8 inches of this unit, and this unit is not within Engagement Range of
-          one or more enemy units, it can make a Normal move of up to D6 inches.
+          8 inches of this unit and this unit is not within Engagement Range,
+          it can make a Normal move of up to D6 inches.
 
   11E-SOB-SORORITAS-RHINO:
     datasheet: "Sororitas Rhino"
     project_unit_id: "UNIT-SORORITAS-RHINO"
-    roster_occurrences: ["FORCE-1985-V946/F1985-07"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-07"
+      - "FORCE-3000/F3000-07"
     current_datasheet:
       status: "partially_verified_current"
       characteristics: null
@@ -228,8 +300,9 @@ units:
         verified_additions: ["Frame"]
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      unit_cost: 75
     verified_updates:
       - source: "OFF-11E-SOB-FP-1.0"
         field: "keywords"
@@ -239,7 +312,9 @@ units:
   11E-SOB-CASTIGATOR:
     datasheet: "Castigator"
     project_unit_id: "UNIT-CASTIGATOR"
-    roster_occurrences: ["FORCE-1985-V946/F1985-08"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-08"
+      - "FORCE-3000/F3000-08"
     current_datasheet:
       status: "partially_verified_current"
       characteristics: null
@@ -250,8 +325,10 @@ units:
         verified_additions: ["Frame"]
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      first_to_second_unit: 165
+      third_plus_unit: 175
     verified_updates:
       - source: "OFF-11E-SOB-FP-1.0"
         field: "keywords"
@@ -272,8 +349,10 @@ units:
         verified_additions: ["Frame"]
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      first_unit: 180
+      second_plus_unit: 220
     verified_updates:
       - source: "OFF-11E-SOB-FP-1.0"
         field: "keywords"
@@ -283,7 +362,9 @@ units:
   11E-SOB-PARAGONS:
     datasheet: "Paragon Warsuits"
     project_unit_id: "UNIT-PARAGONS"
-    roster_occurrences: ["FORCE-1985-V946/F1985-10"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-10"
+      - "FORCE-3000/F3000-09"
     current_datasheet:
       status: "not_yet_verified"
       characteristics: null
@@ -292,14 +373,24 @@ units:
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      first_to_second_unit:
+        models: 3
+        unit_cost: 180
+      third_plus_unit:
+        models: 3
+        unit_cost: 190
+      wargear_options:
+        per_multi_melta: 10
     verified_updates: []
 
   11E-SOB-SERAPHIM:
     datasheet: "Seraphim Squad"
     project_unit_id: "UNIT-SERAPHIM"
-    roster_occurrences: ["FORCE-1985-V946/F1985-11"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-11"
+      - "FORCE-3000/F3000-10"
     current_datasheet:
       status: "not_yet_verified"
       characteristics: null
@@ -308,8 +399,14 @@ units:
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      first_to_second_unit:
+        5_models: 85
+        10_models: 160
+      third_plus_unit:
+        5_models: 95
+        10_models: 170
     verified_updates: []
 
   11E-SOB-NOVITIATES:
@@ -324,6 +421,8 @@ units:
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-SOB-1.0"
+      models: 10
+      unit_cost: 100
     verified_updates: []

@@ -1,0 +1,347 @@
+version: 1
+record_id: "CROSSWALK-FORCE-3000"
+record_type: "roster_crosswalk"
+authority_scope: "repository mapping for FORCE-3000"
+authority_map: "../../AUTHORITY.md"
+supersedes_for:
+  - "repository mapping of FORCE-3000 roster occurrences to project unit IDs and 11e rules IDs"
+does_not_supersede:
+  - "the exact FORCE-3000 source payload"
+  - "historical snapshot values"
+  - "project continuity outside explicit mappings"
+  - "current rules not separately verified"
+
+force_id: "FORCE-3000"
+name: "Order of the Silver Compass (House Montfort)"
+game_system: "Warhammer 40,000"
+edition_context: 11
+primary_faction_as_exported: "Adepta Sororitas"
+
+source_snapshot:
+  record_type: "source_snapshot"
+  evidence_class: "A2"
+  exact_source_file: "../../Sources/Armies/FORCE-3000.txt"
+  exact_source_sha256: "ce28c1e3d3a99fb0765af0b141adcb88ca6373474df2a2f1a909597aca0c2ac9"
+  embedded_duplicate:
+    file: "../../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
+    location: "Appendix B"
+    note: "Preserved embedded copy of the same exact payload."
+  app_version: "v2.6.0 (144)"
+  data_version: "v946"
+  listed_points: 3000
+  model_count: 68
+  scale: "Onslaught (3000 points)"
+  force_disposition_as_exported: "Take and Hold"
+  listed_detachments:
+    - name: "Army of Faith"
+      official_11e_metadata:
+        evidence_class: "A5"
+        verification_status: "verified_current"
+        verified_on: "2026-09-12"
+        source: "OFF-11E-MFM-SOB-1.0"
+        force_disposition: "Take and Hold"
+        detachment_points: 2
+        provenance_note: "The individual 2DP value comes from the verified current MFM, not from the roster export."
+    - name: "Sanctified Orators"
+      official_11e_metadata:
+        evidence_class: "A5"
+        verification_status: "verified_current"
+        verified_on: "2026-09-12"
+        source: "OFF-11E-MFM-SOB-1.0"
+        force_disposition: "Purge the Foe"
+        detachment_points: 1
+        provenance_note: "The individual 1DP value comes from the verified current MFM, not from the roster export."
+  total_detachment_points_as_exported: 3
+
+direct_user_resupply:
+  record_type: "provenance_event"
+  date: "2026-09-12"
+  evidence_class: "A1"
+  canon_status: null
+  scope: >
+    User directly supplied the v946 House Montfort 3,000-point roster again
+    for durable project use. Its composition corresponds to the preserved
+    FORCE-3000 / Appendix B snapshot.
+  arithmetic_rechecked:
+    points: 3000
+    models: 68
+
+current_rules_status:
+  as_of: "2026-09-12"
+  authority: "../../Rules/11e/SOURCE_INDEX.md"
+  whole_list_legality: "not_certified"
+  current_points:
+    verification_status: "partially_verified_current"
+    verified_non_warhound_subtotal: 1900
+    warhound_current_points: "not_yet_verified"
+    whole_list_current_total: "not_certified"
+    note: >
+      Current MFM values were verified for the Sororitas, Imperial Agents,
+      and Imperial Knights occurrences in this snapshot. A current official
+      Warhound point value was not successfully retrieved, so the current
+      whole-list total is not asserted.
+  current_leader_support_attachments: "partially_verified_current"
+  current_imperial_agents_allied_legality: "not_fully_verified"
+  current_armiger_allied_legality: "not_yet_verified"
+  current_warhound_support_rule: "partially_verified_current"
+
+formations:
+  F3000-01:
+    label: "Constantia / Dialogus / Retributors"
+    snapshot_points: 215
+    models: 7
+    units:
+      - project_unit_id: "UNIT-CANONESS"
+        rules_id: "11E-SOB-CANONESS"
+        snapshot_points: 70
+        attachment_role_as_exported: "Leader (Character)"
+        warlord: true
+        enhancement_as_exported: "Litanies of Faith"
+        project_identity: "CHAR-CONSTANTIA"
+      - project_unit_id: "UNIT-DIALOGUS"
+        rules_id: "11E-SOB-DIALOGUS"
+        snapshot_points: 40
+        attachment_role_as_exported: "Support (Character)"
+        project_identity: "CHAR-EULALIA"
+      - project_unit_id: "UNIT-RETRIBUTORS"
+        rules_id: "11E-SOB-RETRIBUTORS"
+        snapshot_points: 105
+        attachment_role_as_exported: "Bodyguard"
+    project_tactical_role: "UNRESOLVED_FOR_FORCE_3000"
+
+  F3000-02:
+    label: "Imagifier / Battle Sisters"
+    snapshot_points: 155
+    models: 11
+    units:
+      - project_unit_id: "UNIT-IMAGIFIER"
+        rules_id: "11E-SOB-IMAGIFIER"
+        snapshot_points: 55
+        attachment_role_as_exported: "Support (Character)"
+      - project_unit_id: "UNIT-BATTLE-SISTERS"
+        rules_id: "11E-SOB-BATTLE-SISTERS"
+        snapshot_points: 100
+        attachment_role_as_exported: "Bodyguard (Battleline)"
+    project_tactical_role: "UNRESOLVED_FOR_FORCE_3000"
+
+  F3000-03:
+    label: "Palatine / Dogmata / Sacresants"
+    snapshot_points: 185
+    models: 7
+    units:
+      - project_unit_id: "UNIT-PALATINE"
+        rules_id: "11E-SOB-PALATINE"
+        snapshot_points: 65
+        attachment_role_as_exported: "Leader (Character)"
+        enhancement_as_exported: "Blade of Saint Ellynor"
+      - project_unit_id: "UNIT-DOGMATA"
+        rules_id: "11E-SOB-DOGMATA"
+        snapshot_points: 45
+        attachment_role_as_exported: "Support (Character)"
+      - project_unit_id: "UNIT-SACRESANTS"
+        rules_id: "11E-SOB-SACRESANTS"
+        snapshot_points: 75
+        attachment_role_as_exported: "Bodyguard"
+    project_tactical_role: "UNRESOLVED_FOR_FORCE_3000"
+
+  F3000-04:
+    label: "Hospitaller / Dominions"
+    snapshot_points: 155
+    models: 11
+    units:
+      - project_unit_id: "UNIT-HOSPITALLER"
+        rules_id: "11E-SOB-HOSPITALLER"
+        snapshot_points: 65
+        attachment_role_as_exported: "Support (Character)"
+      - project_unit_id: "UNIT-DOMINIONS"
+        rules_id: "11E-SOB-DOMINIONS"
+        snapshot_points: 90
+        attachment_role_as_exported: "Bodyguard"
+    project_tactical_role: "UNRESOLVED_FOR_FORCE_3000"
+
+  F3000-05:
+    label: "Justina / Inquisitorial Agents"
+    snapshot_points: 125
+    models: 7
+    units:
+      - project_unit_id: "UNIT-INQUISITOR"
+        rules_id: "11E-IA-INQUISITOR"
+        snapshot_points: 65
+        attachment_role_as_exported: "Leader"
+        project_identity: "CHAR-JUSTINA"
+      - project_unit_id: "UNIT-INQUISITORIAL-AGENTS"
+        rules_id: "11E-IA-INQUISITORIAL-AGENTS"
+        snapshot_points: 60
+        attachment_role_as_exported: "Bodyguard"
+    project_tactical_role: "UNRESOLVED_FOR_FORCE_3000"
+    institutional_boundary: "Independent Inquisitorial capability within the coalition."
+
+  F3000-06:
+    label: "Aurelia / House Montfort household"
+    snapshot_points: 175
+    models: 10
+    units:
+      - project_unit_id: "UNIT-ROGUE-TRADER-ENTOURAGE"
+        rules_id: "11E-IA-ROGUE-TRADER-ENTOURAGE"
+        snapshot_points: 105
+        attachment_role_as_exported: "Leader"
+        project_identity: "CHAR-AURELIA"
+      - project_unit_id: "UNIT-VOIDSMEN"
+        rules_id: "11E-IA-VOIDSMEN"
+        snapshot_points: 70
+        attachment_role_as_exported: "Bodyguard"
+        component_project_identity:
+          canid: null
+          note: "The FORCE-3000 source does not name the Canid and does not establish it as Pilgrim."
+    project_tactical_role: >
+      House Montfort positioning / deployment flexibility / close security /
+      recovery, with greater emphasis on preserving options around the larger
+      Knight/Titan commitment.
+    institutional_boundary: >
+      House Montfort household formation; cooperation does not establish
+      authority over Knight or Titan commands.
+
+  F3000-07:
+    label: "Sororitas Rhino"
+    snapshot_points: 65
+    models: 1
+    units:
+      - project_unit_id: "UNIT-SORORITAS-RHINO"
+        rules_id: "11E-SOB-SORORITAS-RHINO"
+        snapshot_points: 65
+    project_vehicle_name: "UNRESOLVED"
+    project_crew: "UNRESOLVED"
+
+  F3000-08:
+    label: "Castigator"
+    snapshot_points: 165
+    models: 1
+    units:
+      - project_unit_id: "UNIT-CASTIGATOR"
+        rules_id: "11E-SOB-CASTIGATOR"
+        snapshot_points: 165
+    project_vehicle_name: "UNRESOLVED"
+    project_crew: "UNRESOLVED"
+
+  F3000-09:
+    label: "Paragon Warsuits"
+    snapshot_points: 180
+    models: 3
+    units:
+      - project_unit_id: "UNIT-PARAGONS"
+        rules_id: "11E-SOB-PARAGONS"
+        snapshot_points: 180
+        collective_project_identity: "CHAR-PARAGON-TRIO"
+    individual_pilot_names: "UNRESOLVED"
+    narrative_superior_identity: "UNRESOLVED"
+
+  F3000-10:
+    label: "Seraphim Squad"
+    snapshot_points: 75
+    models: 5
+    units:
+      - project_unit_id: "UNIT-SERAPHIM"
+        rules_id: "11E-SOB-SERAPHIM"
+        snapshot_points: 75
+    project_personal_names: "UNRESOLVED"
+
+  F3000-11:
+    label: "Armiger Helverin"
+    snapshot_points: 140
+    models: 1
+    units:
+      - project_unit_id: "UNIT-HELVERIN"
+        rules_id: "11E-IK-ARMIGER-HELVERIN"
+        snapshot_points: 140
+        project_identity: "CHAR-HELVERIN-PILOT"
+    project_pilot_name: "UNRESOLVED"
+    project_knight_house: "UNRESOLVED"
+    source_conflict:
+      status: "UNRESOLVED"
+      exact_snapshot: "Meltagun"
+      other_project_material: "intended physical Helverin loadout has referred to a Questoris heavy stubber"
+      safeguard: "Do not silently reconcile the two."
+
+  F3000-12:
+    label: "Armiger Warglaive"
+    snapshot_points: 140
+    models: 1
+    units:
+      - project_unit_id: "UNIT-WARGLAIVE"
+        rules_id: "11E-IK-ARMIGER-WARGLAIVE"
+        snapshot_points: 140
+        project_identity: "CHAR-VALERIA"
+    project_knight_house: "UNRESOLVED"
+    project_pilot_surname: "UNRESOLVED"
+
+  F3000-13:
+    label: "Imperial Rhino"
+    snapshot_points: 65
+    models: 1
+    units:
+      - project_unit_id: "UNIT-IMPERIAL-RHINO"
+        rules_id: "11E-IA-IMPERIAL-RHINO"
+        snapshot_points: 65
+    project_ownership: "UNRESOLVED"
+    project_crew: "UNRESOLVED"
+    project_passengers: "UNRESOLVED"
+
+  F3000-14:
+    label: "Inquisitorial Chimera"
+    snapshot_points: 60
+    models: 1
+    units:
+      - project_unit_id: "UNIT-INQUISITORIAL-CHIMERA"
+        rules_id: "11E-IA-INQUISITORIAL-CHIMERA"
+        snapshot_points: 60
+    project_ownership: "UNRESOLVED"
+    project_crew: "UNRESOLVED"
+    project_passengers: "UNRESOLVED"
+
+  F3000-15:
+    label: "Warhound Titan"
+    snapshot_points: 1100
+    models: 1
+    units:
+      - project_unit_id: "UNIT-WARHOUND"
+        rules_id: "11E-AT-WARHOUND"
+        snapshot_points: 1100
+        project_identity: "CHAR-PRINCEPS"
+    project_titan_name: "UNRESOLVED"
+    project_princeps_formal_name: "UNRESOLVED"
+    reported_princeps_address: "Sabine"
+    project_titan_legion: "UNRESOLVED"
+    project_permanent_shipboard_status: "UNRESOLVED"
+
+integrity:
+  formation_points_total: 3000
+  formation_models_total: 68
+  unit_occurrences: 23
+  expected_rules_records_used:
+    adepta_sororitas: 14
+    imperial_agents: 6
+    imperial_knights: 2
+    adeptus_titanicus: 1
+  crosswalk_completeness_requirement: >
+    Every unit occurrence in this force must resolve to exactly one project
+    unit ID and one 11e rules ID, even when current datasheet fields remain
+    not_yet_verified.
+
+snapshot_relation:
+  FORCE_1985_V946:
+    relation: "separate_source_snapshot"
+    supersession: false
+    note: >
+      FORCE-3000 does not automatically supersede FORCE-1985-V946 and the two
+      snapshots are not automatically sequential moments in fiction.
+
+non_implications:
+  - "Roster presence does not establish story-scene presence."
+  - "Roster absence does not establish casualty, departure or reassignment."
+  - "Roster differences do not establish reinforcement, arrival, promotion or chronology."
+  - "A loadout difference does not establish fictional rearmament."
+  - "The House Montfort force name does not establish House Montfort ownership of Knight or Titan allies."
+  - "The FORCE-3000 Canid is not automatically Pilgrim."
+  - "A newer rules value does not rewrite this historical export."
+  - "A project character mapping does not transfer generic official biography."
+  - "Latest supplied does not mean currently legal unless current official rules were checked."

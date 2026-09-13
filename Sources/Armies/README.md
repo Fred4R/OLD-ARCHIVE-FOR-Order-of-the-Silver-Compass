@@ -10,6 +10,18 @@ Rules:
 - preserve its hash and source/version metadata in the corresponding `../../Armies/` crosswalk;
 - roster differences establish configuration differences only, not fictional chronology.
 
-`FORCE-1985-V946.txt` is the standalone exact payload corresponding to Appendix C of the preserved v4.3.41 Compendium. Its SHA-256 is:
+## FORCE-1985-V946
 
+`FORCE-1985-V946.txt` is the standalone exact payload corresponding to Appendix C of the preserved v4.3.41 Compendium.
+
+SHA-256:
 `f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6`
+
+## FORCE-3000
+
+`FORCE-3000.txt` is the standalone exact payload corresponding to Appendix B of the preserved v4.3.41 Compendium.
+
+SHA-256:
+`ce28c1e3d3a99fb0765af0b141adcb88ca6373474df2a2f1a909597aca0c2ac9`
+
+FORCE-3000 and FORCE-1985-V946 are separate source snapshots. Neither is automatically a later fictional moment than the other.
