@@ -45,7 +45,12 @@ enhancements:
     source: "OFF-11E-MFM-SOB-1.0"
     points: 15
     effect:
-      verification_status: "blocked_current_source"
+      verification_status: "partially_verified_current"
+      source: "OFF-11E-AOF-CODEX-PREVIEW"
+      summary: >
+        Public official preview verifies improved melee Strength and Armour
+        Penetration, Precision, and a Miracle-die reward after the bearer
+        destroys enemy models in melee.
       authority: "current Codex / Warhammer 40,000 app"
   - name: "Divine Aspect"
     verification_status: "verified_current"
@@ -97,11 +102,20 @@ army_rule_interaction:
       Codex rule governing which rolls an Act of Faith can substitute.
 
 stratagems:
-  verification_status: "blocked_current_source"
-  authority: "current Codex / Warhammer 40,000 app"
-  note: >
-    Do not reconstruct the complete current Army of Faith Stratagem set from
-    community databases, older-edition summaries or model memory.
+  verification_status: "partially_verified_current"
+  public_official_examples:
+    - name: "Divine Guidance"
+      source: "OFF-11E-AOF-CODEX-PREVIEW"
+      summary: >
+        Public official preview verifies a 1CP Battle Tactic that improves
+        Armour Penetration for one Sororitas unit in Shooting or Fight and can
+        generate a Miracle die if its attacks destroy enemy models.
+  complete_set:
+    verification_status: "blocked_current_source"
+    authority: "current Codex / Warhammer 40,000 app"
+    note: >
+      Do not reconstruct the remaining current Army of Faith Stratagem set from
+      community databases, older-edition summaries or model memory.
 
 official_theme:
   evidence_class: "A5"
