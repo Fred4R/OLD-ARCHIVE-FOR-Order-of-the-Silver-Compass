@@ -35,7 +35,7 @@ Current extracted army source:
   - Repository file: `Sources/Methodology/Roberts_Yoon_2022_Personality_Psychology.pdf`
   - Artifact hash: `d8d5dfa8ab160d90730aa13e4e0fa6f1e064852bbd72f8563bbf80960651f7f2`
 
-These academic sources govern only the scientific constructs and limits they actually support. They improve inference; they do not diagnose Fred, create project canon, or dictate fiction.
+These academic sources govern only the scientific constructs and limits they actually support. `Sources/Methodology/REVIEW_STATUS.md` records the later full-review state and narrowly supersedes the older Compendium audit only on that review-completion question. The papers improve inference; they do not create project canon or dictate fiction.
 
 ## Warhammer 40,000 lore and rules
 
