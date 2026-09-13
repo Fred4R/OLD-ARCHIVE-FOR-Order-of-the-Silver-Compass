@@ -368,9 +368,12 @@ A same-day 2026-09-13 check of the official Warhammer 40,000 downloads/news rout
 
 For current rules questions:
 1. use the current official Games Workshop source;
-2. use the specific current MFM/Faction Pack record above where retrieved;
+2. use the specific current system, MFM, Faction Pack, Codex/app or update record above that governs the exact field;
 3. use preserved rosters only for snapshot composition and snapshot costs.
 
 Do not use an older-edition Index or inherited Compendium rules claim as proof of a current 11th-edition field.
 
+Shared construction, mission, terrain/objective and source-routing records live under `Rules/11e/system/`.
 Detachment-specific records live under `Rules/11e/detachments/`; Army of Faith is routed through `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml`.
+
+Exact competitive layout coordinates are time-sensitive. Recheck the live app/current official event and update material before a precise current-layout claim.
