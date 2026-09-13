@@ -12,7 +12,7 @@ Use `AUTHORITY.md` to determine which record governs the question. Do not assume
 
 Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for continuation-critical baseline continuity that has not been explicitly superseded. Preserve its candidate review status and unresolved boundaries.
 
-For army questions, use the exact source payload under `Sources/Armies/` when one exists, then resolve the corresponding crosswalk under `Armies/`. For current Warhammer 40,000 rules questions, route through `Rules/11e/SOURCE_INDEX.md` and the matching rules record before making current stats, keyword, ability, attachment, points, or legality claims.
+For army questions, use the exact source payload under `Sources/Armies/` when one exists, then resolve the corresponding crosswalk under `Armies/`. For current Warhammer 40,000 rules questions, route through `Rules/11e/SOURCE_INDEX.md`, then use the matching unit record under `Rules/11e/units/` or Detachment record under `Rules/11e/detachments/` before making current stats, keyword, ability, attachment, Detachment, Enhancement, Stratagem, points, or legality claims.
 
 Keep distinct:
 - authority scope;
