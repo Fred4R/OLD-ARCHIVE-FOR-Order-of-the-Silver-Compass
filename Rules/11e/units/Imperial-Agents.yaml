@@ -1,4 +1,4 @@
-version: 2
+version: 3
 record_type: "current_rules_crosswalk"
 authority_map: "../../../AUTHORITY.md"
 authority_scope: "dated current 11e rules findings for listed units"
@@ -13,94 +13,168 @@ does_not_supersede:
 edition: 11
 faction: "Imperial Agents"
 source_index: "../SOURCE_INDEX.md"
-pilot_force: "FORCE-1985-V946"
+connected_forces: ["FORCE-1985-V946", "FORCE-3000"]
 
 status_rule: >
-  These units occur in an Adepta Sororitas roster snapshot as allied Imperial
-  Agents. Their current full datasheets, current points, and current allied
-  construction legality are not inferred from the snapshot.
+  These units can appear in non-Agents Imperium armies under Imperial Agents
+  construction rules, but this file records only the allied-use provisions
+  actually verified. Whole-list legality remains a separate check.
 
 units:
   11E-IA-INQUISITOR:
     datasheet: "Inquisitor"
     project_unit_id: "UNIT-INQUISITOR"
-    roster_occurrences: ["FORCE-1985-V946/F1985-05"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-05"
+      - "FORCE-3000/F3000-05"
     current_datasheet:
-      status: "not_yet_verified"
+      status: "partially_verified_current"
       characteristics: null
       weapons: null
       abilities: null
       keywords: null
       faction_keywords: null
+      leader:
+        status: "verified_current"
+        source: "OFF-11E-MFM-IA-1.0"
+        eligible_bodyguards_include: ["Inquisitorial Agents"]
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-IA-1.0"
+      unit_cost: 55
     allied_use:
-      snapshot_status: "present_in_FORCE-1985-V946"
-      current_legality: "not_yet_verified"
-    official_current_source:
-      source: "OFF-11E-IA-FP-1.0"
-      scope: "current faction supplement; full relevant datasheet not retrieved"
+      current_legality: "partially_verified_current"
+      note: >
+        Current Imperial Agents material confirms the Inquisitor/Inquisitorial
+        Agents relationship in non-Agents armies, but the complete Assigned
+        Agents allowance table has not been retrieved.
 
   11E-IA-INQUISITORIAL-AGENTS:
     datasheet: "Inquisitorial Agents"
     project_unit_id: "UNIT-INQUISITORIAL-AGENTS"
-    roster_occurrences: ["FORCE-1985-V946/F1985-05"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-05"
+      - "FORCE-3000/F3000-05"
     current_datasheet:
-      status: "not_yet_verified"
+      status: "partially_verified_current"
       characteristics: null
       weapons: null
       abilities: null
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
-    allied_use:
-      snapshot_status: "present_in_FORCE-1985-V946"
-      current_legality: "not_yet_verified"
-    official_current_source:
-      source: "OFF-11E-IA-FP-1.0"
-      scope: "current faction supplement; full relevant datasheet not retrieved"
+      status: "verified_current"
+      source: "OFF-11E-MFM-IA-1.0"
+      6_models: 50
+      12_models: 100
+    verified_updates:
+      - source: "OFF-11E-IA-FP-1.0"
+        field: "Inquisitorial Henchmen"
+        value: >
+          If Army Faction is not Agents of the Imperium, for each Inquisitor
+          unit included, one Inquisitorial Agents unit can be included without
+          counting towards the number of Retinue units allowed, subject to
+          Assigned Agents.
 
   11E-IA-ROGUE-TRADER-ENTOURAGE:
     datasheet: "Rogue Trader Entourage"
     project_unit_id: "UNIT-ROGUE-TRADER-ENTOURAGE"
-    roster_occurrences: ["FORCE-1985-V946/F1985-06"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-06"
+      - "FORCE-3000/F3000-06"
     current_datasheet:
-      status: "not_yet_verified"
+      status: "partially_verified_current"
       characteristics: null
       weapons: null
       abilities: null
       keywords: null
       faction_keywords: null
+      leader:
+        status: "verified_current"
+        source: "OFF-11E-MFM-IA-1.0"
+        eligible_bodyguards_include: ["Voidsmen-at-Arms"]
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
+      status: "verified_current"
+      source: "OFF-11E-MFM-IA-1.0"
+      models: 4
+      unit_cost: 75
     allied_use:
-      snapshot_status: "present_in_FORCE-1985-V946"
-      current_legality: "not_yet_verified"
-    official_current_source:
-      source: "OFF-11E-IA-FP-1.0"
-      scope: "current faction supplement; full relevant datasheet not retrieved"
+      current_legality: "not_fully_verified"
 
   11E-IA-VOIDSMEN:
     datasheet: "Voidsmen-at-Arms"
     project_unit_id: "UNIT-VOIDSMEN"
-    roster_occurrences: ["FORCE-1985-V946/F1985-06"]
+    roster_occurrences:
+      - "FORCE-1985-V946/F1985-06"
+      - "FORCE-3000/F3000-06"
     current_datasheet:
-      status: "not_yet_verified"
+      status: "partially_verified_current"
       characteristics: null
       weapons: null
       abilities: null
       keywords: null
       faction_keywords: null
     current_points:
-      status: "blocked_current_source"
-      source: "OFF-11E-MFM-LIVE"
-    allied_use:
-      snapshot_status: "present_in_FORCE-1985-V946"
-      current_legality: "not_yet_verified"
-    official_current_source:
-      source: "OFF-11E-IA-FP-1.0"
-      scope: "current faction supplement; full relevant datasheet not retrieved"
+      status: "verified_current"
+      source: "OFF-11E-MFM-IA-1.0"
+      models: 6
+      unit_cost: 50
+    verified_updates:
+      - source: "OFF-11E-IA-FP-1.0"
+        field: "Navy Bodyguard"
+        value: >
+          If Army Faction is not Agents of the Imperium, for each Voidfarers
+          Character unit included, one Voidsmen-at-Arms unit can be included
+          without counting towards the number of Retinue units allowed,
+          subject to Assigned Agents.
+
+  11E-IA-IMPERIAL-RHINO:
+    datasheet: "Imperial Rhino"
+    project_unit_id: "UNIT-IMPERIAL-RHINO"
+    roster_occurrences: ["FORCE-3000/F3000-13"]
+    current_datasheet:
+      status: "partially_verified_current"
+      characteristics: null
+      weapons: null
+      abilities: null
+      keywords:
+        status: "partially_verified_current"
+        verified_additions: ["Frame"]
+      faction_keywords: null
+      transport:
+        status: "verified_current"
+        source: "OFF-11E-IA-FP-1.0"
+        capacity: "12 Agents of the Imperium Infantry models"
+        exclusions: ["Terminator", "Officio Assassinorum"]
+    current_points:
+      status: "verified_current"
+      source: "OFF-11E-MFM-IA-1.0"
+      unit_cost: 75
+    verified_updates:
+      - source: "OFF-11E-IA-FP-1.0"
+        field: "keywords"
+        action: "add"
+        value: "Frame"
+
+  11E-IA-INQUISITORIAL-CHIMERA:
+    datasheet: "Inquisitorial Chimera"
+    project_unit_id: "UNIT-INQUISITORIAL-CHIMERA"
+    roster_occurrences: ["FORCE-3000/F3000-14"]
+    current_datasheet:
+      status: "partially_verified_current"
+      characteristics: null
+      weapons: null
+      abilities: null
+      keywords:
+        status: "partially_verified_current"
+        verified_additions: ["Frame"]
+      faction_keywords: null
+    current_points:
+      status: "verified_current"
+      source: "OFF-11E-MFM-IA-1.0"
+      unit_cost: 70
+    verified_updates:
+      - source: "OFF-11E-IA-FP-1.0"
+        field: "keywords"
+        action: "add"
+        value: "Frame"
