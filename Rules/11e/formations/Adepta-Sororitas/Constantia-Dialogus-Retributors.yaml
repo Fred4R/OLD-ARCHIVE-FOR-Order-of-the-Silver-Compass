@@ -1,0 +1,94 @@
+version: 1
+record_type: "current_formation_rules_context"
+formation_id: "11E-SOB-FORM-CONSTANTIA-DIALOGUS-RETRIBUTORS"
+authority_map: "../../../../AUTHORITY.md"
+authority_scope: "current verified rules context for the preserved Constantia/Dialogus/Retributor formation"
+verification_as_of: "2026-09-13"
+edition: 11
+faction: "Adepta Sororitas"
+formation: "Constantia / Dialogus / Retributors"
+source_index: "../../SOURCE_INDEX.md"
+
+roster_occurrences:
+  - "FORCE-1985-V946/F1985-01"
+  - "FORCE-3000/F3000-01"
+
+current_records:
+  unit_rules: "../../units/Adepta-Sororitas.yaml"
+  army_of_faith: "../../detachments/Adepta-Sororitas/Army-of-Faith.yaml"
+  army_construction: "../../system/ARMY_CONSTRUCTION.yaml"
+
+attachment_structure:
+  verification_status: "verified_current"
+  sources:
+    - "OFF-11E-MFM-SOB-1.0"
+    - "OFF-11E-SOB-FP-1.0"
+    - "OFF-11E-ARMY-BUILDING-2026"
+  leader:
+    rules_id: "11E-SOB-CANONESS"
+    role: "Leader"
+    eligible_bodyguard: "Retributor Squad"
+  support:
+    rules_id: "11E-SOB-DIALOGUS"
+    role: "Support"
+    eligible_bodyguard: "Retributor Squad"
+  bodyguard:
+    rules_id: "11E-SOB-RETRIBUTORS"
+  construction_rule: >
+    Current army construction permits one Leader and one Support unit attached
+    to the same bodyguard unit. The live MFM lists Retributor Squad as eligible
+    for both the Canoness and Dialogus.
+
+retrieved_current_cost_if_preserved_enhancement_assignment_remains_legal:
+  verification_status: "partially_verified_current"
+  canoness: 60
+  dialogus: 40
+  retributors_5_models_first_to_second_unit: 105
+  litanies_of_faith: 10
+  calculated_total: 215
+  boundary: >
+    This arithmetic uses current retrieved schedules and the preserved Litanies
+    of Faith assignment. It is not a whole-list legality certificate and does
+    not independently verify current Enhancement eligibility wording or effect.
+
+command_relevant_rules:
+  retributors:
+    verification_status: "verified_current"
+    source: "OFF-11E-SOB-FP-1.0"
+    summary: >
+      Storm of Retribution lets the unit re-roll Hit rolls of 1 and Wound
+      rolls of 1 for ranged attacks. Against an enemy unit that has destroyed
+      one or more Adepta Sororitas units from this army during the battle,
+      those attacks also add 1 to Hit and Wound rolls.
+  army_of_faith:
+    verification_status: "partially_verified_current"
+    sources:
+      - "OFF-11E-AOF-CODEX-PREVIEW"
+      - "OFF-11E-SOB-FP-1.0"
+    summary: >
+      Sacred Rites publicly verifies up to two Acts of Faith for the same unit
+      in one phase. Divine Guidance publicly verifies a 1CP Shooting/Fight
+      intervention that improves Armour Penetration and can generate a Miracle
+      die after destroying enemy models.
+
+blocked_current_fields:
+  canoness_base_datasheet_abilities:
+    source: "OFF-11E-APP-CODEX-AUTHORITY"
+    status: "blocked_current_source"
+  dialogus_base_datasheet_abilities:
+    source: "OFF-11E-APP-CODEX-AUTHORITY"
+    status: "blocked_current_source"
+  retributor_weapon_profiles:
+    source: "OFF-11E-APP-CODEX-AUTHORITY"
+    status: "blocked_current_source"
+  litanies_of_faith_effect:
+    source: "OFF-11E-APP-CODEX-AUTHORITY"
+    status: "blocked_current_source"
+  complete_army_of_faith_stratagem_set:
+    source: "OFF-11E-APP-CODEX-AUTHORITY"
+    status: "blocked_current_source"
+
+boundaries:
+  - "This formation context does not rewrite either preserved roster snapshot."
+  - "Current points and attachments do not certify whole-list legality."
+  - "Tabletop attachment structure does not create biography, friendship, intimacy or permanent narrative assignment."
