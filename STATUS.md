@@ -1,10 +1,12 @@
 # Status and Provenance
 
-Keep project standing separate from evidence provenance.
+Read `AUTHORITY.md` for which record governs a question.
 
-## Project status
+Do not collapse authority, record type, canon status, evidence class, or verification status into one field.
 
-Use these distinctions when they apply:
+## Canon status
+
+Use these distinctions for project standing when they apply:
 
 - `ESTABLISHED_PROJECT_CANON`
 - `INTERPRETATION`
@@ -14,15 +16,61 @@ Use these distinctions when they apply:
 
 A statement's presence in a candidate document does not by itself make it accepted canon.
 
-## Evidence and provenance
+## Record type
 
-Preserve the MASTER's evidence distinctions, including A1-A8 and `A1-REPORTED` where applicable.
+Record type describes what a record is, not whether it is canon.
 
-Evidence class is not a universal ranking. Repetition through one transmission chain is not independent corroboration.
+Examples include:
+- source snapshot;
+- roster crosswalk;
+- rules finding;
+- continuity record;
+- relation record;
+- interpretation;
+- proposal;
+- workflow record.
+
+`SOURCE_SNAPSHOT` is therefore a record type, not a canon status.
+
+## Evidence class
+
+Preserve the Compendium's evidence distinctions:
+
+- `A1` — available direct user statement in the relevant audit/conversation;
+- `A1-REPORTED` — predecessor summary or embedded quotation of an earlier user statement;
+- `A2` — exact embedded source artifact;
+- `A3` — inherited accepted-baseline claim whose original source was not independently seen;
+- `A4` — candidate-lineage claim;
+- `A5` — official source actually inspected;
+- `A6` — interpretation or inference;
+- `A7` — proposal;
+- `A8` — unresolved or unavailable evidence.
+
+These are categories, not a universal ranking.
+
+An evidence class such as `A1` is not a canon status.
+
+Repeated transmission through one lineage is not independent corroboration.
+
+## Verification status
+
+Time-sensitive or external claims may also need a verification state.
+
+Current rules records use states such as:
+- `verified_current`;
+- `partially_verified_current`;
+- `not_yet_verified`;
+- `blocked_current_source`.
+
+Verification status answers whether a current/external claim was checked. It does not make a project claim canon.
+
+## Provenance safeguards
 
 A checksum proves byte identity, not authorship, acceptance, truth, or current rules legality.
 
 A retrieval failure means only that the attempted route failed. It is not proof that the source does not exist.
+
+A later correction overrides only the scope it actually addresses.
 
 ## Unresolved information
 
@@ -34,4 +82,4 @@ Partial evidence may narrow an unresolved question without resolving it.
 
 ## Claim discipline
 
-Do not call something accepted, current/legal, complete, ready, cold-start tested, committed, uploaded, merged, or verified unless the condition has actually been checked.
+Do not call something accepted, current/legal, complete, ready, cold-start tested, committed, uploaded, merged, or verified unless the relevant condition has actually been checked.
