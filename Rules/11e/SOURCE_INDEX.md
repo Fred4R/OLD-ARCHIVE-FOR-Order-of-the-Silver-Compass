@@ -4,7 +4,7 @@ Authority scope: current 11th-edition source routing and dated verification only
 
 A record here may supersede an older Compendium rules claim only for the exact field and date/source scope verified here. It does not rewrite historical roster snapshots or project continuity.
 
-Verification date for this pilot: 2026-09-12.
+Verification date for the current connected army layer: 2026-09-12.
 
 ## OFF-11E-DOWNLOADS
 
@@ -14,7 +14,7 @@ Locator: https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/
 Verified: yes, 2026-09-12  
 Scope: current official download hub and update routing.
 
-The page states that the Munitorum Field Manual provides unit points values, which squads Leaders can join, and Detachment Points and Force Dispositions. The page showed the Munitorum Field Manual as updated 02/09/2026.
+The page identifies the Munitorum Field Manual as the current points/formation source and showed it updated 02/09/2026.
 
 ## OFF-11E-MFM-LIVE
 
@@ -22,9 +22,68 @@ Publisher: Games Workshop / Warhammer Community
 Title: Munitorum Field Manual, live interactive source  
 Locator: https://mfm.warhammer-community.com/  
 Verified locator: yes, 2026-09-12  
-Retrieval status: blocked_current_source
+Route note: the generic landing page returned HTTP 403 through one direct fetch route, but current official faction pages were successfully retrieved through the indexed web route below.
 
-The current downloads page routes to this source. This environment received HTTP 403 when attempting to retrieve the live values. Therefore this repository does not copy or certify current point values, Leader attachments, or whole-list legality from the MFM in this pilot.
+Do not convert a route-specific retrieval failure into a claim that the source is unavailable.
+
+## OFF-11E-MFM-SOB-1.0
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Munitorum Field Manual — Adepta Sororitas  
+Locator: https://mfm.warhammer-community.com/en/adepta-sororitas  
+Version shown: v1.0  
+Verified: yes, 2026-09-12
+
+Scope verified for this repository:
+- current unit points schedules;
+- Leader/Support labels and eligible bodyguard units shown by the live MFM;
+- Detachment Points, Force Dispositions and Enhancement/Upgrade costs shown by the live MFM.
+
+Relevant current values include:
+- Canoness 60; Dialogus 40; Retributor Squad 105 for the first two units;
+- Imagifier 65; Battle Sisters Squad 100; Palatine 50; Dogmata 45;
+- Celestian Sacresants: first unit 75 for 5 models or 150 for 10;
+- Hospitaller first unit 75; Dominion Squad first two units 100, plus 5 per meltagun;
+- Sororitas Rhino 75; Castigator first two units 165;
+- Exorcist first unit 180; Paragon Warsuits first two units 180;
+- Seraphim Squad first two units 85 for 5 models or 160 for 10;
+- Sisters Novitiate Squad 100;
+- Army of Faith 2DP / Take and Hold; Litanies of Faith 10; Blade of Saint Ellynor 15;
+- Sanctified Orators 1DP / Purge the Foe; Hagiomnifex Upgrade 25.
+
+These current values do not rewrite the v946 roster costs.
+
+## OFF-11E-MFM-IA-1.0
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Munitorum Field Manual — Imperial Agents  
+Locator: https://mfm.warhammer-community.com/en/imperial-agents  
+Version shown: v1.0  
+Verified: yes, 2026-09-12
+
+Relevant current values:
+- Inquisitor 55;
+- Inquisitorial Agents: 6 models 50;
+- Rogue Trader Entourage: 4 models 75;
+- Voidsmen-at-Arms: 6 models 50;
+- Imperial Rhino 75;
+- Inquisitorial Chimera 70.
+
+The live MFM also shows Inquisitor as a Leader option for Inquisitorial Agents and Rogue Trader Entourage as a Leader option for Voidsmen-at-Arms. Full Assigned Agents allowance/whole-list legality is not certified from these values alone.
+
+## OFF-11E-MFM-IK-1.0
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Munitorum Field Manual — Imperial Knights  
+Locator: https://mfm.warhammer-community.com/en/imperial-knights  
+Version shown: v1.0  
+Verified: yes, 2026-09-12
+
+Relevant current values:
+- Armiger Helverin 140;
+- Armiger Warglaive 140.
+
+The MFM points page does not by itself certify their allied inclusion in FORCE-3000.
 
 ## OFF-11E-SOB-FP-1.0
 
@@ -34,21 +93,65 @@ Locator: https://assets.warhammer-community.com/eng_11-06_warhammer40000_faction
 Matched-play date: 20 June 2026  
 Verified: yes, 2026-09-12
 
-Scope:
-- additional rules and clarifications that supplement the Codex;
-- new Detachments and datasheets;
-- rules updates and FAQs;
-- current 11th-edition datasheet field structure visible in the included datasheets.
-
-Relevant verified FORCE-1985-V946 updates:
+Relevant verified updates:
 - Dialogus, Dogmata, Hospitaller and Imagifier: remove Core ability `Leader`; add `Support`.
-- Dominion Squad, `Righteous Awareness`: after an enemy unit ends a move within 8", if the Dominion unit is not within Engagement Range, it can make a Normal move of up to D6".
-- Retributor Squad, `Storm of Retribution`: ranged attacks re-roll a Hit roll of 1 and a Wound roll of 1; against an enemy unit that has destroyed one or more Adepta Sororitas units from the army during the battle, add 1 to Hit and Wound rolls as well.
+- Dominion Squad, `Righteous Awareness`: current movement-response rule recorded in the unit crosswalk.
+- Retributor Squad, `Storm of Retribution`: current re-roll/vengeance rule recorded in the unit crosswalk.
 - Castigator, Exorcist and Sororitas Rhino: add the `FRAME` keyword.
-- Sanctified Orators: Enhancements selected from the detachment do not count towards the total number of Enhancements in the army; friendly `ADEPTA SORORITAS CHARACTER` units have +1 Ld.
-- Hagiomnifex is an `ADEPTA SORORITAS CHARACTER` unit Upgrade, excluding Penitent units, with a once-per-turn per-unit start-of-phase selectable ability set.
+- Sanctified Orators rules and Hagiomnifex update are recorded only to the scope actually inspected.
 
-The Faction Pack does not republish every ordinary Codex datasheet. Missing base profiles, full keyword sets, wargear profiles, Leader/Support eligibility and abilities are therefore not inferred.
+The pack supplements rather than republishes every ordinary Codex datasheet, so missing base profiles are not inferred.
+
+## OFF-11E-IA-FP-1.0
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Imperial Agents Faction Pack, Version 1.0  
+Locator: https://assets.warhammer-community.com/eng_11-06_warhammer40000_faction_pack_imperial_agents-qhp2xzepry-gapdknla3x.pdf  
+Matched-play date: 20 June 2026  
+Verified relevant update text: yes, 2026-09-12
+
+Relevant verified updates:
+- Inquisitorial Agents: if Army Faction is not Agents of the Imperium, each Inquisitor can permit one Inquisitorial Agents unit not to count towards the number of Retinue units allowed, subject to Assigned Agents.
+- Voidsmen-at-Arms: corresponding current Navy Bodyguard rule for each Voidfarers Character, subject to Assigned Agents.
+- Imperial Rhino transport update: capacity 12 Agents of the Imperium Infantry, excluding Terminator and Officio Assassinorum models.
+- Imperial Rhino and Inquisitorial Chimera: add `FRAME`.
+
+The complete Assigned Agents allowance table and every base datasheet were not retrieved through the current public route; whole-list allied legality remains a separate check.
+
+## OFF-11E-IK-FP-1.0
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Imperial Knights Faction Pack, Version 1.0  
+Locator: https://assets.warhammer-community.com/eng_11-06_warhammer40000_faction_pack_imperial_knights-uoieohputz-totyd7mvs6.pdf  
+Matched-play date: 20 June 2026  
+Verified metadata: yes, 2026-09-12  
+Full retrieval status: source file exceeded the available direct retrieval route.
+
+The current pack exists and supplements the Codex. Base Armiger datasheet characteristics and current Freeblade/ally construction rules are therefore not reconstructed from older-edition material.
+
+## OFF-11E-AT-FP-1.0
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Adeptus Titanicus Faction Pack, Version 1.0  
+Locator: https://assets.warhammer-community.com/eng_11-06_warhammer40000_faction_pack_adeptus_titanicus-w2uqxtzclf-9hqf20r3dc.pdf  
+Matched-play date: 20 June 2026  
+Verified: yes, 2026-09-12
+
+Relevant verified rules:
+- `Titanic Support`: if every model in the army has the `IMPERIUM` keyword, one Adeptus Titanicus model may be included even without the selected Army Faction keyword.
+- Warhound Titan current datasheet is published in full.
+- Characteristics: M 14", T 13, SV 2+, W 40, LD 6+, OC 16; 5+ invulnerable save against ranged attacks.
+- Keywords: Vehicle, Walker, Titanic, Towering, Frame, Imperium, Warhound Titan.
+- Faction keyword: Adeptus Titanicus.
+- Warhound turbo-laser destructor: 72", D3+3 attacks, BS 3+, S 20, AP -3, D 2D6, Blast.
+- Warhound feet: Melee, 8 attacks, WS 4+, S 10, AP -1, D 2.
+- Core/Faction abilities include Deadly Demise 2D6 and Super-heavy Walker.
+- `Striding Colossus`: targeting the model with a Stratagem costs twice that Stratagem's stated CP cost.
+- `Flank Speed`: advancing adds 8" to Move instead of making an Advance roll.
+- damaged state at 1-13 wounds remaining reduces OC by 8 and subtracts 1 from Hit rolls.
+- both standard primary weapons have a legal replacement route to a Warhound turbo-laser destructor; the FORCE-3000 double turbo-laser configuration is therefore supported by this datasheet.
+
+A current official Warhound points value was not successfully retrieved in this audit. The v946 1100-point value remains a snapshot value, not a current-points certification.
 
 ## OFF-11E-IMPERIAL-FACTION-PACKS-ARTICLE
 
@@ -58,29 +161,16 @@ Date: 11 June 2026
 Locator: https://www.warhammer-community.com/en-gb/articles/8nrrdlgr/new40k-download-new-imperial-faction-packs-today/  
 Verified: yes, 2026-09-12
 
-Relevant verified detachment metadata:
-- Adepta Sororitas `Army of Faith`: Take and Hold, 2 Detachment Points.
-- Adepta Sororitas `Sanctified Orators`: Purge the Foe, 1 Detachment Point.
-- Imperial Agents detachments listed independently for the faction.
-
-The FORCE-1985-V946 export lists `Army of Faith and Sanctified Orators (3 Detachment Points)`. The article supports the individual 2DP + 1DP values; this pilot does not certify every rule governing their combined use.
-
-## OFF-11E-IA-FP-1.0
-
-Publisher: Games Workshop / Warhammer Community  
-Title: Imperial Agents Faction Pack, Version 1.0  
-Locator: https://assets.warhammer-community.com/eng_11-06_warhammer40000_faction_pack_imperial_agents-qhp2xzepry-gapdknla3x.pdf  
-Matched-play date: 20 June 2026  
-Verified metadata: yes, 2026-09-12  
-Full retrieval status: source file exceeded the available web retrieval route.
-
-The pack is a current official Imperial Agents supplement. This pilot does not infer the full current datasheets or allied-construction rules for Inquisitor, Inquisitorial Agents, Rogue Trader Entourage or Voidsmen-at-Arms from the mere existence of the pack.
+Relevant metadata:
+- Adepta Sororitas `Army of Faith`: Take and Hold, 2DP.
+- Adepta Sororitas `Sanctified Orators`: Purge the Foe, 1DP.
+- Imperial Knights current detachment names/DP values are listed independently.
 
 ## Source-routing rule
 
-For current rules questions, prefer:
-1. the live current Games Workshop source;
-2. the current Faction Pack or Codex/update source;
-3. the preserved roster only for snapshot composition and snapshot costs.
+For current rules questions:
+1. use the current official Games Workshop source;
+2. use the specific current MFM/Faction Pack record above where retrieved;
+3. use preserved rosters only for snapshot composition and snapshot costs.
 
-Do not use the Compendium's inherited rules claims as a substitute for a current official check.
+Do not use an older-edition Index or inherited Compendium rules claim as proof of a current 11th-edition field.
