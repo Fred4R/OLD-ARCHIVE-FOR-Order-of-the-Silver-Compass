@@ -624,6 +624,80 @@ def validate_armies(
         fail(f"Rules record has stale/unmatched roster occurrence: {pair[0]} -> {pair[1]}")
 
 
+
+def validate_core_markdown() -> None:
+    core_paths = [
+        ROOT / "README.md",
+        ROOT / "AGENTS.md",
+        ROOT / "AUTHORITY.md",
+        ROOT / "STATUS.md",
+        ROOT / "SOURCES.md",
+    ]
+    for path in core_paths:
+        text = read_text(path)
+        headings = re.findall(r"^## (.+)$", text, flags=re.MULTILINE)
+        duplicates = sorted({heading for heading in headings if headings.count(heading) > 1})
+        for heading in duplicates:
+            fail(
+                f"{path.relative_to(ROOT)} contains duplicate level-2 heading "
+                f"{heading!r}"
+            )
+
+
+def validate_illustrative_stories() -> None:
+    story_root = ROOT / "Stories/Illustrative"
+    if not story_root.exists():
+        return
+
+    boundary = story_root / "README.md"
+    if not boundary.exists():
+        fail("Stories/Illustrative exists without its README boundary file")
+
+    story_paths = sorted(
+        path for path in story_root.glob("*.md")
+        if path.name != "README.md"
+    )
+    for path in story_paths:
+        text = read_text(path)
+        required = {
+            "RECORD_TYPE": "illustrative_story",
+            "CANON_STATUS": "PROPOSAL",
+            "EVIDENCE_CLASS": "A7",
+        }
+        for field, expected in required.items():
+            match = re.search(
+                rf"^{re.escape(field)}:\s*(.+?)\s*$",
+                text,
+                flags=re.MULTILINE,
+            )
+            if not match:
+                fail(f"{path.relative_to(ROOT)} missing {field}")
+            elif match.group(1).strip() != expected:
+                fail(
+                    f"{path.relative_to(ROOT)} {field} must be {expected!r}, "
+                    f"found {match.group(1).strip()!r}"
+                )
+
+        continuity = re.search(
+            r"^CONTINUITY_BASIS:\s*(.+?)\s*$",
+            text,
+            flags=re.MULTILINE,
+        )
+        if not continuity or not continuity.group(1).strip():
+            fail(f"{path.relative_to(ROOT)} missing CONTINUITY_BASIS")
+
+        purpose = re.search(
+            r"^PURPOSE:\s*(.+?)\s*$",
+            text,
+            flags=re.MULTILINE,
+        )
+        if not purpose or "not adopted" not in purpose.group(1).lower():
+            fail(
+                f"{path.relative_to(ROOT)} PURPOSE must explicitly state "
+                "that the scene is not adopted into story history"
+            )
+
+
 def validate_connections() -> None:
     required_files = [
         ROOT / "AUTHORITY.md",
@@ -653,6 +727,8 @@ def validate_connections() -> None:
 
 def main() -> int:
     validate_connections()
+    validate_core_markdown()
+    validate_illustrative_stories()
     validate_manifest()
     master_text = validate_master()
     source_ids = validate_source_index()
@@ -668,7 +744,8 @@ def main() -> int:
     print("Repository validation PASSED.")
     print("Checked: tracked-file hashes, canonical Compendium identity, YAML syntax,")
     print("authority/status separation, army arithmetic, exact source payloads,")
-    print("project/rules/source IDs, roster-occurrence links, and current-claim provenance.")
+    print("project/rules/source IDs, roster-occurrence links, current-claim provenance,")
+    print("core-document heading uniqueness, and illustrative-story proposal boundaries.")
     return 0
 
 
