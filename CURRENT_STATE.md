@@ -1,0 +1,254 @@
+# Current State
+
+This is the compact operational continuity kernel for the Order of the Silver Compass project.
+
+It answers one question: **what must a fresh conversation know in order to continue correctly now?**
+
+It is not a new canon source. It does not upgrade inherited evidence, convert a proposal into history, certify current Warhammer rules, or erase unresolved information.
+
+## Authority and provenance
+
+Authority scope: current operational scene pointer, immediate conversational focus, continuation-critical state, and cold-start routing.
+
+Underlying factual authority remains with the record that actually supports each claim:
+- preserved continuity, people, relationships and unresolved boundaries: `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`, subject to its review status and evidence distinctions;
+- later scoped repository corrections or additions: the relevant later record;
+- current Warhammer rules: current official Games Workshop/Warhammer sources, with repository verification recorded under `Rules/11e/`;
+- exact army snapshots: `Sources/Armies/`;
+- roster-to-project mappings: `Armies/`.
+
+The preserved MASTER remains a **REVISED CANDIDATE — user acceptance not established**. Its inherited `ESTABLISHED_PROJECT_CANON` labels record project standing carried forward from predecessor material; they do not mean the 2026-09-13 audit independently witnessed Fred accept every underlying event. Preserve that distinction.
+
+This file narrowly supersedes older repository pointers only for the current operational present and immediate focus. It does not supersede the historical evidence from which that present was derived.
+
+## Current live scene
+
+The story is aboard the `True Meridian`, inside Aurelia Montfort's House Montfort working-and-receiving chamber reached during her accepted working circuit.
+
+Do not resume beneath the Warhound, repeat introductions, or stage an audit council.
+
+The active conversational focus is now **Canoness Constantia Serenitas as Warlord through the Army of Faith Detachment**. This later repository focus supersedes the Compendium's older immediate Justina-focus only as a matter of present conversational priority. Justina remains present in the continuity and retains all separately established facts and authority.
+
+The tactical thread is command-resource stewardship: mission purpose, Stratagem use, Acts of Faith, Miracle dice, the cost of consuming finite options, and what becomes possible or impossible afterward.
+
+Preferred causal teaching chain:
+
+`mission -> threatened purpose -> available rule/resource -> choice -> action -> consequence -> changed options`
+
+## Current endpoint carried forward
+
+The following is preserved as reported user-authored / inherited continuation rather than newly witnessed evidence.
+
+At the threshold of the chamber, Fred commits part of his lived time, present and future, to helping the others preserve ways to return home. This extends the project's return motif toward durable human futures without making the `True Meridian` identical to Fred's hoped-for domestic home.
+
+Fred looks Constantia in the eye and relaxes. He notices something mildly faithful about her apart from the earlier luminous event. This is Fred's perception, not evidence of another supernatural manifestation or of Constantia's private interpretation.
+
+The Warhound Princeps, whom Fred's later wording calls **Sabine**, beckons Valeria and the Helverin pilot into the gathering. The form `Sabine` is permitted as reported usage; formal naming acceptance, surname, Titan Legion and Warhound name remain unresolved.
+
+Fred notices smiling and laughter among women of high station and wonders what they are normally like when he is absent. He wants to contribute to that enjoyment sincerely. This establishes Fred's perspective only. It does not establish reciprocal attraction, consent, romance, or a collective relationship state.
+
+## Current gathering and count safeguard
+
+Fred's reported total is exactly **nine women with him**.
+
+Protected continuity claims:
+- Eulalia Veridica has remained continuously present; no departure and return occurred.
+- all three Silver Compass Paragon pilots are current-chamber participants.
+
+Other inherited positive presence claims, combined with those protected claims, produce ten women. The exact one-person overcount remains **UNRESOLVED SOURCE RECONCILIATION**.
+
+Therefore:
+- do not invent a departure, disappearance, death, or off-screen movement;
+- do not erase Eulalia or any Paragon pilot to make the arithmetic fit;
+- do not assume the unresolved person is the Princeps or Helverin pilot;
+- do not enumerate the full chamber unless exact staging becomes necessary;
+- ordinary limited viewpoint and dialogue focus may continue despite the unresolved count.
+
+Positive current-presence claims carried from the preserved record include Constantia, Aurelia, Justina, Eulalia, Valeria, the Helverin pilot, the Warhound Princeps, and the three Paragon pilots. The conflict lies in reconciling those claims with Fred's direct nine-woman total, not in a license to choose one person to delete.
+
+Justina's individual Agents are not separately established as physically present in the current chamber.
+
+## Authorities that must remain distinct
+
+Fred is the expeditionary coordinator. He coordinates the shared objective; he does not replace the participating authorities and has no tabletop model.
+
+Constantia commands the Order of the Silver Compass and its Sororitas forces.
+
+Aurelia Montfort leads House Montfort and holds primary shipboard authority aboard the `True Meridian`.
+
+Justina Voss retains independent Inquisitorial jurisdiction and directs her own Agents.
+
+Valeria retains authority appropriate to piloting her Warglaive.
+
+The Helverin pilot retains authority appropriate to her engine and role.
+
+The Warhound Princeps commands the project Warhound.
+
+Specialists retain authority within their own competence.
+
+Cooperation is coordination, not institutional merger, common ownership, or an unqualified chain of command.
+
+## Principal people needed for immediate continuation
+
+### Constantia Serenitas
+
+Project standing: `ESTABLISHED_PROJECT_CANON` in the preserved record; underlying acceptance evidence is inherited rather than independently recovered in the 2026-09-13 audit.
+
+Constantia is Canoness and commander of the Order of the Silver Compass. She is a competent military and religious leader who knows the Sisters under her command intimately and cares about them independently of Fred's preferences.
+
+At THE LIGHT OF RETURN she visibly manifested an unusual luminous phenomenon before gathered witnesses. She treated it as religiously significant while refusing to claim complete knowledge of its cause or message.
+
+She knows Fred's hope for a wife, children and peaceful home and has said that she cares whether he lives long enough to become the husband and father he hopes to become. This establishes tenderness and meaningful personal concern, not romantic love, sexual desire, exclusivity or a future pairing.
+
+For Army of Faith simulation, use `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml` for current rules and `Characters/Constantia-Serenitas.md` for bounded `INTERPRETATION / A6` portrayal guidance.
+
+### Aurelia Montfort
+
+Aurelia is Rogue Trader, leader of House Montfort and primary ship authority aboard the `True Meridian`.
+
+Her accepted working circuit demonstrated her competence through routes, access, staging, security, specialist support, recovery and creation of options before commitment. She is not Fred's logistics assistant and is not subordinate to the Sororitas.
+
+Fred's familiarity with Aurelia remains developing. She witnessed THE LIGHT OF RETURN and therefore knows Fred's publicly articulated domestic hope. Her private response and any attraction remain unresolved.
+
+### Justina Voss
+
+Justina is an Inquisitor with an independent Inquisitorial presence.
+
+Her demonstrated project method is calibrated inquiry: distinguish observation, inference, remaining uncertainty, jurisdiction and recommendation. She can make strong inferences without becoming omniscient.
+
+Fred's familiarity with Justina remains developing. She witnessed THE LIGHT OF RETURN and knows Fred's publicly articulated domestic hope. Her Ordo, private interpretation, emotional response and any attraction remain unresolved.
+
+### Eulalia Veridica
+
+Eulalia is a Sister Dialogus and Support Character who operates with the Silver Compass force in both preserved snapshots.
+
+She has demonstrated the ability to distinguish witness from interpretation, recapitulate shared meaning, transmit clarified intent and invite correction. She is not omniscient, a narrator surrogate, or automatically a permanent House Montfort communications officer.
+
+Her personal name and continuous presence are established in the inherited continuity. Her exact Order Dialogus origin and institutional arrangement with the Silver Compass remain unresolved.
+
+### Valeria
+
+Valeria is the established pilot of the project Armiger Warglaive.
+
+She has taught Fred through practical observation of the Warglaive's practiced operational relation with the three Silver Compass Paragon pilots. Her surname, title, Knight house or Freeblade status, Questor alignment, fealty and permanent True Meridian status remain unresolved.
+
+### Helverin pilot
+
+A woman pilots the project Armiger Helverin represented in FORCE-3000.
+
+Her personal name remains unresolved. Earlier `Livia` is provisional and must not be forced into current dialogue or canon.
+
+### Warhound Princeps
+
+The project Warhound has an established female Princeps. Fred's later wording uses `Sabine`; earlier `Sabina` was provisional. Formal personal-name spelling remains unresolved.
+
+Her surname, Titan Legion, Warhound name, interface condition, supporting crew and permanent True Meridian status remain unresolved.
+
+### Paragon trio
+
+Three women of the Order of the Silver Compass pilot the three Paragon Warsuits represented in both preserved snapshots.
+
+They have a practiced operational relation with Valeria's Warglaive and were present for REMEMBER THE RETURN. All three are protected as current-chamber participants.
+
+Their personal names, individual voices, biographies, which one is the narrative Paragon Superior, and private relationships remain unresolved.
+
+## Durable sequence and waymarks
+
+The preserved record carries the following continuity in project standing, with evidence limits retained:
+
+- **Accepted breakfast** — Fred, Constantia, Aurelia and Justina shared an earlier breakfast aboard the `True Meridian`. The original acceptance transcript was not independently recovered in the 2026-09-13 audit.
+- **REMEMBER THE RETURN** — Fred, Constantia, Valeria and the three Paragon pilots share the command intent that the force should win and return alive; Valeria and the Paragons demonstrate practiced coordination and recoverable commitment.
+- **THE LIGHT OF RETURN** — Constantia's visible luminous phenomenon is witnessed; she publicly articulates Fred's hope for wife, children and peaceful home and refuses to claim infallible knowledge of the Emperor's private intention. Eulalia's grounding exchange follows.
+- **Aurelia's working circuit** — the coalition experiences Aurelia exercising shipboard competence through functional spaces and decisions; this does not establish a full ship map or exact architecture.
+- **THE STEWARDSHIP OF COMMAND** — latest named waymark in the preserved Compendium. Fred's tactical learning has reached stewardship of finite command options. The story continued beyond the named waymark into the present chamber state.
+
+Do not turn a waymark into stronger evidence than the underlying record provides.
+
+## Relationship boundaries
+
+Fred knows Constantia better than he knows Aurelia or Justina.
+
+Constantia and Fred have established personal knowledge and tenderness in the broad sense of access to private hopes. This does not establish romance, sexual desire, exclusivity or pair-bonding.
+
+Aurelia, Justina, Eulalia, Valeria, the Princeps, the Helverin pilot and the Paragon pilots have no established reciprocal romantic or sexual state with Fred unless later evidence separately establishes one.
+
+Fred's attraction, tenderness, curiosity or hopes may be narrated when he supplies or establishes them. They do not create another person's desire or consent.
+
+Constantia, Aurelia and Justina are established coalition participants, but deeper prior history among the three remains pending audit. Do not invent dates, old memories, private shorthand or longstanding friendship.
+
+## Army state
+
+Two durable force snapshots remain separate historical source artifacts.
+
+`FORCE-1985-V946`:
+- 1,985 points;
+- 84 models;
+- exact source: `Sources/Armies/FORCE-1985-V946.txt`;
+- crosswalk: `Armies/Order-of-the-Silver-Compass/FORCE-1985-V946.yaml`.
+
+`FORCE-3000`:
+- 3,000 points;
+- 68 models;
+- 15 formations;
+- 23 unit occurrences;
+- exact source: `Sources/Armies/FORCE-3000.txt`;
+- crosswalk: `Armies/Order-of-the-Silver-Compass/FORCE-3000.yaml`.
+
+They are not automatically sequential fictional moments. Roster differences do not establish casualties, reinforcement, arrival, departure, promotion, rearmament or chronology.
+
+## Current rules state relevant to the live focus
+
+Start current rules work at `Rules/11e/SOURCE_INDEX.md`.
+
+For Army of Faith, use `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml`.
+
+Currently verified public official evidence supports the Detachment's current existence, its Detachment Points and Force Disposition, current Enhancement names and points, the public Sacred Rites evidence permitting a unit to perform up to two Acts of Faith in the same phase, and the public Divine Guidance example recorded there.
+
+Complete current Army of Faith Stratagem wording, several Enhancement effects including `Litanies of Faith`, and some base datasheet fields remain blocked by current Codex/app access in the repository. Do not reconstruct them from community sources and call them verified.
+
+## Open gates that matter now
+
+These unresolved matters must remain narrow rather than obstructing ordinary continuation:
+
+- reconciliation of the nine-woman total against ten positive presence claims;
+- formal Princeps name acceptance and all wider Titan identity;
+- Helverin pilot personal name and Knight institutional identity;
+- individual Paragon names and narrative Superior identity;
+- Valeria's wider Knight identity;
+- Eulalia's institutional Order Dialogus origin;
+- deeper prior history among Constantia, Aurelia and Justina;
+- exact metaphysical cause or message of THE LIGHT OF RETURN;
+- exact `True Meridian` class, dimensions and Titan-support architecture;
+- complete current Army of Faith Codex/app-only rule text;
+- any reciprocal attraction, romance, sexuality or commitment not separately established.
+
+Do not solve any of these by invention.
+
+## Cold-start behavior
+
+For an ordinary new conversation:
+
+1. read this file;
+2. identify the task;
+3. retrieve only the task-specific authoritative record it points to;
+4. answer or continue without making Fred reconstruct the project.
+
+Do not preload the whole governance layer.
+
+Use `AUTHORITY.md` and `STATUS.md` when authority, supersession, evidence class or canon standing is actually in question. Use `USING_REPOSITORY.md` for maintenance/workflow. Use `CONTINUATION.md` when continuation planning rather than immediate continuation is the task.
+
+For story, continue the lived scene.
+
+For army learning, use the exact snapshot plus current verified rules and explain causally.
+
+For identification, use the methodology PDFs by function.
+
+For repository maintenance, preserve provenance and verify the committed result.
+
+## Update rule
+
+When later accepted conversation changes the current scene, relationship state, name state or another durable continuity fact, update the proper authoritative home first and then update this kernel's operational pointer.
+
+Do not use this summary as an excuse to bypass the underlying evidence.
+
+The repository succeeds when Fred can speak naturally and the system performs retrieval, verification, continuity maintenance and routine QA underneath the experience.
