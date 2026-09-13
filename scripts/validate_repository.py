@@ -1057,6 +1057,7 @@ def validate_connections() -> None:
         ROOT / "AGENTS.md",
         ROOT / "STATUS.md",
         ROOT / "SOURCES.md",
+        ROOT / "CURRENT_STATE.md",
         ROOT / "CONTINUATION.md",
         ROOT / "NEW_CONVERSATION.md",
         ROOT / "scripts/validate_repository.py",
@@ -1070,10 +1071,17 @@ def validate_connections() -> None:
             fail(f"Missing required connected file: {path.relative_to(ROOT)}")
 
     checks = {
-        ROOT / "README.md": ["scripts/validate_repository.py", "Validate repository integrity", "CONTINUATION.md", "NEW_CONVERSATION.md"],
-        ROOT / "AGENTS.md": ["scripts/validate_repository.py", "CONTINUATION.md", "NEW_CONVERSATION.md"],
-        ROOT / "AUTHORITY.md": ["scripts/validate_repository.py", "CONTINUATION.md", "NEW_CONVERSATION.md"],
-        ROOT / "NEW_CONVERSATION.md": ["Current live story pointer", "Next substantive repository task", "Rules/11e/SOURCE_INDEX.md", "CONTINUATION.md"],
+        ROOT / "README.md": ["scripts/validate_repository.py", "Validate repository integrity", "CURRENT_STATE.md", "NEW_CONVERSATION.md"],
+        ROOT / "AGENTS.md": ["scripts/validate_repository.py", "CURRENT_STATE.md", "CONTINUATION.md", "NEW_CONVERSATION.md"],
+        ROOT / "AUTHORITY.md": ["scripts/validate_repository.py", "CURRENT_STATE.md", "CONTINUATION.md", "NEW_CONVERSATION.md"],
+        ROOT / "CURRENT_STATE.md": [
+            "Current live scene",
+            "Current gathering and count safeguard",
+            "Current rules state relevant to the live focus",
+            "Open gates that matter now",
+            "Order_of_the_Silver_Compass_MASTER_v4.3.41.txt",
+        ],
+        ROOT / "NEW_CONVERSATION.md": ["CURRENT_STATE.md", "Rules/11e/SOURCE_INDEX.md", "CONTINUATION.md", "USING_REPOSITORY.md"],
         ROOT / "Stories/Illustrative/README.md": ["../../CONTINUATION.md"],
     }
     for path, required_fragments in checks.items():

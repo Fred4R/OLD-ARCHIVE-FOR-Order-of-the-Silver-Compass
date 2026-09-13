@@ -1,16 +1,14 @@
-For a fresh conversation, read `NEW_CONVERSATION.md` first. It is a routing handoff, not a canon source.
-
-Read `USING_REPOSITORY.md` next. It defines the practical retrieval workflow and how to keep repository mechanics beneath the user experience.
-
 # Instructions for AI systems
 
 This is a provenance-controlled Warhammer 40,000 project repository.
 
-Read `AUTHORITY.md`, `README.md`, `STATUS.md`, and `SOURCES.md` before substantive work.
+For a fresh conversation, read `CURRENT_STATE.md` first. It is the compact operational continuity kernel, not an independent canon source.
 
-Use `AUTHORITY.md` to determine which record governs the question. Do not assume that a newer file supersedes an older one outside its stated scope.
+Then retrieve only the record required by the task. Do not preload the full governance layer or preserved Compendium merely because a conversation is new.
 
-Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for continuation-critical baseline continuity that has not been explicitly superseded. Preserve its candidate review status and unresolved boundaries.
+Use `NEW_CONVERSATION.md` for minimal cold-start routing and `USING_REPOSITORY.md` for repository workflow. Use `AUTHORITY.md` when authority or supersession is actually in question and `STATUS.md` when canon/evidence terminology matters.
+
+Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for underlying baseline continuity or evidence not already resolved by a narrower authoritative record. Preserve its candidate review status and unresolved boundaries.
 
 For army questions, use the exact source payload under `Sources/Armies/` when one exists, then resolve the corresponding crosswalk under `Armies/`. For current Warhammer 40,000 rules questions, route through `Rules/11e/SOURCE_INDEX.md`, then use the matching unit record under `Rules/11e/units/` or Detachment record under `Rules/11e/detachments/` before making current stats, keyword, ability, attachment, Detachment, Enhancement, Stratagem, points, or legality claims.
 
