@@ -63,3 +63,10 @@ GitHub Actions also runs the same validator automatically on pull requests and o
 The validator checks repository mechanics: tracked-file SHA-256 coverage, canonical Compendium identity, YAML syntax and duplicate keys, authority/status/evidence separation, army arithmetic, exact source payload hashes, project/rules/source identifiers, roster-occurrence links, and provenance for current-rule claims.
 
 A passing validation is not a lore-truth certificate, user acceptance, current army-legality certificate, or proof that unresolved information has become resolved.
+
+
+## Repository validation
+
+Run `python scripts/validate_repository.py` after repository changes. The same check is automated in `.github/workflows/validate-repository.yml` for pull requests and pushes to `main`.
+
+A passing validator confirms repository structure and references only. It does not establish canon acceptance, source truth, or current army legality.
