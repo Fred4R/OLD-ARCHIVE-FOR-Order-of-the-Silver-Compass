@@ -56,3 +56,8 @@ After changing repository structure, army crosswalks, rules records, authority r
 Do not claim the repository is structurally valid until that command passes against the actual committed tree. GitHub Actions runs the same check on pull requests and pushes to `main`.
 
 The validator is a structural guard. It does not promote proposals to canon, resolve `UNRESOLVED`, certify whole-list legality, or replace source review.
+
+
+## Continuation planning
+
+For substantial continuation, read `CONTINUATION.md`. It keeps story and army understanding ahead of infrastructure and defines how repository work may be echoed symbolically without becoming canon.
