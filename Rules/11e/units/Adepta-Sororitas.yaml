@@ -2,7 +2,7 @@ version: 3
 record_type: "current_rules_crosswalk"
 authority_map: "../../../AUTHORITY.md"
 authority_scope: "dated current 11e rules findings for listed units"
-verification_as_of: "2026-09-12"
+verification_as_of: "2026-09-13"
 supersedes_for:
   - "only current-rules fields explicitly verified in this file"
 does_not_supersede:
@@ -44,29 +44,12 @@ current_army_rule_context:
       recurring Miracle-die gain and does not itself replace the Codex definition
       of which rolls an Act of Faith can substitute.
 
-current_detachment_costs:
+current_detachment_records:
   Army_of_Faith:
-    source: "OFF-11E-MFM-SOB-1.0"
-    verification_status: "verified_current"
-    detachment_points: 2
-    force_disposition: "Take and Hold"
-    enhancements:
-      Litanies_of_Faith: 10
-      Blade_of_Saint_Ellynor: 15
-    detachment_rule:
-      name: "Sacred Rites"
-      source: "OFF-11E-AOF-CODEX-PREVIEW"
-      verification_status: "partially_verified_current"
-      public_official_evidence: >
-        The official Codex preview states that each ADEPTA SORORITAS unit from
-        the army can perform up to two Acts of Faith per phase instead of one.
-        The 2026 edition retains existing Codex Detachments and the inspected
-        2026 Faction Pack rules-update section contains no Army of Faith or
-        Sacred Rites amendment. Complete live app/Codex wording remains the
-        final authority.
-      tactical_consequence: >
-        A unit can use Miracle dice twice in one phase, increasing reliability
-        at decisive moments while consuming the finite Miracle-dice pool faster.
+    detachment_id: "11E-SOB-DET-ARMY-OF-FAITH"
+    record: "../detachments/Adepta-Sororitas/Army-of-Faith.yaml"
+
+current_detachment_costs:
   Sanctified_Orators:
     source: "OFF-11E-MFM-SOB-1.0"
     verification_status: "verified_current"
