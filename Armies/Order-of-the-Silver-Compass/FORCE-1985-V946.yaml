@@ -20,9 +20,12 @@ faction: "Adepta Sororitas"
 source_snapshot:
   record_type: "source_snapshot"
   evidence_class: "A2"
-  exact_source_file: "Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
-  exact_source_location: "Appendix C"
-  compendium_exact_payload_sha256: "f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6"
+  exact_source_file: "../../Sources/Armies/FORCE-1985-V946.txt"
+  exact_source_sha256: "f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6"
+  embedded_duplicate:
+    file: "../../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
+    location: "Appendix C"
+    note: "Preserved embedded copy of the same exact payload."
   app_version: "v2.6.0 (144)"
   data_version: "v946"
   listed_points: 1985
