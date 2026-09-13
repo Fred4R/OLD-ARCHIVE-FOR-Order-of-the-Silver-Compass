@@ -17,6 +17,7 @@ There is no universal ranking for every question. Identify the question type fir
 | Repository routing and supersession | `AUTHORITY.md` | Controls repository routing only. It does not create fictional canon or game rules. |
 | Canon/evidence terminology | `STATUS.md` together with preserved Compendium Section 0C | Canon status and evidence class remain separate. |
 | Source routing | `SOURCES.md` | Points to source families; it does not replace them. |
+| New-conversation bootstrap | `NEW_CONVERSATION.md` | Routes a fresh conversation to the correct authorities and live-state pointers. It is a handoff record, not canon, evidence or current rules. |
 | Continuation planning | `CONTINUATION.md` | Guides priority, sequencing and symbolic use of repository work. It is planning, not evidence, canon or current game rules. |
 | Preserved Silver Compass baseline, continuity, people, relationships, unresolved boundaries, historical roster snapshots | `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` | Preserved baseline candidate. Its own `REVIEW_STATUS: REVISED CANDIDATE — user acceptance not established` remains in force. |
 | Exact FORCE-1985-V946 source payload | `Sources/Armies/FORCE-1985-V946.txt` | Standalone immutable source artifact. Appendix C remains a preserved embedded copy of the same payload. It is not current legality or fictional chronology. |
