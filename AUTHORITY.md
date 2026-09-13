@@ -22,7 +22,7 @@ There is no universal ranking for every question. Identify the question type fir
 | FORCE-1985-V946 repository crosswalk | `Armies/Order-of-the-Silver-Compass/FORCE-1985-V946.yaml` | Maps roster occurrences to project unit IDs, rules IDs, and explicitly scoped project identities. It does not replace Appendix C. |
 | Current 11th-edition findings | `Rules/11e/SOURCE_INDEX.md` plus the matching record under `Rules/11e/units/` | Governs only fields actually verified from current official Games Workshop/Warhammer sources. |
 | Current official Warhammer lore/rules | Current Games Workshop/Warhammer primary source | Repository records verification and routing; they do not outrank the official source. |
-| Human-evidence methodology | Original PDFs under `Sources/Methodology/` | These sources govern the scientific constructs and limits they actually support. |
+| Human-evidence methodology | Original PDFs under `Sources/Methodology/` | These sources govern the scientific constructs and limits they actually support. `Sources/Methodology/REVIEW_STATUS.md` governs only the later review-completion state. |
 | Workflow state | GitHub issues, pull requests, commits, and branches | Workflow only; not Silver Compass canon merely because it exists or is merged. |
 
 ## Preserved Compendium and later repository records
