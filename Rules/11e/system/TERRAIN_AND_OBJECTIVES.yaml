@@ -1,0 +1,163 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-TERRAIN-AND-OBJECTIVES"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current 11th-edition shared terrain and objective structure explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "current shared terrain/objective fields explicitly verified here"
+does_not_supersede:
+  - "exact current tournament layout coordinates"
+  - "complete Core Rules terrain wording not reproduced here"
+  - "historical roster snapshots or snapshot points"
+  - "faction-specific movement, visibility or objective abilities"
+  - "project canon, biography, relationships or story chronology"
+edition: 11
+system: "Terrain and objectives"
+source_index: "../SOURCE_INDEX.md"
+
+terrain_model:
+  verification_status: "verified_current"
+  source: "OFF-11E-TERRAIN-PREVIEW-2026"
+  feature: >
+    A terrain feature is the physical scenery placed on, or sometimes marking
+    the edge of, a terrain area.
+  area: >
+    A terrain area is the battlefield footprint to which the terrain rules
+    apply.
+  consequence: >
+    Tactical reasoning should distinguish the physical model from the rules
+    footprint because movement, visibility, protection and objective control
+    can depend on the area rather than only on the scenery piece.
+
+hidden:
+  verification_status: "verified_current"
+  source: "OFF-11E-TERRAIN-PREVIEW-2026"
+  eligible_model_types:
+    - "Infantry"
+    - "Beast"
+    - "Swarm"
+  public_summary: >
+    Eligible models within a terrain area can be Hidden while their unit has
+    not shot in the current or preceding player turn. Hidden models are
+    normally visible only to enemy units within the stated detection range,
+    which the public article says is usually 15 inches.
+  consequence: >
+    Units can preserve themselves while occupying useful ground, but shooting
+    can exchange that protection for offensive effect.
+
+obscuring_and_cover:
+  verification_status: "verified_current"
+  source: "OFF-11E-TERRAIN-PREVIEW-2026"
+  obscuring: >
+    Most terrain areas are Obscuring and cannot be seen entirely through.
+  benefit_of_cover: >
+    Eligible Infantry, Beast and Swarm units in terrain areas gain the Benefit
+    of Cover; the public rule preview describes this as worsening the attacking
+    weapon's Ballistic Skill by 1.
+  large_model_boundary: >
+    The terrain-objective preview distinguishes larger Vehicles and Monsters
+    from models that gain cover merely by occupying a terrain area; physical
+    features can still provide protection depending on geometry and the full
+    terrain rules.
+
+standard_terrain_area_set:
+  verification_status: "verified_current"
+  source: "OFF-11E-TERRAIN-PREVIEW-2026"
+  footprint_count: 16
+  footprints:
+    - shape: "large rectangle"
+      count: 4
+      size_inches: "7 x 11.5"
+    - shape: "large right-angle triangle"
+      count: 2
+      size_inches: "8 x 11.5"
+    - shape: "medium rectangle"
+      count: 4
+      size_inches: "6 x 4"
+    - shape: "long line"
+      count: 2
+      size_inches: "10 x 2.5"
+    - shape: "short line"
+      count: 4
+      size_inches: "6 x 2"
+
+objectives:
+  verification_status: "verified_current"
+  source: "OFF-11E-TERRAIN-OBJECTIVES-2026"
+  default_relationship: >
+    Most objectives are secured by claiming a terrain area rather than standing
+    next to a separate objective token.
+  typical_count:
+    minimum: 5
+    maximum: 6
+  mission_relationship: >
+    Most Primary Missions still combine objective holding with additional
+    mission-specific tasks.
+  exceptions: >
+    Some missions can still use conventional markers or movable objects where
+    their mission rules require them.
+  consequence: >
+    The same piece of ground can simultaneously affect protection, movement,
+    visibility and scoring, so controlling terrain is often part of controlling
+    the mission rather than a separate concern.
+
+recommended_layouts:
+  verification_status: "partially_verified_current"
+  sources:
+    - "OFF-11E-TERRAIN-PREVIEW-2026"
+    - "OFF-11E-EVENT-COMPANION-1.1"
+    - "OFF-11E-JULY-UPDATE-2026"
+    - "OFF-11E-AUGUST-UPDATE-2026"
+  per_mission_matchup: 3
+  labels:
+    - "A"
+    - "B"
+    - "C"
+  event_battlefield_size_inches:
+    width: 44
+    length: 60
+  casual_boundary: >
+    Casual play can use the recommended layouts or arrange terrain differently
+    to suit the available collection.
+  event_boundary: >
+    Organised play uses recommended layouts selected or randomly determined as
+    directed by the organiser.
+  current_layout_state: >
+    Exact layout geometry is mutable. Event Companion version 1.1 includes July
+    layout changes, while the August official update states that additional
+    layouts were changed afterward. This record therefore does not certify a
+    frozen coordinate set as current.
+
+layout_update_history:
+  - source: "OFF-11E-JULY-UPDATE-2026"
+    verification_status: "verified_current"
+    change: >
+      All Purge the Foe mission maps changed to six objectives and several
+      Disruption layouts were amended.
+  - source: "OFF-11E-AUGUST-UPDATE-2026"
+    verification_status: "verified_current"
+    change: >
+      Recommended layouts were adjusted again; Disruption received more
+      six-objective maps and some Expansion-objective terrain areas were moved
+      to improve movement lanes for large Vehicles and Monsters.
+
+exact_current_layout_coordinates:
+  verification_status: "not_fully_verified"
+  sources:
+    - "OFF-11E-EVENT-COMPANION-1.1"
+    - "OFF-11E-AUGUST-UPDATE-2026"
+  note: >
+    Before making a precise current competitive-layout claim, recheck the live
+    app and current official event/download material. A retrieval failure or an
+    older PDF must not be treated as proof that no later layout exists.
+
+project_use:
+  teaching_chain: >
+    mission purpose -> objective locations -> terrain-area effects -> threat and
+    access routes -> formation choice -> movement/fire/protection tradeoff ->
+    scoring and survival consequence -> changed future options
+  boundaries:
+    - "Terrain geometry is game state, not fictional geography unless a story separately establishes it."
+    - "Objective control is a tabletop abstraction and does not by itself establish a character's motive."
+    - "Exact event layouts must remain time-sensitive because Games Workshop has already amended them during this edition."
