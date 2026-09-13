@@ -1,0 +1,249 @@
+version: 1
+force_id: "FORCE-1985-V946"
+name: "Order of the Silver Compass"
+game_system: "Warhammer 40,000"
+edition_context: 11
+faction: "Adepta Sororitas"
+
+source_snapshot:
+  status: "SOURCE_SNAPSHOT"
+  exact_source_file: "COMPENDIUM_MASTER_v4.3.41.txt"
+  exact_source_location: "Appendix C"
+  compendium_exact_payload_sha256: "f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6"
+  app_version: "v2.6.0 (144)"
+  data_version: "v946"
+  listed_points: 1985
+  model_count: 84
+  scale: "Strike Force (2000 points)"
+  force_disposition_as_exported: "Take and Hold"
+  listed_detachments:
+    - name: "Army of Faith"
+      detachment_points_as_exported: 2
+      official_11e_metadata:
+        source: "OFF-11E-IMPERIAL-FACTION-PACKS-ARTICLE"
+        force_disposition: "Take and Hold"
+        detachment_points: 2
+    - name: "Sanctified Orators"
+      detachment_points_as_exported: 1
+      official_11e_metadata:
+        source: "OFF-11E-IMPERIAL-FACTION-PACKS-ARTICLE"
+        force_disposition: "Purge the Foe"
+        detachment_points: 1
+  total_detachment_points_as_exported: 3
+
+current_rules_status:
+  whole_list_legality: "not_certified"
+  current_points: "not_verified"
+  current_leader_support_attachments: "not_fully_verified"
+  current_allied_legality: "not_verified"
+  live_mfm_source: "OFF-11E-MFM-LIVE"
+  note: >
+    The current MFM locator was identified, but the live endpoint returned HTTP
+    403 through the available route. Snapshot values remain historical/export
+    evidence rather than current legality claims.
+
+direct_user_resupply:
+  date: "2026-09-12"
+  status: "A1_direct_user_statement"
+  scope: >
+    User directly supplied this V946 1,985-point roster again and requested
+    army lists they create be used as reference throughout the project where relevant.
+  arithmetic_rechecked:
+    points: 1985
+    models: 84
+
+formations:
+  F1985-01:
+    label: "Constantia / Dialogus / Retributors"
+    snapshot_points: 215
+    models: 7
+    units:
+      - project_unit_id: "UNIT-CANONESS"
+        rules_id: "11E-SOB-CANONESS"
+        snapshot_points: 70
+        attachment_role_as_exported: "Leader (Character)"
+        warlord: true
+        enhancement_as_exported: "Litanies of Faith"
+        project_identity: "CHAR-CONSTANTIA"
+      - project_unit_id: "UNIT-DIALOGUS"
+        rules_id: "11E-SOB-DIALOGUS"
+        snapshot_points: 40
+        attachment_role_as_exported: "Support (Character)"
+        project_identity: "CHAR-EULALIA"
+      - project_unit_id: "UNIT-RETRIBUTORS"
+        rules_id: "11E-SOB-RETRIBUTORS"
+        snapshot_points: 105
+        attachment_role_as_exported: "Bodyguard"
+    project_tactical_role: "Protected heavy-ranged-fire formation."
+
+  F1985-02:
+    label: "Imagifier / Battle Sisters"
+    snapshot_points: 180
+    models: 11
+    units:
+      - project_unit_id: "UNIT-IMAGIFIER"
+        rules_id: "11E-SOB-IMAGIFIER"
+        snapshot_points: 80
+        attachment_role_as_exported: "Support (Character)"
+        enhancement_as_exported: "Hagiomnifex (Upgrade)"
+        enhancement_current_rule_source: "OFF-11E-SOB-FP-1.0"
+      - project_unit_id: "UNIT-BATTLE-SISTERS"
+        rules_id: "11E-SOB-BATTLE-SISTERS"
+        snapshot_points: 100
+        attachment_role_as_exported: "Bodyguard (Battleline)"
+    project_tactical_role: "Ground-holding / objective formation."
+
+  F1985-03:
+    label: "Palatine / Dogmata / Sacresants"
+    snapshot_points: 260
+    models: 12
+    units:
+      - project_unit_id: "UNIT-PALATINE"
+        rules_id: "11E-SOB-PALATINE"
+        snapshot_points: 65
+        attachment_role_as_exported: "Leader (Character)"
+        enhancement_as_exported: "Blade of Saint Ellynor"
+      - project_unit_id: "UNIT-DOGMATA"
+        rules_id: "11E-SOB-DOGMATA"
+        snapshot_points: 45
+        attachment_role_as_exported: "Support (Character)"
+      - project_unit_id: "UNIT-SACRESANTS"
+        rules_id: "11E-SOB-SACRESANTS"
+        snapshot_points: 150
+        attachment_role_as_exported: "Bodyguard"
+    project_tactical_role: "Major central commitment / consequential-space formation."
+
+  F1985-04:
+    label: "Hospitaller / Dominions"
+    snapshot_points: 200
+    models: 11
+    units:
+      - project_unit_id: "UNIT-HOSPITALLER"
+        rules_id: "11E-SOB-HOSPITALLER"
+        snapshot_points: 90
+        attachment_role_as_exported: "Support (Character)"
+        enhancement_as_exported: "Hagiomnifex (Upgrade)"
+        enhancement_current_rule_source: "OFF-11E-SOB-FP-1.0"
+      - project_unit_id: "UNIT-DOMINIONS"
+        rules_id: "11E-SOB-DOMINIONS"
+        snapshot_points: 110
+        attachment_role_as_exported: "Bodyguard"
+    project_tactical_role: "Concealed threat / anti-armour-capable formation in this snapshot."
+
+  F1985-05:
+    label: "Justina / Inquisitorial Agents"
+    snapshot_points: 125
+    models: 7
+    units:
+      - project_unit_id: "UNIT-INQUISITOR"
+        rules_id: "11E-IA-INQUISITOR"
+        snapshot_points: 65
+        attachment_role_as_exported: "Leader"
+        project_identity: "CHAR-JUSTINA"
+      - project_unit_id: "UNIT-INQUISITORIAL-AGENTS"
+        rules_id: "11E-IA-INQUISITORIAL-AGENTS"
+        snapshot_points: 60
+        attachment_role_as_exported: "Bodyguard"
+    project_tactical_role: "Independent Inquisitorial specialist-support / protection / resource-efficiency formation."
+
+  F1985-06:
+    label: "Aurelia / House Montfort household"
+    snapshot_points: 175
+    models: 10
+    units:
+      - project_unit_id: "UNIT-ROGUE-TRADER-ENTOURAGE"
+        rules_id: "11E-IA-ROGUE-TRADER-ENTOURAGE"
+        snapshot_points: 105
+        attachment_role_as_exported: "Leader"
+        project_identity: "CHAR-AURELIA"
+      - project_unit_id: "UNIT-VOIDSMEN"
+        rules_id: "11E-IA-VOIDSMEN"
+        snapshot_points: 70
+        attachment_role_as_exported: "Bodyguard"
+        component_project_identity:
+          canid: "CHAR-PILGRIM"
+          scope: "FORCE-1985 / Vespera context only"
+    project_tactical_role: "House Montfort positioning / deployment-flexibility / close-security / recovery formation."
+
+  F1985-07:
+    label: "Sororitas Rhino"
+    snapshot_points: 65
+    models: 1
+    units:
+      - project_unit_id: "UNIT-SORORITAS-RHINO"
+        rules_id: "11E-SOB-SORORITAS-RHINO"
+        snapshot_points: 65
+    project_tactical_role: "Transport role developed around the Palatine / Dogmata / Sacresant formation."
+
+  F1985-08:
+    label: "Castigator"
+    snapshot_points: 165
+    models: 1
+    units:
+      - project_unit_id: "UNIT-CASTIGATOR"
+        rules_id: "11E-SOB-CASTIGATOR"
+        snapshot_points: 165
+    project_tactical_role: "Direct-fire support."
+
+  F1985-09:
+    label: "Exorcist"
+    snapshot_points: 180
+    models: 1
+    units:
+      - project_unit_id: "UNIT-EXORCIST"
+        rules_id: "11E-SOB-EXORCIST"
+        snapshot_points: 180
+    project_tactical_role: "Protected long-range / indirect-capable fire support."
+
+  F1985-10:
+    label: "Paragon Warsuits"
+    snapshot_points: 180
+    models: 3
+    units:
+      - project_unit_id: "UNIT-PARAGONS"
+        rules_id: "11E-SOB-PARAGONS"
+        snapshot_points: 180
+        collective_project_identity: "CHAR-PARAGON-TRIO"
+    project_tactical_role: "Hard mobile reserve / counterweight."
+
+  F1985-11:
+    label: "Seraphim Squad"
+    snapshot_points: 150
+    models: 10
+    units:
+      - project_unit_id: "UNIT-SERAPHIM"
+        rules_id: "11E-SOB-SERAPHIM"
+        snapshot_points: 150
+    project_tactical_role: "Fast spatial problem-solving / reserve utility."
+    source_preservation_note: >
+      The unusual aggregate pistol count remains controlled by Appendix C and
+      must not be simplified into a different loadout.
+
+  F1985-12:
+    label: "Sisters Novitiate Squad"
+    snapshot_points: 90
+    models: 10
+    units:
+      - project_unit_id: "UNIT-NOVITIATES"
+        rules_id: "11E-SOB-NOVITIATES"
+        snapshot_points: 90
+    project_tactical_role: "Forward utility / positional presence."
+
+integrity:
+  formation_points_total: 1985
+  formation_models_total: 84
+  expected_rules_records:
+    adepta_sororitas: 16
+    imperial_agents: 4
+  crosswalk_completeness_requirement: >
+    Every unit occurrence in this force must resolve to exactly one project
+    unit ID and one 11e rules ID, even when current datasheet fields remain
+    not_yet_verified.
+
+non_implications:
+  - "Roster presence does not establish story-scene presence."
+  - "Roster absence does not establish casualty, departure or reassignment."
+  - "A loadout difference does not establish fictional rearmament."
+  - "A newer rules value does not rewrite this historical export."
+  - "A project character mapping does not transfer generic official biography."
+  - "Latest supplied does not mean currently legal unless current official rules were checked."

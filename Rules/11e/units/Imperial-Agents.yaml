@@ -1,0 +1,95 @@
+version: 1
+edition: 11
+faction: "Imperial Agents"
+source_index: "../SOURCE_INDEX.md"
+pilot_force: "FORCE-1985-V946"
+
+status_rule: >
+  These units occur in an Adepta Sororitas roster snapshot as allied Imperial
+  Agents. Their current full datasheets, current points, and current allied
+  construction legality are not inferred from the snapshot.
+
+units:
+  11E-IA-INQUISITOR:
+    datasheet: "Inquisitor"
+    project_unit_id: "UNIT-INQUISITOR"
+    roster_occurrences: ["FORCE-1985-V946/F1985-05"]
+    current_datasheet:
+      status: "not_yet_verified"
+      characteristics: null
+      weapons: null
+      abilities: null
+      keywords: null
+      faction_keywords: null
+    current_points:
+      status: "blocked_current_source"
+      source: "OFF-11E-MFM-LIVE"
+    allied_use:
+      snapshot_status: "present_in_FORCE-1985-V946"
+      current_legality: "not_yet_verified"
+    official_current_source:
+      source: "OFF-11E-IA-FP-1.0"
+      scope: "current faction supplement; full relevant datasheet not retrieved"
+
+  11E-IA-INQUISITORIAL-AGENTS:
+    datasheet: "Inquisitorial Agents"
+    project_unit_id: "UNIT-INQUISITORIAL-AGENTS"
+    roster_occurrences: ["FORCE-1985-V946/F1985-05"]
+    current_datasheet:
+      status: "not_yet_verified"
+      characteristics: null
+      weapons: null
+      abilities: null
+      keywords: null
+      faction_keywords: null
+    current_points:
+      status: "blocked_current_source"
+      source: "OFF-11E-MFM-LIVE"
+    allied_use:
+      snapshot_status: "present_in_FORCE-1985-V946"
+      current_legality: "not_yet_verified"
+    official_current_source:
+      source: "OFF-11E-IA-FP-1.0"
+      scope: "current faction supplement; full relevant datasheet not retrieved"
+
+  11E-IA-ROGUE-TRADER-ENTOURAGE:
+    datasheet: "Rogue Trader Entourage"
+    project_unit_id: "UNIT-ROGUE-TRADER-ENTOURAGE"
+    roster_occurrences: ["FORCE-1985-V946/F1985-06"]
+    current_datasheet:
+      status: "not_yet_verified"
+      characteristics: null
+      weapons: null
+      abilities: null
+      keywords: null
+      faction_keywords: null
+    current_points:
+      status: "blocked_current_source"
+      source: "OFF-11E-MFM-LIVE"
+    allied_use:
+      snapshot_status: "present_in_FORCE-1985-V946"
+      current_legality: "not_yet_verified"
+    official_current_source:
+      source: "OFF-11E-IA-FP-1.0"
+      scope: "current faction supplement; full relevant datasheet not retrieved"
+
+  11E-IA-VOIDSMEN:
+    datasheet: "Voidsmen-at-Arms"
+    project_unit_id: "UNIT-VOIDSMEN"
+    roster_occurrences: ["FORCE-1985-V946/F1985-06"]
+    current_datasheet:
+      status: "not_yet_verified"
+      characteristics: null
+      weapons: null
+      abilities: null
+      keywords: null
+      faction_keywords: null
+    current_points:
+      status: "blocked_current_source"
+      source: "OFF-11E-MFM-LIVE"
+    allied_use:
+      snapshot_status: "present_in_FORCE-1985-V946"
+      current_legality: "not_yet_verified"
+    official_current_source:
+      source: "OFF-11E-IA-FP-1.0"
+      scope: "current faction supplement; full relevant datasheet not retrieved"
