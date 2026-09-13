@@ -41,6 +41,11 @@ The crosswalk preserves those Games Workshop concepts. It does not invent a para
 
 Historical export points and current points are separate fields. A later rules change does not rewrite an earlier roster snapshot.
 
-## Current pilot
+## Connected forces
 
-The first pilot is `FORCE-1985-V946`, the directly re-supplied 1,985-point Order of the Silver Compass list. Its standalone exact source is `../../Sources/Armies/FORCE-1985-V946.txt`; Appendix C of `../../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` remains the preserved embedded copy.
+- `FORCE-1985-V946`: exact source `../../Sources/Armies/FORCE-1985-V946.txt`; Appendix C remains the embedded copy.
+- `FORCE-3000`: exact source `../../Sources/Armies/FORCE-3000.txt`; Appendix B remains the embedded copy.
+
+The two forces are separate roster snapshots, not automatically sequential moments in fiction.
+
+Current rules records now cover the relevant Adepta Sororitas, Imperial Agents, Imperial Knights, and Adeptus Titanicus unit identities. Missing current fields remain explicitly unverified rather than inferred.
