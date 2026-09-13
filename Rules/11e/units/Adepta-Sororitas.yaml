@@ -1,4 +1,15 @@
-version: 1
+version: 2
+record_type: "current_rules_crosswalk"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "dated current 11e rules findings for listed units"
+verification_as_of: "2026-09-12"
+supersedes_for:
+  - "only current-rules fields explicitly verified in this file"
+does_not_supersede:
+  - "historical roster snapshots"
+  - "project canon or continuity"
+  - "unverified current rules fields"
+
 edition: 11
 faction: "Adepta Sororitas"
 source_index: "../SOURCE_INDEX.md"
