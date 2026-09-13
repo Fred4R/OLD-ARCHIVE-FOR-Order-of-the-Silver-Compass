@@ -66,9 +66,9 @@ The authoritative live-story baseline remains the preserved Compendium, especial
 
 Resume aboard the `True Meridian`, inside Aurelia Montfort's House Montfort working-and-receiving chamber reached during her accepted working circuit.
 
-The immediate social focus is Fred's interest in understanding Justina Voss.
+The immediate social focus is now Fred's interest in understanding Canoness Constantia Serenitas as Warlord through the Army of Faith Detachment. This supersedes the prior immediate Justina-focus only for current conversational priority; Justina remains present and established.
 
-The conversation has reached Stratagem stewardship.
+The tactical conversation remains within Stratagem and command-resource stewardship, now approached through Constantia's Warlord role, Acts of Faith, Miracle dice and Army of Faith.
 
 Do **not**:
 - resume beneath the Warhound;
