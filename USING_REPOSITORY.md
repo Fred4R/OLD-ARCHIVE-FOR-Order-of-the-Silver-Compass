@@ -85,17 +85,28 @@ Keep behavior, state, trait, motive, value, skill, self-concept, reputation, nar
 
 ### Repository maintenance
 
-For a meaningful durable change:
+For a meaningful durable change, use this merge contract:
 
-1. branch from current `main`;
-2. make the smallest useful change;
-3. update routing and checksums only where necessary;
-4. open a pull request;
-5. require the repository validator to pass;
-6. repair failures rather than weakening the validator;
-7. merge the tested tree;
-8. re-fetch `main`;
-9. require the post-merge validation run to pass before claiming the durable update succeeded.
+1. **Purpose** — define one coherent task and its intended result.
+2. **Baseline** — begin from the current integrated `main` state.
+3. **Scope** — state what the change may alter and what it must not alter.
+4. **Branch** — work on a temporary branch rather than changing `main` directly.
+5. **Evidence** — verify any current or external claim from its controlling source before encoding it.
+6. **Smallest useful diff** — change only the authoritative records, routing, validation, or checksums required by the task.
+7. **Pull request** — state the purpose, authority, boundaries, and verification conditions.
+8. **Structural validation** — require `python scripts/validate_repository.py` and the GitHub Actions validator to pass on the latest proposed tree.
+9. **Semantic review** — compare the actual diff with the stated purpose. A green validator does not prove lore truth, canon acceptance, identity, current legality, or warranted inference.
+10. **Conflict discipline** — repair Git conflicts mechanically, but preserve evidential conflicts as `UNRESOLVED` when the evidence does not settle them.
+11. **Integration** — normally squash-merge one conceptual task into one meaningful `main` commit. Use a full merge commit only when preserving the branch's internal commit sequence has enduring value. Do not use repository merging to collapse uncertain identities or claims.
+12. **Exact-head safeguard** — merge only the reviewed latest pull-request head, not an earlier passing commit.
+13. **Post-merge verification** — re-fetch `main` and require its automatic validation run to pass before claiming the durable update succeeded.
+14. **Cleanup** — after confirming the pull request is merged and no dependent work remains, delete the temporary branch when the available GitHub route permits it.
+
+Repository merging and evidential synthesis are different operations. A Git merge integrates reviewed file changes. It does not establish that two similar names, people, events, rules claims, or interpretations are the same entity or fact.
+
+When repository-level protection features are available, prefer requiring pull requests and successful validation for `main`, and block force-pushes or deletion. If the hosting plan or connected tool cannot enforce those controls, preserve the same safeguards procedurally rather than bypassing them.
+
+Do not enable automatic merging for lore, continuity, identity, interpretation, or current-rules changes merely because structural checks pass. Human-meaning review remains necessary until the repository can validate those semantic boundaries reliably.
 
 ## Listening-first use
 
