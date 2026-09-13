@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "SHA256SUMS.txt"
 MASTER_PATH = ROOT / "Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
 SOURCE_INDEX_PATH = ROOT / "Rules/11e/SOURCE_INDEX.md"
+DETACHMENT_ROOT = ROOT / "Rules/11e/detachments"
 
 ALLOWED_EVIDENCE_CLASSES = {
     "A1", "A1-REPORTED", "A2", "A3", "A4", "A5", "A6", "A7", "A8"
@@ -277,6 +278,191 @@ def validate_category_separation(path: Path, data: dict[str, Any]) -> None:
             if value not in KNOWN_VERIFICATION_STATUSES:
                 fail(
                     f"{path.relative_to(ROOT)} has unknown verification_status {value!r}"
+                )
+
+
+def validate_detachment_files(
+    source_ids: set[str],
+) -> dict[str, tuple[Path, dict[str, Any]]]:
+    records: dict[str, tuple[Path, dict[str, Any]]] = {}
+    detachment_paths = sorted(DETACHMENT_ROOT.glob("**/*.yaml"))
+
+    if not detachment_paths:
+        fail("No current detachment YAML files found under Rules/11e/detachments")
+        return records
+
+    for path in detachment_paths:
+        data = load_yaml(path)
+        if not data:
+            continue
+
+        validate_category_separation(path, data)
+
+        if data.get("record_type") != "current_detachment_record":
+            fail(f"{path.relative_to(ROOT)} must use record_type current_detachment_record")
+
+        authority_ref = data.get("authority_map")
+        if not isinstance(authority_ref, str):
+            fail(f"{path.relative_to(ROOT)} missing authority_map")
+        else:
+            resolve_repo_path(path, authority_ref)
+
+        source_index_ref = data.get("source_index")
+        if not isinstance(source_index_ref, str):
+            fail(f"{path.relative_to(ROOT)} missing source_index")
+        else:
+            resolved = resolve_repo_path(path, source_index_ref)
+            if resolved and resolved != SOURCE_INDEX_PATH:
+                fail(
+                    f"{path.relative_to(ROOT)} source_index does not resolve to "
+                    "Rules/11e/SOURCE_INDEX.md"
+                )
+
+        validate_date(
+            data.get("verification_as_of"),
+            f"{path.relative_to(ROOT)} verification_as_of",
+        )
+
+        if data.get("edition") != 11:
+            fail(f"{path.relative_to(ROOT)} must declare edition 11")
+
+        detachment_id = data.get("detachment_id")
+        if not isinstance(detachment_id, str) or not re.fullmatch(
+            r"11E-[A-Z0-9-]+", detachment_id
+        ):
+            fail(f"{path.relative_to(ROOT)} has invalid detachment_id {detachment_id!r}")
+            continue
+        if detachment_id in records:
+            previous = records[detachment_id][0].relative_to(ROOT)
+            fail(
+                f"Duplicate detachment_id {detachment_id} in "
+                f"{path.relative_to(ROOT)} and {previous}"
+            )
+            continue
+
+        if not isinstance(data.get("faction"), str) or not data.get("faction"):
+            fail(f"{path.relative_to(ROOT)} missing faction")
+        if not isinstance(data.get("detachment"), str) or not data.get("detachment"):
+            fail(f"{path.relative_to(ROOT)} missing detachment name")
+
+        unknown_sources = collect_source_refs(data) - source_ids
+        for source in sorted(unknown_sources):
+            fail(f"{path.relative_to(ROOT)} references undefined source ID {source}")
+
+        if contains_current_verification(data) and not collect_source_refs(data):
+            fail(
+                f"{path.relative_to(ROOT)} contains a verified-current claim "
+                "without any OFF-* source reference"
+            )
+
+        construction = data.get("current_construction")
+        if isinstance(construction, dict):
+            if construction.get("verification_status") == "verified_current":
+                if not isinstance(construction.get("detachment_points"), int):
+                    fail(
+                        f"{path.relative_to(ROOT)} verified current construction "
+                        "requires integer detachment_points"
+                    )
+                if not isinstance(construction.get("force_disposition"), str):
+                    fail(
+                        f"{path.relative_to(ROOT)} verified current construction "
+                        "requires force_disposition"
+                    )
+                if not collect_source_refs(construction):
+                    fail(
+                        f"{path.relative_to(ROOT)} verified current construction "
+                        "requires an OFF-* source"
+                    )
+
+        enhancements = data.get("enhancements")
+        if not isinstance(enhancements, list) or not enhancements:
+            fail(f"{path.relative_to(ROOT)} must contain an enhancements list")
+        else:
+            seen_names: set[str] = set()
+            for number, enhancement in enumerate(enhancements, start=1):
+                if not isinstance(enhancement, dict):
+                    fail(
+                        f"{path.relative_to(ROOT)} enhancement {number} must be a mapping"
+                    )
+                    continue
+                name = enhancement.get("name")
+                if not isinstance(name, str) or not name:
+                    fail(
+                        f"{path.relative_to(ROOT)} enhancement {number} missing name"
+                    )
+                elif name in seen_names:
+                    fail(
+                        f"{path.relative_to(ROOT)} contains duplicate enhancement {name!r}"
+                    )
+                else:
+                    seen_names.add(name)
+
+                if enhancement.get("verification_status") == "verified_current":
+                    source = enhancement.get("source")
+                    if not isinstance(source, str) or source not in source_ids:
+                        fail(
+                            f"{path.relative_to(ROOT)} enhancement {name!r} is "
+                            "verified_current without a defined OFF-* source"
+                        )
+                    if not isinstance(enhancement.get("points"), int):
+                        fail(
+                            f"{path.relative_to(ROOT)} enhancement {name!r} is "
+                            "verified_current without integer points"
+                        )
+
+        project_connections = data.get("project_connections")
+        if isinstance(project_connections, dict):
+            guide_ref = project_connections.get("constantia_guide")
+            if isinstance(guide_ref, str):
+                resolve_repo_path(path, guide_ref)
+
+        records[detachment_id] = (path, data)
+
+    return records
+
+
+def validate_detachment_links(
+    detachment_records: dict[str, tuple[Path, dict[str, Any]]],
+) -> None:
+    for path in sorted((ROOT / "Rules/11e/units").glob("*.yaml")):
+        data = load_yaml(path)
+        if not data:
+            continue
+
+        links = data.get("current_detachment_records")
+        if links is None:
+            continue
+        if not isinstance(links, dict):
+            fail(f"{path.relative_to(ROOT)} current_detachment_records must be a mapping")
+            continue
+
+        for label, link in links.items():
+            if not isinstance(link, dict):
+                fail(
+                    f"{path.relative_to(ROOT)} detachment link {label!r} must be a mapping"
+                )
+                continue
+
+            detachment_id = link.get("detachment_id")
+            record_ref = link.get("record")
+            if detachment_id not in detachment_records:
+                fail(
+                    f"{path.relative_to(ROOT)} references unknown detachment_id "
+                    f"{detachment_id!r}"
+                )
+                continue
+            if not isinstance(record_ref, str):
+                fail(
+                    f"{path.relative_to(ROOT)} detachment link {label!r} missing record"
+                )
+                continue
+
+            resolved = resolve_repo_path(path, record_ref)
+            expected_path = detachment_records[detachment_id][0]
+            if resolved and resolved != expected_path:
+                fail(
+                    f"{path.relative_to(ROOT)} detachment link {label!r} resolves to "
+                    f"{resolved.relative_to(ROOT)}, expected {expected_path.relative_to(ROOT)}"
                 )
 
 
@@ -711,6 +897,7 @@ def validate_connections() -> None:
         ROOT / "scripts/validate_repository.py",
         ROOT / "requirements-validator.txt",
         ROOT / ".github/workflows/validate-repository.yml",
+        ROOT / "Rules/11e/detachments/README.md",
     ]
     for path in required_files:
         if not path.exists():
@@ -737,7 +924,9 @@ def main() -> int:
     validate_manifest()
     master_text = validate_master()
     source_ids = validate_source_index()
+    detachment_records = validate_detachment_files(source_ids)
     rule_records, _ = validate_rules_files(master_text, source_ids)
+    validate_detachment_links(detachment_records)
     validate_armies(master_text, source_ids, rule_records)
 
     if errors:
@@ -749,8 +938,9 @@ def main() -> int:
     print("Repository validation PASSED.")
     print("Checked: tracked-file hashes, canonical Compendium identity, YAML syntax,")
     print("authority/status separation, army arithmetic, exact source payloads,")
-    print("project/rules/source IDs, roster-occurrence links, current-claim provenance,")
-    print("core-document heading uniqueness, and illustrative-story proposal boundaries.")
+    print("project/rules/source IDs, Detachment IDs and links, roster-occurrence links,")
+    print("current-claim provenance, core-document heading uniqueness, and")
+    print("illustrative-story proposal boundaries.")
     return 0
 
 
