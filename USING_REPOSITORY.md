@@ -10,6 +10,12 @@ Use the repository to reduce Fred's burden, not to move repository administratio
 
 Retrieve the smallest authoritative record needed for the current task. Do not load, summarize, or narrate the whole repository merely because it exists.
 
+### Retrieval route discipline
+
+When a repository router already names an exact path, retrieve that path directly before relying on repository-wide search. Search indexes can be unavailable or lag behind the repository state; an empty search result is therefore not evidence that a known record is absent.
+
+If direct retrieval fails, try another permitted repository route before asking Fred to resupply material or declaring the record missing. Record the retrieval failure as a route failure, not as evidence about whether the source exists.
+
 The normal sequence is:
 
 1. identify the task;
