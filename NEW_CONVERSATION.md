@@ -207,7 +207,7 @@ A public Faction Pack that does not reproduce a base Codex field is not evidence
 
 When current, obscure, disputed, edition-sensitive or important rules matter, inspect the current official Games Workshop/Warhammer source.
 
-## Immediate next work
+## Next substantive repository task
 
 Follow `CONTINUATION.md` and `USING_REPOSITORY.md`.
 
