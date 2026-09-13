@@ -112,6 +112,7 @@ stratagems:
         generate a Miracle die if its attacks destroy enemy models.
   complete_set:
     verification_status: "blocked_current_source"
+    source: "OFF-11E-APP-CODEX-AUTHORITY"
     authority: "current Codex / Warhammer 40,000 app"
     note: >
       Do not reconstruct the remaining current Army of Faith Stratagem set from
