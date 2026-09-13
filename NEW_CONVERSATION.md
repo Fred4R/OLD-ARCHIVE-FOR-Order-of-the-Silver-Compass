@@ -227,7 +227,7 @@ The preferred causal teaching chain is:
 
 `mission -> threatened purpose -> available rule/resource -> choice -> action -> consequence -> changed options`
 
-The shared 11th-edition system layer now exists under `Rules/11e/system/`. The next repository-integration step is to connect the two preserved army crosswalks to those shared concepts without rewriting either historical snapshot. This background work should not displace the current experiential focus unless the present task actually depends on it.
+The two preserved army crosswalks now contain bounded links to the shared 11th-edition construction, mission and terrain/objective records. The next repository-integration step is targeted current datasheet coverage only where it materially improves tactical choices, legality checks, formation behavior or story-grounded explanation. This background work should not displace the current experiential focus unless the present task actually depends on it.
 
 ## Story and repository synergy
 
