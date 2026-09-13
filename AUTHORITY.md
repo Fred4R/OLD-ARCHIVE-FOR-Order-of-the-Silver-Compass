@@ -26,6 +26,7 @@ There is no universal ranking for every question. Identify the question type fir
 | Current official Warhammer lore/rules | Current Games Workshop/Warhammer primary source | Repository records verification and routing; they do not outrank the official source. |
 | Human-evidence methodology | Original PDFs under `Sources/Methodology/` | These sources govern the scientific constructs and limits they actually support. `Sources/Methodology/REVIEW_STATUS.md` governs only the later review-completion state. |
 | Repository structural integrity | `scripts/validate_repository.py` plus `.github/workflows/validate-repository.yml` | Checks repository invariants and provenance wiring. A pass does not establish truth, canon acceptance, or current game legality. |
+| Repository structural integrity | `scripts/validate_repository.py` plus `.github/workflows/validate-repository.yml` | Checks repository invariants and provenance wiring. A pass does not establish truth, canon acceptance, or current game legality. |
 | Workflow state | GitHub issues, pull requests, commits, and branches | Workflow only; not Silver Compass canon merely because it exists or is merged. |
 
 ## Preserved Compendium and later repository records
@@ -107,3 +108,8 @@ The repository exists to preserve and route meaning, not to create maintenance w
 `scripts/validate_repository.py` enforces repository invariants: hashes, parseability, reference resolution, arithmetic, source routing, and category separation.
 
 Its result is **structural**, not substantive. A passing run does not supersede the Compendium, official Games Workshop sources, original methodology sources, direct user evidence, or unresolved project boundaries. The validator may reject a malformed record; it may not invent the fact that would make the record pass.
+
+
+## Validator authority boundary
+
+`scripts/validate_repository.py` checks hashes, parseability, reference resolution, arithmetic, source routing, and category separation. Its result is structural, not substantive. It may reject a malformed record; it may not invent the fact that would make the record pass.
