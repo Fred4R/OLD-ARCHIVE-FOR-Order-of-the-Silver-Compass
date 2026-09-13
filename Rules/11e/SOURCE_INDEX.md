@@ -203,6 +203,9 @@ The 2026 edition explicitly retains existing Codex Detachments. The inspected cu
 Publisher: Games Workshop / Warhammer Community  
 Titles: #New40k – Points, apps, and updates incoming; Warhammer 40,000 Core Rules  
 Dates: 15 June 2026; 1 June 2026  
+Locators:
+- https://www.warhammer-community.com/en-gb/articles/8wi6x7nq/new40k-points-apps-and-updates-incoming/
+- https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf
 Verified: yes, 2026-09-13
 
 Relevant verified findings:
