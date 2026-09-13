@@ -59,6 +59,14 @@ The two forces are separate roster snapshots, not automatically sequential momen
 Current rules records now cover the relevant Adepta Sororitas, Imperial Agents, Imperial Knights, and Adeptus Titanicus unit identities. Missing current fields remain explicitly unverified rather than inferred.
 
 
-## Planned system-rules layer
+## System-rules layer
 
-`../../../CONTINUATION.md` defines the next rules-integration sequence: army construction, missions, terrain/objectives, and source/update routing. Add those records only from current official Games Workshop evidence and connect them to army snapshots without turning rules structure into fictional chronology.
+Shared current rules concepts live under `system/`.
+
+Current foundation:
+- `system/ARMY_CONSTRUCTION.yaml` — current verified army-construction structure;
+- `system/SOURCE_AND_UPDATE_ROUTING.yaml` — current official-source routing and update discipline.
+
+The next planned system merge is mission selection together with terrain/objective interaction. See `../../../CONTINUATION.md`.
+
+System records must use current official Games Workshop evidence. They connect rules structure across armies without rewriting historical roster snapshots or turning game structure into fictional chronology.

@@ -1,0 +1,91 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-SOURCE-UPDATE-ROUTING"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "project routing among current official 11th-edition Games Workshop rules sources"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "repository routing for current 11th-edition rules questions"
+does_not_supersede:
+  - "the official Games Workshop source itself"
+  - "historical roster snapshots"
+  - "project canon, biography, relationships or story chronology"
+  - "unverified rules fields"
+edition: 11
+system: "Source and update routing"
+source_index: "../SOURCE_INDEX.md"
+
+routing_basis:
+  verification_status: "verified_current"
+  sources:
+    - "OFF-11E-DOWNLOADS"
+    - "OFF-11E-MFM-LIVE"
+    - "OFF-11E-APP-CODEX-AUTHORITY"
+    - "OFF-11E-APP-MFM-SYNC"
+
+routes:
+  - question: "core game rules and game-wide mechanics"
+    use_first:
+      - "current Warhammer 40,000 Core Rules"
+      - "current official Rules Updates or FAQ when the field has been amended"
+    source: "OFF-11E-APP-CODEX-AUTHORITY"
+    note: >
+      Repository system records summarize only fields actually verified from
+      current official sources.
+  - question: "unit points, upgrade points, Leader/Support attachment lists, Detachment Points, Force Dispositions"
+    use_first:
+      - "current online Munitorum Field Manual"
+    sources:
+      - "OFF-11E-DOWNLOADS"
+      - "OFF-11E-MFM-LIVE"
+      - "OFF-11E-APP-MFM-SYNC"
+    note: >
+      The official downloads page showed the MFM updated 02/09/2026 at this
+      verification date. The official app article states that the online MFM
+      updates when the Warhammer 40,000 app updates.
+  - question: "new-edition faction amendments"
+    use_first:
+      - "current faction Rules Update / Faction Pack"
+      - "current official downloads route"
+    source: "OFF-11E-DOWNLOADS"
+    note: >
+      Use the faction-specific OFF-* record in SOURCE_INDEX when one has been
+      retrieved. Do not infer missing Codex fields from a Faction Pack that does
+      not reproduce them.
+  - question: "complete faction datasheets, Codex rules, Detachment wording, Stratagems and unexposed Enhancement effects"
+    use_first:
+      - "current Codex"
+      - "Warhammer 40,000 app content for that Codex/faction"
+    source: "OFF-11E-APP-CODEX-AUTHORITY"
+    note: >
+      The public MFM is not a complete faction-rules source. Fields that remain
+      inaccessible through the available official route stay blocked or unverified.
+  - question: "latest errata, FAQ and downloadable update state"
+    use_first:
+      - "Warhammer Community Warhammer 40,000 Downloads"
+    source: "OFF-11E-DOWNLOADS"
+
+update_rules:
+  - >
+    Prefer the source that currently governs the exact field rather than a
+    generic newest document.
+  - >
+    A newer source supersedes an older repository statement only for the field
+    it actually changes or republishes.
+  - >
+    A route-specific retrieval failure is not evidence that the official source
+    does not exist.
+  - >
+    Re-check time-sensitive fields when answering current, disputed, obscure or
+    edition-sensitive questions.
+  - >
+    Preserve historical roster bytes and snapshot costs when current rules change.
+
+project_use:
+  consequence: >
+    The routing record makes update impact traceable: determine which official
+    source governs a field, update the matching durable rules record, then review
+    only downstream records that actually depend on that field.
+  boundary: >
+    Source order is repository routing derived from the documented roles of
+    official sources; it is not a fictional hierarchy or project-canon claim.
