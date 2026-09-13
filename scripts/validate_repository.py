@@ -661,6 +661,7 @@ def validate_armies(
     master_text: str,
     source_ids: set[str],
     rule_records: dict[str, dict[str, Any]],
+    system_records: dict[str, tuple[Path, dict[str, Any]]],
 ) -> None:
     project_units = set(re.findall(r"\bUNIT-[A-Z0-9-]+\b", master_text))
     project_characters = set(re.findall(r"\bCHAR-[A-Z0-9-]+\b", master_text))
@@ -744,6 +745,79 @@ def validate_armies(
         current_rules = data.get("current_rules_status")
         if isinstance(current_rules, dict):
             validate_date(current_rules.get("as_of"), f"{path.relative_to(ROOT)} current_rules_status.as_of")
+
+        system_context = data.get("current_system_context")
+        if not isinstance(system_context, dict):
+            fail(f"{path.relative_to(ROOT)} missing current_system_context")
+        else:
+            validate_date(
+                system_context.get("as_of"),
+                f"{path.relative_to(ROOT)} current_system_context.as_of",
+            )
+            if system_context.get("relation_type") != "reference_for_current_rules_interpretation":
+                fail(
+                    f"{path.relative_to(ROOT)} current_system_context has invalid relation_type"
+                )
+
+            links = system_context.get("records")
+            required_links = {
+                "army_construction": "11E-SYSTEM-ARMY-CONSTRUCTION",
+                "missions": "11E-SYSTEM-MISSIONS",
+                "terrain_and_objectives": "11E-SYSTEM-TERRAIN-AND-OBJECTIVES",
+            }
+            if not isinstance(links, dict):
+                fail(
+                    f"{path.relative_to(ROOT)} current_system_context.records must be a mapping"
+                )
+            else:
+                for label, expected_id in required_links.items():
+                    if label not in links:
+                        fail(
+                            f"{path.relative_to(ROOT)} missing current system link {label!r}"
+                        )
+
+                for label, link in links.items():
+                    if not isinstance(link, dict):
+                        fail(
+                            f"{path.relative_to(ROOT)} system link {label!r} must be a mapping"
+                        )
+                        continue
+
+                    system_id = link.get("system_id")
+                    expected_id = required_links.get(label)
+                    if expected_id is not None and system_id != expected_id:
+                        fail(
+                            f"{path.relative_to(ROOT)} system link {label!r} must use "
+                            f"{expected_id!r}, found {system_id!r}"
+                        )
+                    if system_id not in system_records:
+                        fail(
+                            f"{path.relative_to(ROOT)} references unknown system_id "
+                            f"{system_id!r}"
+                        )
+                        continue
+
+                    record_ref = link.get("record")
+                    if not isinstance(record_ref, str):
+                        fail(
+                            f"{path.relative_to(ROOT)} system link {label!r} missing record"
+                        )
+                    else:
+                        resolved = resolve_repo_path(path, record_ref)
+                        expected_path = system_records[system_id][0]
+                        if resolved and resolved != expected_path:
+                            fail(
+                                f"{path.relative_to(ROOT)} system link {label!r} resolves to "
+                                f"{resolved.relative_to(ROOT)}, expected "
+                                f"{expected_path.relative_to(ROOT)}"
+                            )
+
+                    for field in ("applicability", "use", "boundary"):
+                        if not isinstance(link.get(field), str) or not link.get(field):
+                            fail(
+                                f"{path.relative_to(ROOT)} system link {label!r} "
+                                f"missing non-empty {field}"
+                            )
 
         formations = data.get("formations")
         if not isinstance(formations, dict):
@@ -1020,7 +1094,7 @@ def main() -> int:
     detachment_records = validate_detachment_files(source_ids)
     rule_records, _ = validate_rules_files(master_text, source_ids)
     validate_detachment_links(detachment_records)
-    validate_armies(master_text, source_ids, rule_records)
+    validate_armies(master_text, source_ids, rule_records, system_records)
 
     if errors:
         print(f"Repository validation FAILED with {len(errors)} error(s):")
@@ -1031,7 +1105,7 @@ def main() -> int:
     print("Repository validation PASSED.")
     print("Checked: tracked-file hashes, canonical Compendium identity, YAML syntax,")
     print("authority/status separation, army arithmetic, exact source payloads,")
-    print("project/rules/source IDs, system and Detachment IDs and links, roster-occurrence links,")
+    print("project/rules/source IDs, system/Detachment/army links, roster-occurrence links,")
     print("current-claim provenance, core-document heading uniqueness, and")
     print("illustrative-story proposal boundaries.")
     return 0

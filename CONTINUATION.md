@@ -43,21 +43,18 @@ The preferred causal teaching chain is:
 
 `mission -> battlefield condition -> available formation -> choice -> action -> consequence -> changed options`
 
-### 2. Connect both army snapshots to system rules
+### 2. Use both army snapshots with the shared system layer
 
-Keep `FORCE-1985-V946` and `FORCE-3000` as separate historical roster snapshots.
+`FORCE-1985-V946` and `FORCE-3000` remain separate historical roster snapshots.
 
-Add references from their crosswalks to relevant system concepts such as:
-- Force Disposition;
-- Detachment Point budget;
-- Leader/Support structure;
-- objective role;
-- terrain dependence;
-- reserve/deployment function;
-- Stratagem/Command Point interaction;
-- play context.
+Their crosswalks now contain bounded references to:
+- current army-construction structure;
+- current mission structure;
+- current terrain/objective structure.
 
-Do not convert those references into fictional chronology.
+These links support present-day rules interpretation and tactical teaching. They do not certify whole-list legality, rewrite snapshot values, establish which battle was played, or create fictional chronology.
+
+For `FORCE-3000`, the system link explicitly preserves that the current public construction record does not verify a 3,000-point construction row.
 
 ### 3. Improve current datasheet coverage only where useful
 
