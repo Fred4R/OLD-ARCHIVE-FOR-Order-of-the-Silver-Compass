@@ -18,13 +18,14 @@ A retrieval failure means only that one route failed. It does not prove that a s
 
 For a new conversation, read these files before substantial work:
 
-1. `NEW_CONVERSATION.md` — orientation and task routing.
-2. `AUTHORITY.md` — which record governs which question.
-3. `STATUS.md` — canon status, evidence classes and verification states.
-4. `CONTINUATION.md` — experience-first priorities, next work and symbolic-story protocol.
-5. `AGENTS.md` — operating instructions for AI systems.
-6. `SOURCES.md` — source routing.
-7. Use the preserved Compendium, army records, rules records or methodology sources only as needed for the task.
+1. `NEW_CONVERSATION.md` — orientation and current live pointer.
+2. `USING_REPOSITORY.md` — how to retrieve only what the task needs and how to keep repository mechanics out of the user experience.
+3. `AUTHORITY.md` — which record governs which question.
+4. `STATUS.md` — canon status, evidence classes and verification states.
+5. `CONTINUATION.md` — experience-first priorities and current story/rules focus.
+6. `AGENTS.md` — operating instructions for AI systems.
+7. `SOURCES.md` — source routing.
+8. Use the preserved Compendium, army records, rules records or methodology sources only as needed for the task.
 
 Do not load or summarize the entire Compendium merely because a new conversation has begun. Retrieve the smallest authoritative section that answers the question, then expand only when necessary.
 
@@ -105,6 +106,25 @@ Do not invent his dialogue, decisions, attraction, consent, deep conclusions or 
 Do not convert Fred's interest, tenderness, attraction or hopes into reciprocal feelings in another character without accepted evidence.
 
 Constantia, Aurelia, Justina, Eulalia, Valeria, the Knight pilots, the Princeps and other competent actors retain their own authority, knowledge and agency.
+
+## Listening-first handoff
+
+Direct user feedback on 2026-09-13 establishes a concrete interface failure: a response that mixed a research memo, rules table, naming proposals, etymology and story was unpleasant to listen to.
+
+A future conversation should therefore use the repository beneath the response rather than narrating it.
+
+For story-oriented requests:
+- tell the scene first;
+- do not lead with a report or table;
+- do not repeat unchanged spatial orientation;
+- let characters act for their own purposes;
+- introduce rules because an immediate decision needs them;
+- use etymology rarely and only when it sharpens a real distinction;
+- do not explain every line's meaning after it is spoken;
+- place source/provenance/update notes after the scene and keep them short;
+- introduce unresolved character names gradually and as proposals until accepted.
+
+See `USING_REPOSITORY.md` for the operational version of this rule.
 
 ## Current principal people and institutions
 
@@ -189,32 +209,21 @@ When current, obscure, disputed, edition-sensitive or important rules matter, in
 
 ## Next substantive repository task
 
-Follow `CONTINUATION.md`.
+Follow `CONTINUATION.md` and `USING_REPOSITORY.md`.
 
-The next planned rules work is the small 11th-edition system layer:
+The immediate conversational focus is not another architecture pass. It is:
 
-- `Rules/11e/system/ARMY_CONSTRUCTION.yaml`
-- `Rules/11e/system/MISSIONS.yaml`
-- `Rules/11e/system/TERRAIN_AND_OBJECTIVES.yaml`
-- `Rules/11e/system/SOURCE_AND_UPDATE_ROUTING.yaml`
-
-Build these only from current official Games Workshop evidence.
-
-Do not pre-fill them from memory.
+- Constantia as Warlord;
+- Army of Faith as an actual tactical system rather than only Sacred Rites;
+- current official verification of the Army of Faith Stratagem/Enhancement material before precise rules claims;
+- a story in which one real command problem makes those rules necessary;
+- gradual differentiation and possible lore-compatible naming of unnamed women, with proposed names kept distinct from accepted canon.
 
 The preferred causal teaching chain is:
 
-`mission -> battlefield condition -> available formation -> choice -> action -> consequence -> changed options`
+`mission -> threatened purpose -> available rule/resource -> choice -> action -> consequence -> changed options`
 
-This layer should connect both army snapshots to:
-- Force Dispositions;
-- Detachment Point budgets;
-- Leader/Support structure;
-- objective roles;
-- terrain dependence;
-- deployment/reserve function;
-- Stratagem/Command Point interaction;
-- play context.
+The 11th-edition system-layer files listed in `CONTINUATION.md` remain useful background repository work, but they should not displace the current experiential focus unless the present task actually depends on them.
 
 ## Story and repository synergy
 

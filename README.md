@@ -12,16 +12,19 @@ GitHub is storage and version history. It is not the meaning of the project.
 
 For a fresh conversation, begin with `NEW_CONVERSATION.md`.
 
-1. Read `AUTHORITY.md` to determine which record governs which question and what can supersede what.
-2. Read `STATUS.md` before treating any statement as accepted canon.
-3. Read `SOURCES.md` to route source questions.
-4. Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` as the preserved baseline candidate, with its stated review limits intact.
-5. Read `AGENTS.md` for short instructions to future AI systems.
-6. Read `CONTINUATION.md` for the experience-first continuation sequence and symbolic-story protocol.
-7. Use `Sources/Armies/` for immutable extracted army-list source payloads.
-8. Use `Armies/` for durable army-list crosswalks and roster-to-project mappings.
-9. Use `Rules/11e/` for current 11th-edition source routing and verified rules findings.
-10. Use `Stories/Illustrative/` for immersive A7/PROPOSAL scenes that are explicitly not accepted history merely because they are stored.
+Use `USING_REPOSITORY.md` for the practical task-routing and conversation workflow. It explains how to retrieve the minimum necessary context without turning the repository itself into the user experience.
+
+1. Read `USING_REPOSITORY.md` for practical task routing and live-conversation use.
+2. Read `AUTHORITY.md` to determine which record governs which question and what can supersede what.
+3. Read `STATUS.md` before treating any statement as accepted canon.
+4. Read `SOURCES.md` to route source questions.
+5. Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` as the preserved baseline candidate, with its stated review limits intact.
+6. Read `AGENTS.md` for short instructions to future AI systems.
+7. Read `CONTINUATION.md` for the experience-first continuation sequence and symbolic-story protocol.
+8. Use `Sources/Armies/` for immutable extracted army-list source payloads.
+9. Use `Armies/` for durable army-list crosswalks and roster-to-project mappings.
+10. Use `Rules/11e/` for current 11th-edition source routing and verified rules findings.
+11. Use `Stories/Illustrative/` for immersive A7/PROPOSAL scenes that are explicitly not accepted history merely because they are stored.
 
 ## Authority rule
 
