@@ -46,3 +46,27 @@ The preserved MASTER identifies itself as:
 Repository migration does not convert that candidate status into user acceptance.
 
 The repository should remain simple. Add software, schemas, automation, databases, frameworks, or extra services only when a concrete need demonstrates that plain portable files are inadequate.
+
+
+## Validate repository integrity
+
+Run:
+
+`python scripts/validate_repository.py`
+
+Install the single validator dependency first with:
+
+`python -m pip install --requirement requirements-validator.txt`
+
+GitHub Actions also runs the same validator automatically on pull requests and on pushes to `main` through `.github/workflows/validate-repository.yml`.
+
+The validator checks repository mechanics: tracked-file SHA-256 coverage, canonical Compendium identity, YAML syntax and duplicate keys, authority/status/evidence separation, army arithmetic, exact source payload hashes, project/rules/source identifiers, roster-occurrence links, and provenance for current-rule claims.
+
+A passing validation is not a lore-truth certificate, user acceptance, current army-legality certificate, or proof that unresolved information has become resolved.
+
+
+## Repository validation
+
+Run `python scripts/validate_repository.py` after repository changes. The same check is automated in `.github/workflows/validate-repository.yml` for pull requests and pushes to `main`.
+
+A passing validator confirms repository structure and references only. It does not establish canon acceptance, source truth, or current army legality.
