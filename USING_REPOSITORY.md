@@ -29,11 +29,9 @@ The normal sequence is:
 
 ### Story continuation
 
-Read:
-1. `NEW_CONVERSATION.md`;
-2. the current-focus section of `CONTINUATION.md`;
-3. only the relevant continuation-critical portion of the preserved Compendium;
-4. character or rules records only when the scene actually needs them.
+Read `CURRENT_STATE.md` first.
+
+Then retrieve only the character, relationship, rules or preserved-Compendium detail that the immediate scene actually requires. Use `CONTINUATION.md` when planning future continuation rather than simply continuing the current scene.
 
 Do not begin a story answer with a repository audit.
 
@@ -72,11 +70,9 @@ Do not rewrite a historical roster merely because current points, keywords or ru
 
 ### Canon, continuity and relationships
 
-Read:
-- `AUTHORITY.md`;
-- `STATUS.md`;
-- the relevant Compendium section;
-- any later record that explicitly supersedes that field.
+Start with `CURRENT_STATE.md` for the operational present.
+
+If the question depends on authority, evidence class, acceptance, supersession, a deeper relationship history or an unresolved conflict, then retrieve `AUTHORITY.md`, `STATUS.md`, the relevant Compendium section and any later record that explicitly supersedes that field.
 
 A proposal stored in the repository is still a proposal.
 
