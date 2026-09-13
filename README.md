@@ -10,6 +10,8 @@ GitHub is storage and version history. It is not the meaning of the project.
 
 ## Start here
 
+For a fresh conversation, begin with `NEW_CONVERSATION.md`.
+
 1. Read `AUTHORITY.md` to determine which record governs which question and what can supersede what.
 2. Read `STATUS.md` before treating any statement as accepted canon.
 3. Read `SOURCES.md` to route source questions.
