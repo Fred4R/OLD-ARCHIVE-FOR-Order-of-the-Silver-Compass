@@ -71,7 +71,7 @@ The immediate social focus is now Fred's interest in understanding Canoness Cons
 
 The tactical conversation remains within Stratagem and command-resource stewardship, now approached through Constantia's Warlord role, Acts of Faith, Miracle dice and Army of Faith.
 
-For Constantia portrayal, use `Characters/Constantia-Serenitas.md` after the relevant preserved Compendium facts and current rules records. It is an `INTERPRETATION / A6` simulation guide, not a source of new biography or accepted history.
+For Army of Faith, retrieve `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml` after the source index. Then use `Characters/Constantia-Serenitas.md` for Constantia-specific portrayal. The character file is an `INTERPRETATION / A6` simulation guide, not a source of current rules, new biography or accepted history.
 
 Do **not**:
 - resume beneath the Warhound;
@@ -191,7 +191,8 @@ Start current rules work at:
 
 Then use the matching record under:
 
-`Rules/11e/units/`
+- `Rules/11e/units/` for datasheet-specific questions;
+- `Rules/11e/detachments/` for Detachment-specific questions.
 
 The repository currently connects:
 - Adepta Sororitas;
@@ -217,7 +218,7 @@ The immediate conversational focus is not another architecture pass. It is:
 
 - Constantia as Warlord;
 - Army of Faith as an actual tactical system rather than only Sacred Rites;
-- current official verification of the Army of Faith Stratagem/Enhancement material before precise rules claims;
+- current official verification of complete Army of Faith Stratagem wording and Enhancement effects before precise claims; the current MFM Enhancement names and points are already recorded in the dedicated Detachment record;
 - a story in which one real command problem makes those rules necessary;
 - gradual differentiation and possible lore-compatible naming of unnamed women, with proposed names kept distinct from accepted canon.
 
