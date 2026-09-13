@@ -49,3 +49,8 @@ Historical export points and current points are separate fields. A later rules c
 The two forces are separate roster snapshots, not automatically sequential moments in fiction.
 
 Current rules records now cover the relevant Adepta Sororitas, Imperial Agents, Imperial Knights, and Adeptus Titanicus unit identities. Missing current fields remain explicitly unverified rather than inferred.
+
+
+## Planned system-rules layer
+
+`../../../CONTINUATION.md` defines the next rules-integration sequence: army construction, missions, terrain/objectives, and source/update routing. Add those records only from current official Games Workshop evidence and connect them to army snapshots without turning rules structure into fictional chronology.
