@@ -39,7 +39,8 @@ If current rules enter the scene, verify them first and let them matter because 
 
 Start at:
 - `Rules/11e/SOURCE_INDEX.md`;
-- then the matching record under `Rules/11e/units/` for datasheet questions;
+- then the matching record under `Rules/11e/system/` for shared army-construction or source/update-routing questions;
+- the matching record under `Rules/11e/units/` for datasheet questions;
 - or the matching record under `Rules/11e/detachments/` for Detachment, Enhancement, Stratagem, Detachment Point or Force Disposition questions.
 
 Check:
