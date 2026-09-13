@@ -1,5 +1,9 @@
 # 11th-edition official source index
 
+Authority scope: current 11th-edition source routing and dated verification only. See `../../AUTHORITY.md`.
+
+A record here may supersede an older Compendium rules claim only for the exact field and date/source scope verified here. It does not rewrite historical roster snapshots or project continuity.
+
 Verification date for this pilot: 2026-09-12.
 
 ## OFF-11E-DOWNLOADS

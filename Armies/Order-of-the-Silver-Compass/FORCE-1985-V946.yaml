@@ -1,4 +1,16 @@
-version: 1
+version: 2
+record_id: "CROSSWALK-FORCE-1985-V946"
+record_type: "roster_crosswalk"
+authority_scope: "repository mapping for FORCE-1985-V946"
+authority_map: "../../AUTHORITY.md"
+supersedes_for:
+  - "repository mapping of FORCE-1985-V946 roster occurrences to project unit IDs and 11e rules IDs"
+does_not_supersede:
+  - "Appendix C exact roster payload"
+  - "historical snapshot values"
+  - "project continuity outside explicit mappings"
+  - "current rules not separately verified"
+
 force_id: "FORCE-1985-V946"
 name: "Order of the Silver Compass"
 game_system: "Warhammer 40,000"
@@ -6,10 +18,14 @@ edition_context: 11
 faction: "Adepta Sororitas"
 
 source_snapshot:
-  status: "SOURCE_SNAPSHOT"
-  exact_source_file: "COMPENDIUM_MASTER_v4.3.41.txt"
-  exact_source_location: "Appendix C"
-  compendium_exact_payload_sha256: "f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6"
+  record_type: "source_snapshot"
+  evidence_class: "A2"
+  exact_source_file: "../../Sources/Armies/FORCE-1985-V946.txt"
+  exact_source_sha256: "f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6"
+  embedded_duplicate:
+    file: "../../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
+    location: "Appendix C"
+    note: "Preserved embedded copy of the same exact payload."
   app_version: "v2.6.0 (144)"
   data_version: "v946"
   listed_points: 1985
@@ -18,20 +34,28 @@ source_snapshot:
   force_disposition_as_exported: "Take and Hold"
   listed_detachments:
     - name: "Army of Faith"
-      detachment_points_as_exported: 2
       official_11e_metadata:
+        evidence_class: "A5"
+        verification_status: "verified_current"
+        verified_on: "2026-09-12"
         source: "OFF-11E-IMPERIAL-FACTION-PACKS-ARTICLE"
         force_disposition: "Take and Hold"
         detachment_points: 2
+        provenance_note: "The individual 2DP value comes from the verified official 11e source, not from the roster export."
     - name: "Sanctified Orators"
-      detachment_points_as_exported: 1
       official_11e_metadata:
+        evidence_class: "A5"
+        verification_status: "verified_current"
+        verified_on: "2026-09-12"
         source: "OFF-11E-IMPERIAL-FACTION-PACKS-ARTICLE"
         force_disposition: "Purge the Foe"
         detachment_points: 1
+        provenance_note: "The individual 1DP value comes from the verified official 11e source, not from the roster export."
   total_detachment_points_as_exported: 3
 
 current_rules_status:
+  as_of: "2026-09-12"
+  authority: "../../Rules/11e/SOURCE_INDEX.md"
   whole_list_legality: "not_certified"
   current_points: "not_verified"
   current_leader_support_attachments: "not_fully_verified"
@@ -43,8 +67,10 @@ current_rules_status:
     evidence rather than current legality claims.
 
 direct_user_resupply:
+  record_type: "provenance_event"
   date: "2026-09-12"
-  status: "A1_direct_user_statement"
+  evidence_class: "A1"
+  canon_status: null
   scope: >
     User directly supplied this V946 1,985-point roster again and requested
     army lists they create be used as reference throughout the project where relevant.

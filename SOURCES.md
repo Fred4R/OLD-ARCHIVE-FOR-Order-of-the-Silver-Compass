@@ -2,16 +2,24 @@
 
 Use sources by function rather than treating any one source as universally authoritative.
 
+For precedence and supersession, read `AUTHORITY.md`.
+
 ## Silver Compass project material
 
-The current preserved project source in this repository is:
+The preserved baseline candidate is:
 
-- `COMPENDIUM_MASTER_v4.3.41.txt`
+- `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`
 - SHA-256: `5d112c261a9726e6a67afc19d509a0353cedfec5a624f3a72a5ea951c06ea37a`
+- Internal review status: `REVISED CANDIDATE — user acceptance not established`
 
-Use the authoritative Compendium/repository records for project canon/design, continuity, relationships, roster snapshots, provenance, unresolved boundaries, and migration state.
+Use that preserved Compendium for baseline project continuity, relationships, roster snapshots, provenance, unresolved boundaries, and migration state unless a newer repository record explicitly supersedes the exact field in question.
 
-Army-list cross-reference records live under `Armies/`. They point back to preserved exact roster evidence rather than replacing it.
+Exact army-list source payloads live under `Sources/Armies/` when extracted. Army crosswalk records live under `Armies/`. They map preserved roster evidence into repository identifiers but do not replace the exact roster payload.
+
+Current extracted army source:
+- `Sources/Armies/FORCE-1985-V946.txt`
+- SHA-256: `f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6`
+- Embedded duplicate: Appendix C of `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`
 
 ## Human-evidence methodology
 
@@ -27,7 +35,7 @@ Army-list cross-reference records live under `Armies/`. They point back to prese
   - Repository file: `Sources/Methodology/Roberts_Yoon_2022_Personality_Psychology.pdf`
   - Artifact hash: `d8d5dfa8ab160d90730aa13e4e0fa6f1e064852bbd72f8563bbf80960651f7f2`
 
-These academic sources improve inference. They do not diagnose Fred, create project canon, or dictate fiction.
+These academic sources govern only the scientific constructs and limits they actually support. `Sources/Methodology/REVIEW_STATUS.md` records the later full-review state and narrowly supersedes the older Compendium audit only on that review-completion question. The papers improve inference; they do not create project canon or dictate fiction.
 
 ## Warhammer 40,000 lore and rules
 
@@ -38,6 +46,8 @@ For 11th-edition rules questions:
 - resolve the relevant rules record under `Rules/11e/units/`;
 - use a roster under `Armies/` for snapshot composition and snapshot costs only.
 
-A current rules record must preserve its source and verification status. If the current official source could not be retrieved, mark the field not yet verified or blocked rather than silently substituting an older rule.
+The repository's rules records govern only the fields they explicitly verify and date. They do not outrank the current official Games Workshop source.
+
+If the current official source could not be retrieved, mark the field `not_yet_verified` or `blocked_current_source` rather than silently substituting an older rule.
 
 Historical project snapshots remain historical evidence and should not be silently presented as current.

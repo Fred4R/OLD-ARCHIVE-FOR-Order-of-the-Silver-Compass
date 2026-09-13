@@ -1,6 +1,18 @@
 # Warhammer 40,000 11th-edition rules crosswalk
 
+Read `../../AUTHORITY.md` for repository-wide authority and supersession.
+
 This directory connects Silver Compass roster records to current official Warhammer 40,000 rules sources without rewriting historical roster evidence.
+
+## Authority scope
+
+This directory governs only the current-rules fields that its records explicitly verify from current official Games Workshop/Warhammer sources.
+
+It may narrowly supersede older Compendium rules statements for those verified fields. It does not supersede:
+- historical roster payloads or snapshot costs;
+- project canon, character identity, relationships, or story chronology;
+- unresolved fields;
+- the current official Games Workshop source itself.
 
 ## Resolution order
 
@@ -10,7 +22,7 @@ When answering an army, unit, tactics, or story-context question:
 2. Resolve the stable project unit identifier, such as `UNIT-CANONESS`.
 3. Resolve the 11th-edition rules identifier, such as `11E-SOB-CANONESS`.
 4. Use only current official data whose source and verification status are recorded.
-5. Resolve a project character mapping only when the Compendium separately establishes it.
+5. Resolve a project character mapping only when project continuity separately establishes it.
 
 These are different relations. A roster occurrence is not a datasheet; a datasheet is not a character biography; roster presence is not story-scene presence.
 
@@ -20,16 +32,15 @@ Current 11th-edition datasheets use model characteristics `M`, `T`, `SV`, `W`, `
 
 The crosswalk preserves those Games Workshop concepts. It does not invent a parallel rules vocabulary.
 
-## Status discipline
+## Verification states
 
-- `snapshot` means the value comes from a preserved army export.
-- `verified_current` means a current official source was actually inspected.
-- `partially_verified_current` means an official source confirms only part of the current record.
-- `not_yet_verified` means no current official source was successfully retrieved for that field.
-- `blocked_current_source` means the authoritative live source was identified but could not be retrieved through the available route.
+- `verified_current` — a current official source was actually inspected.
+- `partially_verified_current` — an official source confirms only part of the record.
+- `not_yet_verified` — no current official source was successfully retrieved for that field.
+- `blocked_current_source` — the authoritative live source was identified but could not be retrieved through the available route.
 
 Historical export points and current points are separate fields. A later rules change does not rewrite an earlier roster snapshot.
 
 ## Current pilot
 
-The first pilot is `FORCE-1985-V946`, the directly re-supplied 1,985-point Order of the Silver Compass list. Its exact export remains in Appendix C of `COMPENDIUM_MASTER_v4.3.41.txt`. The files here cross-reference that source rather than duplicating it.
+The first pilot is `FORCE-1985-V946`, the directly re-supplied 1,985-point Order of the Silver Compass list. Its standalone exact source is `../../Sources/Armies/FORCE-1985-V946.txt`; Appendix C of `../../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` remains the preserved embedded copy.
