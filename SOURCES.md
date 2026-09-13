@@ -14,7 +14,12 @@ The preserved baseline candidate is:
 
 Use that preserved Compendium for baseline project continuity, relationships, roster snapshots, provenance, unresolved boundaries, and migration state unless a newer repository record explicitly supersedes the exact field in question.
 
-Army crosswalk records live under `Armies/`. They map preserved roster evidence into repository identifiers but do not replace the exact roster payload.
+Exact army-list source payloads live under `Sources/Armies/` when extracted. Army crosswalk records live under `Armies/`. They map preserved roster evidence into repository identifiers but do not replace the exact roster payload.
+
+Current extracted army source:
+- `Sources/Armies/FORCE-1985-V946.txt`
+- SHA-256: `f0f1772c4547b24d95e236a65b2fbaed5dc1e78bf6824ab41f4d52713000a0a6`
+- Embedded duplicate: Appendix C of `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`
 
 ## Human-evidence methodology
 
