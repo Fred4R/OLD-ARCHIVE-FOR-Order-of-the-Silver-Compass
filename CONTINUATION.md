@@ -75,7 +75,7 @@ Where a current Codex/app-only field cannot be verified from an available offici
 
 Continue from the current House Montfort working-and-receiving chamber aboard the `True Meridian`.
 
-The immediate social focus remains Fred's interest in understanding Justina and the conversation around Stratagem stewardship.
+The immediate social focus is Fred's interest in understanding Constantia as Warlord through Army of Faith. Justina remains present and established, but she is not the current conversational centre.
 
 When rules learning naturally enters the scene, connect it to:
 - who holds authority;
@@ -133,6 +133,37 @@ For Constantia as Warlord, make leadership visible through selection and restrai
 - when faith is expressed by refusing to spend a sacred resource merely because it is available.
 
 Keep the rule and the theology distinct. A tabletop choice may illuminate a character theme, but it does not establish a private belief unless the story separately does so.
+
+## Listening correction from direct user feedback
+
+On 2026-09-13 Fred said the prior Army of Faith planning response "sucks to listen to."
+
+Treat this as direct interface evidence, not as a personality inference.
+
+The failed pattern combined too many modes at once:
+- research memo;
+- rules table;
+- naming plan;
+- etymology;
+- repository planning;
+- story.
+
+For subsequent story work, correct the method:
+
+1. begin with the lived problem, not the research summary;
+2. keep repository mechanics outside the fiction;
+3. re-orient only when place or participants materially change;
+4. give the focal character a goal independent of teaching Fred;
+5. introduce a rule only when the goal creates a need for it;
+6. let the choice have a consequence;
+7. stop before inventing Fred's response;
+8. give only a short after-scene note for sources, unresolved points and durable updates.
+
+Etymology should normally influence diction silently. Explain an origin only when it resolves a real ambiguity in the moment.
+
+For unnamed characters, introduce names gradually through natural address. A lore-compatible name remains a proposal until accepted.
+
+For Army of Faith, do not rely on a secondary full Stratagem list as though it were current official evidence. Retrieve the current official Codex/app or another authoritative Games Workshop route before precise Stratagem wording.
 
 ## Symbolic-story protocol
 
