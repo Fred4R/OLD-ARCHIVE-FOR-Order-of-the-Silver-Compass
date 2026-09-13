@@ -42,7 +42,7 @@ For army teaching, connect:
 
 Explain tactics causally: threat or formation -> choice -> action -> consequence -> changed options.
 
-For storytelling, preserve Fred's agency and character knowledge boundaries.
+For storytelling, preserve Fred's agency and character knowledge boundaries. Illustrative fiction stored under `Stories/Illustrative/` must remain `PROPOSAL` / `A7` unless later accepted through the proper continuity process.
 
 For repository work, prefer plain portable files and minimal dependencies. Verify writes and repository state before claiming success. If a current official rules source cannot be retrieved, mark the field unresolved or not yet verified rather than substituting an older rule or unsupported secondary claim.
 
@@ -56,8 +56,3 @@ After changing repository structure, army crosswalks, rules records, authority r
 Do not claim the repository is structurally valid until that command passes against the actual committed tree. GitHub Actions runs the same check on pull requests and pushes to `main`.
 
 The validator is a structural guard. It does not promote proposals to canon, resolve `UNRESOLVED`, certify whole-list legality, or replace source review.
-
-
-## Repository validation
-
-After changing repository structure, army crosswalks, rules records, source artifacts, authority routing, or checksum coverage, run `python scripts/validate_repository.py`. Do not claim structural validity until it passes against the committed tree. The validator is a structural guard; it does not promote canon, resolve `UNRESOLVED`, or certify whole-list legality.
