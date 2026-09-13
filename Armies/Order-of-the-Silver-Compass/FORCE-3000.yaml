@@ -1,10 +1,10 @@
-version: 1
+version: 2
 record_id: "CROSSWALK-FORCE-3000"
 record_type: "roster_crosswalk"
 authority_scope: "repository mapping for FORCE-3000"
 authority_map: "../../AUTHORITY.md"
 supersedes_for:
-  - "repository mapping of FORCE-3000 roster occurrences to project unit IDs and 11e rules IDs"
+  - "repository mapping of FORCE-3000 roster occurrences to project unit IDs, 11e rules IDs and bounded current-system references"
 does_not_supersede:
   - "the exact FORCE-3000 source payload"
   - "historical snapshot values"
@@ -84,6 +84,47 @@ current_rules_status:
   current_imperial_agents_allied_legality: "not_fully_verified"
   current_armiger_allied_legality: "not_yet_verified"
   current_warhound_support_rule: "partially_verified_current"
+
+current_system_context:
+  as_of: "2026-09-13"
+  relation_type: "reference_for_current_rules_interpretation"
+  records:
+    army_construction:
+      system_id: "11E-SYSTEM-ARMY-CONSTRUCTION"
+      record: "../../Rules/11e/system/ARMY_CONSTRUCTION.yaml"
+      applicability: "partial_current_context"
+      use: >
+        Use shared current construction concepts such as Detachment Points,
+        Leader/Support structure and Force Disposition only where their current
+        sources independently verify them.
+      boundary: >
+        The current public construction record does not verify a 3,000-point
+        construction row. This link therefore does not certify the exported
+        Onslaught label, the 3,000-point format or whole-list legality.
+    missions:
+      system_id: "11E-SYSTEM-MISSIONS"
+      record: "../../Rules/11e/system/MISSIONS.yaml"
+      applicability: "current_play_context_only"
+      use: >
+        Use the current mission system when explaining how this preserved
+        composition could pursue a mission under current 11th-edition play.
+      boundary: >
+        The roster does not establish which mission, deployment, Twist,
+        Secondary Missions, score or battle was historically played.
+    terrain_and_objectives:
+      system_id: "11E-SYSTEM-TERRAIN-AND-OBJECTIVES"
+      record: "../../Rules/11e/system/TERRAIN_AND_OBJECTIVES.yaml"
+      applicability: "current_play_context_only"
+      use: >
+        Use the current terrain/objective framework when analysing positioning,
+        protection, movement and scoring choices for this composition.
+      boundary: >
+        The roster does not establish any historical battlefield layout,
+        terrain placement, objective state or event map.
+  non_implications:
+    - "System links do not certify current whole-list legality."
+    - "System links do not rewrite snapshot points, composition or exported labels."
+    - "System links do not create fictional chronology, scene presence or battle history."
 
 formations:
   F3000-01:
