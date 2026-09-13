@@ -15,6 +15,7 @@ GitHub is storage and version history. It is not the meaning of the project.
 3. Read `SOURCES.md` to route source questions.
 4. Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` as the preserved baseline candidate, with its stated review limits intact.
 5. Read `AGENTS.md` for short instructions to future AI systems.
+6. Read `CONTINUATION.md` for the experience-first continuation sequence and symbolic-story protocol.
 6. Use `Sources/Armies/` for immutable extracted army-list source payloads.
 7. Use `Armies/` for durable army-list crosswalks and roster-to-project mappings.
 8. Use `Rules/11e/` for current 11th-edition source routing and verified rules findings.
