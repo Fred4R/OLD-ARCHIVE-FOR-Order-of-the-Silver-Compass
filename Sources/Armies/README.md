@@ -7,7 +7,7 @@ They are evidence artifacts, not normalized army records and not current-rules c
 Rules:
 - do not edit an existing source payload to match later points, rules, story continuity, or another roster;
 - use a new source artifact for a materially different supplied roster;
-- preserve its hash and source/version metadata in the corresponding `Armies/` crosswalk;
+- preserve its hash and source/version metadata in the corresponding `../../Armies/` crosswalk;
 - roster differences establish configuration differences only, not fictional chronology.
 
 `FORCE-1985-V946.txt` is the standalone exact payload corresponding to Appendix C of the preserved v4.3.41 Compendium. Its SHA-256 is:
