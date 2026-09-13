@@ -81,7 +81,7 @@ For a current Warhammer 40,000 question:
 For an army-list question:
 
 1. identify the exact force snapshot;
-2. use its immutable source payload for what was supplied;
+2. use its immutable source payload under `Sources/Armies/` for what was supplied; if no standalone artifact exists yet, use the preserved exact appendix identified by the crosswalk;
 3. use the `Armies/` record for normalized repository mappings;
 4. use `Rules/11e/` for current rules only where separately verified;
 5. use project continuity for fictional identities and relationships only where separately established.
