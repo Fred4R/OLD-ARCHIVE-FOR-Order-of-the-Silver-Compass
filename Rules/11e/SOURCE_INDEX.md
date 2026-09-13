@@ -4,7 +4,7 @@ Authority scope: current 11th-edition source routing and dated verification only
 
 A record here may supersede an older Compendium rules claim only for the exact field and date/source scope verified here. It does not rewrite historical roster snapshots or project continuity.
 
-Verification date for the current connected army layer: 2026-09-12.
+Verification date for the current connected army layer: 2026-09-13.
 
 ## OFF-11E-DOWNLOADS
 
@@ -32,7 +32,7 @@ Publisher: Games Workshop / Warhammer Community
 Title: Munitorum Field Manual — Adepta Sororitas  
 Locator: https://mfm.warhammer-community.com/en/adepta-sororitas  
 Version shown: v1.0  
-Verified: yes, 2026-09-12
+Verified: yes, 2026-09-12; rechecked 2026-09-13
 
 Scope verified for this repository:
 - current unit points schedules;
@@ -48,7 +48,7 @@ Relevant current values include:
 - Exorcist first unit 180; Paragon Warsuits first two units 180;
 - Seraphim Squad first two units 85 for 5 models or 160 for 10;
 - Sisters Novitiate Squad 100;
-- Army of Faith 2DP / Take and Hold; Litanies of Faith 10; Blade of Saint Ellynor 15;
+- Army of Faith 2DP / Take and Hold; Blade of Saint Ellynor 15; Divine Aspect 5; Litanies of Faith 10; Triptych of the Macharian Crusade 20;
 - Sanctified Orators 1DP / Purge the Foe; Hagiomnifex Upgrade 25.
 
 These current values do not rewrite the v946 roster costs.
@@ -91,9 +91,10 @@ Publisher: Games Workshop / Warhammer Community
 Title: Adepta Sororitas Faction Pack, Version 1.0  
 Locator: https://assets.warhammer-community.com/eng_11-06_warhammer40000_faction_pack_adepta_sororitas-ktlklgb0t5-knvswx9kyw.pdf  
 Matched-play date: 20 June 2026  
-Verified: yes, 2026-09-12
+Verified: yes, 2026-09-12; rechecked 2026-09-13
 
 Relevant verified updates:
+- Rules Updates were re-inspected on 2026-09-13; no Army of Faith or Sacred Rites amendment appears in that section.
 - Dialogus, Dogmata, Hospitaller and Imagifier: remove Core ability `Leader`; add `Support`.
 - Dominion Squad, `Righteous Awareness`: current movement-response rule recorded in the unit crosswalk.
 - Retributor Squad, `Storm of Retribution`: current re-roll/vengeance rule recorded in the unit crosswalk.
@@ -204,3 +205,5 @@ For current rules questions:
 3. use preserved rosters only for snapshot composition and snapshot costs.
 
 Do not use an older-edition Index or inherited Compendium rules claim as proof of a current 11th-edition field.
+
+Detachment-specific records live under `Rules/11e/detachments/`; Army of Faith is routed through `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml`.
