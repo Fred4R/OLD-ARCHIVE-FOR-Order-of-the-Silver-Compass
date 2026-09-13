@@ -50,6 +50,8 @@ For storytelling, preserve Fred's agency and character knowledge boundaries. Ill
 
 For repository work, prefer plain portable files and minimal dependencies. Verify writes and repository state before claiming success. If a current official rules source cannot be retrieved, mark the field unresolved or not yet verified rather than substituting an older rule or unsupported secondary claim.
 
+For meaningful repository changes, follow the merge contract in `USING_REPOSITORY.md`: one coherent task, current-`main` baseline, explicit scope and evidence, smallest useful diff, pull request, structural validation, semantic diff review, exact-head merge, and post-merge verification. Normally squash-merge one conceptual task. Never use a Git merge to resolve an evidential uncertainty.
+
 
 ## Repository validation
 
