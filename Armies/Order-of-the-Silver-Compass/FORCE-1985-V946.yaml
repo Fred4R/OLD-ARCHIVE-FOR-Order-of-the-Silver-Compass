@@ -1,10 +1,10 @@
-version: 2
+version: 3
 record_id: "CROSSWALK-FORCE-1985-V946"
 record_type: "roster_crosswalk"
 authority_scope: "repository mapping for FORCE-1985-V946"
 authority_map: "../../AUTHORITY.md"
 supersedes_for:
-  - "repository mapping of FORCE-1985-V946 roster occurrences to project unit IDs and 11e rules IDs"
+  - "repository mapping of FORCE-1985-V946 roster occurrences to project unit IDs, 11e rules IDs and bounded current-system references"
 does_not_supersede:
   - "Appendix C exact roster payload"
   - "historical snapshot values"
@@ -71,6 +71,47 @@ current_rules_status:
   current_leader_support_attachments: "partially_verified_current"
   current_allied_legality: "not_fully_verified"
   live_mfm_source: "OFF-11E-MFM-LIVE"
+
+current_system_context:
+  as_of: "2026-09-13"
+  relation_type: "reference_for_current_rules_interpretation"
+  records:
+    army_construction:
+      system_id: "11E-SYSTEM-ARMY-CONSTRUCTION"
+      record: "../../Rules/11e/system/ARMY_CONSTRUCTION.yaml"
+      applicability: "partial_current_context"
+      use: >
+        Use the current Strike Force construction framework to interpret shared
+        concepts such as Detachment Point budget, Leader/Support structure and
+        Force Disposition where those fields are separately verified.
+      boundary: >
+        This link does not certify whole-list legality, replace the preserved
+        1,985-point snapshot cost, or convert current construction rules into a
+        historical event.
+    missions:
+      system_id: "11E-SYSTEM-MISSIONS"
+      record: "../../Rules/11e/system/MISSIONS.yaml"
+      applicability: "current_play_context_only"
+      use: >
+        Use the current mission system when explaining how this preserved
+        composition could pursue a mission under current 11th-edition play.
+      boundary: >
+        The roster does not establish which mission, deployment, Twist,
+        Secondary Missions, score or battle was historically played.
+    terrain_and_objectives:
+      system_id: "11E-SYSTEM-TERRAIN-AND-OBJECTIVES"
+      record: "../../Rules/11e/system/TERRAIN_AND_OBJECTIVES.yaml"
+      applicability: "current_play_context_only"
+      use: >
+        Use the current terrain/objective framework when analysing positioning,
+        protection, movement and scoring choices for this composition.
+      boundary: >
+        The roster does not establish any historical battlefield layout,
+        terrain placement, objective state or event map.
+  non_implications:
+    - "System links do not certify current whole-list legality."
+    - "System links do not rewrite snapshot points, composition or exported labels."
+    - "System links do not create fictional chronology, scene presence or battle history."
 
 direct_user_resupply:
   record_type: "provenance_event"
