@@ -26,18 +26,18 @@ Fred should not be made to supervise routine repository QA, source-routing, diff
 
 ## Near-term continuation sequence
 
-### 1. Build the 11th-edition system-rules layer
+### 1. Use the completed 11th-edition system-rules layer
 
-Add only the system records that connect multiple armies and multiple future questions:
+The shared system layer now includes:
 
 - `Rules/11e/system/ARMY_CONSTRUCTION.yaml`
 - `Rules/11e/system/MISSIONS.yaml`
 - `Rules/11e/system/TERRAIN_AND_OBJECTIVES.yaml`
 - `Rules/11e/system/SOURCE_AND_UPDATE_ROUTING.yaml`
 
-These records should use current official Games Workshop sources and preserve dates, versions and scope.
+These records use current official Games Workshop evidence and preserve dates, versions, scope and time-sensitive layout boundaries.
 
-They should explain permissions and consequences, not merely repeat rule text.
+Use them to explain permissions and consequences rather than merely repeat rule text.
 
 The preferred causal teaching chain is:
 

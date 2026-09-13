@@ -233,13 +233,147 @@ Relevant verified findings:
 Repository consequence:
 Use the live MFM for the fields it publishes and treat its dated state as time-sensitive. Do not use MFM synchronization as proof that unexposed Codex rules are publicly available.
 
+## OFF-11E-MISSIONS-PREVIEW-2026
+
+Publisher: Games Workshop / Warhammer Community  
+Title: #New40k – How your army affects your mission  
+Date: 3 April 2026  
+Locator: https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/  
+Verified: yes, 2026-09-13
+
+Relevant verified findings:
+- each Detachment unlocks one or more Force Dispositions and one available Force Disposition is selected for a battle;
+- comparing both players' Force Dispositions determines the specific mission pairing;
+- the five Force Dispositions are Take and Hold, Disruption, Purge the Foe, Priority Assets and Reconnaissance;
+- mission goals are normally asymmetric, and almost all still include some objective-control pressure;
+- pickup games can select a Force Disposition battle by battle, while tournament play normally locks one for the event;
+- the casual mission sequence includes mission, deployment, optional Twist, battlefield creation, attacker/defender and secondary selection;
+- Primary and Secondary scoring are each capped at 45VP per game and 15VP per battle round in the previewed mission framework.
+
+Repository consequence:
+Use this source for the stable relationship between army construction, Force Disposition and mission generation. Do not reconstruct complete card wording from the preview.
+
+## OFF-11E-TERRAIN-PREVIEW-2026
+
+Publisher: Games Workshop / Warhammer Community  
+Title: #New40k – Take cover with updated terrain rules  
+Date: 8 April 2026  
+Locator: https://www.warhammer-community.com/en-gb/articles/xlppkx5s/new40k-take-cover-with-updated-terrain-rules/  
+Verified: yes, 2026-09-13
+
+Relevant verified findings:
+- terrain is separated into physical terrain features and rules-bearing terrain areas;
+- eligible Infantry, Beast and Swarm models can use Hidden under the stated shooting/timing conditions, with a usual 15-inch detection range;
+- most terrain areas are Obscuring;
+- eligible Infantry, Beast and Swarm units in terrain areas gain the Benefit of Cover, which worsens attacking Ballistic Skill by 1;
+- each mission pairing has three recommended terrain layouts;
+- the standard terrain-area footprint set uses 16 footprints across five shapes and sizes.
+
+Repository consequence:
+Record the stable terrain model and tactical consequences. Exact current event-layout coordinates are a separate time-sensitive layer.
+
+## OFF-11E-TERRAIN-OBJECTIVES-2026
+
+Publisher: Games Workshop / Warhammer Community  
+Title: #New40k – Terrain objectives make the battlefield your mission  
+Date: 10 April 2026  
+Locator: https://www.warhammer-community.com/en-gb/articles/lxzwueun/new40k-terrain-objectives-make-the-battlefield-your-mission/  
+Verified: yes, 2026-09-13
+
+Relevant verified findings:
+- most objectives are secured by claiming terrain areas rather than standing near a separate token;
+- most Primary Missions still combine objective holding with other tasks;
+- missions commonly use five or six objectives;
+- missions may still use conventional markers or movable objects where their rules require it;
+- terrain objectives make protection, movement and objective control interact in the same space.
+
+Repository consequence:
+Use this source for the stable terrain-objective relationship rather than for exact current tournament map geometry.
+
+## OFF-11E-CHAPTER-APPROVED-2026
+
+Publisher: Games Workshop / Warhammer Community  
+Title: The Chapter Approved deck – What is it and how does it work?  
+Date: 28 May 2026  
+Locator: https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/  
+Verified: yes, 2026-09-13
+
+Relevant verified findings:
+- the Chapter Approved deck contains 15 mission matchups built from the five Force Dispositions;
+- casual play can select among available Force Dispositions game by game;
+- Twists are part of casual Chapter Approved play;
+- Tactical Secondary Missions draw two new cards each Command phase and can be retained for later scoring;
+- Secondary scoring is capped at 15VP in a turn in the public explanation;
+- organised play fixes one Force Disposition for the event and uses three terrain layouts for each mission matchup.
+
+Boundary:
+Another official product article describes 25 individual missions. This repository does not infer a full 25-card mapping without inspecting the complete current deck/app.
+
+## OFF-11E-EVENT-COMPANION-1.1
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Warhammer Event Companion  
+Version: 1.1  
+Current organiser-resource locator verified 2026-09-13: https://www.warhammer-community.com/en-gb/articles/gxrrbim6/organiser-resources-for-warhammer-events/  
+PDF locator: https://assets.warhammer-community.com/eng_22-07_warhammer_40%2C000_event_companion-alyapl19us-b2drgwkji4.pdf  
+Verified: yes, 2026-09-13
+
+Relevant verified findings:
+- event rosters lock one available Force Disposition before the event;
+- a player's Primary Mission is determined from the opponent's Force Disposition;
+- each Primary-Mission combination has three recommended layouts, A/B/C;
+- event missions use a 44-by-60-inch battlefield;
+- the Event Companion omits Deployment and Twist cards from its event procedure;
+- event players choose Fixed or Tactical Secondary Missions;
+- Tactical play draws two Secondary Missions at the start of each Command phase;
+- the event scoring table caps Primary at 45VP and Secondary at 45VP, normally no more than 15VP from each source per battle round, with the stated Fixed-Mission exception.
+
+Temporal boundary:
+Version 1.1 already contains July layout changes. Later August official material says additional recommended layouts changed, so this PDF is not by itself sufficient to certify every exact current layout coordinate.
+
+## OFF-11E-JULY-UPDATE-2026
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Warhammer 40,000 July Update – what you need to know!  
+Date: 22 July 2026  
+Locator: https://www.warhammer-community.com/en-gb/articles/rgqanids/warhammer-40000-july-update-what-you-need-to-know/  
+Verified: yes, 2026-09-13
+
+Relevant verified findings:
+- all Purge the Foe mission maps were changed to six objectives;
+- several Disruption map layouts were amended;
+- some Detachments changed Detachment Point cost or Force Disposition.
+
+Repository consequence:
+Exact mission-layout state is mutable and should be rechecked rather than frozen from launch previews.
+
+## OFF-11E-AUGUST-UPDATE-2026
+
+Publisher: Games Workshop / Warhammer Community  
+Title: The Warhammer 40,000 August Update – Everything you need to know  
+Date: 26 August 2026  
+Locator: https://www.warhammer-community.com/en-gb/articles/b4zj2o7u/the-warhammer-40000-august-update-everything-you-need-to-know/  
+Verified: yes, 2026-09-13
+
+Relevant verified findings:
+- recommended map layouts were adjusted again for Force-Disposition balance;
+- Disruption received more maps with six objectives;
+- some Expansion-objective terrain areas were moved to improve movement lanes for large Vehicles and Monsters;
+- Games Workshop stated that another balance update was planned for September.
+
+Currentness boundary:
+A same-day 2026-09-13 check of the official Warhammer 40,000 downloads/news routes found no later mission-layout amendment. That retrieval result is not proof that no such source exists; exact competitive layout geometry must still be rechecked before a precise current-layout claim.
+
 ## Source-routing rule
 
 For current rules questions:
 1. use the current official Games Workshop source;
-2. use the specific current MFM/Faction Pack record above where retrieved;
+2. use the specific current system, MFM, Faction Pack, Codex/app or update record above that governs the exact field;
 3. use preserved rosters only for snapshot composition and snapshot costs.
 
 Do not use an older-edition Index or inherited Compendium rules claim as proof of a current 11th-edition field.
 
+Shared construction, mission, terrain/objective and source-routing records live under `Rules/11e/system/`.
 Detachment-specific records live under `Rules/11e/detachments/`; Army of Faith is routed through `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml`.
+
+Exact competitive layout coordinates are time-sensitive. Recheck the live app/current official event and update material before a precise current-layout claim.

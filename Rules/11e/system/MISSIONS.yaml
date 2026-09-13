@@ -1,0 +1,158 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-MISSIONS"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current 11th-edition shared mission structure explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "current shared mission-system fields explicitly verified here"
+does_not_supersede:
+  - "complete Chapter Approved card wording or app-only mission text"
+  - "exact current tournament layout coordinates"
+  - "historical roster snapshots or snapshot points"
+  - "faction-specific legality or Detachment rules"
+  - "project canon, biography, relationships or story chronology"
+edition: 11
+system: "Missions"
+source_index: "../SOURCE_INDEX.md"
+
+force_disposition_to_mission:
+  verification_status: "verified_current"
+  sources:
+    - "OFF-11E-MISSIONS-PREVIEW-2026"
+    - "OFF-11E-CHAPTER-APPROVED-2026"
+  force_dispositions:
+    - "Take and Hold"
+    - "Disruption"
+    - "Purge the Foe"
+    - "Priority Assets"
+    - "Reconnaissance"
+  process: >
+    An army's Detachments make one or more Force Dispositions available.
+    A selected Force Disposition is compared with the opponent's selected
+    Force Disposition to determine the mission pairing and each player's
+    Primary Mission.
+  mission_matchups: 15
+  asymmetry: >
+    The two players can receive different Primary Missions within the same
+    matchup. Most Primary Missions still retain some battlefield objective
+    pressure while emphasizing different strategic purposes.
+  consequence: >
+    Army construction constrains the set of missions an army can be asked to
+    pursue, so list construction affects later battlefield priorities.
+
+casual_play:
+  verification_status: "verified_current"
+  sources:
+    - "OFF-11E-MISSIONS-PREVIEW-2026"
+    - "OFF-11E-CHAPTER-APPROVED-2026"
+  force_disposition_selection: >
+    In pickup/casual play, an available Force Disposition can be selected
+    separately for each battle.
+  high_level_sequence:
+    - "muster armies"
+    - "determine mission"
+    - "determine deployment"
+    - "optional Twist"
+    - "create battlefield"
+    - "determine attacker and defender"
+    - "select Secondary Missions"
+  twists: >
+    Chapter Approved includes optional Twists that can alter rules or mission
+    conditions. Exact Twist wording is not reproduced here.
+
+organised_play:
+  verification_status: "partially_verified_current"
+  sources:
+    - "OFF-11E-EVENT-COMPANION-1.1"
+    - "OFF-11E-JULY-UPDATE-2026"
+    - "OFF-11E-AUGUST-UPDATE-2026"
+  force_disposition_selection: >
+    The Event Companion requires one available Force Disposition to be selected
+    and recorded on the roster before the event, rather than choosing anew for
+    each battle.
+  event_sequence:
+    - "muster armies and record Force Disposition"
+    - "determine Primary Mission from opponent's Force Disposition"
+    - "determine one of three recommended layouts"
+    - "create the battlefield"
+    - "determine attacker and defender"
+    - "select Secondary Missions"
+    - "declare battle formations"
+    - "deploy armies"
+    - "redeploy units where rules permit"
+    - "determine first turn"
+    - "resolve pre-battle rules"
+    - "begin battle"
+    - "end battle after five battle rounds"
+    - "determine victor"
+  omitted_from_event_sequence:
+    - "Deployment cards"
+    - "Twist cards"
+  layout_boundary: >
+    Event Companion version 1.1 supplies recommended layouts, but July and
+    August official updates changed some layouts. Exact current competitive
+    coordinates are therefore not certified by this record.
+
+secondary_missions:
+  verification_status: "verified_current"
+  sources:
+    - "OFF-11E-CHAPTER-APPROVED-2026"
+    - "OFF-11E-EVENT-COMPANION-1.1"
+  modes:
+    - "Fixed"
+    - "Tactical"
+  tactical_summary: >
+    Tactical play draws two Secondary Missions at the start of each Command
+    phase. Active cards can persist if not scored, creating a choice between
+    immediate partial scoring and preserving a later opportunity.
+  event_once_per_battle_swap: >
+    Event Companion version 1.1 permits spending 1CP once per battle at the end
+    of the Command phase to discard one active Secondary Mission and draw one
+    replacement.
+  tactical_discard_resource: >
+    In the event procedure, a Tactical player can discard active Secondary
+    Missions at the end of their own turn and gain 1CP, subject to the event
+    companion's CP-generation limit.
+  consequence: >
+    Secondary cards create short-horizon opportunities whose value depends on
+    position, timing, surviving units and the opportunity cost of pursuing them.
+
+scoring:
+  verification_status: "verified_current"
+  sources:
+    - "OFF-11E-MISSIONS-PREVIEW-2026"
+    - "OFF-11E-EVENT-COMPANION-1.1"
+  primary:
+    maximum_per_game_vp: 45
+    normal_maximum_per_battle_round_vp: 15
+  secondary:
+    maximum_per_game_vp: 45
+    normal_maximum_per_battle_round_vp: 15
+  event_fixed_secondary_boundary: >
+    Event Companion version 1.1 additionally limits each Fixed Secondary
+    Mission card to 20VP.
+  battle_ready_event_vp: 10
+  boundary: >
+    This record does not reproduce individual Primary or Secondary Mission card
+    scoring conditions.
+
+card_set_boundary:
+  verification_status: "not_fully_verified"
+  sources:
+    - "OFF-11E-CHAPTER-APPROVED-2026"
+  note: >
+    Games Workshop publicly describes 15 Force-Disposition mission matchups,
+    while another official product article describes 25 individual missions.
+    The repository does not infer the complete card-to-matchup mapping without
+    inspection of the full current deck or app.
+
+project_use:
+  teaching_chain: >
+    available Force Dispositions -> selected mission purpose -> battlefield
+    requirements -> threatened purpose -> available units/resources -> choice ->
+    action -> score/survival/position consequence -> changed future options
+  boundaries:
+    - "Mission rules do not create fictional chronology."
+    - "Force Disposition is a game-construction and mission field, not a personality diagnosis."
+    - "A mission objective does not by itself establish a fictional motive for a character."
