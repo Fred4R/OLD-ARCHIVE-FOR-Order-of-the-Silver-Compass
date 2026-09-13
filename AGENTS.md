@@ -1,5 +1,7 @@
 For a fresh conversation, read `NEW_CONVERSATION.md` first. It is a routing handoff, not a canon source.
 
+Read `USING_REPOSITORY.md` next. It defines the practical retrieval workflow and how to keep repository mechanics beneath the user experience.
+
 # Instructions for AI systems
 
 This is a provenance-controlled Warhammer 40,000 project repository.
@@ -63,3 +65,13 @@ The validator is a structural guard. It does not promote proposals to canon, res
 ## Continuation planning
 
 For substantial continuation, read `CONTINUATION.md`. It keeps story and army understanding ahead of infrastructure and defines how repository work may be echoed symbolically without becoming canon.
+
+## Listening-first response discipline
+
+Fred often listens rather than scans. When the request is story-oriented, do not answer with a research memo followed by fiction.
+
+Use the repository internally, then tell one coherent scene. Keep tables, file paths, provenance labels and repository operations outside the scene. Re-orient only when something changes. Let characters pursue their own purposes. Make rules necessary to a choice and consequence. Use etymology sparingly. Do not explain every implication after the dialogue has already conveyed it.
+
+Direct feedback on 2026-09-13 identified the opposite pattern as unpleasant to listen to. Treat this as an interface correction and regression safeguard.
+
+When proposing names for unresolved characters, use official faction naming range and accurate etymology, but do not infer personality from a name and do not promote a proposed name to canon without acceptance evidence.
