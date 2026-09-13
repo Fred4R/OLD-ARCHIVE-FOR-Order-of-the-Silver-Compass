@@ -24,6 +24,7 @@ MANIFEST_PATH = ROOT / "SHA256SUMS.txt"
 MASTER_PATH = ROOT / "Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
 SOURCE_INDEX_PATH = ROOT / "Rules/11e/SOURCE_INDEX.md"
 DETACHMENT_ROOT = ROOT / "Rules/11e/detachments"
+SYSTEM_ROOT = ROOT / "Rules/11e/system"
 
 ALLOWED_EVIDENCE_CLASSES = {
     "A1", "A1-REPORTED", "A2", "A3", "A4", "A5", "A6", "A7", "A8"
@@ -279,6 +280,96 @@ def validate_category_separation(path: Path, data: dict[str, Any]) -> None:
                 fail(
                     f"{path.relative_to(ROOT)} has unknown verification_status {value!r}"
                 )
+
+
+def validate_system_files(source_ids: set[str]) -> dict[str, tuple[Path, dict[str, Any]]]:
+    records: dict[str, tuple[Path, dict[str, Any]]] = {}
+    required = {
+        "ARMY_CONSTRUCTION.yaml": "11E-SYSTEM-ARMY-CONSTRUCTION",
+        "SOURCE_AND_UPDATE_ROUTING.yaml": "11E-SYSTEM-SOURCE-UPDATE-ROUTING",
+    }
+
+    if not SYSTEM_ROOT.exists():
+        fail("Missing Rules/11e/system")
+        return records
+
+    for filename in required:
+        path = SYSTEM_ROOT / filename
+        if not path.exists():
+            fail(f"Missing required system record {path.relative_to(ROOT)}")
+
+    for path in sorted(SYSTEM_ROOT.glob("*.yaml")):
+        data = load_yaml(path)
+        if not data:
+            continue
+
+        validate_category_separation(path, data)
+
+        if data.get("record_type") != "current_system_rules_record":
+            fail(f"{path.relative_to(ROOT)} must use record_type current_system_rules_record")
+
+        authority_ref = data.get("authority_map")
+        if not isinstance(authority_ref, str):
+            fail(f"{path.relative_to(ROOT)} missing authority_map")
+        else:
+            resolve_repo_path(path, authority_ref)
+
+        source_index_ref = data.get("source_index")
+        if not isinstance(source_index_ref, str):
+            fail(f"{path.relative_to(ROOT)} missing source_index")
+        else:
+            resolved = resolve_repo_path(path, source_index_ref)
+            if resolved and resolved != SOURCE_INDEX_PATH:
+                fail(
+                    f"{path.relative_to(ROOT)} source_index does not resolve to "
+                    "Rules/11e/SOURCE_INDEX.md"
+                )
+
+        validate_date(
+            data.get("verification_as_of"),
+            f"{path.relative_to(ROOT)} verification_as_of",
+        )
+
+        if data.get("edition") != 11:
+            fail(f"{path.relative_to(ROOT)} must declare edition 11")
+
+        system_id = data.get("system_id")
+        if not isinstance(system_id, str) or not re.fullmatch(
+            r"11E-SYSTEM-[A-Z0-9-]+", system_id
+        ):
+            fail(f"{path.relative_to(ROOT)} has invalid system_id {system_id!r}")
+            continue
+        if system_id in records:
+            previous = records[system_id][0].relative_to(ROOT)
+            fail(
+                f"Duplicate system_id {system_id} in "
+                f"{path.relative_to(ROOT)} and {previous}"
+            )
+            continue
+
+        expected_id = required.get(path.name)
+        if expected_id is not None and system_id != expected_id:
+            fail(
+                f"{path.relative_to(ROOT)} system_id must be {expected_id!r}, "
+                f"found {system_id!r}"
+            )
+
+        if not isinstance(data.get("system"), str) or not data.get("system"):
+            fail(f"{path.relative_to(ROOT)} missing system name")
+
+        unknown_sources = collect_source_refs(data) - source_ids
+        for source in sorted(unknown_sources):
+            fail(f"{path.relative_to(ROOT)} references undefined source ID {source}")
+
+        if contains_current_verification(data) and not collect_source_refs(data):
+            fail(
+                f"{path.relative_to(ROOT)} contains a verified-current claim "
+                "without any OFF-* source reference"
+            )
+
+        records[system_id] = (path, data)
+
+    return records
 
 
 def validate_detachment_files(
@@ -898,6 +989,7 @@ def validate_connections() -> None:
         ROOT / "requirements-validator.txt",
         ROOT / ".github/workflows/validate-repository.yml",
         ROOT / "Rules/11e/detachments/README.md",
+        ROOT / "Rules/11e/system/README.md",
     ]
     for path in required_files:
         if not path.exists():
@@ -924,6 +1016,7 @@ def main() -> int:
     validate_manifest()
     master_text = validate_master()
     source_ids = validate_source_index()
+    system_records = validate_system_files(source_ids)
     detachment_records = validate_detachment_files(source_ids)
     rule_records, _ = validate_rules_files(master_text, source_ids)
     validate_detachment_links(detachment_records)
@@ -938,7 +1031,7 @@ def main() -> int:
     print("Repository validation PASSED.")
     print("Checked: tracked-file hashes, canonical Compendium identity, YAML syntax,")
     print("authority/status separation, army arithmetic, exact source payloads,")
-    print("project/rules/source IDs, Detachment IDs and links, roster-occurrence links,")
+    print("project/rules/source IDs, system and Detachment IDs and links, roster-occurrence links,")
     print("current-claim provenance, core-document heading uniqueness, and")
     print("illustrative-story proposal boundaries.")
     return 0
