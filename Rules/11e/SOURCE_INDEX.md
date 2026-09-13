@@ -11,7 +11,7 @@ Verification date for the current connected army layer: 2026-09-13.
 Publisher: Games Workshop / Warhammer Community  
 Title: Warhammer 40,000 Downloads  
 Locator: https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/  
-Verified: yes, 2026-09-12  
+Verified: yes, 2026-09-12; rechecked 2026-09-13  
 Scope: current official download hub and update routing.
 
 The page identifies the Munitorum Field Manual as the current points/formation source and showed it updated 02/09/2026.
@@ -215,6 +215,23 @@ Relevant verified findings:
 
 Repository consequence:
 Use public official previews for the fields they actually expose. Keep unexposed Codex/app-only fields blocked rather than reconstructing them from secondary sources.
+
+## OFF-11E-APP-MFM-SYNC
+
+Publisher: Games Workshop / Warhammer Community  
+Title: #New40k – New app for a new edition  
+Date: 17 June 2026  
+Locator: https://www.warhammer-community.com/en-gb/articles/dv1aslrr/new40k-new-app-for-a-new-edition/  
+Verified: yes, 2026-09-13
+
+Relevant verified findings:
+- the updated Warhammer 40,000 app contains the full Core Rules;
+- Battle Forge is updated for the new Detachments and Force Dispositions and uses updated Munitorum Field Manual points;
+- the online Munitorum Field Manual includes unit and upgrade points, Leader/Support eligible squads, Detachment Points and Force Dispositions;
+- Games Workshop states that the online Munitorum Field Manual updates when the Warhammer 40,000 app updates.
+
+Repository consequence:
+Use the live MFM for the fields it publishes and treat its dated state as time-sensitive. Do not use MFM synchronization as proof that unexposed Codex rules are publicly available.
 
 ## Source-routing rule
 
