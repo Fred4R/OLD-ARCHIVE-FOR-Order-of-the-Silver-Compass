@@ -83,3 +83,8 @@ Partial evidence may narrow an unresolved question without resolving it.
 ## Claim discipline
 
 Do not call something accepted, current/legal, complete, ready, cold-start tested, committed, uploaded, merged, or verified unless the relevant condition has actually been checked.
+
+
+## Validation is not status
+
+The repository validator may confirm that status, evidence class, verification state, sources, and references are stored consistently. It does not assign `ESTABLISHED_PROJECT_CANON`, convert `UNRESOLVED` into resolved fact, or certify current Warhammer legality merely because the repository passes validation.
