@@ -705,6 +705,7 @@ def validate_connections() -> None:
         ROOT / "AGENTS.md",
         ROOT / "STATUS.md",
         ROOT / "SOURCES.md",
+        ROOT / "CONTINUATION.md",
         ROOT / "scripts/validate_repository.py",
         ROOT / "requirements-validator.txt",
         ROOT / ".github/workflows/validate-repository.yml",
@@ -714,9 +715,10 @@ def validate_connections() -> None:
             fail(f"Missing required connected file: {path.relative_to(ROOT)}")
 
     checks = {
-        ROOT / "README.md": ["scripts/validate_repository.py", "Validate repository integrity"],
-        ROOT / "AGENTS.md": ["scripts/validate_repository.py"],
-        ROOT / "AUTHORITY.md": ["scripts/validate_repository.py"],
+        ROOT / "README.md": ["scripts/validate_repository.py", "Validate repository integrity", "CONTINUATION.md"],
+        ROOT / "AGENTS.md": ["scripts/validate_repository.py", "CONTINUATION.md"],
+        ROOT / "AUTHORITY.md": ["scripts/validate_repository.py", "CONTINUATION.md"],
+        ROOT / "Stories/Illustrative/README.md": ["../../CONTINUATION.md"],
     }
     for path, required_fragments in checks.items():
         text = read_text(path)
