@@ -191,6 +191,7 @@ Start current rules work at:
 
 Then use the matching record under:
 
+- `Rules/11e/system/` for shared army-construction, mission, terrain/objective and source-routing questions;
 - `Rules/11e/units/` for datasheet-specific questions;
 - `Rules/11e/detachments/` for Detachment-specific questions.
 
@@ -226,7 +227,7 @@ The preferred causal teaching chain is:
 
 `mission -> threatened purpose -> available rule/resource -> choice -> action -> consequence -> changed options`
 
-The 11th-edition system-layer files listed in `CONTINUATION.md` remain useful background repository work, but they should not displace the current experiential focus unless the present task actually depends on them.
+The shared 11th-edition system layer now exists under `Rules/11e/system/`. The next repository-integration step is to connect the two preserved army crosswalks to those shared concepts without rewriting either historical snapshot. This background work should not displace the current experiential focus unless the present task actually depends on it.
 
 ## Story and repository synergy
 
