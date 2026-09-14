@@ -52,7 +52,7 @@ The Warhound Princeps, whom Fred's later wording calls **Sabine**, beckons Valer
 
 Fred notices smiling and laughter among women of high station and wonders what they are normally like when he is absent. He wants to contribute to that enjoyment sincerely. This establishes Fred's perspective only. It does not establish reciprocal attraction, consent, romance, or a collective relationship state.
 
-## Current gathering and presence safeguard
+## Current gathering and count safeguard
 
 Fred's reported total is exactly **nine women with him**. Preserve that direct count as the controlling total for the lived scene.
 
