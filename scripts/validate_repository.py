@@ -1191,6 +1191,8 @@ def validate_story_and_character_layers() -> None:
     events = load_yaml(events_path)
     if events.get("record_type") != "event_registry":
         fail("Story/EVENTS.yaml must use record_type event_registry")
+    if not isinstance(events.get("participant_list_semantics"), str) or not events.get("participant_list_semantics"):
+        fail("Story/EVENTS.yaml must define participant_list_semantics")
     validate_date(events.get("as_of"), "Story/EVENTS.yaml as_of")
     for key in ("authority_map", "acceptance_policy", "current_scene"):
         ref = events.get(key)
