@@ -1279,6 +1279,8 @@ def validate_story_and_character_layers() -> None:
                         fail(f"Story/KNOWLEDGE.yaml {claim_id} references unknown holder {identity!r}")
             if not isinstance(claim.get("content"), str) or not claim.get("content"):
                 fail(f"Story/KNOWLEDGE.yaml {claim_id} missing content")
+            if not isinstance(claim.get("evidence_basis"), str) or not claim.get("evidence_basis"):
+                fail(f"Story/KNOWLEDGE.yaml {claim_id} missing evidence_basis")
             refs = claim.get("source_refs")
             if not isinstance(refs, list) or not refs:
                 fail(f"Story/KNOWLEDGE.yaml {claim_id} missing source_refs")
