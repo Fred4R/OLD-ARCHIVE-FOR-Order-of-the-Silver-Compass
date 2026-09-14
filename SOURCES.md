@@ -70,6 +70,24 @@ These sources are used to test compatibility and sharpen portrayal. They do not 
   - Project use: supports keeping sacred oratory and hymnal inspiration distinct from Army of Faith's Acts-of-Faith resource logic. It does not assign every Sanctified Orators rule or Enhancement to Constantia or Eulalia personally.
   - Locator: https://www.warhammer-community.com/en-gb/articles/1zvyawig/warhammer-40000-faction-focus-adepta-sororitas/
 
+## Secondary Warhammer reference data
+
+`Reference/Secondary/Wahapedia/11e/` is a convenience reference imported from Wahapedia. It is secondary, non-authoritative, and time-sensitive.
+
+Use it only to:
+- discover candidate rules fields or source locators;
+- cross-check repository coverage;
+- identify claims that need verification against a current official source.
+
+Do not use it by itself to:
+- set or justify `verified_current`;
+- supersede a current Games Workshop/Warhammer source;
+- overwrite a repository current-rules record;
+- fill a field that is `not_yet_verified` or `blocked_current_source`;
+- create project canon, continuity, biography, relationships, or fictional chronology.
+
+For current rules, verify the exact field against the controlling current official Games Workshop/Warhammer source and record that verification under `Rules/11e/`. The local reference note at `Reference/Secondary/Wahapedia/README.md` governs use of the imported dataset.
+
 ## Warhammer 40,000 lore and rules
 
 Current official Games Workshop/Warhammer sources govern current lore and rules.
