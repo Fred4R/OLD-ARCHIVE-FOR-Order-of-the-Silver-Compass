@@ -69,40 +69,54 @@ universal_resolution_order:
     record: "MOVEMENT_AND_RESERVES.yaml"
     system_id: "11E-SYSTEM-MOVEMENT-RESERVES"
     purpose: >
-      Resolve the Movement-phase sequence, current move-type routing and the
-      verified high-level relationship between strategic reserves and ingress.
+      Resolve Movement-phase sequencing and reserve-arrival structure.
   - step: 6
+    record: "TRANSPORTS.yaml"
+    system_id: "11E-SYSTEM-TRANSPORTS"
+    purpose: >
+      Resolve universal transport capacity, embark, disembark and emergency
+      disembark procedure.
+  - step: 7
     record: "SHOOTING.yaml"
     system_id: "11E-SYSTEM-SHOOTING"
     purpose: >
-      Resolve the Shooting-phase sequence, shooting-type routing and verified
-      normal-shooting eligibility.
-  - step: 7
+      Resolve Shooting-phase sequence, shooting-type routing and eligibility.
+  - step: 8
+    record: "ATTACK_RESOLUTION.yaml"
+    system_id: "11E-SYSTEM-ATTACK-RESOLUTION"
+    purpose: >
+      Resolve the shared Making Attacks and Hit, Wound, Save and damage sequence
+      used by shooting and fighting.
+  - step: 9
+    record: "CORE_STRATAGEMS.yaml"
+    system_id: "11E-SYSTEM-CORE-STRATAGEMS"
+    purpose: >
+      Resolve the universal Core Stratagem set, costs and current wording gate.
+  - step: 10
     record: "COMBAT.yaml"
     system_id: "11E-SYSTEM-COMBAT"
     purpose: >
       Resolve current Engagement Range, charge-target timing, Pile In,
       fight-activation and Consolidate structure.
-  - step: 8
+  - step: 11
     record: "MISSIONS.yaml"
     system_id: "11E-SYSTEM-MISSIONS"
     purpose: >
       Resolve shared mission generation, Primary and Secondary structure,
       scoring boundaries and casual-versus-organised-play distinctions.
-  - step: 9
+  - step: 12
     record: "TERRAIN_AND_OBJECTIVES.yaml"
     system_id: "11E-SYSTEM-TERRAIN-AND-OBJECTIVES"
     purpose: >
       Resolve shared terrain-area, visibility/protection and objective-control
       structure, while preserving mutable-layout boundaries.
-  - step: 10
+  - step: 13
     authority: "current official Warhammer 40,000 Core Rules"
     source: "OFF-11E-CORE-RULES-2026"
     purpose: >
-      Resolve universal fields not yet completely extracted into repository
-      records, especially the full Making Attacks procedure, complete Transport
-      procedure, exact Core Stratagem set, common abilities and detailed
-      exceptions or geometry.
+      Resolve fields not yet completely extracted, especially the complete Core
+      Ability catalogue, detailed movement geometry and subordinate exceptions
+      that remain explicitly gated in the matching system record.
 
 coverage_gates:
   fully_or_substantially_routed_here:
@@ -110,20 +124,22 @@ coverage_gates:
     - "battle and Command-phase sequence"
     - "leadership and battle-shock consequences"
     - "Movement-phase and reserve-arrival structure"
+    - "Transport, embark, disembark and emergency-disembark procedure"
     - "Shooting-phase structure"
+    - "Making Attacks and attack-resolution structure"
+    - "Core Stratagem identity and cost routing"
     - "charge and Fight-phase structure"
     - "missions"
     - "terrain and objectives"
   still_require_current_core_rules_for_exact_wording:
-    - "complete Making Attacks and damage-resolution procedure"
-    - "complete Transport and emergency-disembark procedure"
-    - "exact Core Stratagem list and wording"
+    - "subordinate Making Attacks and Save/allocation exceptions not fully extracted"
+    - "exact disputed or freshness-sensitive Core Stratagem wording"
     - "complete common unit and weapon ability catalogue"
     - "unextracted move-type distances, exceptions and geometry"
   rule: >
     A coverage gate is not permission to infer. Retrieve the current official
-    Core Rules for any gated field and preserve the field as unverified if the
-    authoritative text cannot be inspected.
+    Core Rules or current official update for any gated field and preserve the
+    field as unverified if the authoritative text cannot be inspected.
 
 universal_scope:
   includes:
