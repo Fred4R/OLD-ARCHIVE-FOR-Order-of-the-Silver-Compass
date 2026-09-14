@@ -1,0 +1,66 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-BATTLE-SHOCK-ACTIONS"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current universal 11th-edition leadership, battle-shock and action consequences explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "current universal battle-shock roll and battle-shocked consequences explicitly verified here"
+does_not_supersede:
+  - "mission-specific action wording"
+  - "faction-specific morale or action rules"
+  - "current Games Workshop sources"
+edition: 11
+system: "Battle-shock and actions"
+source_index: "../SOURCE_INDEX.md"
+
+primary_source:
+  source: "OFF-11E-CORE-RULES-2026"
+  verification_status: "verified_current"
+
+leadership_roll:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  dice: "2D6"
+  success: >
+    The roll succeeds if its result is equal to or greater than one or more
+    Leadership characteristics in the unit; otherwise it fails.
+
+battle_shock_roll:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  method: "make a leadership roll for the unit"
+  success: "the unit does not become battle-shocked"
+  failure: "the unit and each model in it become battle-shocked"
+
+command_phase_checks:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  active_player_rolls_for_units_that_are:
+    - "currently battle-shocked"
+    - "at or below half-strength"
+  recovery: >
+    A unit that was battle-shocked at the start of the Battle-shock step stops
+    being battle-shocked if its battle-shock roll in that step succeeds.
+
+while_battle_shocked:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  effects:
+    - "the Objective Control characteristic of all models in the unit is modified to '-'"
+    - "the controlling player cannot target that unit with Stratagems"
+    - "the unit is not eligible to start an action"
+    - "an action the unit has started cannot be completed"
+
+action_boundary:
+  verification_status: "partially_verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  note: >
+    This record verifies battle-shock's interaction with actions. Complete action
+    declaration, timing and completion rules remain in the current Core Rules
+    and mission text where applicable.
+
+teaching_model:
+  chain: >
+    casualties/disruption -> battle-shock check -> pass or fail -> changed
+    Objective Control, Stratagem and action access -> changed mission options
