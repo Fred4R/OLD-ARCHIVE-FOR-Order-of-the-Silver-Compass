@@ -13,6 +13,7 @@ claims:
   - claim_id: "KNOW-FRED-EULALIA-NAME"
     holders: ["PERSON-FRED"]
     content: "Fred knows the name Sister Dialogus Eulalia Veridica from her introduction."
+    evidence_basis: "inherited established continuity; exact earlier transcript not independently recovered here"
     source_refs:
       - "../Characters/Eulalia-Veridica.md"
       - "../Relationships/RELATIONSHIPS.md"
@@ -20,6 +21,7 @@ claims:
   - claim_id: "KNOW-DOMESTIC-HOPE-WITNESSES"
     holders: ["CHAR-CONSTANTIA", "CHAR-AURELIA", "CHAR-JUSTINA", "CHAR-EULALIA"]
     content: "These people know Fred's publicly articulated hope for a wife, children, and peaceful home from THE LIGHT OF RETURN and its grounding exchange."
+    evidence_basis: "inherited established continuity extracted from person and relationship records"
     source_refs:
       - "../Relationships/RELATIONSHIPS.md"
       - "../CURRENT_STATE.md"
@@ -27,18 +29,21 @@ claims:
   - claim_id: "KNOW-RETURN-COMMAND-INTENT"
     holders: ["CHAR-CONSTANTIA", "CHAR-VALERIA", "CHAR-PARAGON-TRIO"]
     content: "These people heard Fred state that he is watching how they interact with one another and the world so the force can win and return alive to the True Meridian."
+    evidence_basis: "inherited established continuity; preserve the source records' evidentiary limits"
     source_refs:
       - "../Relationships/RELATIONSHIPS.md"
     non_implications: ["automatic assent to every future decision", "transfer of institutional command"]
   - claim_id: "KNOW-PRINCEPS-RESPONSIBILITY-STATEMENT"
     holders: ["CHAR-PRINCEPS"]
     content: "The Warhound Princeps heard Fred state that senior responsibility includes guiding genuine subordinates while considering threats and consequences larger than the commander's own Warhound."
+    evidence_basis: "later reported continuity extracted from the relationship record; agreement remains unestablished"
     source_refs:
       - "../Relationships/RELATIONSHIPS.md"
     non_implications: ["agreement", "private judgment", "new chain of command"]
   - claim_id: "KNOW-FRED-VALERIA-PARAGON-PRACTICE"
     holders: ["PERSON-FRED"]
     content: "Fred has directly observed enough of Valeria's Warglaive and the Paragon trio's practiced coordination to begin forming a practical model of support, timing, commitment, recoverability, and return."
+    evidence_basis: "inherited established continuity extracted from relationship and character records"
     source_refs:
       - "../Relationships/RELATIONSHIPS.md"
       - "../Characters/Valeria.md"
@@ -47,6 +52,7 @@ claims:
   - claim_id: "KNOW-FRED-CURRENT-SOCIAL-PERCEPTION"
     holders: ["PERSON-FRED"]
     content: "Fred has perceived smiling and laughter among women he usually encounters through formal roles and wants sincerely to contribute to that enjoyment."
+    evidence_basis: "A1-REPORTED current-endpoint continuity preserved in CURRENT_STATE.md"
     source_refs:
       - "../CURRENT_STATE.md"
       - "CURRENT_SCENE.yaml"
