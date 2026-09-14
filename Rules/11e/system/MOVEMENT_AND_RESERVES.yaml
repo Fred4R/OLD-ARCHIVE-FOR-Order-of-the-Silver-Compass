@@ -10,7 +10,7 @@ does_not_supersede:
   - "complete movement geometry or every move-type restriction in the Core Rules"
   - "faction-specific movement abilities"
   - "mission deployment restrictions"
-  - "complete Transport rules not extracted here"
+  - "datasheet-specific Transport capacity or passenger restrictions"
   - "current Games Workshop sources"
 edition: 11
 system: "Movement and reserves"
@@ -61,20 +61,15 @@ strategic_reserves_and_ingress:
     exceptions and all alternative arrival permissions remain controlled by the
     current Core Rules and any specific rule that grants the arrival.
 
-transport_boundary:
-  verification_status: "not_fully_verified"
+transports:
+  verification_status: "verified_current"
   source: "OFF-11E-CORE-RULES-2026"
-  verified_here:
-    - "disembark move is a current universal move type"
-    - "embarked units are selected in the Move Units step"
-  not_extracted_here:
-    - "complete embark eligibility"
-    - "complete disembark placement and post-move restrictions"
-    - "emergency disembark procedure"
-    - "destroyed Transport passenger procedure"
+  record: "TRANSPORTS.yaml"
+  system_id: "11E-SYSTEM-TRANSPORTS"
   rule: >
-    Retrieve the current official Core Rules before giving precise universal
-    Transport wording. Do not substitute 10th-edition Transport text.
+    Resolve capacity, embarking, disembarking and emergency disembark through
+    the dedicated universal Transport record. Datasheet-specific passenger
+    eligibility remains separate.
 
 teaching_model:
   chain: >
