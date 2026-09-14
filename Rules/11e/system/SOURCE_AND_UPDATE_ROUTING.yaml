@@ -37,12 +37,17 @@ routes:
       them after the universal game structure has been resolved.
   - question: "core game rules and game-wide mechanics"
     use_first:
-      - "current Warhammer 40,000 Core Rules"
+      - "Rules/11e/system/STRIKE_FORCE_2000.yaml for the universal 2,000-point route"
+      - "the matching extracted record under Rules/11e/system/"
+      - "current Warhammer 40,000 Core Rules for gated or unextracted wording"
       - "current official Rules Updates or FAQ when the field has been amended"
-    source: "OFF-11E-APP-CODEX-AUTHORITY"
+    sources:
+      - "OFF-11E-CORE-RULES-2026"
+      - "OFF-11E-DOWNLOADS"
     note: >
-      Repository system records summarize only fields actually verified from
-      current official sources.
+      The repository now extracts verified universal phase and battle-shock
+      structure, but the official Core Rules remain controlling. Never fill a
+      coverage gate from older-edition memory or a 10th-edition quick-start guide.
   - question: "unit points, upgrade points, Leader/Support attachment lists, Detachment Points, Force Dispositions"
     use_first:
       - "current online Munitorum Field Manual"
