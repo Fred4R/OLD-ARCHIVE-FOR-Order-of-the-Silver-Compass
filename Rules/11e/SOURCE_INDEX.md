@@ -198,6 +198,53 @@ Relevant verified findings:
 Temporal boundary:
 The 2026 edition explicitly retains existing Codex Detachments. The inspected current 2026 Adepta Sororitas Faction Pack rules-update section contains no Army of Faith or Sacred Rites amendment. This supports continued use of the Codex rule in public official evidence, but the live Warhammer 40,000 app/current Codex remains the final authority for complete wording.
 
+## OFF-11E-CORE-RULES-2026
+
+Publisher: Games Workshop / Warhammer Community  
+Title: Warhammer 40,000 Core Rules  
+Date: 1 June 2026  
+Official article: https://www.warhammer-community.com/en-gb/articles/nhqt9wx3/new40k-rules-download-the-free-core-rules-now/  
+PDF locator: https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf  
+Verified: section-level official-PDF text inspected 2026-09-13  
+Scope: current 11th-edition universal Core Rules.
+
+Verified current findings used by the universal system layer:
+- a battle normally lasts five battle rounds;
+- each player turn contains five phases: Command, Movement, Shooting, Charge and Fight;
+- the Command phase sequence is Start of Command Phase -> Gain Core CP -> Battle-shock -> Command Abilities -> End of Command Phase;
+- both players gain 1CP in the active player's Gain Core CP step;
+- a battle-shock roll is a leadership roll; failure makes the unit and its models battle-shocked;
+- while battle-shocked, models in the unit have Objective Control modified to '-', the unit cannot be targeted by its controller's Stratagems, and it cannot start or complete an action;
+- the Movement phase selects every unit to make a move, including units in strategic reserves and embarked units, with current move types including remain stationary, normal, advance, fall-back, disembark and ingress moves;
+- the Shooting phase uses Start -> Shoot -> End and current shooting types include normal, assault, close-quarters and indirect shooting;
+- normal shooting requires the unit to be unengaged and not to have made an advance move this turn.
+
+Retrieval boundary:
+The official PDF is too large for the available direct web-PDF renderer and screenshot route in this session. The claims above were inspected from the search-indexed text of that exact official 2026 PDF and from Games Workshop's release article. This is section-level verification, not a claim that every page of the PDF was successfully rendered or exhaustively extracted.
+
+Freshness boundary:
+The official Warhammer 40,000 Downloads route was rechecked on 2026-09-13. No later universal Core Rules replacement was identified through that route during this operation. Retrieval absence is not proof that no later update exists; current disputed or time-sensitive claims must still recheck the live official route.
+
+## OFF-11E-COMBAT-CHANGES-2026
+
+Publisher: Games Workshop / Warhammer Community  
+Title: #New40k – Combat changes shake up fighting in the new edition  
+Date: 15 April 2026  
+Locator: https://www.warhammer-community.com/en-gb/articles/m3son4il/new40k-combat-changes-shake-up-fighting-in-the-new-edition/  
+Verified: yes, 2026-09-13  
+Scope: official public explanation of current 11th-edition universal charge and fight changes.
+
+Relevant verified findings:
+- Engagement Range is 2";
+- a unit can declare a charge if at least one enemy unit is within 12";
+- charge targets are selected after the charge roll;
+- charge movement must end engaged with every selected charge target and cannot end engaged with unselected enemy units;
+- ingress moves used for special deployment such as Deep Strike or Strategic Reserves normally set up more than 8" from enemy models;
+- Pile In moves are resolved before attacks, active player first then opponent;
+- players alternate selecting eligible units to fight, with Fights First units resolved before remaining combats and the active player taking the first selection in the Fights First step;
+- an eligible unengaged unit can make an overrun fight under the stated conditions;
+- Consolidate moves are resolved after the fighting sequence and can reposition toward combat or objectives under the Core Rules.
+
 ## OFF-11E-APP-CODEX-AUTHORITY
 
 Publisher: Games Workshop / Warhammer Community  

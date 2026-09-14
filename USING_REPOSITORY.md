@@ -45,7 +45,8 @@ If current rules enter the scene, verify them first and let them matter because 
 
 For a universal question about a standard current 2,000-point game, start at:
 - `Rules/11e/system/STRIKE_FORCE_2000.yaml`;
-- follow its links into army construction, missions, terrain/objectives and current official Core Rules;
+- follow its links into army construction, battle sequence, battle-shock/actions, movement/reserves, shooting, combat, missions and terrain/objectives;
+- use the current official Core Rules for any coverage gate or exact wording not yet extracted;
 - remain faction-neutral unless the question actually requires faction-specific information.
 
 For a faction, roster or datasheet question, start at:
@@ -63,6 +64,8 @@ Check:
 - whether the rule is reproduced in a public current source or remains Codex/app-only.
 
 When the repository contains a historical or earlier-current rule, do not assume it is still current. Re-check official Games Workshop material when freshness matters.
+
+For universal 11th-edition rules, do not use the 10th-edition Quick Start Guide to fill gaps. Current repository coverage intentionally leaves the complete Making Attacks procedure, full Transport procedure, exact Core Stratagem list and full common-ability catalogue gated to the current official 2026 Core Rules until those exact sections are verified.
 
 ### Army roster questions
 

@@ -1,0 +1,64 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-BATTLE-SEQUENCE"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current universal 11th-edition battle-round, turn and Command-phase structure explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "current universal battle-round, player-turn and Command-phase fields explicitly verified here"
+does_not_supersede:
+  - "complete Core Rules wording not extracted here"
+  - "mission-specific timing"
+  - "faction rules, Detachment rules or datasheets"
+  - "project canon or story chronology"
+  - "current Games Workshop sources"
+edition: 11
+system: "Battle sequence"
+source_index: "../SOURCE_INDEX.md"
+
+primary_source:
+  source: "OFF-11E-CORE-RULES-2026"
+  verification_status: "verified_current"
+
+battle_structure:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  normal_battle_rounds: 5
+  player_turns_per_round: 2
+  phases_in_player_turn:
+    - "Command"
+    - "Movement"
+    - "Shooting"
+    - "Charge"
+    - "Fight"
+  consequence: >
+    A 2,000-point Strike Force game uses this same universal turn structure
+    unless a current mission or specific rule explicitly changes timing.
+
+command_phase:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  steps:
+    - "Start of Command Phase"
+    - "Gain Core CP"
+    - "Battle-shock"
+    - "Command Abilities"
+    - "End of Command Phase"
+  core_cp:
+    both_players_gain: 1
+    timing: "Gain Core CP step of each active player's Command phase"
+  end_phase_order:
+    - "resolve non-mission rules triggered at the end of the Command phase"
+    - "then resolve mission achievements triggered at that point"
+  consequence: >
+    Command is not merely administration: both players receive a universal
+    tactical resource, battle-shock is checked, strategic abilities resolve and
+    mission timing can score or change the state before movement begins.
+
+teaching_model:
+  chain: >
+    battle round -> active player turn -> Command state/resource check ->
+    Movement -> Shooting -> Charge -> Fight -> opponent turn -> changed round state
+  boundary: >
+    This record controls sequence only. What a faction can do inside a phase
+    belongs to the applicable faction, Detachment or datasheet record.

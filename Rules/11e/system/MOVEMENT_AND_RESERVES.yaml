@@ -1,0 +1,83 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-MOVEMENT-RESERVES"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current universal 11th-edition Movement-phase and high-level reserve-arrival fields explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "current universal Movement-phase structure and move-type routing explicitly verified here"
+does_not_supersede:
+  - "complete movement geometry or every move-type restriction in the Core Rules"
+  - "faction-specific movement abilities"
+  - "mission deployment restrictions"
+  - "complete Transport rules not extracted here"
+  - "current Games Workshop sources"
+edition: 11
+system: "Movement and reserves"
+source_index: "../SOURCE_INDEX.md"
+
+sources:
+  - "OFF-11E-CORE-RULES-2026"
+  - "OFF-11E-COMBAT-CHANGES-2026"
+
+movement_phase:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  steps:
+    - "Start of Movement Phase"
+    - "Move Units"
+    - "End of Movement Phase"
+  unit_selection:
+    rule: >
+      The active player selects units one at a time until every unit in the army
+      has been selected to move, including units on the battlefield, in
+      strategic reserves and embarked within a Transport.
+  verified_move_types:
+    - "remain stationary"
+    - "normal move"
+    - "advance move"
+    - "fall-back move"
+    - "disembark move"
+    - "ingress move"
+  boundary: >
+    This record does not reproduce the complete legality, distance, model-by-model
+    movement or terrain interaction wording for every move type.
+
+strategic_reserves_and_ingress:
+  verification_status: "partially_verified_current"
+  sources:
+    - "OFF-11E-CORE-RULES-2026"
+    - "OFF-11E-COMBAT-CHANGES-2026"
+  verified_relationship: >
+    Units in strategic reserves are selected during the Move Units step and
+    arrival from strategic reserves or special deployment is resolved through
+    an ingress move.
+  current_public_distance_anchor: >
+    Games Workshop's 2026 combat explanation states that ingress moves used for
+    special deployment such as Deep Strike or Strategic Reserves normally set
+    units up more than 8 inches from enemy models.
+  boundary: >
+    Exact round restrictions, battlefield-edge restrictions, Deep Strike
+    exceptions and all alternative arrival permissions remain controlled by the
+    current Core Rules and any specific rule that grants the arrival.
+
+transport_boundary:
+  verification_status: "not_fully_verified"
+  source: "OFF-11E-CORE-RULES-2026"
+  verified_here:
+    - "disembark move is a current universal move type"
+    - "embarked units are selected in the Move Units step"
+  not_extracted_here:
+    - "complete embark eligibility"
+    - "complete disembark placement and post-move restrictions"
+    - "emergency disembark procedure"
+    - "destroyed Transport passenger procedure"
+  rule: >
+    Retrieve the current official Core Rules before giving precise universal
+    Transport wording. Do not substitute 10th-edition Transport text.
+
+teaching_model:
+  chain: >
+    desired board state -> choose unit -> choose legal move type -> move or
+    arrive -> gain position/access/protection -> expose or preserve options ->
+    changed shooting, charge, objective and reserve possibilities

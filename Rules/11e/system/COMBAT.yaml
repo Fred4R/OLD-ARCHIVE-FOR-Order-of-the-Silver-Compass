@@ -1,0 +1,80 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-COMBAT"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current universal 11th-edition charge and Fight-phase structure explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "current universal Engagement Range, charge-target timing and high-level Fight sequencing explicitly verified here"
+does_not_supersede:
+  - "complete Core Rules charge/fight wording not extracted here"
+  - "faction-specific melee abilities"
+  - "weapon profiles or datasheet rules"
+  - "current Games Workshop sources"
+edition: 11
+system: "Charge and fight"
+source_index: "../SOURCE_INDEX.md"
+
+primary_source:
+  source: "OFF-11E-COMBAT-CHANGES-2026"
+  verification_status: "verified_current"
+
+engagement_range:
+  verification_status: "verified_current"
+  source: "OFF-11E-COMBAT-CHANGES-2026"
+  distance_inches: 2
+  consequence: >
+    Being engaged constrains ordinary movement and changes what combat and
+    shooting options are available; ordinary movement cannot finish within
+    Engagement Range unless a rule such as charging permits it.
+
+charge:
+  verification_status: "verified_current"
+  source: "OFF-11E-COMBAT-CHANGES-2026"
+  declaration_gate: >
+    A unit can declare a charge if at least one enemy unit is within 12 inches.
+  target_timing: "select charge targets after making the charge roll"
+  move_constraints:
+    - "selected charge targets must be within the generated maximum distance"
+    - "the charging unit must end engaged with all selected charge targets"
+    - "the charging unit cannot end engaged with enemy units that were not selected as charge targets"
+  charge_consequence: >
+    Models in a unit that completes its Charge move gain Fights First until the
+    end of the turn under the current combat rules.
+
+fight_phase:
+  verification_status: "verified_current"
+  source: "OFF-11E-COMBAT-CHANGES-2026"
+  pile_in:
+    timing: "before the main attack-selection sequence"
+    order: "active player resolves Pile Ins first, then the opponent"
+    normal_distance_inches: 3
+  fight_selection:
+    structure: "players alternate selecting eligible units"
+    priority: "Fights First units are selected before remaining combats"
+    fights_first_first_selection: "active player"
+  overrun_fight: >
+    A unit that remains eligible to fight but is unengaged by the time it is
+    selected can, under the current conditions, make an overrun fight that
+    provides another Pile In opportunity before attacks.
+  consolidate:
+    timing: "after the fighting sequence"
+    normal_distance_inches: 3
+    use: >
+      Consolidation can reposition units further into combat, engage a nearby
+      enemy where legal, or move toward a nearby objective under the current
+      Core Rules.
+
+boundary:
+  verification_status: "partially_verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  note: >
+    Exact charge-roll modification, every eligibility exception, complete Pile
+    In and Consolidate geometry, melee attack resolution and every combat-range
+    visibility interaction remain controlled by the current Core Rules.
+
+teaching_model:
+  chain: >
+    threat and desired engagement -> declare charge -> roll -> choose legal
+    targets -> move -> Pile In -> activation priority -> attacks -> Consolidate
+    -> changed position, survival and objective access

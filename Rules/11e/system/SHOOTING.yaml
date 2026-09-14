@@ -1,0 +1,65 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-SHOOTING"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current universal 11th-edition Shooting-phase structure explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "current universal Shooting-phase sequence and shooting-type fields explicitly verified here"
+does_not_supersede:
+  - "complete attack-resolution wording not extracted here"
+  - "weapon abilities or faction-specific shooting rules"
+  - "datasheet weapon profiles"
+  - "current Games Workshop sources"
+edition: 11
+system: "Shooting"
+source_index: "../SOURCE_INDEX.md"
+
+primary_source:
+  source: "OFF-11E-CORE-RULES-2026"
+  verification_status: "verified_current"
+
+shooting_phase:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  steps:
+    - "Start of Shooting Phase"
+    - "Shoot"
+    - "End of Shooting Phase"
+  unit_selection: >
+    The active player selects eligible units one at a time and resolves the
+    selected shooting type before moving to the next chosen unit.
+  general_eligibility: >
+    A unit is eligible to shoot if it is on the battlefield and has not already
+    been selected to shoot this phase.
+  verified_shooting_types:
+    - "normal shooting"
+    - "assault shooting"
+    - "close-quarters shooting"
+    - "indirect shooting"
+
+normal_shooting:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  eligible_if:
+    - "the unit is unengaged"
+    - "the unit did not make an advance move this turn"
+  effect: "the unit shoots as described in the current Core Rules Making Attacks procedure"
+  after_shooting: >
+    Until the end of the phase, the unit is not eligible to start an action.
+
+attack_resolution_boundary:
+  verification_status: "not_fully_verified"
+  source: "OFF-11E-CORE-RULES-2026"
+  rule: >
+    The current official Core Rules remain the authority for the complete 2026
+    Making Attacks sequence, including current Hit, Wound, save, damage,
+    allocation, modifier, fast-dice and weapon-ability interactions. This
+    repository operation did not promote older quick-start wording into 11th
+    edition merely because the broad sequence may look familiar.
+
+teaching_model:
+  chain: >
+    target purpose -> shooting eligibility -> shooting type -> target and attack
+    resolution -> casualties or state change -> changed enemy options and later
+    mission/combat possibilities

@@ -281,6 +281,11 @@ def validate_system_files(source_ids: set[str]) -> dict[str, tuple[Path, dict[st
     required = {
         "STRIKE_FORCE_2000.yaml": "11E-SYSTEM-STRIKE-FORCE-2000",
         "ARMY_CONSTRUCTION.yaml": "11E-SYSTEM-ARMY-CONSTRUCTION",
+        "BATTLE_SEQUENCE.yaml": "11E-SYSTEM-BATTLE-SEQUENCE",
+        "BATTLE_SHOCK_AND_ACTIONS.yaml": "11E-SYSTEM-BATTLE-SHOCK-ACTIONS",
+        "MOVEMENT_AND_RESERVES.yaml": "11E-SYSTEM-MOVEMENT-RESERVES",
+        "SHOOTING.yaml": "11E-SYSTEM-SHOOTING",
+        "COMBAT.yaml": "11E-SYSTEM-COMBAT",
         "SOURCE_AND_UPDATE_ROUTING.yaml": "11E-SYSTEM-SOURCE-UPDATE-ROUTING",
     }
 
