@@ -1090,7 +1090,17 @@ def validate_story_and_character_layers() -> None:
             fail(f"Characters/README.md does not route {path.name}")
 
     if relationship_path.exists():
+        relationship_front = load_markdown_frontmatter(relationship_path)
+        if relationship_front.get("record_type") != "relationship_registry":
+            fail("Relationships/RELATIONSHIPS.md must use record_type relationship_registry")
+        validate_date(relationship_front.get("as_of"), "Relationships/RELATIONSHIPS.md as_of")
         relationship_text = read_text(relationship_path)
+        relation_ids = re.findall(r"^## (REL-[A-Z0-9-]+)$", relationship_text, flags=re.MULTILINE)
+        if not relation_ids:
+            fail("Relationships/RELATIONSHIPS.md contains no REL-* records")
+        for relation_id in sorted(set(relation_ids)):
+            if relation_ids.count(relation_id) > 1:
+                fail(f"Relationships/RELATIONSHIPS.md duplicate relation ID {relation_id}")
         for reference in re.findall(r"`(\.\./[^`#]+\.md)(?:#[^`]*)?`", relationship_text):
             resolve_repo_path(relationship_path, reference)
 
