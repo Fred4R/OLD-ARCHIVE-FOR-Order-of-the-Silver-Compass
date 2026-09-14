@@ -7,7 +7,6 @@ verification_as_of: "2026-09-13"
 supersedes_for:
   - "current universal Shooting-phase sequence and shooting-type fields explicitly verified here"
 does_not_supersede:
-  - "complete attack-resolution wording not extracted here"
   - "weapon abilities or faction-specific shooting rules"
   - "datasheet weapon profiles"
   - "current Games Workshop sources"
@@ -44,19 +43,19 @@ normal_shooting:
   eligible_if:
     - "the unit is unengaged"
     - "the unit did not make an advance move this turn"
-  effect: "the unit shoots as described in the current Core Rules Making Attacks procedure"
+  effect: "resolve its selected attacks through ATTACK_RESOLUTION.yaml"
   after_shooting: >
     Until the end of the phase, the unit is not eligible to start an action.
 
-attack_resolution_boundary:
-  verification_status: "not_fully_verified"
+attack_resolution:
+  verification_status: "verified_current"
   source: "OFF-11E-CORE-RULES-2026"
+  record: "ATTACK_RESOLUTION.yaml"
+  system_id: "11E-SYSTEM-ATTACK-RESOLUTION"
   rule: >
-    The current official Core Rules remain the authority for the complete 2026
-    Making Attacks sequence, including current Hit, Wound, save, damage,
-    allocation, modifier, fast-dice and weapon-ability interactions. This
-    repository operation did not promote older quick-start wording into 11th
-    edition merely because the broad sequence may look familiar.
+    Shooting uses the shared Making Attacks and Attack Sequence record. Exact
+    subordinate exceptions that remain partial are preserved as gates in that
+    record rather than being reconstructed here.
 
 teaching_model:
   chain: >
