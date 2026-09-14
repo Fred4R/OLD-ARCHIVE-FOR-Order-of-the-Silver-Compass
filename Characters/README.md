@@ -16,6 +16,19 @@ They are **derived continuity records**, not new witnessing evidence. The preser
 
 No equivalent A6 simulation guide currently exists for Aurelia, Justina, Eulalia, Valeria, the Helverin pilot, the Warhound Princeps, or the Paragon trio. Preserve their continuity records first and use current official Warhammer sources when role-specific lore materially affects portrayal.
 
+## Current records
+
+- `Fred.md`
+- `Constantia-Continuity.md`
+- `Aurelia-Montfort.md`
+- `Justina-Voss.md`
+- `Eulalia-Veridica.md`
+- `Valeria.md`
+- `Helverin-Pilot.md`
+- `Warhound-Princeps.md`
+- `Paragon-Trio.md`
+- `Constantia-Serenitas.md` — `INTERPRETATION / A6` simulation guide, not a continuity authority.
+
 ## Routing
 
 - current location and immediate operational pointer -> `../CURRENT_STATE.md`
