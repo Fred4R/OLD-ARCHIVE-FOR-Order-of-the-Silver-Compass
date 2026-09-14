@@ -1020,6 +1020,10 @@ def validate_story_and_character_layers() -> None:
         ROOT / "Characters/Valeria.md",
         ROOT / "Characters/Warhound-Princeps.md",
     ]
+    character_files = sorted(
+        path for path in (ROOT / "Characters").glob("*.md") if path.name != "README.md"
+    )
+
     required_story_files = [
         story_readme,
         acceptance_path,
@@ -1037,7 +1041,7 @@ def validate_story_and_character_layers() -> None:
     record_ids: set[str] = set()
     character_readme_text = read_text(character_readme)
 
-    for path in required_character_files:
+    for path in character_files:
         if not path.exists():
             continue
         front = load_markdown_frontmatter(path)
