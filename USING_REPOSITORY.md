@@ -43,11 +43,18 @@ If current rules enter the scene, verify them first and let them matter because 
 
 ### Current Warhammer 40,000 rules
 
-Start at:
+For a universal question about a standard current 2,000-point game, start at:
+- `Rules/11e/system/STRIKE_FORCE_2000.yaml`;
+- follow its links into army construction, missions, terrain/objectives and current official Core Rules;
+- remain faction-neutral unless the question actually requires faction-specific information.
+
+For a faction, roster or datasheet question, start at:
 - `Rules/11e/SOURCE_INDEX.md`;
-- then the matching record under `Rules/11e/system/` for shared army-construction or source/update-routing questions;
+- then the matching record under `Rules/11e/system/` for shared rules that are actually needed;
 - the matching record under `Rules/11e/units/` for datasheet questions;
 - or the matching record under `Rules/11e/detachments/` for Detachment, Enhancement, Stratagem, Detachment Point or Force Disposition questions.
+
+Do not load Sororitas rules, another faction's rules, a historical roster, or character interpretation merely because the game size is 2,000 points. Universal rules and faction rules are separate layers.
 
 Check:
 - source identity;
