@@ -1,0 +1,152 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-CORE-STRATAGEMS"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current universal 11th-edition Core Stratagem identity, cost and routing explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "repository routing for the current universal Core Stratagem set recorded here"
+does_not_supersede:
+  - "faction or Detachment Stratagems"
+  - "later official Core Rules amendments or FAQ"
+  - "current official Games Workshop sources"
+edition: 11
+system: "Core Stratagems"
+source_index: "../SOURCE_INDEX.md"
+
+primary_source:
+  source: "OFF-11E-CORE-RULES-2026"
+  verification_status: "verified_current"
+
+secondary_discovery:
+  role: "discovery_only"
+  snapshot: "../../../Reference/Secondary/Wahapedia/11e/"
+  rule: >
+    The secondary snapshot can locate section numbers and candidate text, but it
+    cannot independently make a Stratagem current or authoritative.
+
+core_stratagem_set:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  stratagems:
+    - section: "15.02"
+      name: "Command Re-roll"
+      base_cost_cp: 1
+    - section: "15.03"
+      name: "Epic Challenge"
+      base_cost_cp: 1
+    - section: "15.04"
+      name: "Insane Bravery"
+      base_cost_cp: 1
+    - section: "15.05"
+      name: "Explosives"
+      base_cost_cp: 1
+    - section: "15.06"
+      name: "Crushing Impact"
+      base_cost_cp: 1
+    - section: "15.07"
+      name: "Rapid Ingress"
+      base_cost_cp: 1
+    - section: "15.08"
+      name: "Fire Overwatch"
+      base_cost_cp: 1
+    - section: "15.10"
+      name: "Smokescreen"
+      base_cost_cp: 1
+    - section: "15.11"
+      name: "Heroic Intervention"
+      base_cost_cp: 1
+      optional_extra_cost:
+        mode: "Into the Fray"
+        additional_cp: 1
+    - section: "15.12"
+      name: "Counteroffensive"
+      base_cost_cp: 2
+
+supporting_rule:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "15.09"
+  name: "Snap Shooting"
+  is_stratagem: false
+  role: >
+    Fire Overwatch routes its shooting through the universal Snap Shooting rule;
+    do not count 15.09 as an eleventh Core Stratagem.
+
+verified_high_level_effects:
+  verification_status: "partially_verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  entries:
+    - name: "Command Re-roll"
+      effect: >
+        Immediately after one of the listed friendly-model or friendly-unit
+        rolls, re-roll that roll; multi-die rolls follow the current rule's
+        handling, with charge rolls re-rolled in full.
+    - name: "Epic Challenge"
+      effect: >
+        After a friendly CHARACTER unit is selected to fight, one CHARACTER
+        model in it can gain PRECISION for its melee weapons for the phase.
+    - name: "Insane Bravery"
+      effect: >
+        A once-per-battle Core Stratagem for the current Battle-shock timing and
+        effect stated in the Core Rules.
+    - name: "Explosives"
+      effect: >
+        In the Shooting phase, an eligible unengaged EXPLOSIVES/GRENADES unit
+        can resolve the Core Rules mortal-wound sequence against a nearby visible
+        unengaged enemy unit.
+    - name: "Crushing Impact"
+      effect: >
+        Resolves the current Core Rules impact sequence associated with an
+        eligible charge.
+    - name: "Rapid Ingress"
+      effect: >
+        At the end of the opponent's Movement phase, an eligible friendly unit
+        in strategic reserves can make an ingress move; it cannot be used in
+        battle round one.
+    - name: "Fire Overwatch"
+      effect: >
+        At the end of the opponent's Movement phase, an eligible friendly
+        unengaged non-TITANIC unit shoots using Snap Shooting.
+    - name: "Smokescreen"
+      effect: >
+        At the start of the opponent's Shooting phase, an eligible SMOKE unit
+        can provide the current Core Rules cover effect to itself and qualifying
+        units obscured by it.
+    - name: "Heroic Intervention"
+      effect: >
+        At the end of the opponent's Charge phase, an eligible friendly
+        unengaged unit can resolve the current Core Rules charge response.
+        The Into the Fray mode costs 1 additional CP.
+    - name: "Counteroffensive"
+      effect: >
+        In the opponent's Fight step, immediately after an enemy unit resolves
+        its attacks, use the current Core Rules Counteroffensive effect to alter
+        the next eligible fight timing.
+
+wording_boundary:
+  verification_status: "partially_verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  rule: >
+    The identity and base cost of the ten Core Stratagems are recorded here.
+    Before relying on exact WHEN, TARGET, EFFECT, RESTRICTIONS or optional-mode
+    wording in a disputed or current-sensitive interaction, retrieve the exact
+    current official Core Rules/app/update text. Do not use older 10th-edition
+    Stratagem wording to fill a gap.
+
+freshness_gate:
+  verification_status: "verified_current"
+  sources:
+    - "OFF-11E-DOWNLOADS"
+    - "OFF-11E-CORE-RULES-2026"
+  rule: >
+    Re-check the official Downloads route and current Core Rules/update state
+    before an edition-sensitive ruling. The August 2026 balance article described
+    that pass as focused on points, Detachments and map layouts and announced a
+    further September pass; failure to retrieve a later universal amendment is
+    not proof that none exists.
+
+teaching_model:
+  chain: >
+    tactical problem -> timing window -> eligible target -> CP cost -> effect
+    and restriction -> changed position, survival, attack or fight options
