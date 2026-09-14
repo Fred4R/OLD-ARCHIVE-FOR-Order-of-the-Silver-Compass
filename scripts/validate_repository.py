@@ -1249,6 +1249,8 @@ def validate_story_and_character_layers() -> None:
     knowledge = load_yaml(knowledge_path)
     if knowledge.get("record_type") != "knowledge_registry":
         fail("Story/KNOWLEDGE.yaml must use record_type knowledge_registry")
+    if not isinstance(knowledge.get("holder_list_semantics"), str) or not knowledge.get("holder_list_semantics"):
+        fail("Story/KNOWLEDGE.yaml must define holder_list_semantics")
     validate_date(knowledge.get("as_of"), "Story/KNOWLEDGE.yaml as_of")
     auth_ref = knowledge.get("authority_map")
     if isinstance(auth_ref, str):
