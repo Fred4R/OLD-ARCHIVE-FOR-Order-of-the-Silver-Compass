@@ -23,6 +23,21 @@ routing_basis:
     - "OFF-11E-APP-CODEX-AUTHORITY"
     - "OFF-11E-APP-MFM-SYNC"
 
+secondary_discovery_reference:
+  record: "../../../Reference/Secondary/Wahapedia/README.md"
+  dataset: "../../../Reference/Secondary/Wahapedia/11e/"
+  role: "discovery_comparison_and_coverage_checks_only"
+  authority: "non_authoritative"
+  permitted_use:
+    - "locate candidate rules fields for official verification"
+    - "compare repository coverage with a secondary index"
+    - "identify possible mismatches worth investigating"
+  prohibited_use:
+    - "set or justify verified_current by itself"
+    - "fill not_yet_verified or blocked_current_source by itself"
+    - "supersede a current Games Workshop/Warhammer source"
+    - "create project canon, biography, relationships, or story chronology"
+
 routes:
   - question: "universal rules or structure for a standard 2,000-point Strike Force game"
     use_first:
