@@ -18,6 +18,11 @@ There is no universal ranking for every question. Identify the question type fir
 | Canon/evidence terminology | `STATUS.md` together with preserved Compendium Section 0C | Canon status and evidence class remain separate. |
 | Source routing | `SOURCES.md` | Points to source families; it does not replace them. |
 | Current operational continuity and cold-start live state | `CURRENT_STATE.md` | Governs the current scene pointer, immediate focus and continuation-critical operational state. It is a derived routing/continuity kernel, not independent evidence; underlying factual claims remain controlled by their cited source records. |
+| Structured current scene staging | `Story/CURRENT_SCENE.yaml` | Derived companion for current location, participant-count safeguards, immediate lived beat and explicitly unresolved spatial state. `CURRENT_STATE.md` remains the controlling operational pointer. |
+| Durable story event and waymark index | `Story/EVENTS.yaml` | Governs only the event chronology explicitly extracted there. It preserves underlying evidence class and does not upgrade inherited acceptance. |
+| Explicit story knowledge state | `Story/KNOWLEDGE.yaml` | Governs only who-knows-what claims explicitly extracted there. Absence from this registry is not proof that a person lacks knowledge. |
+| Conversational adoption and durable writeback | `Story/ACCEPTANCE.md` | Controls how user-authored statements/actions may adopt or correct assistant-proposed story facts before repository writeback. It does not create acceptance by itself. |
+| Fred user continuity and agency boundary | `Characters/Fred.md` | Narrow durable home for project-relevant user-authored role, knowledge, stated goals and agency limits. It is not a personality profile and cannot replace Fred's current direct statements. |
 | Principal character continuity | `Characters/*` continuity records listed in `Characters/README.md` | Narrow derived homes for extracted durable person facts and unresolved boundaries. They do not upgrade the preserved evidence. `Characters/Constantia-Serenitas.md` remains a separate A6 simulation guide rather than a continuity authority. |
 | Durable relationship state | `Relationships/RELATIONSHIPS.md` | Governs extracted interpersonal, knowledge, functional and institutional relations explicitly recorded there. It does not create private motives, attraction, consent or history not supported by the underlying evidence. |
 | Preserved Silver Compass baseline evidence, inherited continuity, unresolved boundaries and historical roster snapshots | `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` | Preserved baseline candidate and underlying evidence reservoir. Its own `REVIEW_STATUS: REVISED CANDIDATE — user acceptance not established` remains in force. Extracted character and relationship records may become narrower retrieval homes without upgrading this evidence. |
@@ -28,6 +33,7 @@ There is no universal ranking for every question. Identify the question type fir
 | FORCE-3000 repository crosswalk | `Armies/Order-of-the-Silver-Compass/FORCE-3000.yaml` | Maps the House Montfort 3,000-point roster to project unit IDs, rules IDs, explicitly scoped project identities, and bounded current-system references. System links do not certify a current 3,000-point construction row, whole-list legality, or fictional chronology. |
 | Current 11th-edition findings | `Rules/11e/SOURCE_INDEX.md` plus the matching record under `Rules/11e/system/`, `Rules/11e/units/`, or `Rules/11e/detachments/` | Governs only fields actually verified from current official Games Workshop/Warhammer sources. System records govern shared construction and source-routing fields; unit records govern datasheet-specific fields; Detachment records govern Detachment-specific fields such as Detachment Points, Force Disposition, Enhancements, Stratagems and Detachment rules. |
 | Current official Warhammer lore/rules | Current Games Workshop/Warhammer primary source | Repository records verification and routing; they do not outrank the official source. |
+| Secondary Warhammer discovery reference | `Reference/Secondary/Wahapedia/README.md` and its `11e/` dataset | Discovery, comparison, indexing and coverage checks only. It cannot establish `verified_current`, supersede Games Workshop/Warhammer, or create project continuity. |
 | Human-evidence methodology | Original PDFs under `Sources/Methodology/` | These sources govern the scientific constructs and limits they actually support. `Sources/Methodology/REVIEW_STATUS.md` governs only the later review-completion state. |
 | Repository structural integrity | `scripts/validate_repository.py` plus `.github/workflows/validate-repository.yml` | Checks repository invariants and provenance wiring. A pass does not establish truth, canon acceptance, or current game legality. |
 | Workflow state | GitHub issues, pull requests, commits, and branches | Workflow only; not Silver Compass canon merely because it exists or is merged. |
@@ -99,7 +105,9 @@ Roster presence is not story presence. Roster difference is not fictional chrono
 
 A chat statement does not become durable project canon merely because it appeared in conversation.
 
-When a conversation supplies or corrects a durable project fact, preserve the fact in the appropriate authoritative home with its evidence class and scope. Do not rely on conversational memory as the only durable record.
+Use `Story/ACCEPTANCE.md` to determine whether user-authored material explicitly accepts, minimally adopts, corrects, or leaves assistant narration unresolved. Silence, a generic request to continue, and a repository merge do not by themselves establish fictional canon.
+
+When a conversation supplies or corrects a durable project fact, preserve the smallest fact actually established in the appropriate authoritative home with its evidence class and scope. Update derived story registries only where their scope changes, and update `CURRENT_STATE.md` last when the operational pointer changes. Do not rely on conversational memory as the only durable record.
 
 ## Maintenance
 
