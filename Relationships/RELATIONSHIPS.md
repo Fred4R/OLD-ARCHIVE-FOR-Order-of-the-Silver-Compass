@@ -269,7 +269,7 @@ Established consequence: publicly heard speech can create shared knowledge. Fred
 
 Non-implication: this does not prove what any woman privately feels about Fred, establish friendship, backfill private conversations or equalize familiarity across the gathering.
 
-The participant-count conflict remains controlled by `../CURRENT_STATE.md`.
+The attendance-provenance boundary is controlled by `../CURRENT_STATE.md`. Fred's direct nine-woman total governs the lived scene; the older candidate enumeration must not be promoted into ten simultaneous participants.
 
 ## REL-LIGHT-OF-RETURN-WITNESSES
 
