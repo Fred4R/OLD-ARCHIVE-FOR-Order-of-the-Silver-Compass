@@ -1,0 +1,145 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-ATTACK-RESOLUTION"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current universal 11th-edition Making Attacks and Attack Sequence fields explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "repository routing for the verified universal Making Attacks and Attack Sequence fields recorded here"
+does_not_supersede:
+  - "weapon abilities, datasheet-specific attacks or faction rules"
+  - "unextracted Core Rules exceptions, modifiers or FAQ interactions"
+  - "current official Games Workshop sources"
+edition: 11
+system: "Making attacks and resolving damage"
+source_index: "../SOURCE_INDEX.md"
+
+primary_source:
+  source: "OFF-11E-CORE-RULES-2026"
+  verification_status: "verified_current"
+
+secondary_discovery:
+  role: "discovery_only"
+  snapshot: "../../../Reference/Secondary/Wahapedia/11e/"
+  rule: >
+    The Wahapedia snapshot was used to identify section numbers and candidate
+    wording. It is not authority and cannot independently support a
+    verified_current field.
+
+making_attacks:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "04"
+  sequence:
+    - "Select Weapons"
+    - "Select Targets"
+    - "Resolve Attacks"
+  select_weapons:
+    section: "04.01"
+    shooting: >
+      Each attacking model can select one or more ranged weapons when making
+      shooting attacks, subject to the current rules governing the shooting type.
+    fighting: >
+      Each attacking model selects one melee weapon when making melee attacks,
+      unless another rule changes that permission.
+  select_targets:
+    section: "04.02"
+    shooting: >
+      A selected shooting target must satisfy the current visibility, range and
+      engagement restrictions for the attacking weapon and model.
+    fighting: >
+      A melee target must be engaged with the attacking model, and the number
+      of selected targets cannot exceed the attack characteristic available to
+      that attack sequence.
+  boundary: >
+    Weapon-specific target restrictions, split-fire details, attack-pool
+    modifications and abilities remain subject to the exact current Core Rules.
+
+attack_sequence:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "05"
+  steps:
+    - "Hit Rolls"
+    - "Wound Rolls"
+    - "Save Rolls"
+    - "Inflict Damage"
+
+hit_rolls:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "05.01"
+  procedure:
+    - "roll one D6 for each attack die"
+    - "an unmodified 1 fails"
+    - "an unmodified 6 is a critical hit and is still a hit"
+    - "otherwise compare the result with the attack's BS or WS characteristic"
+  consequence: >
+    A successful hit proceeds to the wound step unless another current rule
+    changes that attack's sequence.
+
+wound_rolls:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "05.02"
+  procedure:
+    - "roll one D6 for each hit"
+    - "an unmodified 1 fails"
+    - "an unmodified 6 is a critical wound and is still a wound"
+  strength_vs_toughness:
+    "S at least twice T": "2+"
+    "S greater than T": "3+"
+    "S equal to T": "4+"
+    "S less than T": "5+"
+    "S at most half T": "6+"
+
+save_rolls:
+  verification_status: "partially_verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "05.03"
+  current_structure:
+    - "create allocation groups before resolving the save results"
+    - "each CHARACTER model forms its own group"
+    - "other models sharing W, Sv and InSv characteristics form groups"
+    - "declare an allocation order subject to wounded-model and CHARACTER ordering restrictions"
+    - "make one save roll for each attack that wounded the target"
+  boundary: >
+    The exact 05.03 wording and all subordinate exceptions were cross-checked
+    through the secondary reference snapshot, but the oversized official PDF did
+    not yield the complete 05.03 text through the available direct renderer in
+    this pass. Use the current Core Rules for exact allocation-order wording.
+
+inflict_damage:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "05.04"
+  ordering: >
+    Resolve save results from lowest to highest until the attacks are resolved
+    or the target unit is destroyed; attacks left after the unit is destroyed
+    are lost.
+  current_allocation_group: >
+    Resolve against the first allocation group. When every model in that group
+    is destroyed, the next group in the declared allocation order becomes current.
+  per_result:
+    - "select a model in the current allocation group, choosing a wounded model when possible"
+    - "determine whether the save result causes the attack to fail or inflict damage using InSv, Sv and AP"
+    - "if damage is inflicted, the selected model loses wounds equal to the attack's D characteristic"
+    - "if its remaining wounds are reduced to 0 or fewer, the model is destroyed"
+
+resolution_boundary:
+  verification_status: "partially_verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  still_requires_exact_current_text_for:
+    - "all subordinate 04.xx and 05.xx exceptions"
+    - "fast-dice and attack-pool exceptions"
+    - "random damage timing"
+    - "mortal-wound interactions"
+    - "complete current weapon-ability interactions"
+  rule: >
+    Do not fill these subordinate fields from older-edition memory. Retrieve the
+    current Core Rules or current official update when the exact interaction matters.
+
+teaching_model:
+  chain: >
+    attack purpose -> legal weapon and target -> hit -> wound -> allocation and
+    saves -> damage and destruction -> changed unit strength, position and future options
