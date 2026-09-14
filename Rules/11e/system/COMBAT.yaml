@@ -57,6 +57,12 @@ fight_phase:
     A unit that remains eligible to fight but is unengaged by the time it is
     selected can, under the current conditions, make an overrun fight that
     provides another Pile In opportunity before attacks.
+  attack_resolution:
+    record: "ATTACK_RESOLUTION.yaml"
+    system_id: "11E-SYSTEM-ATTACK-RESOLUTION"
+    rule: >
+      Melee attacks use the shared Making Attacks and Attack Sequence record.
+      Combat positioning and activation timing remain controlled here.
   consolidate:
     timing: "after the fighting sequence"
     normal_distance_inches: 3
@@ -70,8 +76,8 @@ boundary:
   source: "OFF-11E-CORE-RULES-2026"
   note: >
     Exact charge-roll modification, every eligibility exception, complete Pile
-    In and Consolidate geometry, melee attack resolution and every combat-range
-    visibility interaction remain controlled by the current Core Rules.
+    In and Consolidate geometry and subordinate combat exceptions remain
+    controlled by the current Core Rules.
 
 teaching_model:
   chain: >
