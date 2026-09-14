@@ -10,6 +10,7 @@ does_not_supersede:
   - "CURRENT_STATE.md current operational pointer"
   - "character or relationship authority"
   - "unresolved chronology not explicitly ordered here"
+participant_list_semantics: "positive known participants only; omission does not establish absence unless a later record explicitly marks a list complete"
 events:
   - event_id: "EVENT-ACCEPTED-BREAKFAST"
     sequence: 10
