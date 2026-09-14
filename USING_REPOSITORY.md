@@ -31,7 +31,7 @@ The normal sequence is:
 
 Read `CURRENT_STATE.md` first.
 
-Then retrieve only the character, relationship, rules or preserved-Compendium detail that the immediate scene actually requires. Use `CONTINUATION.md` when planning future continuation rather than simply continuing the current scene.
+Then retrieve only the character, relationship, rules or preserved-Compendium detail that the immediate scene actually requires. For future planning, keep proposals separate from accepted continuity and update durable homes only when a change is actually established.
 
 Do not begin a story answer with a repository audit.
 
@@ -82,7 +82,7 @@ If the question depends on authority, evidence class, acceptance, supersession, 
 
 A proposal stored in the repository is still a proposal.
 
-An illustrative story is not accepted history merely because Fred enjoyed it or continued chatting afterward.
+Assistant-authored or proposed narrative is not accepted history merely because it was useful, enjoyable, or followed by further conversation.
 
 ### Personal identification
 

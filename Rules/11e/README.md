@@ -69,6 +69,6 @@ Current records:
 - `system/TERRAIN_AND_OBJECTIVES.yaml` — current terrain/objective interaction with explicit time-sensitive layout boundaries;
 - `system/SOURCE_AND_UPDATE_ROUTING.yaml` — current official-source routing and update discipline.
 
-The next integration step is to connect the two preserved army crosswalks to these shared system concepts without rewriting historical roster evidence. See `../../../CONTINUATION.md`.
+Both preserved army crosswalks already link to shared system records where applicable. Those links support current interpretation without rewriting historical roster evidence or certifying whole-list legality.
 
 System records must use current official Games Workshop evidence. They connect rules structure across armies without turning rules structure into fictional chronology.

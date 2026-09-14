@@ -268,7 +268,7 @@ For an ordinary new conversation:
 
 Do not preload the whole governance layer.
 
-Use `AUTHORITY.md` and `STATUS.md` when authority, supersession, evidence class or canon standing is actually in question. Use `USING_REPOSITORY.md` for maintenance/workflow. Use `CONTINUATION.md` when continuation planning rather than immediate continuation is the task.
+Use `AUTHORITY.md` and `STATUS.md` when authority, supersession, evidence class or canon standing is actually in question. Use `USING_REPOSITORY.md` for maintenance, workflow, and future planning.
 
 For story, continue the lived scene.
 

@@ -6,7 +6,7 @@ For a fresh conversation, read `CURRENT_STATE.md` first. It is the compact opera
 
 Then retrieve only the record required by the task. Do not preload the full governance layer or preserved Compendium merely because a conversation is new.
 
-Use `NEW_CONVERSATION.md` for minimal cold-start routing and `USING_REPOSITORY.md` for repository workflow. Use `AUTHORITY.md` when authority or supersession is actually in question and `STATUS.md` when canon/evidence terminology matters.
+Use `USING_REPOSITORY.md` for repository workflow and planning. Use `AUTHORITY.md` when authority or supersession is actually in question and `STATUS.md` when canon/evidence terminology matters.
 
 Use the matching continuity record under `Characters/` for extracted principal-character facts and `Relationships/RELATIONSHIPS.md` for extracted durable relation state. Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for underlying baseline evidence, unextracted continuity, or source reconciliation. Preserve its candidate review status and unresolved boundaries.
 
@@ -46,7 +46,7 @@ For army teaching, connect:
 
 Explain tactics causally: threat or formation -> choice -> action -> consequence -> changed options.
 
-For storytelling, preserve Fred's agency and character knowledge boundaries. Illustrative fiction stored under `Stories/Illustrative/` must remain `PROPOSAL` / `A7` unless later accepted through the proper continuity process.
+For storytelling, preserve Fred's agency and character knowledge boundaries. Assistant-authored or proposed fiction is not accepted history unless a later user-authored or otherwise controlling record establishes the durable change.
 
 For repository work, prefer plain portable files and minimal dependencies. Verify writes and repository state before claiming success. If a current official rules source cannot be retrieved, mark the field unresolved or not yet verified rather than substituting an older rule or unsupported secondary claim.
 
@@ -64,9 +64,6 @@ Do not claim the repository is structurally valid until that command passes agai
 The validator is a structural guard. It does not promote proposals to canon, resolve `UNRESOLVED`, certify whole-list legality, or replace source review.
 
 
-## Continuation planning
-
-For substantial continuation, read `CONTINUATION.md`. It keeps story and army understanding ahead of infrastructure and defines how repository work may be echoed symbolically without becoming canon.
 
 ## Listening-first response discipline
 

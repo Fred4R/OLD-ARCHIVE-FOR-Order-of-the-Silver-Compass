@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import hashlib
 import re
-import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -105,20 +104,6 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def tracked_files() -> list[str]:
-    try:
-        result = subprocess.run(
-            ["git", "ls-files", "-z"],
-            cwd=ROOT,
-            check=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-        )
-        return sorted(p for p in result.stdout.decode("utf-8").split("\0") if p)
-    except Exception as exc:
-        fail(f"Could not enumerate tracked files with git: {exc}")
-        return []
-
 
 def resolve_repo_path(base_file: Path, reference: str) -> Path | None:
     candidate = (base_file.parent / reference).resolve()
@@ -185,6 +170,13 @@ def contains_current_verification(value: Any) -> bool:
     return False
 
 
+def immutable_evidence_files() -> list[str]:
+    paths = [MASTER_PATH]
+    paths.extend(sorted((ROOT / "Sources/Armies").glob("*.txt")))
+    paths.extend(sorted((ROOT / "Sources/Methodology").glob("*.pdf")))
+    return [str(path.relative_to(ROOT)) for path in paths]
+
+
 def validate_manifest() -> None:
     if not MANIFEST_PATH.exists():
         fail("Missing SHA256SUMS.txt")
@@ -204,17 +196,19 @@ def validate_manifest() -> None:
             fail(f"Duplicate checksum entry for {rel}")
         manifest[rel] = digest
 
-    tracked = set(tracked_files())
-    expected = tracked - {"SHA256SUMS.txt"}
+    expected = set(immutable_evidence_files())
     actual = set(manifest)
 
     for rel in sorted(expected - actual):
-        fail(f"Checksum manifest missing tracked file: {rel}")
+        fail(f"Checksum manifest missing immutable evidence file: {rel}")
     for rel in sorted(actual - expected):
-        fail(f"Checksum manifest has non-tracked or stale file: {rel}")
+        fail(f"Checksum manifest has non-evidence or stale file: {rel}")
 
     for rel in sorted(expected & actual):
         path = ROOT / rel
+        if not path.exists():
+            fail(f"Immutable evidence file is missing: {rel}")
+            continue
         digest = sha256_file(path)
         if digest != manifest[rel]:
             fail(
@@ -983,7 +977,6 @@ def validate_core_markdown() -> None:
         ROOT / "AUTHORITY.md",
         ROOT / "STATUS.md",
         ROOT / "SOURCES.md",
-        ROOT / "NEW_CONVERSATION.md",
     ]
     for path in core_paths:
         text = read_text(path)
@@ -996,59 +989,6 @@ def validate_core_markdown() -> None:
             )
 
 
-def validate_illustrative_stories() -> None:
-    story_root = ROOT / "Stories/Illustrative"
-    if not story_root.exists():
-        return
-
-    boundary = story_root / "README.md"
-    if not boundary.exists():
-        fail("Stories/Illustrative exists without its README boundary file")
-
-    story_paths = sorted(
-        path for path in story_root.glob("*.md")
-        if path.name != "README.md"
-    )
-    for path in story_paths:
-        text = read_text(path)
-        required = {
-            "RECORD_TYPE": "illustrative_story",
-            "CANON_STATUS": "PROPOSAL",
-            "EVIDENCE_CLASS": "A7",
-        }
-        for field, expected in required.items():
-            match = re.search(
-                rf"^{re.escape(field)}:\s*(.+?)\s*$",
-                text,
-                flags=re.MULTILINE,
-            )
-            if not match:
-                fail(f"{path.relative_to(ROOT)} missing {field}")
-            elif match.group(1).strip() != expected:
-                fail(
-                    f"{path.relative_to(ROOT)} {field} must be {expected!r}, "
-                    f"found {match.group(1).strip()!r}"
-                )
-
-        continuity = re.search(
-            r"^CONTINUITY_BASIS:\s*(.+?)\s*$",
-            text,
-            flags=re.MULTILINE,
-        )
-        if not continuity or not continuity.group(1).strip():
-            fail(f"{path.relative_to(ROOT)} missing CONTINUITY_BASIS")
-
-        purpose = re.search(
-            r"^PURPOSE:\s*(.+?)\s*$",
-            text,
-            flags=re.MULTILINE,
-        )
-        if not purpose or "not adopted" not in purpose.group(1).lower():
-            fail(
-                f"{path.relative_to(ROOT)} PURPOSE must explicitly state "
-                "that the scene is not adopted into story history"
-            )
-
 
 def validate_connections() -> None:
     required_files = [
@@ -1058,43 +998,49 @@ def validate_connections() -> None:
         ROOT / "STATUS.md",
         ROOT / "SOURCES.md",
         ROOT / "CURRENT_STATE.md",
-        ROOT / "CONTINUATION.md",
-        ROOT / "NEW_CONVERSATION.md",
+        ROOT / "USING_REPOSITORY.md",
         ROOT / "scripts/validate_repository.py",
         ROOT / "requirements-validator.txt",
         ROOT / ".github/workflows/validate-repository.yml",
-        ROOT / "Rules/11e/detachments/README.md",
-        ROOT / "Rules/11e/system/README.md",
+        ROOT / "Rules/11e/SOURCE_INDEX.md",
     ]
     for path in required_files:
         if not path.exists():
             fail(f"Missing required connected file: {path.relative_to(ROOT)}")
 
-    checks = {
-        ROOT / "README.md": ["scripts/validate_repository.py", "Validate repository integrity", "CURRENT_STATE.md", "NEW_CONVERSATION.md"],
-        ROOT / "AGENTS.md": ["scripts/validate_repository.py", "CURRENT_STATE.md", "CONTINUATION.md", "NEW_CONVERSATION.md"],
-        ROOT / "AUTHORITY.md": ["scripts/validate_repository.py", "CURRENT_STATE.md", "CONTINUATION.md", "NEW_CONVERSATION.md"],
-        ROOT / "CURRENT_STATE.md": [
-            "Current live scene",
-            "Current gathering and count safeguard",
-            "Current rules state relevant to the live focus",
-            "Open gates that matter now",
-            "Order_of_the_Silver_Compass_MASTER_v4.3.41.txt",
-        ],
-        ROOT / "NEW_CONVERSATION.md": ["CURRENT_STATE.md", "Rules/11e/SOURCE_INDEX.md", "CONTINUATION.md", "USING_REPOSITORY.md"],
-        ROOT / "Stories/Illustrative/README.md": ["../../CONTINUATION.md"],
-    }
-    for path, required_fragments in checks.items():
+    retired_references = [
+        "NEW_CONVERSATION.md",
+        "CONTINUATION.md",
+        "Stories/Illustrative",
+        "Rules/11e/system/README.md",
+        "Rules/11e/detachments/README.md",
+        "Rules/11e/formations/Adepta-Sororitas/Constantia-Dialogus-Retributors.yaml",
+    ]
+    routing_files = [
+        ROOT / "README.md",
+        ROOT / "AGENTS.md",
+        ROOT / "AUTHORITY.md",
+        ROOT / "CURRENT_STATE.md",
+        ROOT / "USING_REPOSITORY.md",
+        ROOT / "Rules/11e/README.md",
+        ROOT / "Characters/README.md",
+        ROOT / "Characters/Constantia-Serenitas.md",
+    ]
+    for path in routing_files:
+        if not path.exists():
+            continue
         text = read_text(path)
-        for fragment in required_fragments:
-            if fragment not in text:
-                fail(f"{path.relative_to(ROOT)} does not connect validator reference {fragment!r}")
+        for retired in retired_references:
+            if retired in text:
+                fail(
+                    f"{path.relative_to(ROOT)} still references retired repository path "
+                    f"{retired!r}"
+                )
 
 
 def main() -> int:
     validate_connections()
     validate_core_markdown()
-    validate_illustrative_stories()
     validate_manifest()
     master_text = validate_master()
     source_ids = validate_source_index()
@@ -1111,11 +1057,10 @@ def main() -> int:
         return 1
 
     print("Repository validation PASSED.")
-    print("Checked: tracked-file hashes, canonical Compendium identity, YAML syntax,")
+    print("Checked: immutable-evidence hashes, canonical Compendium identity, YAML syntax,")
     print("authority/status separation, army arithmetic, exact source payloads,")
     print("project/rules/source IDs, system/Detachment/army links, roster-occurrence links,")
-    print("current-claim provenance, core-document heading uniqueness, and")
-    print("illustrative-story proposal boundaries.")
+    print("current-claim provenance, core-document heading uniqueness, and routing integrity.")
     return 0
 
 

@@ -33,7 +33,7 @@ The result is a simulation model: guidance for choosing plausible actions and sp
 
 Project continuity:
 - `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`, especially Section 3A and `6.1 CHAR-CONSTANTIA`.
-- `CONTINUATION.md` for the present conversational focus and listening-first constraints.
+- `CURRENT_STATE.md` for the present conversational focus and `USING_REPOSITORY.md` for listening-first workflow constraints.
 
 Historical roster evidence:
 - `Sources/Armies/FORCE-1985-V946.txt` with crosswalk `Armies/Order-of-the-Silver-Compass/FORCE-1985-V946.yaml`.
