@@ -1,0 +1,53 @@
+version: 1
+record_id: "STORY-KNOWLEDGE-01"
+record_type: "knowledge_registry"
+as_of: "2026-09-13"
+authority_map: "../AUTHORITY.md"
+authority_scope: "durable explicit knowledge relations extracted from current continuity and relationship records"
+does_not_supersede:
+  - "underlying evidence strength"
+  - "Relationships/RELATIONSHIPS.md durable relationship consequences"
+  - "private motives, attraction, consent, or undisclosed interpretation"
+  - "facts not explicitly extracted here"
+claims:
+  - claim_id: "KNOW-FRED-EULALIA-NAME"
+    holders: ["PERSON-FRED"]
+    content: "Fred knows the name Sister Dialogus Eulalia Veridica from her introduction."
+    source_refs:
+      - "../Characters/Eulalia-Veridica.md"
+      - "../Relationships/RELATIONSHIPS.md"
+    non_implications: ["friendship", "special trust", "institutional origin"]
+  - claim_id: "KNOW-DOMESTIC-HOPE-WITNESSES"
+    holders: ["CHAR-CONSTANTIA", "CHAR-AURELIA", "CHAR-JUSTINA", "CHAR-EULALIA"]
+    content: "These people know Fred's publicly articulated hope for a wife, children, and peaceful home from THE LIGHT OF RETURN and its grounding exchange."
+    source_refs:
+      - "../Relationships/RELATIONSHIPS.md"
+      - "../CURRENT_STATE.md"
+    non_implications: ["agreement", "attraction", "romance", "consent", "private emotional response"]
+  - claim_id: "KNOW-RETURN-COMMAND-INTENT"
+    holders: ["CHAR-CONSTANTIA", "CHAR-VALERIA", "CHAR-PARAGON-TRIO"]
+    content: "These people heard Fred state that he is watching how they interact with one another and the world so the force can win and return alive to the True Meridian."
+    source_refs:
+      - "../Relationships/RELATIONSHIPS.md"
+    non_implications: ["automatic assent to every future decision", "transfer of institutional command"]
+  - claim_id: "KNOW-PRINCEPS-RESPONSIBILITY-STATEMENT"
+    holders: ["CHAR-PRINCEPS"]
+    content: "The Warhound Princeps heard Fred state that senior responsibility includes guiding genuine subordinates while considering threats and consequences larger than the commander's own Warhound."
+    source_refs:
+      - "../Relationships/RELATIONSHIPS.md"
+    non_implications: ["agreement", "private judgment", "new chain of command"]
+  - claim_id: "KNOW-FRED-VALERIA-PARAGON-PRACTICE"
+    holders: ["PERSON-FRED"]
+    content: "Fred has directly observed enough of Valeria's Warglaive and the Paragon trio's practiced coordination to begin forming a practical model of support, timing, commitment, recoverability, and return."
+    source_refs:
+      - "../Relationships/RELATIONSHIPS.md"
+      - "../Characters/Valeria.md"
+      - "../Characters/Paragon-Trio.md"
+    non_implications: ["Knight specialist expertise", "knowledge of pilot biographies", "knowledge of full doctrine"]
+  - claim_id: "KNOW-FRED-CURRENT-SOCIAL-PERCEPTION"
+    holders: ["PERSON-FRED"]
+    content: "Fred has perceived smiling and laughter among women he usually encounters through formal roles and wants sincerely to contribute to that enjoyment."
+    source_refs:
+      - "../CURRENT_STATE.md"
+      - "CURRENT_SCENE.yaml"
+    non_implications: ["another person's attraction", "another person's consent", "collective relationship state"]
