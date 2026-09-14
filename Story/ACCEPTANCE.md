@@ -38,6 +38,8 @@ Example principle: if the assistant introduces an object on a table and the user
 
 This is evidence of adoption of the minimum observable premise, not retroactive proof that every surrounding assistant detail was true.
 
+If the user's wording can be understood without adopting the assistant-introduced premise, or if the user is speaking hypothetically, conditionally, or about a possible future action, preserve the premise as unresolved or proposed rather than upgrading it.
+
 ## What does not count as acceptance
 
 The following do not, by themselves, establish durable canon:
