@@ -72,7 +72,11 @@ Do not rewrite a historical roster merely because current points, keywords or ru
 
 Start with `CURRENT_STATE.md` for the operational present.
 
-If the question depends on authority, evidence class, acceptance, supersession, a deeper relationship history or an unresolved conflict, then retrieve `AUTHORITY.md`, `STATUS.md`, the relevant Compendium section and any later record that explicitly supersedes that field.
+For a principal person's durable facts, retrieve the matching continuity record under `Characters/`.
+
+For durable interpersonal, knowledge, functional or institutional relation state, retrieve `Relationships/RELATIONSHIPS.md`.
+
+If the question depends on authority, evidence class, acceptance, supersession, underlying proof, an unextracted history, or an unresolved conflict, then retrieve `AUTHORITY.md`, `STATUS.md`, the relevant Compendium section and any later scoped record.
 
 A proposal stored in the repository is still a proposal.
 

@@ -14,7 +14,7 @@ Do not preload the entire Compendium or the entire governance layer merely becau
 
 ## Then route by task
 
-For story continuation, use `CURRENT_STATE.md` and retrieve only the character, relationship, rules or Compendium detail the immediate scene requires.
+For story continuation, use `CURRENT_STATE.md` first. Retrieve the matching continuity record under `Characters/` for a principal person, `Relationships/RELATIONSHIPS.md` for durable relation state, and only then the preserved Compendium when underlying evidence or an unextracted detail is actually needed.
 
 For army questions:
 - exact supplied roster -> `Sources/Armies/`;

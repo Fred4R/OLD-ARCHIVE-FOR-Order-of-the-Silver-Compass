@@ -8,7 +8,7 @@ Then retrieve only the record required by the task. Do not preload the full gove
 
 Use `NEW_CONVERSATION.md` for minimal cold-start routing and `USING_REPOSITORY.md` for repository workflow. Use `AUTHORITY.md` when authority or supersession is actually in question and `STATUS.md` when canon/evidence terminology matters.
 
-Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for underlying baseline continuity or evidence not already resolved by a narrower authoritative record. Preserve its candidate review status and unresolved boundaries.
+Use the matching continuity record under `Characters/` for extracted principal-character facts and `Relationships/RELATIONSHIPS.md` for extracted durable relation state. Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for underlying baseline evidence, unextracted continuity, or source reconciliation. Preserve its candidate review status and unresolved boundaries.
 
 For army questions, use the exact source payload under `Sources/Armies/` when one exists, then resolve the corresponding crosswalk under `Armies/`. For current Warhammer 40,000 rules questions, route through `Rules/11e/SOURCE_INDEX.md`, then use the matching unit record under `Rules/11e/units/` or Detachment record under `Rules/11e/detachments/` before making current stats, keyword, ability, attachment, Detachment, Enhancement, Stratagem, points, or legality claims.
 

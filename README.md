@@ -18,6 +18,8 @@ Use `NEW_CONVERSATION.md` for the minimal cold-start handoff and `USING_REPOSITO
 
 Retrieve other records only when the task needs them:
 - `AUTHORITY.md` and `STATUS.md` for authority, canon/evidence status, conflict and supersession;
+- `Characters/` for extracted durable principal-character continuity;
+- `Relationships/RELATIONSHIPS.md` for durable interpersonal and functional relation state;
 - `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for preserved baseline continuity and evidence not yet migrated into a narrower durable home;
 - `Sources/Armies/` for immutable army-list source payloads;
 - `Armies/` for roster-to-project mappings;
