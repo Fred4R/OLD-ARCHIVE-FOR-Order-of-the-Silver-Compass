@@ -14,7 +14,7 @@ For a fresh conversation, begin with `CURRENT_STATE.md`.
 
 It is the compact operational continuity kernel. It tells a fresh system where the project is now and routes deeper retrieval without requiring the whole repository to be read first.
 
-Use `NEW_CONVERSATION.md` for the minimal cold-start handoff and `USING_REPOSITORY.md` for maintenance/workflow.
+`CURRENT_STATE.md` is also the cold-start handoff. Use `USING_REPOSITORY.md` for maintenance and repository workflow.
 
 Retrieve other records only when the task needs them:
 - `AUTHORITY.md` and `STATUS.md` for authority, canon/evidence status, conflict and supersession;
@@ -25,7 +25,6 @@ Retrieve other records only when the task needs them:
 - `Armies/` for roster-to-project mappings;
 - `Rules/11e/` for current 11th-edition source routing and verified findings;
 - `Sources/Methodology/` for human-evidence methodology;
-- `Stories/Illustrative/` for A7 / PROPOSAL fiction that is not accepted history merely because it is stored.
 
 ## Authority rule
 
