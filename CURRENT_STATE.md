@@ -243,7 +243,7 @@ Complete current Army of Faith Stratagem wording, several Enhancement effects in
 
 These unresolved matters must remain narrow rather than obstructing ordinary continuation:
 
-- reconciliation of the nine-woman total against ten positive presence claims;
+- exact identity of the complete nine-woman simultaneous attendance set, because the older candidate enumeration is defective and cannot be summed as seven independently proven simultaneous attendees;
 - formal Princeps name acceptance and all wider Titan identity;
 - Helverin pilot personal name and Knight institutional identity;
 - individual Paragon names and narrative Superior identity;
