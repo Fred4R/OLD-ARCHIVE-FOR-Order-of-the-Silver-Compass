@@ -50,7 +50,9 @@ See `../Relationships/RELATIONSHIPS.md#rel-princeps-warhound`.
 
 ## Current continuity
 
-The Princeps is among the inherited positive presence claims in the current chamber. Do not identify her as the nine-versus-ten overcount without stronger evidence.
+The later endpoint wording positively places the Princeps in the lived beat: Fred sees her beckon Valeria and the Helverin pilot toward the gathering.
+
+Fred's direct total remains exactly nine women. Do not turn the older defective candidate enumeration into a ten-woman simultaneous-presence claim, and do not use the Princeps as a bookkeeping sacrifice to make an inherited count appear consistent.
 
 ## Unresolved / not established
 

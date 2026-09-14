@@ -52,7 +52,7 @@ See `../Relationships/RELATIONSHIPS.md#rel-eulalia-fred`.
 
 Eulalia's continuous presence is protected by the current continuity record: no departure and return occurred.
 
-The chamber's nine-versus-ten presence conflict remains unresolved. Eulalia must not be deleted from the scene merely to repair the arithmetic.
+Fred's direct total is exactly nine women. The former nine-versus-ten wording came from combining later protected corrections with an older candidate enumeration that the assistant had miscounted and that mixed people already present with people entering. Use `../CURRENT_STATE.md` for the corrected attendance-provenance boundary.
 
 ## Functional relations
 

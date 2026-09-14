@@ -44,7 +44,9 @@ See `../Relationships/RELATIONSHIPS.md#rel-valeria-paragon-trio`.
 
 ## Current continuity
 
-Use `../CURRENT_STATE.md` for present chamber state. Valeria is among the inherited positive presence claims, but the exact nine-versus-ten count conflict remains unresolved.
+Use `../CURRENT_STATE.md` for present chamber state. The later endpoint wording places Valeria among the women the Princeps beckons toward the gathering.
+
+Do not recover an artificial ten-woman conflict by treating the older v4.3.37 candidate enumeration as seven independently re-proved simultaneous-presence facts. Fred's direct total of nine women controls the lived scene; the older attendance bookkeeping is defective and must not be repaired by inventing movement or absence.
 
 ## Identity safeguard
 

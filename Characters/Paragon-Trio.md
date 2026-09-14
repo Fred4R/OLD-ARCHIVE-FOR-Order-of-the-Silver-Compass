@@ -40,7 +40,7 @@ See `../Relationships/RELATIONSHIPS.md#rel-fred-paragon-trio-knowledge` and `#re
 
 Fred's later direct correction protects all three Paragon pilots as current-chamber participants.
 
-The chamber still contains an unresolved one-person arithmetic conflict between Fred's exact nine-woman total and ten accumulated positive presence claims. Do not solve that conflict by denying any member of the trio.
+Fred's exact nine-woman total is also direct reported evidence. The former “ten positive claims” problem came from summing the trio against an older candidate enumeration that the assistant had itself miscounted and that mixed people already present with people entering. Do not recreate that bookkeeping error, and do not deny any member of the trio to force an artificial reconciliation.
 
 ## Other durable relations
 

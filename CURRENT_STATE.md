@@ -30,11 +30,13 @@ The story is aboard the `True Meridian`, inside Aurelia Montfort's House Montfor
 
 Do not resume beneath the Warhound, repeat introductions, or stage an audit council.
 
-The active conversational focus is now **Canoness Constantia Serenitas as Warlord through the Army of Faith Detachment**. This later repository focus supersedes the Compendium's older immediate Justina-focus only as a matter of present conversational priority. Justina remains present in the continuity and retains all separately established facts and authority.
+The immediate **lived** beat is social rather than instructional: Fred has noticed smiling and laughter among women usually encountered through command, faith, investigation, ship authority or war, wonders what they are like when he is absent, and wants sincerely to contribute to that enjoyment.
 
-The tactical thread is command-resource stewardship: mission purpose, Stratagem use, Acts of Faith, Miracle dice, the cost of consuming finite options, and what becomes possible or impossible afterward.
+Fred's current **out-of-story learning interest** is Canoness Constantia Serenitas as Warlord through the Army of Faith Detachment. This is a conversational priority, not a fictional event and not permission to turn the chamber into a seminar. Justina remains part of the ongoing continuity and retains all separately established facts and authority; exact simultaneous chamber attendance is governed by the presence section below rather than inferred from an older candidate enumeration.
 
-Preferred causal teaching chain:
+When tactics or rules arise naturally from character purpose, the available thread is command-resource stewardship: mission purpose, Stratagem use, Acts of Faith, Miracle dice, the cost of consuming finite options, and what becomes possible or impossible afterward.
+
+Preferred causal teaching chain when that thread becomes relevant:
 
 `mission -> threatened purpose -> available rule/resource -> choice -> action -> consequence -> changed options`
 
@@ -52,22 +54,34 @@ Fred notices smiling and laughter among women of high station and wonders what t
 
 ## Current gathering and count safeguard
 
-Fred's reported total is exactly **nine women with him**.
+Fred's reported total is exactly **nine women with him**. Preserve that direct count as the controlling total for the lived scene.
 
-Protected continuity claims:
+Directly protected corrections:
 - Eulalia Veridica has remained continuously present; no departure and return occurred.
 - all three Silver Compass Paragon pilots are current-chamber participants.
 
-Other inherited positive presence claims, combined with those protected claims, produce ten women. The exact one-person overcount remains **UNRESOLVED SOURCE RECONCILIATION**.
+The preserved MASTER also carries an older v4.3.37 candidate enumeration of seven named or role-defined women as “physically present in or entering” the chamber continuity: Constantia, Aurelia, Justina, Eulalia, Valeria, the Helverin pilot and the Warhound Princeps. That candidate enumeration is **not** seven independently re-proved simultaneous-presence facts.
 
-Therefore:
-- do not invent a departure, disappearance, death, or off-screen movement;
-- do not erase Eulalia or any Paragon pilot to make the arithmetic fit;
-- do not assume the unresolved person is the Princeps or Helverin pilot;
-- do not enumerate the full chamber unless exact staging becomes necessary;
-- ordinary limited viewpoint and dialogue focus may continue despite the unresolved count.
+Its evidentiary defect is known:
+- the assistant immediately preceding Fred's Paragon correction described those seven listed women as **six**;
+- the older wording conflated people already present with people entering the gathering;
+- Fred's later direct correction supplied the three Paragon pilots against that defective count.
 
-Positive current-presence claims carried from the preserved record include Constantia, Aurelia, Justina, Eulalia, Valeria, the Helverin pilot, the Warhound Princeps, and the three Paragon pilots. The conflict lies in reconciling those claims with Fred's direct nine-woman total, not in a license to choose one person to delete.
+Therefore do **not** add the seven-person candidate list to Eulalia and the Paragon trio and manufacture a ten-woman reality conflict. The contradiction is in the inherited bookkeeping, not evidence that ten women were simultaneously present.
+
+Later endpoint wording separately supports:
+- Fred directly interacting with Constantia;
+- the Princeps beckoning Valeria and the Helverin pilot toward the gathering.
+
+Those later beats do not automatically validate every member of the older candidate enumeration as simultaneous attendance.
+
+Operational rule:
+- exactly nine women are with Fred;
+- Eulalia and all three Paragon pilots are among them;
+- preserve later positively established interactions as written;
+- do not invent a departure, disappearance, death or off-screen movement to repair the old count;
+- do not force all seven older candidate identities into the same simultaneous attendance set;
+- where the exact identity of the remaining participant set matters, retrieve stronger underlying evidence or preserve the identity boundary rather than guessing.
 
 Justina's individual Agents are not separately established as physically present in the current chamber.
 
