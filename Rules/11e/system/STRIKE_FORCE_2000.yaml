@@ -97,7 +97,9 @@ universal_scope:
     - "character portrayal, story continuity or lore"
 
 casual_and_organised_play_boundary:
-  source: "OFF-11E-CHAPTER-APPROVED-2026"
+  sources:
+    - "OFF-11E-CHAPTER-APPROVED-2026"
+    - "OFF-11E-EVENT-COMPANION-1.1"
   verification_status: "verified_current"
   rule: >
     Universal game structure and current Core Rules are shared, but organised
