@@ -26,9 +26,11 @@ That role-level identity is established. Her personal name is not.
 
 ## Current continuity
 
-The Helverin pilot is among the inherited positive presence claims in the current chamber continuity. Fred's reported total remains exactly nine women while accumulated positive claims total ten.
+The later endpoint wording places the Helverin pilot among the women the Princeps beckons toward the gathering.
 
-Do not resolve that contradiction by silently deleting the Helverin pilot or by asserting that she definitely is the overcount. Use `../CURRENT_STATE.md` for the controlling presence safeguard.
+Fred's direct total remains exactly nine women. The older v4.3.37 candidate enumeration is known to contain an assistant counting defect and to conflate people already present with people entering. Do not sum that candidate list into a ten-woman reality conflict, and do not invent a departure or absence for the Helverin pilot to repair old bookkeeping.
+
+Use `../CURRENT_STATE.md` for the controlling presence safeguard.
 
 ## Name safeguard
 
