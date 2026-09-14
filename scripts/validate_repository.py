@@ -976,7 +976,6 @@ def validate_armies(
 
 
 
-
 def validate_character_relationship_records(master_text: str) -> None:
     character_records = {
         "Characters/Constantia-Continuity.md": "CHAR-CONSTANTIA",
@@ -1000,107 +999,7 @@ def validate_character_relationship_records(master_text: str) -> None:
             fail(f"{rel} is not labelled character_continuity_record")
 
         match = re.search(
-            r'^project_character_id:\s*"([^"]+)"\s*$',
-            text,
-            flags=re.MULTILINE,
-        )
-        if not match:
-            fail(f"{rel} missing project_character_id")
-        elif match.group(1) != character_id:
-            fail(
-                f"{rel} project_character_id must be {character_id!r}, "
-                f"found {match.group(1)!r}"
-            )
-
-        if character_id not in master_text:
-            fail(f"{rel} project character {character_id} is absent from preserved MASTER")
-
-        if "Order_of_the_Silver_Compass_MASTER_v4.3.41.txt" not in text:
-            fail(f"{rel} does not preserve its MASTER provenance link")
-
-        if "Unresolved" not in text and "unresolved" not in text:
-            fail(f"{rel} does not preserve an unresolved/not-established boundary")
-
-    simulation = ROOT / "Characters/Constantia-Serenitas.md"
-    if not simulation.exists():
-        fail("Missing Constantia simulation guide")
-    else:
-        text = read_text(simulation)
-        for fragment in (
-            'record_type: "character_simulation_guide"',
-            'canon_status: "INTERPRETATION"',
-            'evidence_class: "A6"',
-        ):
-            if fragment not in text:
-                fail(
-                    "Characters/Constantia-Serenitas.md lost its A6 simulation boundary: "
-                    f"{fragment!r}"
-                )
-
-    character_index = ROOT / "Characters/README.md"
-    if not character_index.exists():
-        fail("Missing Characters/README.md")
-    else:
-        text = read_text(character_index)
-        for fragment in (
-            "character_continuity_record",
-            "Constantia-Continuity.md",
-            "Relationships/RELATIONSHIPS.md",
-        ):
-            if fragment not in text:
-                fail(f"Characters/README.md missing routing fragment {fragment!r}")
-
-    relationships = ROOT / "Relationships/RELATIONSHIPS.md"
-    if not relationships.exists():
-        fail("Missing Relationships/RELATIONSHIPS.md")
-        return
-
-    text = read_text(relationships)
-    if 'record_type: "relationship_registry"' not in text:
-        fail("Relationships/RELATIONSHIPS.md is not labelled relationship_registry")
-    if "Order_of_the_Silver_Compass_MASTER_v4.3.41.txt" not in text:
-        fail("Relationships/RELATIONSHIPS.md does not preserve its MASTER provenance link")
-    if "REVISED CANDIDATE — user acceptance not established" not in text:
-        fail("Relationships/RELATIONSHIPS.md does not preserve the MASTER review boundary")
-
-    required_relation_ids = {
-        "REL-CONSTANTIA-FRED",
-        "REL-VALERIA-FRED",
-        "REL-AURELIA-FRED",
-        "REL-JUSTINA-FRED",
-        "REL-EULALIA-FRED",
-        "REL-CONSTANTIA-AURELIA",
-        "REL-CONSTANTIA-JUSTINA",
-        "REL-AURELIA-JUSTINA",
-        "REL-VALERIA-PARAGON-TRIO",
-        "REL-FRED-PARAGON-TRIO-KNOWLEDGE",
-        "REL-FRED-CURRENT-GROUP-COMMAND-INTENT",
-        "REL-FRED-PRINCEPS-RESPONSIBILITY-STATEMENT",
-        "REL-JUSTINA-AGENTS",
-        "REL-PRINCEPS-WARHOUND",
-        "REL-DIALOGUS-CONSTANTIA-FORMATION",
-        "REL-DIALOGUS-OSC",
-        "REL-DIALOGUS-TRUE-MERIDIAN",
-        "REL-DIALOGUS-CURRENT-COALITION-GROUNDING",
-        "REL-CONSTANTIA-PARAGON-TRIO",
-        "REL-VALERIA-WARGLAIVE",
-        "REL-FRED-EXPEDITIONARY-COALITION",
-        "REL-MONTFORT-SHIPBOARD-HOSTING",
-        "REL-CURRENT-CHAMBER-SHARED-SITUATION",
-        "REL-LIGHT-OF-RETURN-WITNESSES",
-    }
-    for relation_id in sorted(required_relation_ids):
-        if relation_id not in text:
-            fail(f"Relationships/RELATIONSHIPS.md missing relation {relation_id}")
-        if relation_id not in master_text:
-            fail(f"Extracted relation {relation_id} is absent from preserved MASTER")
-
-    if "Functional relations must not be promoted into personal relationships" not in text:
-        fail("Relationships/RELATIONSHIPS.md missing functional/personal relation safeguard")
-
-
-def validate_core_markdown() -> None:
-    core_paths = [
+            r'^project_character_id:\s*"([^"]+)"\s*    core_paths = [
         ROOT / "README.md",
         ROOT / "AGENTS.md",
         ROOT / "AUTHORITY.md",
@@ -1349,6 +1248,7 @@ if __name__ == "__main__":
 
     if "Functional relations must not be promoted into personal relationships" not in text:
         fail("Relationships/RELATIONSHIPS.md missing functional/personal relation safeguard")
+
 
 
 def validate_core_markdown() -> None:
