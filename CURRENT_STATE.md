@@ -40,6 +40,18 @@ Preferred causal teaching chain when that thread becomes relevant:
 
 `mission -> threatened purpose -> available rule/resource -> choice -> action -> consequence -> changed options`
 
+## Structured story-state companions
+
+This file remains the controlling current operational pointer. The following derived companions make narrower story questions retrievable without turning this kernel into a full historical ledger:
+
+- `Story/CURRENT_SCENE.yaml` — structured current location, participant-count safeguards, immediate lived beat, and explicitly unresolved spatial state;
+- `Story/EVENTS.yaml` — durable extracted event and waymark chronology;
+- `Story/KNOWLEDGE.yaml` — explicit who-knows-what relations already supported by continuity;
+- `Story/ACCEPTANCE.md` — conservative rules for determining what a live exchange actually establishes before durable writeback;
+- `Characters/Fred.md` — Fred's bounded user-authored role, knowledge, stated goals, and agency limits.
+
+These records are derived homes. They do not upgrade the preserved MASTER's evidence, resolve the unknown complete nine-woman attendance set, or turn proposed sensory geometry into accepted physical staging.
+
 ## Current endpoint carried forward
 
 The following is preserved as reported user-authored / inherited continuation rather than newly witnessed evidence.
@@ -171,6 +183,8 @@ Their personal names, individual voices, biographies, which one is the narrative
 
 ## Character and relationship retrieval
 
+For Fred's durable user-authored role, knowledge, stated goals, and agency limits, use `Characters/Fred.md`.
+
 For deeper durable person facts, use the extracted continuity records under `Characters/`:
 - `Characters/Constantia-Continuity.md`;
 - `Characters/Aurelia-Montfort.md`;
@@ -280,8 +294,8 @@ For repository maintenance, preserve provenance and verify the committed result.
 
 ## Update rule
 
-When later accepted conversation changes the current scene, relationship state, name state or another durable continuity fact, update the proper authoritative home first and then update this kernel's operational pointer.
+When later conversation may change the current scene, event history, knowledge state, relationship state, name state or another durable continuity fact, apply `Story/ACCEPTANCE.md` first. Update the proper authoritative home and any affected structured story registry before updating this kernel's operational pointer.
 
-Do not use this summary as an excuse to bypass the underlying evidence.
+Do not use this summary as an excuse to bypass the underlying evidence or to treat assistant narration as self-accepting.
 
 The repository succeeds when Fred can speak naturally and the system performs retrieval, verification, continuity maintenance and routine QA underneath the experience.
