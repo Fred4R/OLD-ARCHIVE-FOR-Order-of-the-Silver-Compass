@@ -54,25 +54,76 @@ universal_resolution_order:
       Resolve Strike Force construction limits, Detachment Point budget,
       Enhancement limit, attachments and Force Disposition construction rules.
   - step: 3
+    record: "BATTLE_SEQUENCE.yaml"
+    system_id: "11E-SYSTEM-BATTLE-SEQUENCE"
+    purpose: >
+      Resolve the battle-round, player-turn, phase and Command-phase sequence,
+      including the universal Gain Core CP step.
+  - step: 4
+    record: "BATTLE_SHOCK_AND_ACTIONS.yaml"
+    system_id: "11E-SYSTEM-BATTLE-SHOCK-ACTIONS"
+    purpose: >
+      Resolve universal leadership and battle-shock checks and their effects on
+      Objective Control, Stratagem access and actions.
+  - step: 5
+    record: "MOVEMENT_AND_RESERVES.yaml"
+    system_id: "11E-SYSTEM-MOVEMENT-RESERVES"
+    purpose: >
+      Resolve the Movement-phase sequence, current move-type routing and the
+      verified high-level relationship between strategic reserves and ingress.
+  - step: 6
+    record: "SHOOTING.yaml"
+    system_id: "11E-SYSTEM-SHOOTING"
+    purpose: >
+      Resolve the Shooting-phase sequence, shooting-type routing and verified
+      normal-shooting eligibility.
+  - step: 7
+    record: "COMBAT.yaml"
+    system_id: "11E-SYSTEM-COMBAT"
+    purpose: >
+      Resolve current Engagement Range, charge-target timing, Pile In,
+      fight-activation and Consolidate structure.
+  - step: 8
     record: "MISSIONS.yaml"
     system_id: "11E-SYSTEM-MISSIONS"
     purpose: >
       Resolve shared mission generation, Primary and Secondary structure,
       scoring boundaries and casual-versus-organised-play distinctions.
-  - step: 4
+  - step: 9
     record: "TERRAIN_AND_OBJECTIVES.yaml"
     system_id: "11E-SYSTEM-TERRAIN-AND-OBJECTIVES"
     purpose: >
       Resolve shared terrain-area, visibility/protection and objective-control
       structure, while preserving mutable-layout boundaries.
-  - step: 5
+  - step: 10
     authority: "current official Warhammer 40,000 Core Rules"
-    source: "OFF-11E-DOWNLOADS"
+    source: "OFF-11E-CORE-RULES-2026"
     purpose: >
-      Resolve universal core mechanics not yet extracted into a repository
-      system record, including the complete current wording of turn phases,
-      movement, shooting, charging, fighting, damage, Battle-shock, reserves,
-      transports, Stratagems, common abilities and other game-wide mechanics.
+      Resolve universal fields not yet completely extracted into repository
+      records, especially the full Making Attacks procedure, complete Transport
+      procedure, exact Core Stratagem set, common abilities and detailed
+      exceptions or geometry.
+
+coverage_gates:
+  fully_or_substantially_routed_here:
+    - "Strike Force construction"
+    - "battle and Command-phase sequence"
+    - "leadership and battle-shock consequences"
+    - "Movement-phase and reserve-arrival structure"
+    - "Shooting-phase structure"
+    - "charge and Fight-phase structure"
+    - "missions"
+    - "terrain and objectives"
+  still_require_current_core_rules_for_exact_wording:
+    - "complete Making Attacks and damage-resolution procedure"
+    - "complete Transport and emergency-disembark procedure"
+    - "exact Core Stratagem list and wording"
+    - "complete common unit and weapon ability catalogue"
+    - "unextracted move-type distances, exceptions and geometry"
+  rule: >
+    A coverage gate is not permission to infer. Retrieve the current official
+    Core Rules for any gated field and preserve the field as unverified if the
+    authoritative text cannot be inspected.
 
 universal_scope:
   includes:
