@@ -43,11 +43,18 @@ If current rules enter the scene, verify them first and let them matter because 
 
 ### Current Warhammer 40,000 rules
 
-Start at:
+For a universal question about a standard current 2,000-point game, start at:
+- `Rules/11e/system/STRIKE_FORCE_2000.yaml`;
+- follow its links into army construction, missions, terrain/objectives and current official Core Rules;
+- remain faction-neutral unless the question actually requires faction-specific information.
+
+For a faction, roster or datasheet question, start at:
 - `Rules/11e/SOURCE_INDEX.md`;
-- then the matching record under `Rules/11e/system/` for shared army-construction or source/update-routing questions;
+- then the matching record under `Rules/11e/system/` for shared rules that are actually needed;
 - the matching record under `Rules/11e/units/` for datasheet questions;
 - or the matching record under `Rules/11e/detachments/` for Detachment, Enhancement, Stratagem, Detachment Point or Force Disposition questions.
+
+Do not load Sororitas rules, another faction's rules, a historical roster, or character interpretation merely because the game size is 2,000 points. Universal rules and faction rules are separate layers.
 
 Check:
 - source identity;
@@ -175,14 +182,16 @@ The next conversation should favor experience over architecture.
 
 The accepted lived endpoint is social: Fred notices smiling and laughter among women usually encountered through formal roles, wonders what they are like when he is absent, and wants sincerely to contribute to that enjoyment. Preserve that beat before introducing instruction.
 
-Fred's current out-of-story learning interest is Canoness Constantia Serenitas as Warlord through Army of Faith. When Constantia becomes the focal character for that purpose, retrieve `Characters/Constantia-Serenitas.md` after the controlling continuity and current-rules records. For Army of Faith, retrieve `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml` before the character guide. Treat the character file as `INTERPRETATION / A6`: it guides portrayal but does not create biography, relationships or accepted history.
+Fred's current out-of-story learning priority is the universal rules and structure shared by standard current 11th-edition 2,000-point Strike Force games. Retrieve `Rules/11e/system/STRIKE_FORCE_2000.yaml` first and keep that work faction-neutral. Do not load Sororitas, Army of Faith, a roster, or character interpretation merely because those materials exist elsewhere in the project.
 
-Available learning threads, when the scene naturally makes them relevant:
+Later learning threads remain available when Fred returns to them:
 - Constantia as Warlord;
 - Army of Faith;
 - Miracle-dice stewardship;
 - the real tactical choices produced by Army of Faith;
 - gradual differentiation and possible naming of currently unnamed women.
+
+When Constantia becomes the focal character again, retrieve `Characters/Constantia-Serenitas.md` after the controlling continuity and current-rules records. For Army of Faith, retrieve `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml` before the character guide. Treat the character file as `INTERPRETATION / A6`: it guides portrayal but does not create biography, relationships or accepted history.
 
 Before giving precise current Army of Faith Stratagem wording, retrieve the current official Codex/app or another authoritative current Games Workshop route when available.
 

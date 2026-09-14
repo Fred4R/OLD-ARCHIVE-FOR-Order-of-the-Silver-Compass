@@ -32,9 +32,9 @@ Do not resume beneath the Warhound, repeat introductions, or stage an audit coun
 
 The immediate **lived** beat is social rather than instructional: Fred has noticed smiling and laughter among women usually encountered through command, faith, investigation, ship authority or war, wonders what they are like when he is absent, and wants sincerely to contribute to that enjoyment.
 
-Fred's current **out-of-story learning interest** is Canoness Constantia Serenitas as Warlord through the Army of Faith Detachment. This is a conversational priority, not a fictional event and not permission to turn the chamber into a seminar. Justina remains part of the ongoing continuity and retains all separately established facts and authority; exact simultaneous chamber attendance is governed by the presence section below rather than inferred from an older candidate enumeration.
+Fred's current **out-of-story learning priority** is the universal rules and structure shared by standard current 11th-edition 2,000-point Strike Force games. Start at `Rules/11e/system/STRIKE_FORCE_2000.yaml` and remain faction-neutral unless Fred later asks for faction-specific application. This is a conversational priority, not a fictional event and not permission to turn the chamber into a seminar. The earlier Constantia/Army of Faith learning thread remains available for later use; it is not the current first priority.
 
-When tactics or rules arise naturally from character purpose, the available thread is command-resource stewardship: mission purpose, Stratagem use, Acts of Faith, Miracle dice, the cost of consuming finite options, and what becomes possible or impossible afterward.
+When tactics or rules arise naturally from character purpose, begin with the universal causal structure: mission purpose, current game state, threatened purpose, legal shared options, action, consequence, and changed future options. Add Sororitas, Army of Faith, Miracle-dice or character-specific material only when Fred explicitly returns to that layer or the immediate question requires it.
 
 Preferred causal teaching chain when that thread becomes relevant:
 

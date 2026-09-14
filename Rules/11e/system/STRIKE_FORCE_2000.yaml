@@ -1,0 +1,136 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-STRIKE-FORCE-2000"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current universal 11th-edition rules routing for standard 2,000-point Strike Force games"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "repository routing for universal current 2,000-point Strike Force questions"
+does_not_supersede:
+  - "current official Games Workshop Core Rules, Chapter Approved material or updates"
+  - "faction rules, Detachment rules, datasheets, army rules or faction-specific legality"
+  - "historical roster snapshots or snapshot points"
+  - "project canon, biography, relationships or story chronology"
+edition: 11
+system: "Universal Strike Force 2000"
+source_index: "../SOURCE_INDEX.md"
+
+purpose:
+  scope: >
+    This is the first repository entry point when the question is about the
+    universal rules or structure of a standard current 2,000-point Warhammer
+    40,000 game. It composes game-wide system records without importing any
+    faction-specific rule, datasheet, roster or project-character assumption.
+  success_condition: >
+    Two otherwise legal 2,000-point armies should be able to use this route to
+    resolve the shared game structure before either army's faction-specific
+    rules are consulted.
+
+format_identity:
+  verification_status: "verified_current"
+  source: "OFF-11E-ARMY-BUILDING-2026"
+  battle_size: "Strike Force"
+  points_total: 2000
+  detachment_points: 3
+  enhancement_limit: 4
+  ordinary_unit_limit: 3
+  battleline_unit_limit_multiplier: 2
+  note: >
+    These are universal Strike Force construction values. Faction-specific
+    exceptions, allied permissions, Detachment restrictions and datasheet
+    legality must be resolved separately when relevant.
+
+universal_resolution_order:
+  - step: 1
+    record: "SOURCE_AND_UPDATE_ROUTING.yaml"
+    system_id: "11E-SYSTEM-SOURCE-UPDATE-ROUTING"
+    purpose: >
+      Identify the current official source that governs the exact universal
+      field and re-check freshness when the claim is time-sensitive.
+  - step: 2
+    record: "ARMY_CONSTRUCTION.yaml"
+    system_id: "11E-SYSTEM-ARMY-CONSTRUCTION"
+    purpose: >
+      Resolve Strike Force construction limits, Detachment Point budget,
+      Enhancement limit, attachments and Force Disposition construction rules.
+  - step: 3
+    record: "MISSIONS.yaml"
+    system_id: "11E-SYSTEM-MISSIONS"
+    purpose: >
+      Resolve shared mission generation, Primary and Secondary structure,
+      scoring boundaries and casual-versus-organised-play distinctions.
+  - step: 4
+    record: "TERRAIN_AND_OBJECTIVES.yaml"
+    system_id: "11E-SYSTEM-TERRAIN-AND-OBJECTIVES"
+    purpose: >
+      Resolve shared terrain-area, visibility/protection and objective-control
+      structure, while preserving mutable-layout boundaries.
+  - step: 5
+    authority: "current official Warhammer 40,000 Core Rules"
+    source: "OFF-11E-DOWNLOADS"
+    purpose: >
+      Resolve universal core mechanics not yet extracted into a repository
+      system record, including the complete current wording of turn phases,
+      movement, shooting, charging, fighting, damage, Battle-shock, reserves,
+      transports, Stratagems, common abilities and other game-wide mechanics.
+
+universal_scope:
+  includes:
+    - "Strike Force battle-size construction constants"
+    - "game-wide army-construction structure"
+    - "battle and turn structure"
+    - "Command Points and universal Stratagem rules"
+    - "movement, shooting, charge, fight, damage and destruction mechanics"
+    - "Battle-shock and Leadership mechanics"
+    - "reserves, Strategic Reserves and transports"
+    - "terrain, visibility, protection and objectives"
+    - "mission generation, Primary and Secondary scoring structure"
+    - "Force Disposition where it affects universal construction or mission procedure"
+    - "current game-wide FAQ, errata and rules-update effects"
+  excludes:
+    - "faction army rules"
+    - "faction or Codex Detachment rules"
+    - "faction Stratagems or Enhancements"
+    - "datasheet abilities, weapons, characteristics or points"
+    - "allied-faction permissions"
+    - "specific Silver Compass roster legality or tactics"
+    - "character portrayal, story continuity or lore"
+
+casual_and_organised_play_boundary:
+  sources:
+    - "OFF-11E-CHAPTER-APPROVED-2026"
+    - "OFF-11E-EVENT-COMPANION-1.1"
+  verification_status: "verified_current"
+  rule: >
+    Universal game structure and current Core Rules are shared, but organised
+    play can add event-specific procedures, roster declarations, layout
+    requirements or timing constraints. Do not silently apply an Event
+    Companion requirement to an ordinary casual game, and do not omit an
+    event-specific requirement when the user explicitly asks about organised play.
+
+freshness_gate:
+  verification_status: "verified_current"
+  source: "OFF-11E-DOWNLOADS"
+  rule: >
+    Before answering a current, disputed, obscure or edition-sensitive universal
+    rules question, re-check the official Warhammer 40,000 Downloads route and
+    any current Core Rules update or Chapter Approved material governing that
+    field. A repository verification date is evidence of the last check, not a
+    guarantee that the field remains unchanged.
+
+teaching_model:
+  chain: >
+    mission purpose -> current game state -> threatened purpose -> legal
+    universal options -> faction-specific options only if needed -> action ->
+    consequence -> changed score, position, resources and future options
+  boundary: >
+    Use universal rules to explain what every army can or must do. Add faction
+    rules only after the universal layer is resolved and only when the question
+    actually requires them.
+
+project_boundaries:
+  - "Do not infer faction rules from universal rules."
+  - "Do not infer current legality from a historical roster."
+  - "Do not turn Force Disposition, mission role or game mechanics into personality evidence."
+  - "Do not copy mutable faction or datasheet rules into this universal record."
+  - "Do not treat event-only procedures as universal casual-play requirements."

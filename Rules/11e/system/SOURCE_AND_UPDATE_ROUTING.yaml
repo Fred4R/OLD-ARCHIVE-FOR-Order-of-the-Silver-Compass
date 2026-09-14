@@ -24,6 +24,17 @@ routing_basis:
     - "OFF-11E-APP-MFM-SYNC"
 
 routes:
+  - question: "universal rules or structure for a standard 2,000-point Strike Force game"
+    use_first:
+      - "Rules/11e/system/STRIKE_FORCE_2000.yaml"
+      - "current official Warhammer 40,000 Core Rules for universal mechanics not yet extracted"
+    sources:
+      - "OFF-11E-ARMY-BUILDING-2026"
+      - "OFF-11E-DOWNLOADS"
+    note: >
+      Keep this route faction-neutral. Do not load faction rules, Detachments,
+      datasheets or a project roster unless the user's question actually needs
+      them after the universal game structure has been resolved.
   - question: "core game rules and game-wide mechanics"
     use_first:
       - "current Warhammer 40,000 Core Rules"
