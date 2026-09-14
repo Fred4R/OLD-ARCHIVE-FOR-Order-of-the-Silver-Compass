@@ -9,6 +9,7 @@ does_not_supersede:
   - "Relationships/RELATIONSHIPS.md durable relationship consequences"
   - "private motives, attraction, consent, or undisclosed interpretation"
   - "facts not explicitly extracted here"
+holder_list_semantics: "positive known holders only; omission does not establish ignorance"
 claims:
   - claim_id: "KNOW-FRED-EULALIA-NAME"
     holders: ["PERSON-FRED"]
