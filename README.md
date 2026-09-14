@@ -18,12 +18,14 @@ It is the compact operational continuity kernel. It tells a fresh system where t
 
 Retrieve other records only when the task needs them:
 - `AUTHORITY.md` and `STATUS.md` for authority, canon/evidence status, conflict and supersession;
-- `Characters/` for extracted durable principal-character continuity;
+- `Story/` for structured current scene staging, durable event chronology, explicit knowledge state, and conversational adoption/writeback rules;
+- `Characters/` for extracted durable principal-person continuity, including the bounded `Characters/Fred.md` user-continuity record;
 - `Relationships/RELATIONSHIPS.md` for durable interpersonal and functional relation state;
 - `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for preserved baseline continuity and evidence not yet migrated into a narrower durable home;
 - `Sources/Armies/` for immutable army-list source payloads;
 - `Armies/` for roster-to-project mappings;
 - `Rules/11e/` for current 11th-edition source routing and verified findings;
+- `Reference/Secondary/Wahapedia/` for secondary discovery/comparison only, never current authority;
 - `Sources/Methodology/` for human-evidence methodology;
 
 ## Authority rule
@@ -48,7 +50,7 @@ The preserved MASTER identifies itself as:
 
 Repository migration does not convert that candidate status into user acceptance.
 
-The first operational extraction is now separate in `CURRENT_STATE.md`. The MASTER remains preserved rather than silently rewritten.
+Operational extraction now uses `CURRENT_STATE.md` as the cold-start pointer, with narrower derived homes under `Story/`, `Characters/`, and `Relationships/`. The MASTER remains preserved rather than silently rewritten, and those derived records do not upgrade its evidence or acceptance status.
 
 The repository should remain simple. Add software, schemas, automation, databases, frameworks, or extra services only when a concrete need demonstrates that plain portable files are inadequate.
 

@@ -8,6 +8,7 @@ claims already recorded in the repository.
 
 from __future__ import annotations
 
+import csv
 import hashlib
 import re
 import sys
@@ -976,6 +977,400 @@ def validate_armies(
 
 
 
+
+def load_markdown_frontmatter(path: Path) -> dict[str, Any]:
+    text = read_text(path)
+    if not text.startswith("---\n"):
+        fail(f"{path.relative_to(ROOT)} is missing YAML front matter")
+        return {}
+    parts = text.split("---", 2)
+    if len(parts) < 3:
+        fail(f"{path.relative_to(ROOT)} has malformed YAML front matter")
+        return {}
+    try:
+        value = yaml.load(parts[1], Loader=UniqueKeyLoader)
+    except Exception as exc:
+        fail(f"Front matter parse failed for {path.relative_to(ROOT)}: {exc}")
+        return {}
+    if not isinstance(value, dict):
+        fail(f"Front matter must be a mapping: {path.relative_to(ROOT)}")
+        return {}
+    return value
+
+
+def validate_story_and_character_layers() -> None:
+    character_readme = ROOT / "Characters/README.md"
+    relationship_path = ROOT / "Relationships/RELATIONSHIPS.md"
+    current_state_path = ROOT / "CURRENT_STATE.md"
+    story_readme = ROOT / "Story/README.md"
+    acceptance_path = ROOT / "Story/ACCEPTANCE.md"
+    scene_path = ROOT / "Story/CURRENT_SCENE.yaml"
+    events_path = ROOT / "Story/EVENTS.yaml"
+    knowledge_path = ROOT / "Story/KNOWLEDGE.yaml"
+
+    required_character_files = [
+        ROOT / "Characters/Fred.md",
+        ROOT / "Characters/Aurelia-Montfort.md",
+        ROOT / "Characters/Constantia-Continuity.md",
+        ROOT / "Characters/Constantia-Serenitas.md",
+        ROOT / "Characters/Eulalia-Veridica.md",
+        ROOT / "Characters/Helverin-Pilot.md",
+        ROOT / "Characters/Justina-Voss.md",
+        ROOT / "Characters/Paragon-Trio.md",
+        ROOT / "Characters/Valeria.md",
+        ROOT / "Characters/Warhound-Princeps.md",
+    ]
+    character_files = sorted(
+        path for path in (ROOT / "Characters").glob("*.md") if path.name != "README.md"
+    )
+
+    required_story_files = [
+        story_readme,
+        acceptance_path,
+        scene_path,
+        events_path,
+        knowledge_path,
+        relationship_path,
+        character_readme,
+    ]
+    for path in required_character_files + required_story_files:
+        if not path.exists():
+            fail(f"Missing story/character continuity file: {path.relative_to(ROOT)}")
+
+    identities: set[str] = set()
+    record_ids: set[str] = set()
+    character_readme_text = read_text(character_readme)
+
+    for path in character_files:
+        if not path.exists():
+            continue
+        front = load_markdown_frontmatter(path)
+        record_id = front.get("record_id")
+        if not isinstance(record_id, str) or not record_id:
+            fail(f"{path.relative_to(ROOT)} missing record_id")
+        elif record_id in record_ids:
+            fail(f"Duplicate character/person record_id {record_id}")
+        else:
+            record_ids.add(record_id)
+
+        record_type = front.get("record_type")
+        if record_type not in {
+            "character_continuity_record",
+            "character_simulation_guide",
+            "user_continuity_record",
+        }:
+            fail(f"{path.relative_to(ROOT)} has unsupported record_type {record_type!r}")
+
+        authority_scope = front.get("authority_scope")
+        if not isinstance(authority_scope, str) or not authority_scope:
+            fail(f"{path.relative_to(ROOT)} missing authority_scope")
+
+        if "as_of" in front:
+            validate_date(front.get("as_of"), f"{path.relative_to(ROOT)} as_of")
+
+        if record_type == "character_continuity_record":
+            identity = front.get("project_character_id")
+            if not isinstance(identity, str) or not identity.startswith("CHAR-"):
+                fail(f"{path.relative_to(ROOT)} missing project_character_id")
+            else:
+                identities.add(identity)
+        elif record_type == "user_continuity_record":
+            identity = front.get("person_id")
+            if identity != "PERSON-FRED":
+                fail(f"{path.relative_to(ROOT)} user continuity must use PERSON-FRED")
+            else:
+                identities.add(identity)
+        elif record_type == "character_simulation_guide":
+            if front.get("canon_status") != "INTERPRETATION":
+                fail(f"{path.relative_to(ROOT)} simulation guide must remain INTERPRETATION")
+            if front.get("evidence_class") != "A6":
+                fail(f"{path.relative_to(ROOT)} simulation guide must remain A6")
+
+        if path.name not in character_readme_text:
+            fail(f"Characters/README.md does not route {path.name}")
+
+    if relationship_path.exists():
+        relationship_front = load_markdown_frontmatter(relationship_path)
+        if relationship_front.get("record_type") != "relationship_registry":
+            fail("Relationships/RELATIONSHIPS.md must use record_type relationship_registry")
+        validate_date(relationship_front.get("as_of"), "Relationships/RELATIONSHIPS.md as_of")
+        relationship_text = read_text(relationship_path)
+        relation_ids = re.findall(r"^## (REL-[A-Z0-9-]+)$", relationship_text, flags=re.MULTILINE)
+        if not relation_ids:
+            fail("Relationships/RELATIONSHIPS.md contains no REL-* records")
+        for relation_id in sorted(set(relation_ids)):
+            if relation_ids.count(relation_id) > 1:
+                fail(f"Relationships/RELATIONSHIPS.md duplicate relation ID {relation_id}")
+        for reference in re.findall(r"`(\.\./[^`#]+\.md)(?:#[^`]*)?`", relationship_text):
+            resolve_repo_path(relationship_path, reference)
+
+    acceptance = load_markdown_frontmatter(acceptance_path)
+    if acceptance.get("record_type") != "conversation_adoption_policy":
+        fail("Story/ACCEPTANCE.md must use record_type conversation_adoption_policy")
+    validate_date(acceptance.get("as_of"), "Story/ACCEPTANCE.md as_of")
+
+    scene = load_yaml(scene_path)
+    if scene.get("record_type") != "current_scene_record":
+        fail("Story/CURRENT_SCENE.yaml must use record_type current_scene_record")
+    validate_date(scene.get("as_of"), "Story/CURRENT_SCENE.yaml as_of")
+    for key in ("authority_map", "current_state", "acceptance_policy"):
+        ref = scene.get(key)
+        if not isinstance(ref, str):
+            fail(f"Story/CURRENT_SCENE.yaml missing {key}")
+        else:
+            resolve_repo_path(scene_path, ref)
+
+    location = scene.get("location")
+    if not isinstance(location, dict):
+        fail("Story/CURRENT_SCENE.yaml missing location mapping")
+    else:
+        if location.get("local_authority") not in identities:
+            fail("Story/CURRENT_SCENE.yaml local_authority is not a known character identity")
+        current_state_text = read_text(current_state_path)
+        for field in ("vessel", "area"):
+            value = location.get(field)
+            if not isinstance(value, str) or not value:
+                fail(f"Story/CURRENT_SCENE.yaml location.{field} must be non-empty")
+            elif value not in current_state_text:
+                fail(f"CURRENT_STATE.md does not contain current-scene {field} {value!r}")
+
+    presence = scene.get("presence")
+    if not isinstance(presence, dict):
+        fail("Story/CURRENT_SCENE.yaml missing presence mapping")
+    else:
+        if presence.get("fred") != "PERSON-FRED":
+            fail("Story/CURRENT_SCENE.yaml presence.fred must be PERSON-FRED")
+        if presence.get("women_with_fred") != 9:
+            fail("Story/CURRENT_SCENE.yaml must preserve exactly nine women with Fred")
+        if presence.get("complete_attendance_resolved") is not False:
+            fail("Story/CURRENT_SCENE.yaml must preserve unresolved complete attendance")
+        protected = presence.get("protected_presence")
+        protected_counts: dict[str, int] = {}
+        if not isinstance(protected, list):
+            fail("Story/CURRENT_SCENE.yaml protected_presence must be a list")
+        else:
+            for item in protected:
+                if not isinstance(item, dict):
+                    fail("Story/CURRENT_SCENE.yaml protected_presence item must be a mapping")
+                    continue
+                entity_id = item.get("entity_id")
+                count = item.get("count")
+                if entity_id not in identities:
+                    fail(f"Story/CURRENT_SCENE.yaml references unknown protected identity {entity_id!r}")
+                if not isinstance(count, int) or count < 1:
+                    fail(f"Story/CURRENT_SCENE.yaml has invalid protected count for {entity_id!r}")
+                elif isinstance(entity_id, str):
+                    protected_counts[entity_id] = count
+        if protected_counts.get("CHAR-EULALIA") != 1:
+            fail("Story/CURRENT_SCENE.yaml must protect Eulalia's current presence")
+        if protected_counts.get("CHAR-PARAGON-TRIO") != 3:
+            fail("Story/CURRENT_SCENE.yaml must protect all three Paragon pilots")
+
+        anchors = presence.get("positive_interaction_anchors", [])
+        if not isinstance(anchors, list):
+            fail("Story/CURRENT_SCENE.yaml positive_interaction_anchors must be a list")
+        else:
+            for item in anchors:
+                if not isinstance(item, dict):
+                    fail("Story/CURRENT_SCENE.yaml interaction anchor must be a mapping")
+                    continue
+                participants = item.get("participants")
+                if not isinstance(participants, list):
+                    fail("Story/CURRENT_SCENE.yaml interaction anchor participants must be a list")
+                    continue
+                for identity in participants:
+                    if identity not in identities:
+                        fail(f"Story/CURRENT_SCENE.yaml interaction anchor references unknown identity {identity!r}")
+
+    for ref in scene.get("source_refs", []):
+        if isinstance(ref, str):
+            resolve_repo_path(scene_path, ref)
+        else:
+            fail("Story/CURRENT_SCENE.yaml source_refs must contain paths")
+
+    events = load_yaml(events_path)
+    if events.get("record_type") != "event_registry":
+        fail("Story/EVENTS.yaml must use record_type event_registry")
+    if not isinstance(events.get("participant_list_semantics"), str) or not events.get("participant_list_semantics"):
+        fail("Story/EVENTS.yaml must define participant_list_semantics")
+    validate_date(events.get("as_of"), "Story/EVENTS.yaml as_of")
+    for key in ("authority_map", "acceptance_policy", "current_scene"):
+        ref = events.get(key)
+        if not isinstance(ref, str):
+            fail(f"Story/EVENTS.yaml missing {key}")
+        else:
+            resolve_repo_path(events_path, ref)
+
+    event_ids: set[str] = set()
+    event_sequences: set[int] = set()
+    event_list = events.get("events")
+    if not isinstance(event_list, list) or not event_list:
+        fail("Story/EVENTS.yaml must contain events")
+    else:
+        for event in event_list:
+            if not isinstance(event, dict):
+                fail("Story/EVENTS.yaml event must be a mapping")
+                continue
+            event_id = event.get("event_id")
+            if not isinstance(event_id, str) or not event_id.startswith("EVENT-"):
+                fail(f"Story/EVENTS.yaml invalid event_id {event_id!r}")
+            elif event_id in event_ids:
+                fail(f"Story/EVENTS.yaml duplicate event_id {event_id}")
+            else:
+                event_ids.add(event_id)
+            sequence = event.get("sequence")
+            if not isinstance(sequence, int):
+                fail(f"Story/EVENTS.yaml {event_id} sequence must be integer")
+            elif sequence in event_sequences:
+                fail(f"Story/EVENTS.yaml duplicate sequence {sequence}")
+            else:
+                event_sequences.add(sequence)
+            if event.get("canon_status") not in ALLOWED_CANON_STATUSES:
+                fail(f"Story/EVENTS.yaml {event_id} has invalid canon_status")
+            if event.get("evidence_class") not in ALLOWED_EVIDENCE_CLASSES:
+                fail(f"Story/EVENTS.yaml {event_id} has invalid evidence_class")
+            participants = event.get("participants", [])
+            if not isinstance(participants, list):
+                fail(f"Story/EVENTS.yaml {event_id} participants must be a list")
+            else:
+                for identity in participants:
+                    if identity not in identities:
+                        fail(f"Story/EVENTS.yaml {event_id} references unknown identity {identity!r}")
+            refs = event.get("source_refs")
+            if not isinstance(refs, list) or not refs:
+                fail(f"Story/EVENTS.yaml {event_id} missing source_refs")
+            else:
+                for ref in refs:
+                    if isinstance(ref, str):
+                        resolve_repo_path(events_path, ref)
+                    else:
+                        fail(f"Story/EVENTS.yaml {event_id} source_refs must contain paths")
+
+    knowledge = load_yaml(knowledge_path)
+    if knowledge.get("record_type") != "knowledge_registry":
+        fail("Story/KNOWLEDGE.yaml must use record_type knowledge_registry")
+    if not isinstance(knowledge.get("holder_list_semantics"), str) or not knowledge.get("holder_list_semantics"):
+        fail("Story/KNOWLEDGE.yaml must define holder_list_semantics")
+    validate_date(knowledge.get("as_of"), "Story/KNOWLEDGE.yaml as_of")
+    auth_ref = knowledge.get("authority_map")
+    if isinstance(auth_ref, str):
+        resolve_repo_path(knowledge_path, auth_ref)
+    else:
+        fail("Story/KNOWLEDGE.yaml missing authority_map")
+
+    claim_ids: set[str] = set()
+    claims = knowledge.get("claims")
+    if not isinstance(claims, list) or not claims:
+        fail("Story/KNOWLEDGE.yaml must contain claims")
+    else:
+        for claim in claims:
+            if not isinstance(claim, dict):
+                fail("Story/KNOWLEDGE.yaml claim must be a mapping")
+                continue
+            claim_id = claim.get("claim_id")
+            if not isinstance(claim_id, str) or not claim_id.startswith("KNOW-"):
+                fail(f"Story/KNOWLEDGE.yaml invalid claim_id {claim_id!r}")
+            elif claim_id in claim_ids:
+                fail(f"Story/KNOWLEDGE.yaml duplicate claim_id {claim_id}")
+            else:
+                claim_ids.add(claim_id)
+            holders = claim.get("holders")
+            if not isinstance(holders, list) or not holders:
+                fail(f"Story/KNOWLEDGE.yaml {claim_id} must have holders")
+            else:
+                for identity in holders:
+                    if identity not in identities:
+                        fail(f"Story/KNOWLEDGE.yaml {claim_id} references unknown holder {identity!r}")
+            if not isinstance(claim.get("content"), str) or not claim.get("content"):
+                fail(f"Story/KNOWLEDGE.yaml {claim_id} missing content")
+            if not isinstance(claim.get("evidence_basis"), str) or not claim.get("evidence_basis"):
+                fail(f"Story/KNOWLEDGE.yaml {claim_id} missing evidence_basis")
+            refs = claim.get("source_refs")
+            if not isinstance(refs, list) or not refs:
+                fail(f"Story/KNOWLEDGE.yaml {claim_id} missing source_refs")
+            else:
+                for ref in refs:
+                    if isinstance(ref, str):
+                        resolve_repo_path(knowledge_path, ref)
+                    else:
+                        fail(f"Story/KNOWLEDGE.yaml {claim_id} source_refs must contain paths")
+
+    routing_requirements = {
+        ROOT / "README.md": ["Story/", "Characters/Fred.md", "Reference/Secondary/Wahapedia/"],
+        ROOT / "AGENTS.md": ["Story/CURRENT_SCENE.yaml", "Story/KNOWLEDGE.yaml", "Story/EVENTS.yaml", "Story/ACCEPTANCE.md"],
+        ROOT / "AUTHORITY.md": ["Story/CURRENT_SCENE.yaml", "Story/EVENTS.yaml", "Story/KNOWLEDGE.yaml", "Story/ACCEPTANCE.md", "Characters/Fred.md"],
+        current_state_path: ["Story/CURRENT_SCENE.yaml", "Story/EVENTS.yaml", "Story/KNOWLEDGE.yaml", "Story/ACCEPTANCE.md", "Characters/Fred.md"],
+        ROOT / "USING_REPOSITORY.md": ["Story/CURRENT_SCENE.yaml", "Story/EVENTS.yaml", "Story/KNOWLEDGE.yaml", "Story/ACCEPTANCE.md", "Characters/Fred.md"],
+    }
+    for path, required_strings in routing_requirements.items():
+        text = read_text(path)
+        for required in required_strings:
+            if required not in text:
+                fail(f"{path.relative_to(ROOT)} does not route required story record {required!r}")
+
+
+def validate_secondary_reference() -> None:
+    root = ROOT / "Reference/Secondary/Wahapedia"
+    data_root = root / "11e"
+    readme = root / "README.md"
+    required = [
+        readme,
+        data_root / "Abilities.csv",
+        data_root / "Datasheets.csv",
+        data_root / "Detachments.csv",
+        data_root / "Enhancements.csv",
+        data_root / "Factions.csv",
+        data_root / "Last_update.csv",
+        data_root / "Source.csv",
+        data_root / "Stratagems.csv",
+    ]
+    for path in required:
+        if not path.exists():
+            fail(f"Missing Wahapedia secondary-reference file: {path.relative_to(ROOT)}")
+
+    readme_text = read_text(readme).lower()
+    for phrase in ("secondary", "non-authoritative", "official"):
+        if phrase not in readme_text:
+            fail(f"Reference/Secondary/Wahapedia/README.md missing authority boundary term {phrase!r}")
+
+    csv_paths = sorted(data_root.glob("*.csv"))
+    if not csv_paths:
+        fail("No Wahapedia CSV files found")
+    for path in csv_paths:
+        try:
+            with path.open("r", encoding="utf-8-sig", newline="") as handle:
+                reader = csv.reader(handle, delimiter="|")
+                header = next(reader, None)
+        except Exception as exc:
+            fail(f"Cannot parse secondary-reference CSV {path.relative_to(ROOT)}: {exc}")
+            continue
+        if not header or not any(str(cell).strip() for cell in header):
+            fail(f"Secondary-reference CSV has no usable header: {path.relative_to(ROOT)}")
+
+    rules_readme = read_text(ROOT / "Rules/11e/README.md")
+    routing_text = read_text(ROOT / "Rules/11e/system/SOURCE_AND_UPDATE_ROUTING.yaml")
+    for path, text in (
+        (ROOT / "Rules/11e/README.md", rules_readme),
+        (ROOT / "Rules/11e/system/SOURCE_AND_UPDATE_ROUTING.yaml", routing_text),
+    ):
+        if "Reference/Secondary/Wahapedia" not in text:
+            fail(f"{path.relative_to(ROOT)} does not route the Wahapedia secondary reference")
+
+    routing = load_yaml(ROOT / "Rules/11e/system/SOURCE_AND_UPDATE_ROUTING.yaml")
+    secondary = routing.get("secondary_discovery_reference")
+    if not isinstance(secondary, dict):
+        fail("SOURCE_AND_UPDATE_ROUTING.yaml missing secondary_discovery_reference")
+    else:
+        if secondary.get("authority") != "non_authoritative":
+            fail("Wahapedia secondary discovery route must remain non_authoritative")
+        for key in ("record", "dataset"):
+            ref = secondary.get(key)
+            if not isinstance(ref, str):
+                fail(f"Wahapedia secondary discovery route missing {key}")
+            else:
+                resolve_repo_path(ROOT / "Rules/11e/system/SOURCE_AND_UPDATE_ROUTING.yaml", ref)
+
+
 def validate_core_markdown() -> None:
     core_paths = [
         ROOT / "README.md",
@@ -1005,6 +1400,17 @@ def validate_connections() -> None:
         ROOT / "SOURCES.md",
         ROOT / "CURRENT_STATE.md",
         ROOT / "USING_REPOSITORY.md",
+        ROOT / "Story/README.md",
+        ROOT / "Story/ACCEPTANCE.md",
+        ROOT / "Story/CURRENT_SCENE.yaml",
+        ROOT / "Story/EVENTS.yaml",
+        ROOT / "Story/KNOWLEDGE.yaml",
+        ROOT / "Characters/README.md",
+        ROOT / "Characters/Fred.md",
+        ROOT / "Relationships/RELATIONSHIPS.md",
+        ROOT / "Reference/Secondary/Wahapedia/README.md",
+        ROOT / "Rules/11e/README.md",
+        ROOT / "Rules/11e/system/SOURCE_AND_UPDATE_ROUTING.yaml",
         ROOT / "scripts/validate_repository.py",
         ROOT / "requirements-validator.txt",
         ROOT / ".github/workflows/validate-repository.yml",
@@ -1030,7 +1436,10 @@ def validate_connections() -> None:
         ROOT / "USING_REPOSITORY.md",
         ROOT / "Rules/11e/README.md",
         ROOT / "Characters/README.md",
+        ROOT / "Characters/Fred.md",
         ROOT / "Characters/Constantia-Serenitas.md",
+        ROOT / "Story/README.md",
+        ROOT / "Story/ACCEPTANCE.md",
     ]
     for path in routing_files:
         if not path.exists():
@@ -1047,6 +1456,8 @@ def validate_connections() -> None:
 def main() -> int:
     validate_connections()
     validate_core_markdown()
+    validate_story_and_character_layers()
+    validate_secondary_reference()
     validate_manifest()
     master_text = validate_master()
     source_ids = validate_source_index()
@@ -1066,7 +1477,8 @@ def main() -> int:
     print("Checked: immutable-evidence hashes, canonical Compendium identity, YAML syntax,")
     print("authority/status separation, army arithmetic, exact source payloads,")
     print("project/rules/source IDs, system/Detachment/army links, roster-occurrence links,")
-    print("current-claim provenance, core-document heading uniqueness, and routing integrity.")
+    print("current-claim provenance, story/character/knowledge wiring, secondary-reference")
+    print("integrity, core-document heading uniqueness, and routing integrity.")
     return 0
 
 

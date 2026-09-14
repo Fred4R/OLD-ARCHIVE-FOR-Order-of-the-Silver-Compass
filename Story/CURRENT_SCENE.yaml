@@ -1,0 +1,57 @@
+version: 1
+record_id: "STORY-SCENE-CURRENT-01"
+record_type: "current_scene_record"
+as_of: "2026-09-13"
+authority_map: "../AUTHORITY.md"
+current_state: "../CURRENT_STATE.md"
+acceptance_policy: "ACCEPTANCE.md"
+authority_scope: "structured staging companion for the current lived scene"
+does_not_supersede:
+  - "CURRENT_STATE.md current operational pointer"
+  - "underlying source evidence or its review status"
+  - "character continuity or relationship records"
+  - "unresolved complete attendance identity"
+  - "unresolved room geometry or ship architecture"
+scene_id: "STORY-SCENE-CURRENT-01"
+location:
+  vessel: "True Meridian"
+  area: "House Montfort working-and-receiving chamber"
+  local_authority: "CHAR-AURELIA"
+presence:
+  fred: "PERSON-FRED"
+  women_with_fred: 9
+  count_evidence_class: "A1-REPORTED"
+  complete_attendance_resolved: false
+  protected_presence:
+    - entity_id: "CHAR-EULALIA"
+      count: 1
+    - entity_id: "CHAR-PARAGON-TRIO"
+      count: 3
+  positive_interaction_anchors:
+    - participants: ["PERSON-FRED", "CHAR-CONSTANTIA"]
+      fact: "Later endpoint wording supports direct interaction between Fred and Constantia."
+    - participants: ["CHAR-PRINCEPS", "CHAR-VALERIA", "CHAR-HELVERIN-PILOT"]
+      fact: "Later endpoint wording supports the Princeps beckoning Valeria and the Helverin pilot toward the gathering."
+  safeguards:
+    - "Do not add the older seven-person candidate enumeration to later corrections and manufacture ten simultaneous women."
+    - "Do not invent departure, disappearance, death, or off-screen movement to repair inherited counting defects."
+    - "Justina's individual Agents are not separately established as physically present."
+current_beat:
+  fred_perception: "Fred notices smiling and laughter among women he usually encounters through command, faith, investigation, ship authority, or war."
+  fred_intent: "Fred sincerely wants to contribute to their enjoyment."
+  boundary: "This establishes Fred's perspective and intent only; it does not establish reciprocal attraction, consent, romance, or collective relationship state."
+spatial_state:
+  established:
+    - "The lived scene is inside Aurelia Montfort's House Montfort working-and-receiving chamber aboard the True Meridian."
+  unresolved:
+    - "exact chamber dimensions"
+    - "complete furniture layout"
+    - "doors, windows, alcoves, and precise architectural geometry"
+    - "lighting details not separately established"
+    - "precise relative positions of all ten people"
+    - "complete identity of all nine women"
+  narration_rule: "Local sensory detail may be proposed for an intelligible scene, but unresolved geometry must not be written back as durable fact unless later adopted under ACCEPTANCE.md."
+source_refs:
+  - "../CURRENT_STATE.md"
+  - "../Relationships/RELATIONSHIPS.md"
+  - "../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"

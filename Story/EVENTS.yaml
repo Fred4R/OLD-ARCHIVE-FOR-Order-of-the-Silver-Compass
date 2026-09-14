@@ -1,0 +1,73 @@
+version: 1
+record_id: "STORY-EVENTS-01"
+record_type: "event_registry"
+as_of: "2026-09-13"
+authority_map: "../AUTHORITY.md"
+acceptance_policy: "ACCEPTANCE.md"
+authority_scope: "durable event and waymark index for story chronology explicitly extracted here"
+does_not_supersede:
+  - "underlying source evidence or its review status"
+  - "CURRENT_STATE.md current operational pointer"
+  - "character or relationship authority"
+  - "unresolved chronology not explicitly ordered here"
+participant_list_semantics: "positive known participants only; omission does not establish absence unless a later record explicitly marks a list complete"
+events:
+  - event_id: "EVENT-ACCEPTED-BREAKFAST"
+    sequence: 10
+    title: "Accepted breakfast"
+    canon_status: "ESTABLISHED_PROJECT_CANON"
+    evidence_class: "A3"
+    standing_note: "Inherited accepted-baseline standing; original acceptance transcript was not independently recovered in the 2026-09-13 audit."
+    participants: ["PERSON-FRED", "CHAR-CONSTANTIA", "CHAR-AURELIA", "CHAR-JUSTINA"]
+    summary: "Fred, Constantia, Aurelia, and Justina shared an earlier breakfast aboard the True Meridian."
+    source_refs:
+      - "../CURRENT_STATE.md"
+      - "../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
+  - event_id: "EVENT-REMEMBER-THE-RETURN"
+    sequence: 20
+    title: "REMEMBER THE RETURN"
+    canon_status: "ESTABLISHED_PROJECT_CANON"
+    evidence_class: "A3"
+    standing_note: "Inherited project standing; this extraction does not independently recover the original acceptance transcript."
+    participants: ["PERSON-FRED", "CHAR-CONSTANTIA", "CHAR-VALERIA", "CHAR-PARAGON-TRIO"]
+    summary: "Fred states the command intent that the force should win and return alive; Valeria and the three Paragon pilots demonstrate practiced coordination and recoverable commitment."
+    source_refs:
+      - "../CURRENT_STATE.md"
+      - "../Relationships/RELATIONSHIPS.md"
+      - "../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
+  - event_id: "EVENT-LIGHT-OF-RETURN"
+    sequence: 30
+    title: "THE LIGHT OF RETURN"
+    canon_status: "ESTABLISHED_PROJECT_CANON"
+    evidence_class: "A3"
+    standing_note: "Inherited project standing; exact metaphysical cause and message remain unresolved."
+    participants: ["PERSON-FRED", "CHAR-CONSTANTIA", "CHAR-AURELIA", "CHAR-JUSTINA", "CHAR-EULALIA"]
+    summary: "Constantia visibly manifests an unusual luminous phenomenon, publicly articulates Fred's hope for wife, children, and peaceful home, and refuses to claim infallible knowledge of the Emperor's private intention; Eulalia's grounding exchange follows."
+    source_refs:
+      - "../CURRENT_STATE.md"
+      - "../Relationships/RELATIONSHIPS.md"
+      - "../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
+  - event_id: "EVENT-AURELIA-WORKING-CIRCUIT"
+    sequence: 40
+    title: "Aurelia's working circuit"
+    canon_status: "ESTABLISHED_PROJECT_CANON"
+    evidence_class: "A3"
+    standing_note: "Inherited accepted continuity; exact ship map and architecture are not established by the event."
+    participants: ["PERSON-FRED", "CHAR-AURELIA", "CHAR-JUSTINA"]
+    summary: "Aurelia demonstrates shipboard competence through routes, access, staging, security, specialist support, recovery, and option creation; Justina demonstrates calibrated inquiry within that working context."
+    source_refs:
+      - "../CURRENT_STATE.md"
+      - "../Characters/Aurelia-Montfort.md"
+      - "../Characters/Justina-Voss.md"
+  - event_id: "EVENT-STEWARDSHIP-OF-COMMAND"
+    sequence: 50
+    title: "THE STEWARDSHIP OF COMMAND"
+    canon_status: "ESTABLISHED_PROJECT_CANON"
+    evidence_class: "A3"
+    standing_note: "Latest named waymark in the preserved Compendium; the story continued beyond it into the current chamber state."
+    participants: []
+    summary: "Fred's tactical learning reaches stewardship of finite command options."
+    source_refs:
+      - "../CURRENT_STATE.md"
+      - "../Order_of_the_Silver_Compass_MASTER_v4.3.41.txt"
+current_scene: "CURRENT_SCENE.yaml"

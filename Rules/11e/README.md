@@ -39,6 +39,14 @@ Current 11th-edition datasheets use model characteristics `M`, `T`, `SV`, `W`, `
 
 The crosswalk preserves those Games Workshop concepts. It does not invent a parallel rules vocabulary.
 
+## Secondary discovery reference
+
+`../../Reference/Secondary/Wahapedia/11e/` is available as a secondary, non-authoritative discovery and comparison corpus. Its governing note is `../../Reference/Secondary/Wahapedia/README.md`.
+
+Use it to locate candidate fields, compare coverage, or identify questions that require official verification. Do not use it by itself to set `verified_current`, fill `not_yet_verified` or `blocked_current_source`, supersede Games Workshop/Warhammer, or create project continuity.
+
+The normal rules route remains official-source first: resolve the exact field through `SOURCE_INDEX.md` and the matching system, unit, or Detachment record, then consult the controlling current official source when needed.
+
 ## Verification states
 
 - `verified_current` — a current official source was actually inspected.

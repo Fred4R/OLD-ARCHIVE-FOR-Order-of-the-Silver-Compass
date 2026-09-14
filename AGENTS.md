@@ -8,9 +8,13 @@ Then retrieve only the record required by the task. Do not preload the full gove
 
 Use `USING_REPOSITORY.md` for repository workflow and planning. Use `AUTHORITY.md` when authority or supersession is actually in question and `STATUS.md` when canon/evidence terminology matters.
 
-Use the matching continuity record under `Characters/` for extracted principal-character facts and `Relationships/RELATIONSHIPS.md` for extracted durable relation state. Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for underlying baseline evidence, unextracted continuity, or source reconciliation. Preserve its candidate review status and unresolved boundaries.
+For story continuation, read `Story/CURRENT_SCENE.yaml` only when staging, presence, or immediate sensory state matters; use `Story/KNOWLEDGE.yaml` when character knowledge matters; use `Story/EVENTS.yaml` when chronology or prior waymarks matter; and use `Story/ACCEPTANCE.md` before durable writeback from live fiction.
+
+Use `Characters/Fred.md` for Fred's bounded user-authored continuity and agency limits. Use the matching continuity record under `Characters/` for extracted principal-character facts and `Relationships/RELATIONSHIPS.md` for extracted durable relation state. Use `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt` for underlying baseline evidence, unextracted continuity, or source reconciliation. Preserve its candidate review status and unresolved boundaries.
 
 For army questions, use the exact source payload under `Sources/Armies/` when one exists, then resolve the corresponding crosswalk under `Armies/`. For current Warhammer 40,000 rules questions, route through `Rules/11e/SOURCE_INDEX.md`, then use the matching unit record under `Rules/11e/units/` or Detachment record under `Rules/11e/detachments/` before making current stats, keyword, ability, attachment, Detachment, Enhancement, Stratagem, points, or legality claims.
+
+`Reference/Secondary/Wahapedia/` is a secondary discovery/comparison corpus only. It may help locate candidate fields or coverage gaps, but it must never set `verified_current`, fill blocked official fields, or supersede the controlling current Games Workshop/Warhammer source.
 
 Keep distinct:
 - authority scope;
@@ -55,7 +59,7 @@ For meaningful repository changes, follow the merge contract in `USING_REPOSITOR
 
 ## Repository validation
 
-After changing repository structure, army crosswalks, rules records, authority routing, source artifacts, or checksum coverage, run:
+After changing repository structure, story registries, character/relationship routing, army crosswalks, rules records, authority routing, secondary-reference routing, source artifacts, or checksum coverage, run:
 
 `python scripts/validate_repository.py`
 

@@ -31,7 +31,9 @@ The normal sequence is:
 
 Read `CURRENT_STATE.md` first.
 
-Then retrieve only the character, relationship, rules or preserved-Compendium detail that the immediate scene actually requires. For future planning, keep proposals separate from accepted continuity and update durable homes only when a change is actually established.
+When staging, presence, current location, or immediate sensory state matters, retrieve `Story/CURRENT_SCENE.yaml`. When a person's knowledge or ignorance matters, retrieve `Story/KNOWLEDGE.yaml`. When earlier chronology or waymarks matter, retrieve `Story/EVENTS.yaml`. Use `Characters/Fred.md` for Fred's bounded user-authored role, knowledge, goals, and agency limits.
+
+Then retrieve only the character, relationship, rules or preserved-Compendium detail that the immediate scene actually requires. For future planning, keep proposals separate from accepted continuity and apply `Story/ACCEPTANCE.md` before durable writeback from assistant-authored fiction.
 
 Do not begin a story answer with a repository audit.
 
@@ -40,6 +42,20 @@ Do not repeat unchanged room geometry, cast lists or authority summaries unless 
 For the current chamber, preserve Fred's direct total of exactly nine women. The older v4.3.37 candidate enumeration contains a known assistant counting defect and mixes people already present with people entering; do not sum that candidate list against later corrections and recreate ten simultaneous participants.
 
 If current rules enter the scene, verify them first and let them matter because a character has a real problem to solve.
+
+### Durable story writeback
+
+When a story exchange appears to establish a lasting change, do not commit the assistant's whole scene. Use `Story/ACCEPTANCE.md` to identify the smallest adopted or user-authored fact.
+
+Update in this order where applicable:
+- the authoritative character, relationship, event, or knowledge home;
+- `Story/CURRENT_SCENE.yaml` if current staging or presence changed;
+- `Story/EVENTS.yaml` if a durable event or ordering fact was established;
+- `Story/KNOWLEDGE.yaml` if who knows what changed;
+- `Characters/Fred.md` only for Fred's own project-relevant user-authored state;
+- `CURRENT_STATE.md` last when the operational pointer or continuation-critical summary changed.
+
+Preserve a compact evidence basis rather than archiving whole chats by default. Silence, enjoyment, a generic request to continue, and a repository merge are not acceptance evidence.
 
 ### Current Warhammer 40,000 rules
 
@@ -116,7 +132,7 @@ For a meaningful durable change, use this merge contract:
 8. **Structural validation** — require `python scripts/validate_repository.py` and the GitHub Actions validator to pass on the latest proposed tree.
 9. **Semantic review** — compare the actual diff with the stated purpose. A green validator does not prove lore truth, canon acceptance, identity, current legality, or warranted inference.
 10. **Conflict discipline** — repair Git conflicts mechanically, but preserve evidential conflicts as `UNRESOLVED` when the evidence does not settle them.
-11. **Integration** — normally squash-merge one conceptual task into one meaningful `main` commit. Use a full merge commit only when preserving the branch's internal commit sequence has enduring value. Do not use repository merging to collapse uncertain identities or claims.
+11. **Integration** — inspect the repository's currently enabled merge methods before acting; do not let a connector default choose a disallowed method. Normally squash-merge one conceptual task into one meaningful `main` commit when squash is enabled. Use another permitted method only when preserving branch history has enduring value. Do not use repository merging to collapse uncertain identities or claims.
 12. **Exact-head safeguard** — merge only the reviewed latest pull-request head, not an earlier passing commit.
 13. **Post-merge verification** — re-fetch `main` and require its automatic validation run to pass before claiming the durable update succeeded.
 14. **Cleanup** — after confirming the pull request is merged and no dependent work remains, delete the temporary branch when the available GitHub route permits it.
