@@ -72,6 +72,11 @@ Shared current rules concepts live under `system/`.
 Current records:
 - `system/STRIKE_FORCE_2000.yaml` — faction-neutral entry point for universal current 2,000-point Strike Force questions;
 - `system/ARMY_CONSTRUCTION.yaml` — current verified army-construction structure;
+- `system/BATTLE_SEQUENCE.yaml` — battle rounds, player turns, phases and Command-phase/Core-CP sequence;
+- `system/BATTLE_SHOCK_AND_ACTIONS.yaml` — leadership, battle-shock and verified action/OC/Stratagem consequences;
+- `system/MOVEMENT_AND_RESERVES.yaml` — Movement-phase structure, move-type routing and high-level ingress/reserve structure;
+- `system/SHOOTING.yaml` — Shooting-phase structure and verified shooting-type/normal-shooting fields;
+- `system/COMBAT.yaml` — Engagement Range, charge timing and high-level Fight-phase structure;
 - `system/MISSIONS.yaml` — current shared mission generation, event/casual distinctions and scoring boundaries;
 - `system/TERRAIN_AND_OBJECTIVES.yaml` — current terrain/objective interaction with explicit time-sensitive layout boundaries;
 - `system/SOURCE_AND_UPDATE_ROUTING.yaml` — current official-source routing and update discipline.
@@ -79,3 +84,5 @@ Current records:
 Both preserved army crosswalks already link to shared system records where applicable. Those links support current interpretation without rewriting historical roster evidence or certifying whole-list legality.
 
 System records must use current official Games Workshop evidence. They connect rules structure across armies without turning rules structure into fictional chronology.
+
+The universal Core Rules extraction is intentionally incomplete where the exact current 2026 text was not successfully inspected. In particular, the complete Making Attacks procedure, full Transport procedure, exact Core Stratagem list and full common-ability catalogue remain gated to the current official Core Rules. Do not backfill those fields from 10th-edition quick-start material or model memory.
