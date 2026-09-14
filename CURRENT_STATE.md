@@ -11,7 +11,10 @@ It is not a new canon source. It does not upgrade inherited evidence, convert a 
 Authority scope: current operational scene pointer, immediate conversational focus, continuation-critical state, and cold-start routing.
 
 Underlying factual authority remains with the record that actually supports each claim:
-- preserved continuity, people, relationships and unresolved boundaries: `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`, subject to its review status and evidence distinctions;
+- current operational state: this file;
+- extracted principal-character continuity: the matching record under `Characters/`;
+- durable interpersonal and functional relation state: `Relationships/RELATIONSHIPS.md`;
+- preserved underlying continuity evidence and material not yet extracted: `Order_of_the_Silver_Compass_MASTER_v4.3.41.txt`, subject to its review status and evidence distinctions;
 - later scoped repository corrections or additions: the relevant later record;
 - current Warhammer rules: current official Games Workshop/Warhammer sources, with repository verification recorded under `Rules/11e/`;
 - exact army snapshots: `Sources/Armies/`;
@@ -151,6 +154,22 @@ Three women of the Order of the Silver Compass pilot the three Paragon Warsuits 
 They have a practiced operational relation with Valeria's Warglaive and were present for REMEMBER THE RETURN. All three are protected as current-chamber participants.
 
 Their personal names, individual voices, biographies, which one is the narrative Paragon Superior, and private relationships remain unresolved.
+
+## Character and relationship retrieval
+
+For deeper durable person facts, use the extracted continuity records under `Characters/`:
+- `Characters/Constantia-Continuity.md`;
+- `Characters/Aurelia-Montfort.md`;
+- `Characters/Justina-Voss.md`;
+- `Characters/Eulalia-Veridica.md`;
+- `Characters/Valeria.md`;
+- `Characters/Helverin-Pilot.md`;
+- `Characters/Warhound-Princeps.md`;
+- `Characters/Paragon-Trio.md`.
+
+Use `Relationships/RELATIONSHIPS.md` for durable interpersonal, knowledge, functional and institutional relations.
+
+These are derived continuity homes. The preserved MASTER remains the underlying evidentiary reservoir and retains its candidate review status.
 
 ## Durable sequence and waymarks
 
