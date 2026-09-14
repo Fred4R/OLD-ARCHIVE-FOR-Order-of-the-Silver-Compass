@@ -279,6 +279,7 @@ def validate_category_separation(path: Path, data: dict[str, Any]) -> None:
 def validate_system_files(source_ids: set[str]) -> dict[str, tuple[Path, dict[str, Any]]]:
     records: dict[str, tuple[Path, dict[str, Any]]] = {}
     required = {
+        "STRIKE_FORCE_2000.yaml": "11E-SYSTEM-STRIKE-FORCE-2000",
         "ARMY_CONSTRUCTION.yaml": "11E-SYSTEM-ARMY-CONSTRUCTION",
         "SOURCE_AND_UPDATE_ROUTING.yaml": "11E-SYSTEM-SOURCE-UPDATE-ROUTING",
     }
