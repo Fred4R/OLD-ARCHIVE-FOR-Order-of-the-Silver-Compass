@@ -64,6 +64,12 @@ Current rules records use states such as:
 
 Verification status answers whether a current/external claim was checked. It does not make a project claim canon.
 
+## Conversational adoption
+
+`Story/ACCEPTANCE.md` governs how a live exchange may supply direct evidence, explicitly accept or correct an assistant proposal, or minimally adopt an observable premise through user action.
+
+Assistant narration, silence, a generic request to continue, enjoyment, or repository integration do not by themselves establish project canon. When adoption is ambiguous, preserve the weaker status.
+
 ## Provenance safeguards
 
 A checksum proves byte identity, not authorship, acceptance, truth, or current rules legality.
