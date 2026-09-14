@@ -2,7 +2,7 @@
 
 Read `../../AUTHORITY.md` for repository-wide authority and supersession.
 
-This directory connects Silver Compass roster records to current official Warhammer 40,000 rules sources without rewriting historical roster evidence.
+This directory provides the current universal 11th-edition system layer and connects Silver Compass roster records to current official Warhammer 40,000 rules sources without rewriting historical roster evidence.
 
 ## Authority scope
 
@@ -13,6 +13,12 @@ It may narrowly supersede older Compendium rules statements for those verified f
 - project canon, character identity, relationships, or story chronology;
 - unresolved fields;
 - the current official Games Workshop source itself.
+
+## Universal 2,000-point entry point
+
+For a question about the rules or structure shared by any standard current 2,000-point game, start with `system/STRIKE_FORCE_2000.yaml`.
+
+That record is deliberately faction-neutral. It routes universal Strike Force construction, mission, terrain/objective and current-Core-Rules questions without importing Sororitas rules, another faction's rules, a roster, or project-character assumptions. Faction and datasheet records are consulted only after the universal layer when the question actually requires them.
 
 ## Resolution order
 
@@ -64,6 +70,7 @@ Current rules records now cover the relevant Adepta Sororitas, Imperial Agents, 
 Shared current rules concepts live under `system/`.
 
 Current records:
+- `system/STRIKE_FORCE_2000.yaml` — faction-neutral entry point for universal current 2,000-point Strike Force questions;
 - `system/ARMY_CONSTRUCTION.yaml` — current verified army-construction structure;
 - `system/MISSIONS.yaml` — current shared mission generation, event/casual distinctions and scoring boundaries;
 - `system/TERRAIN_AND_OBJECTIVES.yaml` — current terrain/objective interaction with explicit time-sensitive layout boundaries;
