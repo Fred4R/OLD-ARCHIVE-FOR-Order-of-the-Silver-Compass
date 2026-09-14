@@ -50,7 +50,7 @@ The preserved MASTER identifies itself as:
 
 Repository migration does not convert that candidate status into user acceptance.
 
-The first operational extraction is now separate in `CURRENT_STATE.md`. The MASTER remains preserved rather than silently rewritten.
+Operational extraction now uses `CURRENT_STATE.md` as the cold-start pointer, with narrower derived homes under `Story/`, `Characters/`, and `Relationships/`. The MASTER remains preserved rather than silently rewritten, and those derived records do not upgrade its evidence or acceptance status.
 
 The repository should remain simple. Add software, schemas, automation, databases, frameworks, or extra services only when a concrete need demonstrates that plain portable files are inadequate.
 
