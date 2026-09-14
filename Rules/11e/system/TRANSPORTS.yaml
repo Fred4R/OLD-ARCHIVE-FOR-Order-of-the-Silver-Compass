@@ -1,0 +1,120 @@
+version: 1
+record_type: "current_system_rules_record"
+system_id: "11E-SYSTEM-TRANSPORTS"
+authority_map: "../../../AUTHORITY.md"
+authority_scope: "current universal 11th-edition Transport, embark and disembark procedure explicitly verified here"
+verification_as_of: "2026-09-13"
+supersedes_for:
+  - "repository routing for current universal Transport procedure fields recorded here"
+does_not_supersede:
+  - "datasheet-specific transport capacities or eligibility restrictions"
+  - "special transport abilities or faction rules"
+  - "current official Games Workshop sources"
+edition: 11
+system: "Transports"
+source_index: "../SOURCE_INDEX.md"
+
+primary_source:
+  source: "OFF-11E-CORE-RULES-2026"
+  verification_status: "verified_current"
+
+secondary_discovery:
+  role: "discovery_only"
+  snapshot: "../../../Reference/Secondary/Wahapedia/11e/"
+  rule: >
+    The secondary snapshot was used to identify section numbers and candidate
+    wording. Current Games Workshop Core Rules remain authoritative.
+
+transport_capacity:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "18.01"
+  rule: >
+    A TRANSPORT's datasheet states which friendly models can embark and how many
+    it can carry. More than one unit can be embarked at once if the remaining
+    capacity is sufficient.
+  before_battle: >
+    In Declare Battle Formations, eligible units can begin embarked within a
+    friendly TRANSPORT that has sufficient capacity for the whole unit.
+
+embarking:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "18.02"
+  timing: "after the first battle round has started, after the unit makes a normal, advance or fall-back move"
+  conditions:
+    - "every model in the unit is within 3 inches of the TRANSPORT"
+    - "the unit was not set up on the battlefield this turn"
+    - "the unit is eligible to embark as described on the TRANSPORT datasheet"
+    - "the TRANSPORT has sufficient remaining capacity for every model"
+  effect: >
+    Remove the unit from the battlefield and place it to one side; it is then
+    embarked within the TRANSPORT and is not on the battlefield.
+
+disembarking:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "18.03"
+  rule: >
+    In the active player's Movement phase, an eligible unit embarked within a
+    TRANSPORT can disembark by making a disembark move.
+  destroyed_transport: >
+    If a TRANSPORT is destroyed, emergency disembark moves for its embarked
+    units are resolved before the TRANSPORT is removed.
+
+disembark_move:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "18.04"
+  base_eligibility:
+    - "the unit is embarked within a TRANSPORT on the battlefield"
+    - "the unit did not embark within that TRANSPORT this phase"
+    - "the TRANSPORT has not made an advance or fall-back move this phase"
+  modes:
+    rapid:
+      setup_distance: "3 inches"
+      required_if: "the TRANSPORT made a normal or ingress move this phase"
+      consequence: "the disembarking unit cannot declare a charge this turn"
+    tactical:
+      setup_distance: "3 inches"
+      available_if: >
+        the TRANSPORT remained stationary or has not yet been selected to move,
+        and the unit can satisfy the tactical setup restrictions
+      consequence: "the disembarking unit can subsequently make a normal or advance move"
+    combat:
+      setup_distance: "6 inches"
+      consequence:
+        - "make the required hazard roll for each model"
+        - "the unit can be set up engaged with enemy units the TRANSPORT is engaged with when the rule permits"
+        - "the unit becomes battle-shocked"
+        - "the unit cannot declare a charge this turn"
+  ingress_note: >
+    A rapid disembark after an ingress move follows the current setup restrictions
+    for that disembark mode.
+
+emergency_disembark:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  section: "18.05"
+  setup_distance: "6 inches"
+  procedure:
+    - "resolve when the unit is embarked within a TRANSPORT that has just been destroyed"
+    - "make the required hazard roll for each model"
+    - "set models wholly within 6 inches and as close as possible to the destroyed TRANSPORT, subject to the current setup restrictions"
+    - "a model that cannot be legally set up is destroyed"
+    - "the disembarking unit becomes battle-shocked"
+    - "the unit is not eligible to declare a charge until the end of the turn"
+
+datasheet_boundary:
+  verification_status: "verified_current"
+  source: "OFF-11E-CORE-RULES-2026"
+  rule: >
+    Universal Transport procedure does not establish that a particular unit can
+    embark in a particular TRANSPORT. Resolve model-type, keyword and capacity
+    eligibility from that TRANSPORT's current datasheet.
+
+teaching_model:
+  chain: >
+    protected movement need -> embark eligibility -> transport movement ->
+    choose or trigger disembark mode -> setup risk and restrictions -> changed
+    shooting, charge, objective and survival options
