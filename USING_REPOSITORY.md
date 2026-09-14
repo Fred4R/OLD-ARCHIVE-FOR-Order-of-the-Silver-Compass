@@ -37,6 +37,8 @@ Do not begin a story answer with a repository audit.
 
 Do not repeat unchanged room geometry, cast lists or authority summaries unless the listener needs re-orientation.
 
+For the current chamber, preserve Fred's direct total of exactly nine women. The older v4.3.37 candidate enumeration contains a known assistant counting defect and mixes people already present with people entering; do not sum that candidate list against later corrections and recreate ten simultaneous participants.
+
 If current rules enter the scene, verify them first and let them matter because a character has a real problem to solve.
 
 ### Current Warhammer 40,000 rules
@@ -171,10 +173,12 @@ For the current chamber:
 
 The next conversation should favor experience over architecture.
 
-When Constantia is the focal character, retrieve `Characters/Constantia-Serenitas.md` after the controlling continuity and current-rules records. For Army of Faith, retrieve `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml` before the character guide. Treat the character file as `INTERPRETATION / A6`: it guides portrayal but does not create biography, relationships or accepted history.
+The accepted lived endpoint is social: Fred notices smiling and laughter among women usually encountered through formal roles, wonders what they are like when he is absent, and wants sincerely to contribute to that enjoyment. Preserve that beat before introducing instruction.
 
-Current focus:
-- Canoness Constantia Serenitas as Warlord;
+Fred's current out-of-story learning interest is Canoness Constantia Serenitas as Warlord through Army of Faith. When Constantia becomes the focal character for that purpose, retrieve `Characters/Constantia-Serenitas.md` after the controlling continuity and current-rules records. For Army of Faith, retrieve `Rules/11e/detachments/Adepta-Sororitas/Army-of-Faith.yaml` before the character guide. Treat the character file as `INTERPRETATION / A6`: it guides portrayal but does not create biography, relationships or accepted history.
+
+Available learning threads, when the scene naturally makes them relevant:
+- Constantia as Warlord;
 - Army of Faith;
 - Miracle-dice stewardship;
 - the real tactical choices produced by Army of Faith;

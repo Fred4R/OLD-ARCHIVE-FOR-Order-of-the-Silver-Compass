@@ -29,6 +29,8 @@ Keep distinct:
 
 Never fill `UNRESOLVED` by invention.
 
+For the current chamber, Fred's direct reported total of exactly nine women controls the lived scene. The older v4.3.37 candidate enumeration contains a known assistant counting defect and conflates people already present with people entering; do not promote it into seven independent simultaneous-presence facts or combine it with later corrections to manufacture ten participants.
+
 Do not infer ownership, biography, relationships, chronology, casualty, reinforcement, rearmament, or institutional authority merely from co-presence in a roster or scene.
 
 A roster occurrence, a datasheet identity, and a project character mapping are different relations. Current rules can update how a datasheet functions without rewriting the historical roster that contained it.

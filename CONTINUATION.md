@@ -72,7 +72,9 @@ Where a current Codex/app-only field cannot be verified from an available offici
 
 Continue from the current House Montfort working-and-receiving chamber aboard the `True Meridian`.
 
-The immediate social focus is Fred's interest in understanding Constantia as Warlord through Army of Faith. Justina remains present and established, but she is not the current conversational centre.
+The immediate lived beat is social: Fred has noticed smiling and laughter among women usually encountered through office, faith, investigation, ship authority or war; he wonders what they are like when he is absent and wants sincerely to contribute to that enjoyment.
+
+Fred's current out-of-story learning interest is understanding Constantia as Warlord through Army of Faith. That interest should shape what becomes available when the scene naturally creates a reason for it; it is not a fictional event and should not turn the gathering into a rules seminar. Exact simultaneous chamber attendance is controlled by `CURRENT_STATE.md`; do not reconstruct it from the older defective candidate enumeration.
 
 When rules learning naturally enters the scene, connect it to:
 - who holds authority;
@@ -95,9 +97,9 @@ Do not announce “complete,” “verified,” “current,” “legal,” “a
 
 ## Current focus — Constantia as Warlord and Army of Faith
 
-Direct user instruction on 2026-09-13 shifts the immediate experiential focus from understanding Justina toward understanding Canoness Constantia Serenitas as Warlord through the Army of Faith Detachment.
+Direct user instruction on 2026-09-13 shifts the current learning priority from understanding Justina toward understanding Canoness Constantia Serenitas as Warlord through the Army of Faith Detachment.
 
-This changes current priority only. It does not erase the established Justina thread, move anyone out of the current chamber, or create a new fictional event by itself.
+This is an out-of-story priority, not a fictional event. It does not erase the established Justina thread, settle unresolved attendance, or require the next scene beat to become tactical instruction. Preserve the accepted social endpoint first; let Army of Faith enter only through a natural character purpose or problem.
 
 ### Official-rules connection
 
