@@ -1123,8 +1123,16 @@ def validate_story_and_character_layers() -> None:
     location = scene.get("location")
     if not isinstance(location, dict):
         fail("Story/CURRENT_SCENE.yaml missing location mapping")
-    elif location.get("local_authority") not in identities:
-        fail("Story/CURRENT_SCENE.yaml local_authority is not a known character identity")
+    else:
+        if location.get("local_authority") not in identities:
+            fail("Story/CURRENT_SCENE.yaml local_authority is not a known character identity")
+        current_state_text = read_text(current_state_path)
+        for field in ("vessel", "area"):
+            value = location.get(field)
+            if not isinstance(value, str) or not value:
+                fail(f"Story/CURRENT_SCENE.yaml location.{field} must be non-empty")
+            elif value not in current_state_text:
+                fail(f"CURRENT_STATE.md does not contain current-scene {field} {value!r}")
 
     presence = scene.get("presence")
     if not isinstance(presence, dict):
